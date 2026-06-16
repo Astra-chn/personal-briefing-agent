@@ -38,9 +38,12 @@ class RSSCollector:
             return []
 
         max_items = int(section_config.get("max_items", 15))
+        fallback_enabled = bool(section_config.get("fallback_when_no_keyword_match", False))
+        fallback_min_items = int(section_config.get("fallback_min_items", 0))
         keywords = section_config.get("keywords", [])
         sources = section_config.get("rss_sources", [])
         items: list[ContentItem] = []
+        fallback_items: list[ContentItem] = []
 
         for url in sources:
             try:
@@ -52,10 +55,24 @@ class RSSCollector:
             for entry in entries:
                 item = self._entry_to_item(entry, url, keywords)
                 if not item:
+                    if fallback_enabled:
+                        fallback_item = self._entry_to_item(entry, url, keywords, require_keyword=False)
+                        if fallback_item:
+                            fallback_items.append(fallback_item)
                     continue
                 items.append(item)
                 if len(items) >= max_items:
                     return items
+
+        if fallback_enabled and len(items) < fallback_min_items:
+            seen_urls = {item.url for item in items}
+            for item in fallback_items:
+                if item.url in seen_urls:
+                    continue
+                items.append(item)
+                seen_urls.add(item.url)
+                if len(items) >= min(max_items, fallback_min_items):
+                    break
 
         return items
 
@@ -74,7 +91,13 @@ class RSSCollector:
             raise ValueError(f"invalid RSS feed: {url}")
         return list(getattr(parsed, "entries", []))
 
-    def _entry_to_item(self, entry: Any, source_url: str, keywords: list[str]) -> ContentItem | None:
+    def _entry_to_item(
+        self,
+        entry: Any,
+        source_url: str,
+        keywords: list[str],
+        require_keyword: bool = True,
+    ) -> ContentItem | None:
         title = _entry_get(entry, "title", "").strip()
         link = _entry_get(entry, "link", "").strip()
         if not title or not link:
@@ -93,7 +116,7 @@ class RSSCollector:
         source_title = source.get("title") if isinstance(source, dict) else ""
         hit_keywords = _matched_keywords(f"{title} {summary}", keywords)
 
-        if keywords and not hit_keywords:
+        if require_keyword and keywords and not hit_keywords:
             return None
 
         return ContentItem(

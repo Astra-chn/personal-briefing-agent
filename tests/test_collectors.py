@@ -79,3 +79,27 @@ def test_rss_collector_skips_non_matching_and_maps_matching(monkeypatch):
     assert len(items) == 1
     assert items[0].title == "DeepSeek Agent update"
     assert "DeepSeek" in items[0].keywords
+
+
+def test_rss_collector_can_fallback_when_no_keywords_match(monkeypatch):
+    entries = [
+        {"title": "World leaders meet for summit", "link": "https://example.com/world", "summary": "Diplomacy update"},
+        {"title": "Markets react to election", "link": "https://example.com/market", "summary": "Global market update"},
+    ]
+    monkeypatch.setattr(rss_collector, "feedparser", SimpleNamespace(parse=lambda content: SimpleNamespace(entries=entries, bozo=False)))
+    config = {
+        "world_news": {
+            "enabled": True,
+            "max_items": 5,
+            "fallback_when_no_keyword_match": True,
+            "fallback_min_items": 2,
+            "keywords": ["semiconductor"],
+            "rss_sources": ["https://feeds.example.com/world.xml"],
+        }
+    }
+    logger = SimpleNamespace(warning=lambda *args, **kwargs: None)
+
+    items = RSSCollector(config, "world_news", "world_news", logger, session=FakeSession(FakeResponse())).collect()
+
+    assert len(items) == 2
+    assert items[0].category == "world_news"

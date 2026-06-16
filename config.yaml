@@ -7,6 +7,10 @@ briefing:
   daily_max_items: 12
   weekly_max_items: 25
   include_personal_advice: true
+  category_minimums:
+    github: 2
+    ai_news: 3
+    world_news: 2
 
 llm:
   provider: deepseek
@@ -65,6 +69,8 @@ ai_news:
 world_news:
   enabled: true
   max_items: 15
+  fallback_when_no_keyword_match: true
+  fallback_min_items: 5
   keywords:
     - 中美关系
     - 俄乌战争
@@ -73,6 +79,24 @@ world_news:
     - AI监管
     - 全球经济
     - 科技政策
+    - US-China
+    - China
+    - United States
+    - Russia
+    - Ukraine
+    - Middle East
+    - Gaza
+    - Israel
+    - Iran
+    - semiconductor
+    - chip
+    - export controls
+    - AI regulation
+    - technology policy
+    - global economy
+    - regulation
+    - policy
+    - Taiwan
   rss_sources:
     - https://feeds.bbci.co.uk/news/world/rss.xml
     - https://www.aljazeera.com/xml/rss/all.xml

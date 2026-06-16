@@ -82,7 +82,44 @@ def filter_items(items: list[ScoredItem], config: dict[str, Any], mode: str) -> 
     limit_key = "weekly_max_items" if mode == "weekly" else "daily_max_items"
     max_items = int(config.get("briefing", {}).get(limit_key, 12))
     selected = [item for item in items if item.score >= min_score]
-    return selected[:max_items] if selected else items[:max_items]
+    selected = _with_category_minimums(selected, items, config)
+    if not selected:
+        selected = items[:max_items]
+    return _cap_items(selected, max_items)
+
+
+def _with_category_minimums(
+    selected: list[ScoredItem],
+    all_items: list[ScoredItem],
+    config: dict[str, Any],
+) -> list[ScoredItem]:
+    minimums = config.get("briefing", {}).get(
+        "category_minimums",
+        {"github": 2, "ai_news": 3, "world_news": 2},
+    )
+    result = list(selected)
+    selected_urls = {item.url for item in result}
+
+    for category, minimum in minimums.items():
+        current_count = sum(1 for item in result if item.category == category)
+        if current_count >= int(minimum):
+            continue
+        candidates = [
+            item
+            for item in all_items
+            if item.category == category and item.url not in selected_urls
+        ]
+        for item in candidates[: max(0, int(minimum) - current_count)]:
+            result.append(item)
+            selected_urls.add(item.url)
+
+    return sorted(result, key=lambda item: item.score, reverse=True)
+
+
+def _cap_items(items: list[ScoredItem], max_items: int) -> list[ScoredItem]:
+    if len(items) <= max_items:
+        return items
+    return sorted(items, key=lambda item: item.score, reverse=True)[:max_items]
 
 
 def _interest_keywords(config: dict[str, Any]) -> list[str]:

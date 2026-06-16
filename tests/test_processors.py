@@ -42,3 +42,43 @@ def test_clean_deduplicate_and_score_items():
 
 def test_canonicalize_url_removes_tracking_parameters():
     assert canonicalize_url("https://EXAMPLE.com/a/?utm_source=x&keep=1#section") == "https://example.com/a?keep=1"
+
+
+def test_filter_items_keeps_world_news_minimum_even_below_threshold():
+    config = {
+        "briefing": {
+            "daily_max_items": 5,
+            "category_minimums": {"world_news": 1},
+        },
+        "scoring": {"min_score": 4.5},
+    }
+    items = score_items(
+        [
+            ContentItem(
+                title="AI Agent launch",
+                url="https://example.com/ai",
+                source="AI",
+                summary="OpenAI Agent release",
+                category="ai_news",
+                keywords=["OpenAI"],
+            ),
+            ContentItem(
+                title="Technology policy talks",
+                url="https://example.com/world",
+                source="World",
+                summary="Policy and global economy update",
+                category="world_news",
+                keywords=["policy"],
+            ),
+        ],
+        {
+            "profile": {"user_goal": "AI Agent"},
+            "ai_news": {"keywords": ["AI Agent", "OpenAI"]},
+            "world_news": {"keywords": ["policy"]},
+            "scoring": config["scoring"],
+        },
+    )
+
+    filtered = filter_items(items, config, "daily")
+
+    assert any(item.category == "world_news" for item in filtered)
