@@ -57,6 +57,10 @@ jobs:
         run: |
           git config user.name "briefing-bot"
           git config user.email "briefing-bot@users.noreply.github.com"
-          git add output data
-          git commit -m "Update personal briefing" || echo "No changes to commit"
-          git push
+          git add -f output data
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update personal briefing"
+            git push
+          fi
