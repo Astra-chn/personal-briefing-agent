@@ -1,0 +1,97 @@
+profile:
+  language: zh-CN
+  user_goal: "关注 AI 发展、GitHub 热门项目、AI Agent、后端转 AI、公考相关趋势"
+  style: "简洁、直接、有判断、有行动建议"
+
+briefing:
+  daily_max_items: 12
+  weekly_max_items: 25
+  include_personal_advice: true
+
+llm:
+  provider: deepseek
+  base_url: "https://api.deepseek.com"
+  model: "deepseek-v4-flash"
+  temperature: 0.3
+  max_tokens: 4000
+  timeout_seconds: 60
+
+github:
+  enabled: true
+  max_repos: 10
+  min_stars: 50
+  lookback_days: 14
+  topics:
+    - ai
+    - llm
+    - agent
+    - rag
+    - python
+    - java
+    - backend
+    - automation
+    - coding-agent
+    - mcp
+  keywords:
+    - AI Agent
+    - RAG
+    - LLM
+    - DeepSeek
+    - Claude
+    - OpenAI
+    - code agent
+    - MCP
+    - workflow automation
+
+ai_news:
+  enabled: true
+  max_items: 15
+  keywords:
+    - OpenAI
+    - Anthropic
+    - Claude
+    - Gemini
+    - DeepSeek
+    - AI Agent
+    - RAG
+    - coding agent
+    - multimodal
+    - open source model
+  rss_sources:
+    - https://openai.com/news/rss.xml
+    - https://www.anthropic.com/news/rss.xml
+    - https://huggingface.co/blog/feed.xml
+
+world_news:
+  enabled: true
+  max_items: 15
+  keywords:
+    - 中美关系
+    - 俄乌战争
+    - 中东局势
+    - 半导体
+    - AI监管
+    - 全球经济
+    - 科技政策
+  rss_sources:
+    - https://feeds.bbci.co.uk/news/world/rss.xml
+    - https://www.aljazeera.com/xml/rss/all.xml
+
+scoring:
+  relevance_weight: 0.4
+  importance_weight: 0.3
+  novelty_weight: 0.2
+  actionability_weight: 0.1
+  min_score: 3.5
+
+output:
+  save_markdown: true
+  save_html: true
+  save_to_sqlite: true
+  markdown_dir: output
+  database_path: data/briefing.db
+
+delivery:
+  email_enabled: true
+  streamlit_enabled: true
+  attach_markdown: false
