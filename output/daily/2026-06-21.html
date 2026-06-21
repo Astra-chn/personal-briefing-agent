@@ -26,168 +26,183 @@ blockquote {
 code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
 </style></head><body><main class="container"><h1>每日个人简报 - 2026-06-21</h1>
 <h2>AI 生成综述</h2>
-<h1>2026-06-21 个人简报</h1>
-<h2>今日最值得关注的 5 件事</h2>
+<h2>📋 今日最值得关注的 5 件事</h2>
 <ol>
-<li><strong>AutoGPT 星数破 18.5万</strong> – 最易上手的全栈 AI Agent 项目，适合你边做边学自动化。</li>
-<li><strong>n8n 工作流自动化平台</strong> – 可视化+自定义代码，400+ 集成，后端转 AI 的最佳切入工具。</li>
-<li><strong>OpenAI 收购 Ona</strong> – 预示未来 AI Agent 将长周期运行在企业云端，后端能力更值钱。</li>
-<li><strong>Dify 成 Agent 开发首选平台</strong> – 生产级 Agent 工作流，帮你低代码搭建 RAG 应用。</li>
-<li><strong>OpenAI 发布“部署模拟”技术</strong> – 安全评估前置化，AI 应用落地门槛降低。</li>
+<li>
+<p><strong>🔥 MiMo-Code 开源（小米发布）</strong><br />
+   GitHub 1 万+ Star，项目 <code>XiaomiMiMo/MiMo-Code</code> 强调“模型与代理共进化”。对初学者来说，它是<strong>理解 AI Agent 架构</strong>的绝佳实战入口。<br />
+<a href="https://github.com/XiaomiMiMo/MiMo-Code">仓库链接</a></p>
+</li>
+<li>
+<p><strong>🛠 llmtrim：让 LLM API 费用立减 30%+</strong><br />
+   本地代理压缩请求，无精度损失，支持 Python/Rust 等。<strong>适合你“后端转 AI”阶段</strong>，先学会用工具省钱，再理解原理。<br />
+<a href="https://github.com/fkiene/llmtrim">仓库链接</a></p>
+</li>
+<li>
+<p><strong>🧠 OpenAI 收购 Ona：Codex 走向“长时任务”</strong><br />
+   OpenAI 收购 Ona 以提供<strong>持久化云端环境</strong>，让 AI Agent 能执行企业级长流程。这意味着<strong>后端工程师做 AI Agent 的价值更高了</strong>，因为你懂系统集成和稳定性。<br />
+<a href="https://openai.com/index/openai-to-acquire-ona">原文</a></p>
+</li>
+<li>
+<p><strong>🌍 霍尔木兹海峡局势升级</strong><br />
+   伊朗声称关闭海峡，美国否认。若属实，全球油价飙升，影响科技公司成本（服务器、芯片制造），也可能加速国内自主技术替代。<strong>关注政策对“国产替代”的扶持</strong>。<br />
+<a href="https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&amp;at_campaign=rss">BBC 报道</a></p>
+</li>
+<li>
+<p><strong>💨 莫斯科炼油厂遇袭，黑色降雨</strong><br />
+   俄乌战争升级到莫斯科附近。<strong>地缘不确定性会推高安全成本</strong>，可能使企业更倾向选择国内云/开源方案，利好中国 AI 工具链发展。<br />
+<a href="https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss">BBC 报道</a></p>
+</li>
 </ol>
 <hr />
-<h2>GitHub 热门项目</h2>
-<h3>1. AutoGPT （⭐185k，Python）</h3>
+<h2>📂 GitHub 热门项目</h2>
+<h3>1. <code>superloglabs/superlog</code> ⭐ 915</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/Significant-Gravitas/AutoGPT</li>
-<li><strong>趋势</strong>：AI Agent 的代表项目，目标“让每个人都能用和构建 AI”。</li>
-<li><strong>对你</strong>：<strong>非常适合学习</strong>。纯 Python，从运行一个自治 Agent 开始，你能直观理解任务分解、工具调用、记忆等核心概念。建议先跑通“Forge”模块。</li>
+<li><strong>简介</strong>：开源可观测性工具，用 AI Agent <strong>自动修复软件</strong>（self-heal）。  </li>
+<li><strong>是否适合你</strong>：<strong>不推荐</strong>当前阶段直接学。它用 TypeScript 编写，侧重运维和复杂架构，你基础弱的话容易迷失。<strong>建议先掌握基础后端和监控概念后再看</strong>。  </li>
+<li><strong>链接</strong>：https://github.com/superloglabs/superlog</li>
 </ul>
-<h3>2. n8n （⭐193k，TypeScript）</h3>
+<h3>2. <code>fkiene/llmtrim</code> ⭐ 85</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/n8n-io/n8n</li>
-<li><strong>趋势</strong>：开源 Zapier 替代品，原生 AI 节点（LLM、向量数据库）。</li>
-<li><strong>对你</strong>：<strong>强烈推荐</strong>。你关注“后端转 AI”和自动化工具，n8n 让你用拖拽搭建复杂工作流，同时支持写自定义代码（JavaScript/TypeScript）。学完可直接做个人自动化工具箱。</li>
+<li><strong>简介</strong>：本地代理压缩 LLM 请求的 token 消耗，实测节省输入 31%、输出 74%，<strong>不改变回答结果</strong>。支持 Python、Rust 等多种语言。  </li>
+<li><strong>是否适合你</strong>：<strong>非常适合</strong>。你可以作为<strong>第一个动手项目</strong>：部署它的 Python 版本，跑一个测试 API，体验“费用优化”这个过程。这直接对应“后端转 AI”的实际需求。  </li>
+<li><strong>链接</strong>：https://github.com/fkiene/llmtrim</li>
 </ul>
-<h3>3. Dify （⭐145k，TypeScript）</h3>
+<h3>3. <code>XiaomiMiMo/MiMo-Code</code> ⭐ 10,139</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/langgenius/dify</li>
-<li><strong>趋势</strong>：生产级 Agent + RAG 平台，支持多模型编排。</li>
-<li><strong>对你</strong>：<strong>适合学习</strong>。如果你对 RAG 感兴趣，Dify 是少有的低代码+高可配置方案。但注意它更偏向部署和应用，代码基础弱时先看文档和社区教程，不急于啃源码。</li>
+<li><strong>简介</strong>：小米开源，探索“模型与 Agent 共同进化”。项目结构可能包含多个 Agent 协作模式、记忆、工具调用。  </li>
+<li><strong>是否适合你</strong>：<strong>值得深入阅读代码</strong>，但可能需要先看文档。建议你<strong>从 README 开始</strong>，理解设计理念，然后尝试运行 demo。适合作为<strong>学习 Agent 概念的第二个项目</strong>。  </li>
+<li><strong>链接</strong>：https://github.com/XiaomiMiMo/MiMo-Code</li>
 </ul>
-<h3>4. open-webui （⭐142k，Python）</h3>
+<h3>4. <code>Dong90/oh-my-taiyiforge</code> ⭐ 398</h3>
 <ul>
-<li><strong>链接</strong>：https://github.com/open-webui/open-webui</li>
-<li><strong>趋势</strong>：最火的本地 AI 聊天界面，支持 Ollama、OpenAI。</li>
-<li><strong>对你</strong>：<strong>轻松入门</strong>。纯 Python 后端+简单前端，你不必写代码也能部署自己的 AI 助手。适合理解“模型接入-前端展示”全流程。</li>
-</ul>
-<h3>5. hermes-agent （⭐198k，Python）</h3>
-<ul>
-<li><strong>链接</strong>：https://github.com/NousResearch/hermes-agent</li>
-<li><strong>趋势</strong>：“与你一起成长的 Agent”，强调可扩展性。</li>
-<li><strong>对你</strong>：<strong>中高级学习材料</strong>。代码质量高，但涉及 LangChain、工具注册等进阶概念。建议先完成 AutoGPT 或 n8n 项目后再阅读其源码，理解如何设计模块化 Agent。</li>
-</ul>
-<h3>其他值得一看</h3>
-<ul>
-<li><strong>JavaGuide</strong> （⭐156k，JavaScript）：面试导向，对你现阶段偏项目学习帮助不大，可作工具书。</li>
-<li><strong>superpowers</strong> （⭐234k，Shell）：框架+方法论，概念大于代码，适合有一定基础后借鉴设计思路。</li>
-<li><strong>openclaw</strong> （⭐379k，TypeScript）：个人 AI 助手，星数最高但结构复杂，暂不推荐。</li>
+<li><strong>简介</strong>：AI 工作流自动化插件，用于 Claude/Codex 的<strong>智能代码生成</strong>。  </li>
+<li><strong>是否适合你</strong>：<strong>中等推荐</strong>。如果你已经在使用 Claude 或 Codex 写代码，这个插件能帮你自动化重复流程。但它是针对已有工作流的，你现阶段先体验一下就好。  </li>
+<li><strong>链接</strong>：https://github.com/Dong90/oh-my-taiyiforge</li>
 </ul>
 <hr />
-<h2>AI 发展动态（趋势影响）</h2>
-<h3>1. OpenAI 收购 Ona（来源：openai.com）</h3>
+<h2>🤖 AI 发展动态</h2>
+<h3>1. OpenAI 收购 Ona → Codex 升级为“持久 Agent”</h3>
 <ul>
-<li><strong>趋势</strong>：Ona 提供安全、持久的云环境，使 AI Agent 能长期运行（如管理邮箱、操作企业系统）。这意味着“AI 编程助手 Codex”将升级为“24小时在线的运维 Agent”。</li>
-<li><strong>对就业/政策</strong>：后端工程师转 AI 的需求进一步明确——企业需要熟悉云基础设施（Docker、K8s）的人来管理这些 Agent。政策上，代理长期运行可能引发隐私和计算资源监管。</li>
+<li><strong>趋势</strong>：AI 开发工具正在从“一次性问答”转向<strong>持久化、长时运行的任务 Agent</strong>。  </li>
+<li><strong>对你的影响</strong>：你关注“后端转 AI”，这正是方向 —— 后端工程师擅长管理状态、异步任务、错误重试，这些能力在 Agent 场景下变得更重要。<strong>建议关注 Codex 后续的 API 变化</strong>，学习如何通过 API 构建长时间运行的 AI 应用。  </li>
+<li><a href="https://openai.com/index/openai-to-acquire-ona">原文</a></li>
 </ul>
-<h3>2. OpenAI 推出“部署模拟”（来源：openai.com）</h3>
+<h3>2. OpenAI 推出“部署模拟”提前预测模型行为</h3>
 <ul>
-<li><strong>趋势</strong>：发布前先模拟真实对话环境测试模型行为，降低上线风险。这是大模型安全评估的标准化步骤。</li>
-<li><strong>对你</strong>：未来你将更容易找到“可安全使用”的开源模型，创业门槛降低。学习 RAG 时要注意输出质量控制，模拟测试会成为主流做法。</li>
+<li><strong>趋势</strong>：AI 安全评估越来越重要，模拟环境可能成为企业部署的必备环节。  </li>
+<li><strong>对你的影响</strong>：如果你未来做 AI 应用开发，<strong>部署前验证是个新技能点</strong>。可以关注模拟工具的使用方式，但暂时不用深入学习。  </li>
+<li><a href="https://openai.com/index/deployment-simulation">原文</a></li>
+</ul>
+<h3>3. OpenAI 模型可通过 Oracle Cloud 承诺购买</h3>
+<ul>
+<li><strong>趋势</strong>：AI 能力被“打包”进企业云合同，<strong>降低了企业接入门槛</strong>。  </li>
+<li><strong>对你的影响</strong>：国内也可能类似（华为云、阿里云引入国产模型）。<strong>建议你熟悉一个主流云的 AI 服务套餐</strong>，比如阿里云的百炼平台，这对求职有加分。  </li>
+<li><a href="https://openai.com/index/openai-on-oracle-cloud">原文</a></li>
+</ul>
+<h3>4. AI 诊断罕见儿童疾病</h3>
+<ul>
+<li><strong>趋势</strong>：推理模型在专业领域的垂直应用加速。  </li>
+<li><strong>对你的影响</strong>：展示<strong>AI + 行业知识</strong>的价值。你可以类比思考：后端 + AI + 某个行业（如医疗、金融）更容易做出成果。<strong>不用急着追这个具体新闻</strong>，但应把握“用 AI 解决真实问题”的思路。  </li>
+<li><a href="https://openai.com/index/diagnose-rare-childhood-diseases">原文</a></li>
 </ul>
 <hr />
-<h2>国际形势与科技政策</h2>
-<p>今日材料中未涉及国际形势与科技政策相关内容。近期可关注：
-- 欧盟 AI 法案执行细节（影响开源模型许可证）
-- 美国对华芯片出口管制（影响本地部署推理成本）
-- 国内“人工智能+”产业政策（利好后端转AI的岗位）</p>
+<h2>🌍 国际形势</h2>
+<h3>1. 美伊谈判 + 霍尔木兹海峡危机</h3>
+<ul>
+<li><strong>关键信息</strong>：伊朗声称已关闭霍尔木兹海峡，美国否认。谈判在瑞士进行。  </li>
+<li><strong>与科技/就业/政策的关系</strong>：  </li>
+<li>若海峡真正受阻，全球油价飙升 → 芯片制造、数据中心能源成本上升 → 可能加速国内<strong>新能源+自研芯片</strong>政策。  </li>
+<li>地缘风险让企业更重视“供应链安全”，利好<strong>国产替代技术</strong>（如国产模型、数据库、芯片）。  </li>
+<li><strong>对你</strong>：<strong>关注中国政府后续可能推出的“科技自主”专项补贴或减税</strong>，这会影响 AI 岗位需求。  </li>
+<li><a href="https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&amp;at_campaign=rss">BBC 原文</a></li>
+</ul>
+<h3>2. 俄乌战争升级：莫斯科炼油厂遭袭</h3>
+<ul>
+<li><strong>关键信息</strong>：几乎 200 架无人机袭击莫斯科附近，导致炼油厂火灾和“黑雨”。  </li>
+<li><strong>与科技/就业/政策的关系</strong>：  </li>
+<li>战争升级增加全球不确定性，<strong>资本更倾向流入“避险”区域</strong>，中国可能获得更多外资（包括科技领域）。  </li>
+<li>国内军工+AI 结合方向可能加速，但与你个人关联度较低。  </li>
+<li><strong>对你</strong>：不必过度关注，但需知道地缘波动<strong>可能影响企业的国际化招聘计划</strong>，建议优先关注国内企业机会。  </li>
+<li><a href="https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss">BBC 原文</a></li>
+</ul>
 <hr />
-<h2>对我的个人建议（具体行动）</h2>
-<ol>
-<li><strong>立刻动手</strong>：本周用 <strong>AutoGPT Forge</strong> 做一个最简单的“自动查天气预报并邮件提醒” Agent，用时约4小时。过程中熟悉 Python 虚拟环境、API 调用、LangChain 的基本链。</li>
-<li><strong>长期工具</strong>：学会 <strong>n8n</strong> 的本地部署和AI节点配置（耗时1-2天），它能直接帮你自动化日常重复任务（如爬取热点文章→摘要→发邮件）。这是你“后端转AI”的活名片。</li>
-<li><strong>学习顺序</strong>：AutoGPT → n8n → Dify 的 RAG 实践。每完成一个写笔记发到你的博客/仓库，这是积累面试作品的最佳方式。</li>
-<li><strong>关注点</strong>：多看 open-webui 的 Issues 区，了解用户遇到的实际问题（如模型加载慢、文件上传错误），这些就是真实需求，也是你未来求职的痛点经验。</li>
-<li><strong>行动提醒</strong>：周末用 n8n 自动化你关注的技术新闻抓取（比如 GitHub Trending），结合 OpenAI API 做每日简报——这个项目本身就能直接展示你的自动化+AI整合能力。</li>
-</ol>
+<h2>🇨🇳 中国国家政策</h2>
+<p><strong>本期缺少直接、有内容的政策来源。</strong><br />
+提供材料仅是 <code>gov.cn</code> 首页列表页，无任何具体新闻、文件或解读。<br />
+- 无法依据此分析科技、就业、公考等政策动向。<br />
+- <strong>建议日常补充</strong>：关注“中国政府网”的具体栏目，或订阅“澎湃新闻”“界面新闻”的政策解读。</p>
+<blockquote>
+<p>⚠️ 本期没有强行用其他来源拼凑政策结论。</p>
+</blockquote>
+<hr />
+<h2>🎯 具体行动建议</h2>
+<h3>1️⃣ 动手项目：先从 <code>llmtrim</code> 开始</h3>
+<ul>
+<li><strong>操作</strong>：fork 仓库，按 README 用 Python 跑起本地代理，然后用一个免费 API key（如 OpenRouter）测试是否减少了 token 消耗。  </li>
+<li><strong>目的</strong>：体验“优化 AI 成本”是后端转 AI 的硬技能，简历上可以写“使用 llmtrim 降低 API 费用 30%”。  </li>
+<li><strong>时间</strong>：2 小时以内。</li>
+</ul>
+<h3>2️⃣ 学习项目：阅读 <code>MiMo-Code</code> 的 README 和架构图</h3>
+<ul>
+<li><strong>操作</strong>：打开项目，只看 Markdown 文档和 <code>docs/</code> 目录，理解“模型-代理共进化”思想。  </li>
+<li><strong>目的</strong>：建立 AI Agent 的顶层认知，为后续深入学 LangChain / AutoGPT 打基础。</li>
+</ul>
+<h3>3️⃣ 跟踪 OpenAI 收购 Ona 后的 Codex API 变化</h3>
+<ul>
+<li><strong>操作</strong>：关注 OpenAI 官方博客，等 Codex 更新后，试用“长时间运行”的 Agent 接口。  </li>
+<li><strong>目的</strong>：保持对“持久 Agent”技术的敏感度，这是下一波 AI 开发的前沿。</li>
+</ul>
+<h3>4️⃣ 每周固定 1 条国际新闻分析</h3>
+<ul>
+<li><strong>操作</strong>：从 BBC/Reuters 挑选一条涉及能源或科技的地缘新闻，写 50 字笔记，思考“这对国内科技政策有什么可能影响”。  </li>
+<li><strong>目的</strong>：训练自己将国际局势与个人职业（后端转 AI）挂钩的能力，面试时能展示广度。</li>
+</ul>
+<h3>5️⃣ 补充政策信息来源</h3>
+<ul>
+<li><strong>操作</strong>：在公众号添加“国是直通车”“经济日报”，每天花 3 分钟看标题。同时订阅“国务院公报”邮件。  </li>
+<li><strong>目的</strong>：弥补本期政策空白，为公考或科技方向决策提供依据。</li>
+</ul>
 <h2>一、今日最值得关注的 5 件事</h2>
 <ul>
-<li><strong>Snailclimb/JavaGuide</strong>（GitHub，评分 5.0）：JavaScript 项目，Stars 156494，适合评估是否能拆成练手项目。</li>
-<li><strong>langgenius/dify</strong>（GitHub，评分 5.0）：TypeScript 项目，Stars 145989，适合评估是否能拆成练手项目。</li>
-<li><strong>open-webui/open-webui</strong>（GitHub，评分 4.99）：Python 项目，Stars 142445，适合评估是否能拆成练手项目。</li>
-<li><strong>x1xhlol/system-prompts-and-models-of-ai-tools</strong>（GitHub，评分 4.99）：Unknown 项目，Stars 140942，适合评估是否能拆成练手项目。</li>
-<li><strong>NousResearch/hermes-agent</strong>（GitHub，评分 4.91）：Python 项目，Stars 198441，适合评估是否能拆成练手项目。</li>
+<li><strong>superloglabs/superlog</strong>（GitHub，评分 4.53）：TypeScript 项目，Stars 915，适合评估是否能拆成练手项目。</li>
+<li><strong>fkiene/llmtrim</strong>（GitHub，评分 4.48）：Rust 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+<li><strong>XiaomiMiMo/MiMo-Code</strong>（GitHub，评分 4.47）：TypeScript 项目，Stars 10139，适合评估是否能拆成练手项目。</li>
+<li><strong>Dong90/oh-my-taiyiforge</strong>（GitHub，评分 4.45）：TypeScript 项目，Stars 398，适合评估是否能拆成练手项目。</li>
+<li><strong>OpenAI to acquire Ona</strong>（openai.com，评分 3.7）：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
 <h2>二、GitHub 热门项目</h2>
-<h3>Snailclimb/JavaGuide</h3>
+<h3>superloglabs/superlog</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/Snailclimb/JavaGuide</li>
-<li>评分：5.0</li>
-<li>简介：Java 面试 &amp; 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发 Stars: 156494; Forks: 46152; Language: JavaScript</li>
-<li>为什么值得关注：JavaScript 项目，Stars 156494，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/superloglabs/superlog</li>
+<li>评分：4.53</li>
+<li>简介：Open-source observability tool that uses AI agents to self-heal your software Stars: 915; Forks: 67; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 915，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>langgenius/dify</h3>
+<h3>fkiene/llmtrim</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/langgenius/dify</li>
-<li>评分：5.0</li>
-<li>简介：Production-ready platform for agentic workflow development. Stars: 145989; Forks: 22958; Language: TypeScript</li>
-<li>为什么值得关注：TypeScript 项目，Stars 145989，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/fkiene/llmtrim</li>
+<li>评分：4.48</li>
+<li>简介：Local proxy that compresses your LLM API requests so you pay less, with no change to the answers. Trims wasted tokens from prompts, history, tool output, and code before they're sent: -31% input / -74% output, measured live. Any provider, no extra model calls. Also an MCP server and embeddable library (Rust, Python, Ruby, Kotlin, Swift, JS/TS). Stars: 85; Forks: 5; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 85，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>open-webui/open-webui</h3>
+<h3>XiaomiMiMo/MiMo-Code</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/open-webui/open-webui</li>
-<li>评分：4.99</li>
-<li>简介：User-friendly AI Interface (Supports Ollama, OpenAI API, ...) Stars: 142445; Forks: 20482; Language: Python</li>
-<li>为什么值得关注：Python 项目，Stars 142445，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>x1xhlol/system-prompts-and-models-of-ai-tools</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools</li>
-<li>评分：4.99</li>
-<li>简介：FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia &amp; v0. (And other Open Sourced) System Prompts, Internal Tools &amp; AI Models Stars: 140942; Forks: 34740; Language: Unknown</li>
-<li>为什么值得关注：Unknown 项目，Stars 140942，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>NousResearch/hermes-agent</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/NousResearch/hermes-agent</li>
-<li>评分：4.91</li>
-<li>简介：The agent that grows with you Stars: 198441; Forks: 35205; Language: Python</li>
-<li>为什么值得关注：Python 项目，Stars 198441，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>Significant-Gravitas/AutoGPT</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/Significant-Gravitas/AutoGPT</li>
-<li>评分：4.91</li>
-<li>简介：AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. Stars: 185045; Forks: 46127; Language: Python</li>
-<li>为什么值得关注：Python 项目，Stars 185045，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>n8n-io/n8n</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/n8n-io/n8n</li>
-<li>评分：4.83</li>
-<li>简介：Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. Stars: 193381; Forks: 58703; Language: TypeScript</li>
-<li>为什么值得关注：TypeScript 项目，Stars 193381，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>f/prompts.chat</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/f/prompts.chat</li>
-<li>评分：4.83</li>
-<li>简介：f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy. Stars: 163990; Forks: 21254; Language: HTML</li>
-<li>为什么值得关注：HTML 项目，Stars 163990，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>obra/superpowers</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/obra/superpowers</li>
+<li>链接：https://github.com/XiaomiMiMo/MiMo-Code</li>
 <li>评分：4.47</li>
-<li>简介：An agentic skills framework &amp; software development methodology that works. Stars: 234366; Forks: 20803; Language: Shell</li>
-<li>为什么值得关注：Shell 项目，Stars 234366，适合评估是否能拆成练手项目。</li>
+<li>简介：MiMo Code: Where Models and Agents Co-Evolve Stars: 10139; Forks: 940; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 10139，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>openclaw/openclaw</h3>
+<h3>Dong90/oh-my-taiyiforge</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/openclaw/openclaw</li>
-<li>评分：4.11</li>
-<li>简介：Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 Stars: 379705; Forks: 79485; Language: TypeScript</li>
-<li>为什么值得关注：TypeScript 项目，Stars 379705，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/Dong90/oh-my-taiyiforge</li>
+<li>评分：4.45</li>
+<li>简介：AI workflow automation plugin for intelligent code generation with Claude/Codex Stars: 398; Forks: 9; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 398，适合评估是否能拆成练手项目。</li>
 </ul>
 <h2>三、AI 发展动态</h2>
 <h3>OpenAI to acquire Ona</h3>
@@ -206,28 +221,74 @@ code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
 <li>简介：OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h2>四、国际形势与科技政策</h2>
+<h3>Access OpenAI models and Codex through your Oracle cloud commitment</h3>
 <ul>
-<li>暂无高分内容。</li>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-on-oracle-cloud</li>
+<li>评分：3.54</li>
+<li>简介：Access OpenAI models and Codex through Oracle Cloud, using existing commitments to build and deploy AI with enterprise security and governance.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h2>五、对我的个人建议</h2>
-<ol>
-<li>优先收藏并拆解：Snailclimb/JavaGuide。</li>
-<li>深入阅读：OpenAI to acquire Ona。</li>
-<li>把值得关注的技术方向转成一个小项目或读书笔记，避免只停留在信息浏览。</li>
-</ol>
-<h2>六、来源链接</h2>
+<h3>Using AI to help physicians diagnose rare genetic diseases affecting children</h3>
 <ul>
-<li><a href="https://github.com/Snailclimb/JavaGuide">Snailclimb/JavaGuide</a> - GitHub</li>
-<li><a href="https://github.com/langgenius/dify">langgenius/dify</a> - GitHub</li>
-<li><a href="https://github.com/open-webui/open-webui">open-webui/open-webui</a> - GitHub</li>
-<li><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">x1xhlol/system-prompts-and-models-of-ai-tools</a> - GitHub</li>
-<li><a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a> - GitHub</li>
-<li><a href="https://github.com/Significant-Gravitas/AutoGPT">Significant-Gravitas/AutoGPT</a> - GitHub</li>
-<li><a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a> - GitHub</li>
-<li><a href="https://github.com/f/prompts.chat">f/prompts.chat</a> - GitHub</li>
-<li><a href="https://github.com/obra/superpowers">obra/superpowers</a> - GitHub</li>
-<li><a href="https://github.com/openclaw/openclaw">openclaw/openclaw</a> - GitHub</li>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/diagnose-rare-childhood-diseases</li>
+<li>评分：3.5</li>
+<li>简介：Researchers used an OpenAI reasoning model to help diagnose rare diseases, identifying 18 new diagnoses in previously unsolved cases.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>US-Iran talks to begin in Switzerland as Tehran says it closed Strait of Hormuz</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The US disputed Iran's claim the waterway is shut, a move Tehran says was a response to Israeli attacks in Lebanon.</li>
+<li>为什么值得关注：命中国际关键词 Iran、Israel，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Steve Rosenberg: Moscow oil refinery attack brings Russia's war with Ukraine closer to home</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：There are moments when life in Moscow feels completely normal - Thursday morning wasn't one of them, writes Steve Rosenberg.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Moscow residents complain of black rain after largest Ukrainian attack hits oil refinery</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.com/news/articles/c98291g5rr1o?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.5</li>
+<li>简介：A refinery and a shopping centre burned after almost 200 Ukrainian drones were launched towards an area to the south-east of the Russian capital.</li>
+<li>为什么值得关注：命中国际关键词 Russia，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é¦é¡µ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：superloglabs/superlog。</li>
+<li>重点阅读：US-Iran talks to begin in Switzerland as Tehran says it closed Strait of Hormuz。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/superloglabs/superlog">superloglabs/superlog</a> - GitHub</li>
+<li><a href="https://github.com/fkiene/llmtrim">fkiene/llmtrim</a> - GitHub</li>
+<li><a href="https://github.com/XiaomiMiMo/MiMo-Code">XiaomiMiMo/MiMo-Code</a> - GitHub</li>
+<li><a href="https://github.com/Dong90/oh-my-taiyiforge">Dong90/oh-my-taiyiforge</a> - GitHub</li>
 <li><a href="https://openai.com/index/openai-to-acquire-ona">OpenAI to acquire Ona</a> - openai.com</li>
 <li><a href="https://openai.com/index/deployment-simulation">Predicting model behavior before release by simulating deployment</a> - openai.com</li>
+<li><a href="https://www.bbc.com/news/articles/cwyekkwm1mmo?at_medium=RSS&amp;at_campaign=rss">US-Iran talks to begin in Switzerland as Tehran says it closed Strait of Hormuz</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.com/news/articles/cp3xqkxp3x5o?at_medium=RSS&amp;at_campaign=rss">Steve Rosenberg: Moscow oil refinery attack brings Russia's war with Ukraine closer to home</a> - feeds.bbci.co.uk</li>
+<li><a href="https://openai.com/index/openai-on-oracle-cloud">Access OpenAI models and Codex through your Oracle cloud commitment</a> - openai.com</li>
+<li><a href="https://openai.com/index/diagnose-rare-childhood-diseases">Using AI to help physicians diagnose rare genetic diseases affecting children</a> - openai.com</li>
+<li><a href="https://www.bbc.com/news/articles/c98291g5rr1o?at_medium=RSS&amp;at_campaign=rss">Moscow residents complain of black rain after largest Ukrainian attack hits oil refinery</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
 </ul></main></body></html>
