@@ -1,0 +1,233 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-06-21</h1>
+<h2>AI 生成综述</h2>
+<h1>2026-06-21 个人简报</h1>
+<h2>今日最值得关注的 5 件事</h2>
+<ol>
+<li><strong>AutoGPT 星数破 18.5万</strong> – 最易上手的全栈 AI Agent 项目，适合你边做边学自动化。</li>
+<li><strong>n8n 工作流自动化平台</strong> – 可视化+自定义代码，400+ 集成，后端转 AI 的最佳切入工具。</li>
+<li><strong>OpenAI 收购 Ona</strong> – 预示未来 AI Agent 将长周期运行在企业云端，后端能力更值钱。</li>
+<li><strong>Dify 成 Agent 开发首选平台</strong> – 生产级 Agent 工作流，帮你低代码搭建 RAG 应用。</li>
+<li><strong>OpenAI 发布“部署模拟”技术</strong> – 安全评估前置化，AI 应用落地门槛降低。</li>
+</ol>
+<hr />
+<h2>GitHub 热门项目</h2>
+<h3>1. AutoGPT （⭐185k，Python）</h3>
+<ul>
+<li><strong>链接</strong>：https://github.com/Significant-Gravitas/AutoGPT</li>
+<li><strong>趋势</strong>：AI Agent 的代表项目，目标“让每个人都能用和构建 AI”。</li>
+<li><strong>对你</strong>：<strong>非常适合学习</strong>。纯 Python，从运行一个自治 Agent 开始，你能直观理解任务分解、工具调用、记忆等核心概念。建议先跑通“Forge”模块。</li>
+</ul>
+<h3>2. n8n （⭐193k，TypeScript）</h3>
+<ul>
+<li><strong>链接</strong>：https://github.com/n8n-io/n8n</li>
+<li><strong>趋势</strong>：开源 Zapier 替代品，原生 AI 节点（LLM、向量数据库）。</li>
+<li><strong>对你</strong>：<strong>强烈推荐</strong>。你关注“后端转 AI”和自动化工具，n8n 让你用拖拽搭建复杂工作流，同时支持写自定义代码（JavaScript/TypeScript）。学完可直接做个人自动化工具箱。</li>
+</ul>
+<h3>3. Dify （⭐145k，TypeScript）</h3>
+<ul>
+<li><strong>链接</strong>：https://github.com/langgenius/dify</li>
+<li><strong>趋势</strong>：生产级 Agent + RAG 平台，支持多模型编排。</li>
+<li><strong>对你</strong>：<strong>适合学习</strong>。如果你对 RAG 感兴趣，Dify 是少有的低代码+高可配置方案。但注意它更偏向部署和应用，代码基础弱时先看文档和社区教程，不急于啃源码。</li>
+</ul>
+<h3>4. open-webui （⭐142k，Python）</h3>
+<ul>
+<li><strong>链接</strong>：https://github.com/open-webui/open-webui</li>
+<li><strong>趋势</strong>：最火的本地 AI 聊天界面，支持 Ollama、OpenAI。</li>
+<li><strong>对你</strong>：<strong>轻松入门</strong>。纯 Python 后端+简单前端，你不必写代码也能部署自己的 AI 助手。适合理解“模型接入-前端展示”全流程。</li>
+</ul>
+<h3>5. hermes-agent （⭐198k，Python）</h3>
+<ul>
+<li><strong>链接</strong>：https://github.com/NousResearch/hermes-agent</li>
+<li><strong>趋势</strong>：“与你一起成长的 Agent”，强调可扩展性。</li>
+<li><strong>对你</strong>：<strong>中高级学习材料</strong>。代码质量高，但涉及 LangChain、工具注册等进阶概念。建议先完成 AutoGPT 或 n8n 项目后再阅读其源码，理解如何设计模块化 Agent。</li>
+</ul>
+<h3>其他值得一看</h3>
+<ul>
+<li><strong>JavaGuide</strong> （⭐156k，JavaScript）：面试导向，对你现阶段偏项目学习帮助不大，可作工具书。</li>
+<li><strong>superpowers</strong> （⭐234k，Shell）：框架+方法论，概念大于代码，适合有一定基础后借鉴设计思路。</li>
+<li><strong>openclaw</strong> （⭐379k，TypeScript）：个人 AI 助手，星数最高但结构复杂，暂不推荐。</li>
+</ul>
+<hr />
+<h2>AI 发展动态（趋势影响）</h2>
+<h3>1. OpenAI 收购 Ona（来源：openai.com）</h3>
+<ul>
+<li><strong>趋势</strong>：Ona 提供安全、持久的云环境，使 AI Agent 能长期运行（如管理邮箱、操作企业系统）。这意味着“AI 编程助手 Codex”将升级为“24小时在线的运维 Agent”。</li>
+<li><strong>对就业/政策</strong>：后端工程师转 AI 的需求进一步明确——企业需要熟悉云基础设施（Docker、K8s）的人来管理这些 Agent。政策上，代理长期运行可能引发隐私和计算资源监管。</li>
+</ul>
+<h3>2. OpenAI 推出“部署模拟”（来源：openai.com）</h3>
+<ul>
+<li><strong>趋势</strong>：发布前先模拟真实对话环境测试模型行为，降低上线风险。这是大模型安全评估的标准化步骤。</li>
+<li><strong>对你</strong>：未来你将更容易找到“可安全使用”的开源模型，创业门槛降低。学习 RAG 时要注意输出质量控制，模拟测试会成为主流做法。</li>
+</ul>
+<hr />
+<h2>国际形势与科技政策</h2>
+<p>今日材料中未涉及国际形势与科技政策相关内容。近期可关注：
+- 欧盟 AI 法案执行细节（影响开源模型许可证）
+- 美国对华芯片出口管制（影响本地部署推理成本）
+- 国内“人工智能+”产业政策（利好后端转AI的岗位）</p>
+<hr />
+<h2>对我的个人建议（具体行动）</h2>
+<ol>
+<li><strong>立刻动手</strong>：本周用 <strong>AutoGPT Forge</strong> 做一个最简单的“自动查天气预报并邮件提醒” Agent，用时约4小时。过程中熟悉 Python 虚拟环境、API 调用、LangChain 的基本链。</li>
+<li><strong>长期工具</strong>：学会 <strong>n8n</strong> 的本地部署和AI节点配置（耗时1-2天），它能直接帮你自动化日常重复任务（如爬取热点文章→摘要→发邮件）。这是你“后端转AI”的活名片。</li>
+<li><strong>学习顺序</strong>：AutoGPT → n8n → Dify 的 RAG 实践。每完成一个写笔记发到你的博客/仓库，这是积累面试作品的最佳方式。</li>
+<li><strong>关注点</strong>：多看 open-webui 的 Issues 区，了解用户遇到的实际问题（如模型加载慢、文件上传错误），这些就是真实需求，也是你未来求职的痛点经验。</li>
+<li><strong>行动提醒</strong>：周末用 n8n 自动化你关注的技术新闻抓取（比如 GitHub Trending），结合 OpenAI API 做每日简报——这个项目本身就能直接展示你的自动化+AI整合能力。</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>Snailclimb/JavaGuide</strong>（GitHub，评分 5.0）：JavaScript 项目，Stars 156494，适合评估是否能拆成练手项目。</li>
+<li><strong>langgenius/dify</strong>（GitHub，评分 5.0）：TypeScript 项目，Stars 145989，适合评估是否能拆成练手项目。</li>
+<li><strong>open-webui/open-webui</strong>（GitHub，评分 4.99）：Python 项目，Stars 142445，适合评估是否能拆成练手项目。</li>
+<li><strong>x1xhlol/system-prompts-and-models-of-ai-tools</strong>（GitHub，评分 4.99）：Unknown 项目，Stars 140942，适合评估是否能拆成练手项目。</li>
+<li><strong>NousResearch/hermes-agent</strong>（GitHub，评分 4.91）：Python 项目，Stars 198441，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>Snailclimb/JavaGuide</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Snailclimb/JavaGuide</li>
+<li>评分：5.0</li>
+<li>简介：Java 面试 &amp; 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发、系统设计与 AI 应用开发 Stars: 156494; Forks: 46152; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 156494，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>langgenius/dify</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/langgenius/dify</li>
+<li>评分：5.0</li>
+<li>简介：Production-ready platform for agentic workflow development. Stars: 145989; Forks: 22958; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 145989，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>open-webui/open-webui</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/open-webui/open-webui</li>
+<li>评分：4.99</li>
+<li>简介：User-friendly AI Interface (Supports Ollama, OpenAI API, ...) Stars: 142445; Forks: 20482; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 142445，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>x1xhlol/system-prompts-and-models-of-ai-tools</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools</li>
+<li>评分：4.99</li>
+<li>简介：FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia &amp; v0. (And other Open Sourced) System Prompts, Internal Tools &amp; AI Models Stars: 140942; Forks: 34740; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 140942，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>NousResearch/hermes-agent</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/NousResearch/hermes-agent</li>
+<li>评分：4.91</li>
+<li>简介：The agent that grows with you Stars: 198441; Forks: 35205; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 198441，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Significant-Gravitas/AutoGPT</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Significant-Gravitas/AutoGPT</li>
+<li>评分：4.91</li>
+<li>简介：AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. Stars: 185045; Forks: 46127; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 185045，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>n8n-io/n8n</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/n8n-io/n8n</li>
+<li>评分：4.83</li>
+<li>简介：Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations. Stars: 193381; Forks: 58703; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 193381，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>f/prompts.chat</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/f/prompts.chat</li>
+<li>评分：4.83</li>
+<li>简介：f.k.a. Awesome ChatGPT Prompts. Share, discover, and collect prompts from the community. Free and open source — self-host for your organization with complete privacy. Stars: 163990; Forks: 21254; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 163990，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>obra/superpowers</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/obra/superpowers</li>
+<li>评分：4.47</li>
+<li>简介：An agentic skills framework &amp; software development methodology that works. Stars: 234366; Forks: 20803; Language: Shell</li>
+<li>为什么值得关注：Shell 项目，Stars 234366，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>openclaw/openclaw</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/openclaw/openclaw</li>
+<li>评分：4.11</li>
+<li>简介：Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 Stars: 379705; Forks: 79485; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 379705，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI to acquire Ona</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-to-acquire-ona</li>
+<li>评分：3.7</li>
+<li>简介：OpenAI plans to acquire Ona to expand Codex with secure, persistent cloud environments, enabling long-running AI agents across enterprise workflows.</li>
+<li>为什么值得关注：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Predicting model behavior before release by simulating deployment</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/deployment-simulation</li>
+<li>评分：3.64</li>
+<li>简介：OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势与科技政策</h2>
+<ul>
+<li>暂无高分内容。</li>
+</ul>
+<h2>五、对我的个人建议</h2>
+<ol>
+<li>优先收藏并拆解：Snailclimb/JavaGuide。</li>
+<li>深入阅读：OpenAI to acquire Ona。</li>
+<li>把值得关注的技术方向转成一个小项目或读书笔记，避免只停留在信息浏览。</li>
+</ol>
+<h2>六、来源链接</h2>
+<ul>
+<li><a href="https://github.com/Snailclimb/JavaGuide">Snailclimb/JavaGuide</a> - GitHub</li>
+<li><a href="https://github.com/langgenius/dify">langgenius/dify</a> - GitHub</li>
+<li><a href="https://github.com/open-webui/open-webui">open-webui/open-webui</a> - GitHub</li>
+<li><a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools">x1xhlol/system-prompts-and-models-of-ai-tools</a> - GitHub</li>
+<li><a href="https://github.com/NousResearch/hermes-agent">NousResearch/hermes-agent</a> - GitHub</li>
+<li><a href="https://github.com/Significant-Gravitas/AutoGPT">Significant-Gravitas/AutoGPT</a> - GitHub</li>
+<li><a href="https://github.com/n8n-io/n8n">n8n-io/n8n</a> - GitHub</li>
+<li><a href="https://github.com/f/prompts.chat">f/prompts.chat</a> - GitHub</li>
+<li><a href="https://github.com/obra/superpowers">obra/superpowers</a> - GitHub</li>
+<li><a href="https://github.com/openclaw/openclaw">openclaw/openclaw</a> - GitHub</li>
+<li><a href="https://openai.com/index/openai-to-acquire-ona">OpenAI to acquire Ona</a> - openai.com</li>
+<li><a href="https://openai.com/index/deployment-simulation">Predicting model behavior before release by simulating deployment</a> - openai.com</li>
+</ul></main></body></html>
