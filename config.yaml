@@ -11,6 +11,24 @@ briefing:
     github: 2
     ai_news: 3
     world_news: 2
+    china_policy: 2
+  category_maximums:
+    github: 4
+    ai_news: 4
+    world_news: 4
+    china_policy: 4
+
+history:
+  repeat_penalty_days:
+    github: 7
+    ai_news: 3
+    world_news: 3
+    china_policy: 3
+  repeat_penalty_points:
+    github: 1.4
+    ai_news: 0.8
+    world_news: 0.8
+    china_policy: 0.8
 
 llm:
   provider: deepseek
@@ -25,6 +43,8 @@ github:
   max_repos: 10
   min_stars: 50
   lookback_days: 14
+  fresh_created_days: 30
+  repeat_suppression_days: 7
   topics:
     - ai
     - llm
@@ -100,6 +120,48 @@ world_news:
   rss_sources:
     - https://feeds.bbci.co.uk/news/world/rss.xml
     - https://www.aljazeera.com/xml/rss/all.xml
+    - https://www.theguardian.com/world/rss
+  gdelt_queries:
+    - "(US China OR China technology OR semiconductor OR export controls OR AI regulation)"
+    - "(Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)"
+    - "(global economy OR technology policy OR chip supply chain OR Taiwan)"
+
+china_policy:
+  enabled: true
+  max_items: 12
+  fallback_when_no_keyword_match: true
+  keywords:
+    - 人工智能
+    - 数字经济
+    - 数据要素
+    - 算力
+    - 半导体
+    - 新质生产力
+    - 科技创新
+    - 产业政策
+    - 就业
+    - 公考
+    - 政府工作报告
+    - 数字政府
+    - 网络安全
+    - 数据安全
+    - 机器人
+  sources:
+    - name: 中国政府网
+      url: https://www.gov.cn/zhengce/zuixin/
+      base_url: https://www.gov.cn
+    - name: 国家发展改革委
+      url: https://www.ndrc.gov.cn/xwdt/xwfb/
+      base_url: https://www.ndrc.gov.cn
+    - name: 工业和信息化部
+      url: https://www.miit.gov.cn/zwgk/zcwj/index.html
+      base_url: https://www.miit.gov.cn
+    - name: 科学技术部
+      url: https://www.most.gov.cn/kjbgz/
+      base_url: https://www.most.gov.cn
+    - name: 国家网信办
+      url: https://www.cac.gov.cn/zcfg/A0903index_1.htm
+      base_url: https://www.cac.gov.cn
 
 scoring:
   relevance_weight: 0.4

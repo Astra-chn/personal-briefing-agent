@@ -36,10 +36,10 @@ class GitHubCollector:
         seen: set[str] = set()
         items: list[ContentItem] = []
 
-        for query in queries:
+        for query_spec in queries:
             try:
                 repos = retry(
-                    lambda q=query: self._search(q, max_repos),
+                    lambda q=query_spec: self._search(q, max_repos),
                     attempts=2,
                     delay_seconds=1,
                 )
@@ -58,19 +58,30 @@ class GitHubCollector:
 
         return items
 
-    def _build_queries(self, github_config: dict[str, Any]) -> list[str]:
+    def _build_queries(self, github_config: dict[str, Any]) -> list[dict[str, str]]:
         min_stars = int(github_config.get("min_stars", 50))
         lookback_days = int(github_config.get("lookback_days", 14))
+        fresh_created_days = int(github_config.get("fresh_created_days", 30))
         pushed_after = (now_beijing() - timedelta(days=lookback_days)).strftime("%Y-%m-%d")
-        base = f"stars:>={min_stars} pushed:>={pushed_after}"
+        created_after = (now_beijing() - timedelta(days=fresh_created_days)).strftime("%Y-%m-%d")
+        fresh_base = f"stars:>={min_stars} created:>={created_after}"
+        updated_base = f"stars:>={min_stars} pushed:>={pushed_after}"
 
         topics = github_config.get("topics", [])[:6]
         keywords = github_config.get("keywords", [])[:6]
-        queries = [f"topic:{topic} {base}" for topic in topics]
-        queries.extend(f"{keyword} in:name,description,readme {base}" for keyword in keywords)
-        return queries or [base]
+        queries: list[dict[str, str]] = []
+        for topic in topics:
+            queries.append({"q": f"topic:{topic} {fresh_base}", "sort": "updated"})
+        for keyword in keywords:
+            queries.append({"q": f"{keyword} in:name,description,readme {fresh_base}", "sort": "updated"})
 
-    def _search(self, query: str, max_repos: int) -> list[dict[str, Any]]:
+        # Keep a small high-star fallback, but run it after fresh queries so old
+        # evergreen repositories do not dominate every daily briefing.
+        for topic in topics[:3]:
+            queries.append({"q": f"topic:{topic} {updated_base}", "sort": "stars"})
+        return queries or [{"q": fresh_base, "sort": "updated"}]
+
+    def _search(self, query_spec: dict[str, str], max_repos: int) -> list[dict[str, Any]]:
         if self.session is None:
             raise RuntimeError("requests is not installed")
         headers = {
@@ -85,8 +96,8 @@ class GitHubCollector:
             self.API_URL,
             headers=headers,
             params={
-                "q": query,
-                "sort": "stars",
+                "q": query_spec["q"],
+                "sort": query_spec.get("sort", "updated"),
                 "order": "desc",
                 "per_page": max_repos,
             },

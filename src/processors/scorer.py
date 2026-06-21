@@ -39,7 +39,11 @@ IMPORTANT_KEYWORDS = (
 )
 
 
-def score_items(items: list[ContentItem], config: dict[str, Any]) -> list[ScoredItem]:
+def score_items(
+    items: list[ContentItem],
+    config: dict[str, Any],
+    history: dict[str, dict[str, Any]] | None = None,
+) -> list[ScoredItem]:
     scoring_config = config.get("scoring", {})
     weights = {
         "relevance": float(scoring_config.get("relevance_weight", 0.4)),
@@ -58,6 +62,10 @@ def score_items(items: list[ContentItem], config: dict[str, Any]) -> list[Scored
             "actionability": _keyword_score(item, ACTION_KEYWORDS),
         }
         total = sum(details[name] * weight for name, weight in weights.items())
+        repeat_penalty = _repeat_penalty(item, history or {}, config)
+        if repeat_penalty:
+            details["repeat_penalty"] = -repeat_penalty
+            total -= repeat_penalty
         scored.append(
             ScoredItem(
                 title=item.title,
@@ -69,7 +77,7 @@ def score_items(items: list[ContentItem], config: dict[str, Any]) -> list[Scored
                 keywords=item.keywords,
                 references=item.references,
                 metadata=item.metadata,
-                score=round(total, 2),
+                score=round(max(0.0, total), 2),
                 score_details={key: round(value, 2) for key, value in details.items()},
             )
         )
@@ -85,6 +93,8 @@ def filter_items(items: list[ScoredItem], config: dict[str, Any], mode: str) -> 
     selected = _with_category_minimums(selected, items, config)
     if not selected:
         selected = items[:max_items]
+    selected = _apply_category_maximums(selected, config)
+    selected = _fill_remaining(selected, items, config, max_items)
     return _cap_items(selected, max_items)
 
 
@@ -95,7 +105,7 @@ def _with_category_minimums(
 ) -> list[ScoredItem]:
     minimums = config.get("briefing", {}).get(
         "category_minimums",
-        {"github": 2, "ai_news": 3, "world_news": 2},
+        {"github": 2, "ai_news": 3, "world_news": 2, "china_policy": 2},
     )
     result = list(selected)
     selected_urls = {item.url for item in result}
@@ -116,6 +126,57 @@ def _with_category_minimums(
     return sorted(result, key=lambda item: item.score, reverse=True)
 
 
+def _apply_category_maximums(
+    selected: list[ScoredItem],
+    config: dict[str, Any],
+) -> list[ScoredItem]:
+    maximums = config.get("briefing", {}).get(
+        "category_maximums",
+        {"github": 4, "ai_news": 4, "world_news": 4, "china_policy": 4},
+    )
+    result: list[ScoredItem] = []
+    counts: dict[str, int] = {}
+    for item in sorted(selected, key=lambda entry: entry.score, reverse=True):
+        maximum = maximums.get(item.category)
+        current_count = counts.get(item.category, 0)
+        if maximum is not None and current_count >= int(maximum):
+            continue
+        result.append(item)
+        counts[item.category] = current_count + 1
+    return result
+
+
+def _fill_remaining(
+    selected: list[ScoredItem],
+    all_items: list[ScoredItem],
+    config: dict[str, Any],
+    max_items: int,
+) -> list[ScoredItem]:
+    maximums = config.get("briefing", {}).get(
+        "category_maximums",
+        {"github": 4, "ai_news": 4, "world_news": 4, "china_policy": 4},
+    )
+    result = list(selected)
+    selected_urls = {item.url for item in result}
+    counts: dict[str, int] = {}
+    for item in result:
+        counts[item.category] = counts.get(item.category, 0) + 1
+
+    for item in sorted(all_items, key=lambda entry: entry.score, reverse=True):
+        if len(result) >= max_items:
+            break
+        if item.url in selected_urls:
+            continue
+        maximum = maximums.get(item.category)
+        current_count = counts.get(item.category, 0)
+        if maximum is not None and current_count >= int(maximum):
+            continue
+        result.append(item)
+        selected_urls.add(item.url)
+        counts[item.category] = current_count + 1
+    return sorted(result, key=lambda entry: entry.score, reverse=True)
+
+
 def _cap_items(items: list[ScoredItem], max_items: int) -> list[ScoredItem]:
     if len(items) <= max_items:
         return items
@@ -124,7 +185,7 @@ def _cap_items(items: list[ScoredItem], max_items: int) -> list[ScoredItem]:
 
 def _interest_keywords(config: dict[str, Any]) -> list[str]:
     keywords: list[str] = []
-    for section in ("github", "ai_news", "world_news"):
+    for section in ("github", "ai_news", "world_news", "china_policy"):
         section_config = config.get(section, {})
         keywords.extend(section_config.get("keywords", []))
         keywords.extend(section_config.get("topics", []))
@@ -137,6 +198,8 @@ def _relevance_score(item: ContentItem, keywords: list[str]) -> float:
     text = _item_text(item)
     matches = sum(1 for keyword in keywords if keyword.lower() in text)
     if item.category == "github":
+        matches += 1
+    if item.category == "china_policy":
         matches += 1
     return min(5.0, 2.0 + matches * 0.7)
 
@@ -178,6 +241,57 @@ def _keyword_score(item: ContentItem, keywords: tuple[str, ...]) -> float:
     text = _item_text(item)
     matches = sum(1 for keyword in keywords if keyword.lower() in text)
     return min(5.0, 2.5 + matches * 0.8)
+
+
+def _repeat_penalty(
+    item: ContentItem,
+    history: dict[str, dict[str, Any]],
+    config: dict[str, Any],
+) -> float:
+    record = history.get(item.url)
+    if not record:
+        return 0.0
+
+    history_config = config.get("history", {})
+    penalty_days = history_config.get(
+        "repeat_penalty_days",
+        {"github": 7, "ai_news": 3, "world_news": 3, "china_policy": 3},
+    )
+    penalty_points = history_config.get(
+        "repeat_penalty_points",
+        {"github": 1.4, "ai_news": 0.8, "world_news": 0.8, "china_policy": 0.8},
+    )
+    days = int(penalty_days.get(item.category, penalty_days.get("news", 3)))
+    last_seen = _parse_history_datetime(record.get("last_selected_at") or record.get("last_seen_at"))
+    if not last_seen:
+        return 0.0
+
+    age_days = (datetime.now(timezone.utc) - last_seen).days
+    if age_days > days:
+        return 0.0
+
+    seen_count = int(record.get("seen_count") or 1)
+    base_penalty = float(penalty_points.get(item.category, penalty_points.get("news", 0.8)))
+    frequency_penalty = min(0.8, max(0, seen_count - 1) * 0.2)
+    item.metadata["repeat_penalty_days"] = days
+    item.metadata["seen_count"] = seen_count
+    return base_penalty + frequency_penalty
+
+
+def _parse_history_datetime(value: Any) -> datetime | None:
+    if not value:
+        return None
+    text = str(value)
+    try:
+        parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
+    except ValueError:
+        try:
+            parsed = datetime.strptime(text, "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
 
 
 def _item_text(item: ContentItem) -> str:

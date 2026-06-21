@@ -4,7 +4,9 @@ import argparse
 from pathlib import Path
 from typing import Any
 
+from src.collectors.gdelt_collector import GDELTCollector
 from src.collectors.github_collector import GitHubCollector
+from src.collectors.html_list_collector import HTMLListCollector
 from src.collectors.rss_collector import RSSCollector
 from src.llm.deepseek_client import DeepSeekClient
 from src.models import BriefingResult, ContentItem
@@ -40,15 +42,18 @@ def run(args: argparse.Namespace) -> BriefingResult:
     date_label = date_label_for_mode(mode, current)
     logger.info("Generating %s briefing for %s", mode, date_label)
 
-    raw_items = _sample_items() if args.dry_run else _collect_items(config, logger)
-    cleaned_items = clean_items(raw_items)
-    unique_items = deduplicate_items(cleaned_items)
-    scored_items = score_items(unique_items, config)
-    selected_items = filter_items(scored_items, config, mode)
-
     db = _database(config, logger)
     if db:
         db.initialize()
+
+    raw_items = _sample_items() if args.dry_run else _collect_items(config, logger)
+    cleaned_items = clean_items(raw_items)
+    unique_items = deduplicate_items(cleaned_items)
+    history = db.get_item_history([item.url for item in unique_items]) if db else {}
+    scored_items = score_items(unique_items, config, history=history)
+    selected_items = filter_items(scored_items, config, mode)
+
+    if db:
         db.save_items(selected_items)
 
     llm_summary = None
@@ -98,6 +103,16 @@ def _collect_items(config: dict[str, Any], logger) -> list[ContentItem]:
             items.extend(RSSCollector(config, section_name, category, logger).collect())
         except Exception as error:  # noqa: BLE001
             logger.warning("%s collection failed: %s", section_name, error)
+
+    try:
+        items.extend(GDELTCollector(config, "world_news", "world_news", logger).collect())
+    except Exception as error:  # noqa: BLE001
+        logger.warning("GDELT world_news collection failed: %s", error)
+
+    try:
+        items.extend(HTMLListCollector(config, "china_policy", "china_policy", logger).collect())
+    except Exception as error:  # noqa: BLE001
+        logger.warning("china_policy collection failed: %s", error)
 
     if not items:
         logger.warning("No external items collected; generating fallback sample briefing.")
@@ -162,6 +177,15 @@ def _sample_items() -> list[ContentItem]:
             summary="科技政策和半导体供应链继续影响 AI 产业竞争格局。",
             category="world_news",
             keywords=["AI监管", "半导体", "科技政策"],
+        ),
+        ContentItem(
+            title="国务院部署数字经济和人工智能相关政策",
+            url="https://example.com/china-policy-ai",
+            source="Example China Policy",
+            published_at=now_beijing().isoformat(),
+            summary="中国国家政策继续关注数字经济、人工智能、算力和产业升级。",
+            category="china_policy",
+            keywords=["人工智能", "数字经济", "产业政策"],
         ),
     ]
 

@@ -1,3 +1,5 @@
+from datetime import UTC, datetime
+
 from src.models import ContentItem
 from src.processors.cleaner import clean_items
 from src.processors.deduplicator import canonicalize_url, deduplicate_items
@@ -82,3 +84,77 @@ def test_filter_items_keeps_world_news_minimum_even_below_threshold():
     filtered = filter_items(items, config, "daily")
 
     assert any(item.category == "world_news" for item in filtered)
+
+
+def test_filter_items_respects_category_maximums():
+    config = {
+        "briefing": {
+            "daily_max_items": 6,
+            "category_maximums": {"github": 2, "ai_news": 4},
+        },
+        "scoring": {"min_score": 1.0},
+    }
+    items = score_items(
+        [
+            ContentItem(
+                title=f"repo-{index}",
+                url=f"https://github.com/example/repo-{index}",
+                source="GitHub",
+                summary="AI Agent Python project",
+                category="github",
+                keywords=["AI Agent"],
+                metadata={"stars": 10000, "language": "Python"},
+            )
+            for index in range(5)
+        ]
+        + [
+            ContentItem(
+                title="AI policy news",
+                url="https://example.com/ai-news",
+                source="AI",
+                summary="OpenAI regulation policy",
+                category="ai_news",
+                keywords=["OpenAI"],
+            )
+        ],
+        {"profile": {"user_goal": "AI Agent"}, "scoring": config["scoring"]},
+    )
+
+    filtered = filter_items(items, config, "daily")
+
+    assert sum(1 for item in filtered if item.category == "github") == 2
+
+
+def test_score_items_applies_history_repeat_penalty():
+    item = ContentItem(
+        title="langchain-ai/langchain",
+        url="https://github.com/langchain-ai/langchain",
+        source="GitHub",
+        summary="AI Agent Python project",
+        category="github",
+        keywords=["AI Agent"],
+        metadata={"stars": 10000, "language": "Python"},
+    )
+    config = {
+        "profile": {"user_goal": "AI Agent"},
+        "scoring": {"min_score": 1.0},
+        "history": {
+            "repeat_penalty_days": {"github": 7},
+            "repeat_penalty_points": {"github": 1.4},
+        },
+    }
+
+    baseline = score_items([item], config)[0]
+    penalized = score_items(
+        [item],
+        config,
+        history={
+            item.url: {
+                "last_selected_at": datetime.now(UTC).isoformat(),
+                "seen_count": 4,
+            }
+        },
+    )[0]
+
+    assert penalized.score < baseline.score
+    assert "repeat_penalty" in penalized.score_details

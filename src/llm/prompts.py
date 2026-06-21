@@ -8,7 +8,7 @@ SYSTEM_PROMPT = """你是我的个人信息分析助手。
 - 我是编程初学者，代码基础不强
 - 我更适合通过项目学习
 - 我关注 AI Agent、RAG、后端转 AI、自动化工具
-- 我也关注公考、国际形势、科技政策
+- 我也关注公考、国际形势、中国国家政策、科技政策
 - 我希望简报不要堆砌新闻，而是告诉我什么值得关注、为什么重要、对我有什么用
 
 要求：
@@ -20,6 +20,7 @@ SYSTEM_PROMPT = """你是我的个人信息分析助手。
 6. 对国际形势说明和科技、就业、政策环境的关系
 7. 最后给出具体行动建议
 8. 语言直接、清晰、不要空话
+9. 没有 world_news 或 china_policy 来源材料时，不要用 GitHub/AI 新闻硬凑国际或政策结论；应该明确说明本期缺少该类直接来源
 """
 
 
@@ -45,8 +46,8 @@ def build_user_prompt(mode: str, date_label: str, items: list[ScoredItem]) -> st
         )
 
     if mode == "weekly":
-        lines.append("请输出：本周重要趋势、GitHub 开源趋势、AI 行业趋势、国际形势趋势、对我的启发、下周关注清单。")
+        lines.append("请输出：本周重要趋势、GitHub 开源趋势、AI 行业趋势、国际形势趋势、中国政策观察、对我的启发、下周关注清单。")
     else:
-        lines.append("请输出：今日最值得关注的 5 件事、GitHub 热门项目、AI 发展动态、国际形势与科技政策、对我的个人建议。")
+        lines.append("请输出：今日最值得关注的 5 件事、GitHub 热门项目、AI 发展动态、国际形势、中国国家政策、对我的个人建议。")
 
     return "\n".join(lines)
