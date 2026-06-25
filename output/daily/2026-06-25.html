@@ -1,0 +1,266 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-06-25</h1>
+<h2>AI 生成综述</h2>
+<h1>今日个人简报 (2026-06-25)</h1>
+<h2>今日最值得关注的 5 件事</h2>
+<ol>
+<li>
+<p><strong>OpenAI 发布自研推理芯片 Jalapeño</strong><br />
+   与 Broadcom 合作，专为 LLM 推理优化，目标是提升性能、效率和规模。<br />
+<a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">来源</a> | 趋势影响：AI 算力成本将下降，推理速度提升，对中小团队部署大模型是利好。</p>
+</li>
+<li>
+<p><strong>OpenAI 推出 Daybreak 安全工具集</strong><br />
+   包含 Codex Security 和 GPT-5.5-Cyber，用于自动化漏洞发现与修复。<br />
+<a href="https://openai.com/index/daybreak-securing-the-world">来源</a> | 趋势影响：AI 安全从“辅助”转向“自动执行”，对安全从业者（包括后端转 AI）的新技能要求会加速。</p>
+</li>
+<li>
+<p><strong>Sandboxd：零 K8s 的开发沙箱，专为 AI Agent 和 SaaS 工厂设计</strong><br />
+   一条命令启动自带预览 URL 的隔离开发环境，Star 691，Go 语言。<br />
+<a href="https://github.com/tastyeffectco/sandboxd">GitHub</a> | 适合你学习：✅ 如果你的目标是做 AI Agent 或自动化工具，这个项目示范了如何快速为 agent 提供安全隔离的沙箱环境，代码量适中，Go 语言值得入门。</p>
+</li>
+<li>
+<p><strong>Brigade：企业级个人智能体（Personal Intelligence）</strong><br />
+   TypeScript 项目，Star 52，虽规模小但思路清晰——打造你的专属“信息参谋”。<br />
+<a href="https://github.com/spinabot/brigade">GitHub</a> | 适合你学习：✅ 与你的“个人简报”需求高度吻合，代码结构适合拆解学习，TypeScript 也适合前端/全栈背景。</p>
+</li>
+<li>
+<p><strong>伊朗战争暴露美国在中东影响力的局限</strong><br />
+   以及英国首相斯塔默辞职（不会改变英国对乌立场）、特朗普家族与阿拉伯关系。<br />
+<a href="https://www.timeslive.co.za/opinion/2026-06-23-heath-muchena-iran-war-has-exposed-the-limits-of-us-power-in-the-middle-east">来源1</a> | <a href="https://www.1in.am/3730806.html">来源2</a> | <a href="https://www.parlamentnilisty.cz/arena/rozhovory/Trumpova-rodina-se-nachazi-v-kapsach-Arabu-Josef-Masin-z-Kalifornie-793073">来源3</a><br />
+   趋势影响：地缘冲突可能导致技术出口管制加强、能源价格波动，间接影响 AI 算力成本和企业 IT 采购预算。</p>
+</li>
+</ol>
+<h2>GitHub 热门项目</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言</th>
+<th>Stars</th>
+<th>是否适合你学习</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/tastyeffectco/sandboxd">sandboxd</a></td>
+<td>Go</td>
+<td>691</td>
+<td>✅ 适合</td>
+<td>命令式隔离环境，AI Agent 开发的常见需求，代码结构清晰</td>
+</tr>
+<tr>
+<td><a href="https://github.com/john-rocky/coreai-model-zoo">coreai-model-zoo</a></td>
+<td>Swift</td>
+<td>217</td>
+<td>❌ 暂不适合</td>
+<td>需要 Apple Core AI 和 iOS/macOS 开发经验，你未提及相关背景</td>
+</tr>
+<tr>
+<td><a href="https://github.com/spinabot/brigade">brigade</a></td>
+<td>TypeScript</td>
+<td>52</td>
+<td>✅ 适合</td>
+<td>个人信息智能体，与你需求匹配，可拆解学习</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ex18a/pwnagotchi64">pwnagotchi64</a></td>
+<td>JavaScript</td>
+<td>50</td>
+<td>⚠️ 偏安全攻防</td>
+<td>强化学习+WiFi 渗透，如果你未来想进入 AI 安全领域可以关注，否则初期不推荐</td>
+</tr>
+</tbody>
+</table>
+<h2>AI 发展动态</h2>
+<ol>
+<li><strong>推理芯片专用化</strong>：OpenAI Jalapeño 表明大模型部署正从通用 GPU 转向定制芯片。这将加速推理成本下降，也意味着 AI 工程化岗位（推理优化、模型压缩）需求上升。  </li>
+<li><strong>AI 安全自动化</strong>：Daybreak 工具说明 AI 不仅能写代码还能自动修漏洞。后端转 AI 的人可关注“AI+安全”交叉方向，但需要先打好基础（如 Python、Go、Linux）。  </li>
+<li><strong>Edge AI 开源生态</strong>：coreai-model-zoo 把 Qwen3.5 等模型移植到苹果硬件，虽然你暂时用不上，但说明端侧 AI 在快速成熟，未来 AI Agent 的部署形态会更多样。</li>
+</ol>
+<h2>国际形势</h2>
+<ul>
+<li><strong>中东局势</strong>：伊朗战争被认为暴露了美军行动能力的局限，可能促使美国调整中东策略。  </li>
+<li><strong>英国政治</strong>：斯塔默辞职，但英国对乌克兰政策不变，短期来看欧洲稳定度不受影响。  </li>
+<li><strong>特朗普家族与阿拉伯关系</strong>：暗示美国大选前经济外交可能更倾向海湾国家。  </li>
+</ul>
+<p><strong>与科技/就业/政策环境的关系</strong>：<br />
+- 地缘紧张会加剧芯片出口管制（如对华 AI 芯片限制），影响中国 AI 企业获取高端硬件。<br />
+- 油价波动可能推高云服务成本（数据中心耗电），但对你个人学习影响较小。<br />
+- 就业上，安全合规岗位（如美国出口管制合规、数据安全）需求可能增加。</p>
+<h2>中国国家政策</h2>
+<p>本期缺少可直接解读的具体政策内容。材料中仅有中国政府网首页和驻外机构列表页，均为静态入口，无近期政策原文或解读。因此无法分析。建议后续使用“国务院公报”、“发改委文件”等更直接的信源。</p>
+<h2>对我的个人建议</h2>
+<h3>1. 学习路径调整</h3>
+<ul>
+<li><strong>本周开始学习 Go</strong>，理由：sandboxd 和未来很多 AI 基础设施项目（Docker、K8s 工具）都用 Go，作为后端转 AI 的刚需语言。  </li>
+<li><strong>拆解 brigade 项目</strong>：从 readme 和代码结构入手，理解“个人智能体”的信息流设计（数据采集→过滤→生成简报）。你可以直接仿写一个简化版。</li>
+</ul>
+<h3>2. 关注点聚焦</h3>
+<ul>
+<li>AI 趋势方面，跟踪 <strong>Jalapeño 芯片的实际影响</strong>：如果推理成本下降，你部署自己 AI 服务的门槛会降低，可以提前学习 vLLM、TGI 等推理框架。  </li>
+<li>国际形势方面，保持对 <strong>伊朗局势对芯片供应链的影响</strong> 的警惕，但不必过度投入时间——每周花 15 分钟扫一眼即可。</li>
+</ul>
+<h3>3. 本周行动清单</h3>
+<ul>
+<li>[ ] 用一天时间 fork sandboxd 本地运行，理解其“一条命令”背后的实现逻辑（docker-compose? 还是纯 Go container?）。  </li>
+<li>[ ] 用两天时间读 brigade 的 README 和源码中的 <code>src/agents</code> 目录，画一张信息流图。  </li>
+<li>[ ] 订阅 OpenAI 博客，关注 Daybreak 工具的后续开源动态（如果有）。</li>
+</ul>
+<h3>4. 一句话总结</h3>
+<p>不要被国际新闻分散精力，把 80% 的学习时间放在 sandboxd 和 brigade 两个项目上，它们直接对应你“项目制学习”和“AI Agent/自动化工具”的目标。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>tastyeffectco/sandboxd</strong>（GitHub，评分 4.45）：Go 项目，Stars 691，适合评估是否能拆成练手项目。</li>
+<li><strong>john-rocky/coreai-model-zoo</strong>（GitHub，评分 4.09）：Swift 项目，Stars 217，适合评估是否能拆成练手项目。</li>
+<li><strong>spinabot/brigade</strong>（GitHub，评分 4.0）：TypeScript 项目，Stars 52，适合评估是否能拆成练手项目。</li>
+<li><strong>Սթարմերի հրաժարականը Ուկրաինայի հարցում Մեծ Բրիտանիայի դիրքորոշումը չի փոխի</strong>（1in.am，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Trumpova rodina se nachází v kapsách Arabů . Josef Mašín z Kalifornie | ParlamentniListy . cz – politika ze všech stran</strong>（parlamentnilisty.cz，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>tastyeffectco/sandboxd</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/tastyeffectco/sandboxd</li>
+<li>评分：4.45</li>
+<li>简介：Self-hosted dev sandboxes with preview URLs. One command. No Kubernetes, perfect for coding agents and Saas factories Stars: 691; Forks: 32; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 691，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>john-rocky/coreai-model-zoo</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/john-rocky/coreai-model-zoo</li>
+<li>评分：4.09</li>
+<li>简介：Community model zoo + knowledge base for Apple Core AI (iOS/macOS 27): Qwen3.5 &amp; Gemma 4 converted end-to-end, verified on-device (iPhone 17 Pro GPU/ANE), conversion gotchas, custom Metal kernels, Swift runner Stars: 217; Forks: 12; Language: Swift</li>
+<li>为什么值得关注：Swift 项目，Stars 217，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>spinabot/brigade</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/spinabot/brigade</li>
+<li>评分：4.0</li>
+<li>简介：Brigade — Your personal intelligence, built enterprise-grade Stars: 52; Forks: 5; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 52，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>ex18a/pwnagotchi64</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/ex18a/pwnagotchi64</li>
+<li>评分：3.72</li>
+<li>简介：(⌐■_■) - Deep Reinforcement Learning instrumenting bettercap for WiFi pwning. Stars: 50; Forks: 2; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 50，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI and Broadcom unveil LLM-optimized inference chip</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-broadcom-jalapeno-inference-chip</li>
+<li>评分：3.92</li>
+<li>简介：OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Daybreak: Tools for securing every organization in the world</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/daybreak-securing-the-world</li>
+<li>评分：2.7</li>
+<li>简介：OpenAI introduces new Daybreak tools, including Codex Security and GPT-5.5-Cyber, to help organizations find, validate, and patch vulnerabilities at scale.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Սթարմերի հրաժարականը Ուկրաինայի հարցում Մեծ Բրիտանիայի դիրքորոշումը չի փոխի</h3>
+<ul>
+<li>来源：1in.am</li>
+<li>链接：https://www.1in.am/3730806.html</li>
+<li>评分：4.0</li>
+<li>简介：20260624T063000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Trumpova rodina se nachází v kapsách Arabů . Josef Mašín z Kalifornie | ParlamentniListy . cz – politika ze všech stran</h3>
+<ul>
+<li>来源：parlamentnilisty.cz</li>
+<li>链接：https://www.parlamentnilisty.cz/arena/rozhovory/Trumpova-rodina-se-nachazi-v-kapsach-Arabu-Josef-Masin-z-Kalifornie-793073</li>
+<li>评分：4.0</li>
+<li>简介：20260623T081500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>HEATH MUCHENA | Iran war has exposed the limits of US power in the Middle East</h3>
+<ul>
+<li>来源：timeslive.co.za</li>
+<li>链接：https://www.timeslive.co.za/opinion/2026-06-23-heath-muchena-iran-war-has-exposed-the-limits-of-us-power-in-the-middle-east</li>
+<li>评分：4.0</li>
+<li>简介：20260623T121500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>伊朗外長與哈瑪斯高官通話 重申支持巴勒斯坦正義事業 - 國際</h3>
+<ul>
+<li>来源：news.ltn.com.tw</li>
+<li>链接：https://news.ltn.com.tw/news/world/breakingnews/5482542</li>
+<li>评分：4.0</li>
+<li>简介：20260624T084500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é©»å¤æºæ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748956.htm</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>ä¸­å½æ¿åºç½</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/index.htm</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：tastyeffectco/sandboxd。</li>
+<li>重点阅读：Սթարմերի հրաժարականը Ուկրաինայի հարցում Մեծ Բրիտանիայի դիրքորոշումը չի փոխի。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/tastyeffectco/sandboxd">tastyeffectco/sandboxd</a> - GitHub</li>
+<li><a href="https://github.com/john-rocky/coreai-model-zoo">john-rocky/coreai-model-zoo</a> - GitHub</li>
+<li><a href="https://github.com/spinabot/brigade">spinabot/brigade</a> - GitHub</li>
+<li><a href="https://www.1in.am/3730806.html">Սթարմերի հրաժարականը Ուկրաինայի հարցում Մեծ Բրիտանիայի դիրքորոշումը չի փոխի</a> - 1in.am</li>
+<li><a href="https://www.parlamentnilisty.cz/arena/rozhovory/Trumpova-rodina-se-nachazi-v-kapsach-Arabu-Josef-Masin-z-Kalifornie-793073">Trumpova rodina se nachází v kapsách Arabů . Josef Mašín z Kalifornie | ParlamentniListy . cz – politika ze všech stran</a> - parlamentnilisty.cz</li>
+<li><a href="https://www.timeslive.co.za/opinion/2026-06-23-heath-muchena-iran-war-has-exposed-the-limits-of-us-power-in-the-middle-east">HEATH MUCHENA | Iran war has exposed the limits of US power in the Middle East</a> - timeslive.co.za</li>
+<li><a href="https://news.ltn.com.tw/news/world/breakingnews/5482542">伊朗外長與哈瑪斯高官通話 重申支持巴勒斯坦正義事業 - 國際</a> - news.ltn.com.tw</li>
+<li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">OpenAI and Broadcom unveil LLM-optimized inference chip</a> - openai.com</li>
+<li><a href="https://github.com/ex18a/pwnagotchi64">ex18a/pwnagotchi64</a> - GitHub</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748956.htm">é©»å¤æºæ</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/index.htm">ä¸­å½æ¿åºç½</a> - 中国政府网</li>
+<li><a href="https://openai.com/index/daybreak-securing-the-world">Daybreak: Tools for securing every organization in the world</a> - openai.com</li>
+</ul></main></body></html>
