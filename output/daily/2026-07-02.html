@@ -1,0 +1,277 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-07-02</h1>
+<h2>AI 生成综述</h2>
+<p>好的，这是根据你提供的材料生成的今日个人简报。</p>
+<hr />
+<h3>今日最值得关注的 5 件事</h3>
+<ol>
+<li>
+<p><strong>OpenAI 发布报告：AI Agent 如何改变工作方式</strong><br />
+<em>来源: OpenAI</em> | <a href="https://openai.com/index/how-agents-are-transforming-work">链接</a><br />
+<strong>为什么重要：</strong> 这是官方发布的实证研究，说明 Agent 能处理更长、更复杂任务，提升生产力。对你来说，这意味着 AI 自动化不再是概念，而是马上能落地的工具。<br />
+<strong>对你有什么用：</strong> 报告中的案例和方法可以指导你设计自己的自动化流程，比如用 Agent 写代码、管理文件、抓取信息。</p>
+</li>
+<li>
+<p><strong>武汉光谷投入超10亿元打造“智能体之城”</strong><br />
+<em>来源: 证券时报</em> | <a href="https://www.stcn.com/article/detail/3989876.html">链接</a><br />
+<strong>为什么重要：</strong> 这是国内第一个明确以“智能体”（Agent）为核心的产业政策，标志着地方政府把 Agent 作为下一阶段重点。<br />
+<strong>对你有什么用：</strong> 智能体开发人才需求会迅速增长，你正在学的 RAG、Agent 正好对口。可以关注该区域的招聘和项目机会。</p>
+</li>
+<li>
+<p><strong>GitHub 项目 toolport：本地优先的 MCP 网关（工具/API 管理）</strong><br />
+<em>来源: GitHub</em> | <a href="https://github.com/tsouth89/toolport">链接</a><br />
+<strong>为什么重要：</strong> MCP（Model Context Protocol）是连接 AI 模型与外部工具的标准，这个项目帮你用同一个端口管理所有工具、节省 90% 的 Token 开销，并隔离潜在危险工具。<br />
+<strong>是否适合你学习：</strong> 适合。项目代码用 Rust 写，你目前基础不强，可以先阅读 README 理解架构；如果你熟悉 JavaScript 后再看 Rust 会有帮助。它的核心价值是“如何安全高效地给 AI 喂工具”，这正是 Agent 开发的关键。</p>
+</li>
+<li>
+<p><strong>GitHub 项目 fanbox：Vibe Coding 驾驶舱（文件+终端+实时改动）</strong><br />
+<em>来源: GitHub</em> | <a href="https://github.com/alchaincyf/fanbox">链接</a><br />
+<strong>为什么重要：</strong> 它把文件浏览、命令执行、代码改动过程整合到一个界面，让你“俯瞰”每一次修改——很适合边学边改的初学者。<br />
+<strong>是否适合你学习：</strong> 非常适合。用 JavaScript 写的，Star 数高（839），社区活跃。你可以直接 fork 下来，一边看它如何监听文件变化、一边修改自己项目。它本身就是个“通过项目学习”的绝佳例子。</p>
+</li>
+<li>
+<p><strong>全球半导体产业链迎来7月涨价潮</strong><br />
+<em>来源: 凤凰网财经</em> | <a href="https://finance.ifeng.com/c/8uMP0mLh8qU">链接</a><br />
+<strong>为什么重要：</strong> 半导体涨价直接影响 AI 芯片成本（包括 OpenAI 新发布的推理芯片），也会传导到云服务和消费级硬件价格。<br />
+<strong>对你有什么用：</strong> 如果你是后端转 AI，需要部署模型，云服务涨价会提高你的实验成本；同时，自主可控的国产芯片（如华为昇腾）的替代机会增加，值得关注。</p>
+</li>
+</ol>
+<hr />
+<h3>GitHub 热门项目（与你的学习路线相关）</h3>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>适合你吗？</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>fanbox</strong>（JavaScript, 839 stars）</td>
+<td>✅ 非常适合</td>
+<td>初学者友好，vibe coding 界面，可观察每次改动，适合边学边改</td>
+</tr>
+<tr>
+<td><strong>toolport</strong>（Rust, 50 stars）</td>
+<td>✅ 较适合</td>
+<td>虽然语言是 Rust，但概念（MCP 网关）对 Agent 开发极重要，可先读懂架构思想</td>
+</tr>
+<tr>
+<td><em>Arena-of-Autonomous-Threads</em>（HTML, 151 stars）</td>
+<td>❌ 暂不推荐</td>
+<td>专注 LLM 测试用的论坛模拟器，与你的“通过项目学习”目标关联弱</td>
+</tr>
+<tr>
+<td><em>ironclaw-ai-vision</em>（HTML, 151 stars）</td>
+<td>❌ 暂不推荐</td>
+<td>综合健身与菜谱，前端为主，AI 含量低，适合后期熟悉 PWA 再考虑</td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议优先看 fanbox（立即动手） 和 toolport（理解架构）。</strong></p>
+<hr />
+<h3>AI 发展动态（趋势与影响）</h3>
+<ol>
+<li>
+<p><strong>OpenAI + Broadcom 推出 Jalapeño 推理芯片</strong><br />
+<em>来源: OpenAI</em> | <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">链接</a><br />
+<strong>趋势影响：</strong> 大厂开始自研芯片，推理成本会大幅下降。你作为个人开发者，以后可以更便宜地跑大模型，甚至本地部署地模型性能会更强。意味着未来几个月你可以开发更复杂、更实时的 Agent。</p>
+</li>
+<li>
+<p><strong>欧洲 AI 就业报告：哪些岗位会自动化、增长或变化</strong><br />
+<em>来源: OpenAI</em> | <a href="https://openai.com/index/mapping-ai-jobs-transition-eu">链接</a><br />
+<strong>趋势影响：</strong> 报告明确指出重复性编程任务将被自动化，而系统设计、领域知识结合 AI 的岗位会增加。对你来说：<strong>不要只学语法，要学“如何用 AI 解决问题”</strong>。你从后端转 AI 的路子是对的。</p>
+</li>
+</ol>
+<hr />
+<h3>国际形势（与科技、就业、政策的关系）</h3>
+<p>本期只有两条有实质内容的国际要闻：</p>
+<ul>
+<li><strong>半导体涨价</strong>：全球供应链紧张延续，美国对华芯片出口管制预期收紧，利好国内半导体设备/材料公司，但也让 AI 创业公司硬件成本上升。你如果想做 AI 应用，要关注云服务商近期的定价调整。</li>
+<li><strong>机器人概念股涨停</strong>：A 股机器人板块大涨，反映了资金对“AI+机器人”的预期。但与你的直接关联较弱，除非你打算切入工业自动化领域。</li>
+</ul>
+<p><strong>缺“国际政治/外交政策”来源</strong>：本期没有直接涉及中美关系、地缘冲突等材料。无法做更深入的分析。</p>
+<hr />
+<h3>中国国家政策</h3>
+<p>本期只有一条来源：全国人大官网列表页（<a href="http://www.npc.gov.cn/">链接</a>），但<strong>没有具体政策内容</strong>，仅显示站点更新。<br />
+因此无法给出具体政策分析。建议你持续关注人大网站或其他官方渠道（如国务院、发改委）的正式文件，特别是关于“数字经济”“人工智能产业”“新质生产力”等方向的政策。</p>
+<hr />
+<h3>对我的个人建议</h3>
+<ol>
+<li>
+<p><strong>立刻上手 fanbox 项目</strong><br />
+   - Fork 仓库，看 README 启动教程，体验“vibe coding”模式。<br />
+   - 学会后可以用这个工具来管理你自己的小项目（比如写一个 RAG 聊天机器人）。</p>
+</li>
+<li>
+<p><strong>用 toolport 的架构思路改进自己的工具链</strong><br />
+   - 不必现在写 Rust，先在纸上画出你当前使用的 AI 工具（如 Ollama、LangChain、FireCrawl）如何通过 MCP 统一管理，理解“懒加载发现”和“工具隔离”的思想。</p>
+</li>
+<li>
+<p><strong>阅读 OpenAI 那篇 Agent 研究论文</strong><br />
+   - 即使不读全文，至少看摘要和结论。把其中提到的“长任务分解”“多步推理”等概念记下来，下次设计自己的 Agent 时直接套用。</p>
+</li>
+<li>
+<p><strong>关注武汉光谷的招聘动态</strong><br />
+   - 在智联、猎聘搜索“智能体开发”“Agent 工程师”，了解企业具体技能要求（比如需要会 LangGraph、MCP、RAG 等），作为你下阶段学习的目标。</p>
+</li>
+<li>
+<p><strong>注意半导体涨价对云成本的影响</strong><br />
+   - 如果你打算租用 GPU 训练/推理，近期优先使用按需实例，不要签长合同；可以对比下华为云、阿里云的国产芯片优惠方案。</p>
+</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>alchaincyf/fanbox</strong>（GitHub，评分 4.61）：JavaScript 项目，Stars 839，适合评估是否能拆成练手项目。</li>
+<li><strong>tsouth89/toolport</strong>（GitHub，评分 4.4）：Rust 项目，Stars 50，适合评估是否能拆成练手项目。</li>
+<li><strong>全球半导体产业链 ， 迎7月涨价潮</strong>（finance.ifeng.com，评分 4.38）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>机器人概念大爆发 ！ 中威电子 、 敏芯股份 、 深科达 、 联得装备 ， 20 % 涨停 ！</strong>（stcn.com，评分 4.24）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>三年投入超10亿元 武汉光谷打造智能体之城</strong>（stcn.com，评分 4.24）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>alchaincyf/fanbox</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/alchaincyf/fanbox</li>
+<li>评分：4.61</li>
+<li>简介：vibe coding 的驾驶舱：左边文件，右边/下边终端，中间看清每一次改动。 / The cockpit for vibe coding: browse files on the left, command agents on the right, watch every change in between. Stars: 839; Forks: 117; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 839，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>tsouth89/toolport</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/tsouth89/toolport</li>
+<li>评分：4.4</li>
+<li>简介：Local-first MCP gateway. One port for every tool and every AI client: lazy discovery (~90% token savings), tool integrity + quarantine, secrets in the OS keychain. Stars: 50; Forks: 11; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 50，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>rafaelmateo123/Arena-of-Autonomous-Threads</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/rafaelmateo123/Arena-of-Autonomous-Threads</li>
+<li>评分：4.08</li>
+<li>简介：Top AI Agent Simulator: Build a Local Reddit Forum for LLM Testing 2026 Stars: 151; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 151，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>shadowlzt/ironclaw-ai-vision</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/shadowlzt/ironclaw-ai-vision</li>
+<li>评分：4.0</li>
+<li>简介：Ultimate AI Fitness Coach PWA 2026: Iron Mike Workout &amp; Smart Recipe Agent Stars: 151; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 151，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>How agents are transforming work</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/how-agents-are-transforming-work</li>
+<li>评分：2.8</li>
+<li>简介：A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.</li>
+<li>为什么值得关注：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Mapping Europe’s AI Workforce Opportunity</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/mapping-ai-jobs-transition-eu</li>
+<li>评分：2.74</li>
+<li>简介：A new OpenAI report maps how AI could reshape jobs across the EU, highlighting which occupations may face automation, growth, or workflow changes.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>OpenAI and Broadcom unveil LLM-optimized inference chip</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-broadcom-jalapeno-inference-chip</li>
+<li>评分：2.72</li>
+<li>简介：OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>全球半导体产业链 ， 迎7月涨价潮</h3>
+<ul>
+<li>来源：finance.ifeng.com</li>
+<li>链接：https://finance.ifeng.com/c/8uMP0mLh8qU</li>
+<li>评分：4.38</li>
+<li>简介：20260629T193000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>机器人概念大爆发 ！ 中威电子 、 敏芯股份 、 深科达 、 联得装备 ， 20 % 涨停 ！</h3>
+<ul>
+<li>来源：stcn.com</li>
+<li>链接：https://www.stcn.com/article/detail/3988652.html</li>
+<li>评分：4.24</li>
+<li>简介：20260630T053000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>三年投入超10亿元 武汉光谷打造智能体之城</h3>
+<ul>
+<li>来源：stcn.com</li>
+<li>链接：https://www.stcn.com/article/detail/3989876.html</li>
+<li>评分：4.24</li>
+<li>简介：20260630T114500Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>市場快訊 - 中時新聞網</h3>
+<ul>
+<li>来源：act.chinatimes.com</li>
+<li>链接：https://act.chinatimes.com/market/content.aspx?AdID=21538</li>
+<li>评分：4.14</li>
+<li>简介：20260630T023000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：1.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：alchaincyf/fanbox。</li>
+<li>重点阅读：全球半导体产业链 ， 迎7月涨价潮。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/alchaincyf/fanbox">alchaincyf/fanbox</a> - GitHub</li>
+<li><a href="https://github.com/tsouth89/toolport">tsouth89/toolport</a> - GitHub</li>
+<li><a href="https://finance.ifeng.com/c/8uMP0mLh8qU">全球半导体产业链 ， 迎7月涨价潮</a> - finance.ifeng.com</li>
+<li><a href="https://www.stcn.com/article/detail/3988652.html">机器人概念大爆发 ！ 中威电子 、 敏芯股份 、 深科达 、 联得装备 ， 20 % 涨停 ！</a> - stcn.com</li>
+<li><a href="https://www.stcn.com/article/detail/3989876.html">三年投入超10亿元 武汉光谷打造智能体之城</a> - stcn.com</li>
+<li><a href="https://act.chinatimes.com/market/content.aspx?AdID=21538">市場快訊 - 中時新聞網</a> - act.chinatimes.com</li>
+<li><a href="https://github.com/rafaelmateo123/Arena-of-Autonomous-Threads">rafaelmateo123/Arena-of-Autonomous-Threads</a> - GitHub</li>
+<li><a href="https://github.com/shadowlzt/ironclaw-ai-vision">shadowlzt/ironclaw-ai-vision</a> - GitHub</li>
+<li><a href="https://openai.com/index/how-agents-are-transforming-work">How agents are transforming work</a> - openai.com</li>
+<li><a href="https://openai.com/index/mapping-ai-jobs-transition-eu">Mapping Europe’s AI Workforce Opportunity</a> - openai.com</li>
+<li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">OpenAI and Broadcom unveil LLM-optimized inference chip</a> - openai.com</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+</ul></main></body></html>
