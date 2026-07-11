@@ -1,0 +1,261 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-07-11</h1>
+<h2>AI 生成综述</h2>
+<h2>📅 2026-07-11 个人简报</h2>
+<p><strong>核心原则：</strong> 只讲值得关注的、为什么重要、对你有什么用。本期缺少可直接引用的中国政策文件，因此政策部分将说明该情况。</p>
+<hr />
+<h3>🔥 今日最值得关注的 5 件事</h3>
+<ol>
+<li>
+<p><strong>SK海力士在美上市募资265亿美元，AI芯片需求爆炸</strong><br />
+   - <strong>为什么重要：</strong> 这是全球最大IPO之一，直接证明AI数据中心对高端存储芯片的疯狂需求。芯片是AI基础设施的“石油”，这波浪潮会持续推动上下游就业和创业机会。<br />
+   - <strong>对你有什么用：</strong> 作为后端转AI的人，理解硬件趋势有助于选择学习方向（比如关注存储优化、分布式系统、AI推理部署）。</p>
+</li>
+<li>
+<p><strong>OpenAI与Broadcom发布专用推理芯片“Jalapeño”</strong><br />
+   - <strong>为什么重要：</strong> 专用芯片意味着大模型推理成本将大幅降低，更多应用场景（Agent、自动化工具）会变得经济可行。<br />
+   - <strong>对你有什么用：</strong> 低成本推理 = 更多开发者用得起Agent。你学RAG和Agent时，未来部署成本会更友好，可以大胆做项目。</p>
+</li>
+<li>
+<p><strong>德国电信用AI改造电信全链路（客服、网络、员工流程）</strong><br />
+   - <strong>为什么重要：</strong> 头部电信企业全面AI化，证明“AI+行业”不是口号，而是正在发生。AI-native转型是未来5年的主流。<br />
+   - <strong>对你有什么用：</strong> 如果你未来想进入“后端转AI”岗位，理解企业级AI落地场景（如客服Agent、网络运维）很有价值。你可以用类似思路做一个模拟项目（比如一个企业客服Agent）。</p>
+</li>
+<li>
+<p><strong>GitHub项目：Reviva——本地优先的AI学习工作台</strong><br />
+   - <strong>为什么重要：</strong> 专为“围绕个人资料学习”设计，支持问答、笔记、复习，本地运行，适合隐私敏感和学习场景。<br />
+   - <strong>对你有什么用：</strong> 你正需要项目学习，这个正好可以拿来当学习工具，甚至可以二次开发加入RAG功能。代码是HTML+后端，对你难度适中。</p>
+</li>
+<li>
+<p><strong>OpenAI报告：欧洲AI劳动力机会地图</strong><br />
+   - <strong>为什么重要：</strong> 报告指出哪些职业会自动化、哪些会增长、哪些会改变工作方式。这与中国情况有相似性。<br />
+   - <strong>对你有什么用：</strong> 帮助你规划转行路线：后端工程师属于“可能被AI增强但不会替代”的岗位，你的方向正确；重点学Agent和RAG是增值方向。</p>
+</li>
+</ol>
+<hr />
+<h3>🐙 GitHub 热门项目（是否适合你学习）</h3>
+<h4>1. <strong>mingchen666/Reviva</strong>（评分4.49，Stars 90）</h4>
+<ul>
+<li><strong>简介：</strong> 本地AI学习工作台，支持导入个人资料后进行问答、做笔记、复习和创作。包含Wiki知识库、Agent、创作工具。</li>
+<li><strong>是否适合你：</strong> ✅ <strong>非常适合。</strong> 星星不多但功能完整，适合初学者理解“本地RAG+Agent”的完整结构。语言HTML（前端），后端逻辑可学习。建议Fork后尝试加入自己的文档库，改造成个人RAG助手。</li>
+</ul>
+<h4>2. <strong>rafaelmateo123/Arena-of-Autonomous-Threads</strong>（评分4.08，Stars 153）</h4>
+<ul>
+<li><strong>简介：</strong> 模拟一个本地Reddit论坛，用于测试LLM Agent之间对话和交互。可用于研究多Agent协作。</li>
+<li><strong>是否适合你：</strong> ⚠️ <strong>适合但偏难。</strong> 概念很酷（多Agent模拟），但代码可能涉及复杂并发和LLM调用。如果你已熟悉基础API调用，可以拿来做学习案例；否则先放着，等有基础再看。</li>
+</ul>
+<h4>3. <strong>shadowlzt/ironclaw-ai-vision</strong>（评分4.0，Stars 152）</h4>
+<ul>
+<li><strong>简介：</strong> AI健身教练PWA，包含健身计划、智能食谱Agent，基于计算机视觉。</li>
+<li><strong>是否适合你：</strong> ❌ <strong>暂时不适合。</strong> 涉及计算机视觉（CV），前端PWA，偏移动端。你更关注后端和Agent，这个项目方向不对，可跳过。</li>
+</ul>
+<hr />
+<h3>🤖 AI 发展动态</h3>
+<h4>1. <strong>OpenAI+Broadcom推出定制推理芯片“Jalapeño”</strong></h4>
+<ul>
+<li><strong>趋势影响：</strong> 芯片专门优化大模型推理，能耗和成本大幅下降。这将加速Agent、RAG等应用从“demo”走向“可商用”。  </li>
+<li><strong>对你：</strong> 可以关注后续开源推理框架的适配，学习如何在低成本硬件上部署小模型做本地Agent。</li>
+</ul>
+<h4>2. <strong>德国电信全面AI化（案例）</strong></h4>
+<ul>
+<li><strong>趋势影响：</strong> 企业级AI不是单独做聊天机器人，而是改造整个业务流程。客服、网络运维、员工内部工具全部AI化。  </li>
+<li><strong>对你：</strong> 你可以做一个小项目：模拟一个“企业内部门票系统Agent”，用RAG处理常见FAQ，用Agent转复杂工单。这是很好的面试作品。</li>
+</ul>
+<h4>3. <strong>OpenAI报告：欧洲AI劳动力转型</strong></h4>
+<ul>
+<li><strong>趋势影响：</strong> 报告指出重复性工作易被自动化，而需判断、沟通、创造的工作会升级。后端开发属于“需持续学习”的岗位。  </li>
+<li><strong>对你：</strong> 坚定信心。你现在学AI Agent和RAG，正是把自己从“增删改查”后端向“AI工作流设计者”转型。</li>
+</ul>
+<hr />
+<h3>🌍 国际形势（与科技、就业、政策的关系）</h3>
+<ol>
+<li>
+<p><strong>美伊冲突升级（美国与伊朗互相打击，伊朗威胁霍尔木兹海峡）</strong><br />
+   - <strong>与科技/就业关系：</strong> 霍尔木兹海峡是石油运输要道，冲突可能推高能源价格，影响全球科技公司成本（数据中心电费、硬件运输）。长期看，地缘不确定性可能加速各国投资本土芯片和AI基础设施。<br />
+   - <strong>对你：</strong> 保持关注，但不必过度焦虑。你学习的技术方向（本地RAG、Agent）在分散化部署场景下更有价值。</p>
+</li>
+<li>
+<p><strong>SK海力士赴美上市（AI芯片巨头）</strong><br />
+   - <strong>与科技/就业关系：</strong> 直接反映AI硬件市场规模。对后端转AI的你：存储、内存（HBM）是AI数据管道的瓶颈，理解这些能帮你优化RAG系统中的数据加载和缓存设计。<br />
+   - <strong>对你：</strong> 学习时可留意HBM缓存技术（如Redis、Memcached在AI场景的应用）。</p>
+</li>
+<li>
+<p><strong>强台风“巴维”袭击东亚（菲律宾15人死亡，将登陆台湾和中国东南）</strong><br />
+   - <strong>与科技/就业关系：</strong> 自然灾害影响数据中心选址、电力稳定性、全球供应链（芯片运输）。可能影响部分云服务可用性。<br />
+   - <strong>对你：</strong> 了解容灾和多云部署的重要性，但现阶段不用深究。</p>
+</li>
+<li>
+<p><strong>乌克兰情报人员承认刺杀案（与前文相关但非核心）</strong><br />
+   - <strong>与科技/就业关系：</strong> 地缘政治不稳定影响欧洲科技人才流动和数据合规。<br />
+   - <strong>对你：</strong> 暂时无关，可忽略。</p>
+</li>
+</ol>
+<hr />
+<h3>🇨🇳 中国国家政策</h3>
+<p><strong>本期说明：</strong> 提供的材料中只有中国政府网和全国人大网站的列表页链接，没有具体的政策文件或新闻摘要。无法提取有效内容。<strong>缺少直接来源，因此不硬凑。</strong></p>
+<p><strong>常规建议：</strong> 如果你关心公考或科技政策，建议每日关注“国务院”微信公众号或“中国政府网”的“政策文件”栏目，特别是《新一代人工智能发展规划》《数字中国建设整体布局规划》等方向的落地政策。</p>
+<hr />
+<h3>📌 对我的个人建议</h3>
+<ol>
+<li><strong>立即行动：</strong> 克隆 <strong>Reviva</strong> 项目到本地，按文档跑通。然后尝试将自己的笔记或Markdown文件夹导入，测试它的RAG问答功能。这是你理解“本地RAG”的绝佳起点。</li>
+<li><strong>规划一个小项目：</strong> 基于Reviva的思路，自己做一个“公考/政策问答助手”。抓取一些公开的公考题库或政策文件PDF，用LangChain搭建一个本地问答机器人（无需GPU，用OpenAI API即可）。这同时覆盖了你对公考和技术学习的兴趣。</li>
+<li><strong>学习优先级调整：</strong> 先专注 <strong>Agent + RAG</strong> 这两个方向。近期OpenAI的芯片和电信案例都表明Agent落地是重点。可以看OpenAI的“Agents”组件（如函数调用、Assistant API），以及LangGraph。</li>
+<li><strong>关注成本变化：</strong> 随着推理芯片降价，以后小团队也能部署多Agent系统。可以开始了解便宜的API（如DeepSeek、GPT-4o mini）来跑原型。</li>
+<li><strong>保持信息筛选：</strong> 美伊冲突、台风这类时事你作为背景了解即可，不要花太多时间。聚焦于<strong>可动手的项目</strong>和<strong>可复用的技术栈</strong>。</li>
+</ol>
+<hr />
+<p><strong>总结：</strong> 今天最值得你花时间的就是<strong>Reviva项目</strong>和<strong>AI芯片趋势</strong>。动手比看新闻更重要。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>mingchen666/Reviva</strong>（GitHub，评分 4.49）：HTML 项目，Stars 90，适合评估是否能拆成练手项目。</li>
+<li><strong>rafaelmateo123/Arena-of-Autonomous-Threads</strong>（GitHub，评分 4.08）：HTML 项目，Stars 153，适合评估是否能拆成练手项目。</li>
+<li><strong>shadowlzt/ironclaw-ai-vision</strong>（GitHub，评分 4.0）：HTML 项目，Stars 152，适合评估是否能拆成练手项目。</li>
+<li><strong>South Korea chip maker SK hynix rides AI boom raising $26.5bn in huge US listing</strong>（www.theguardian.com，评分 3.88）：命中国际关键词 chip、semiconductor，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Watch: What links a bomb in Monaco and a shooting in Ukraine?</strong>（feeds.bbci.co.uk，评分 3.72）：命中国际关键词 Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>mingchen666/Reviva</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/mingchen666/Reviva</li>
+<li>评分：4.49</li>
+<li>简介：Local-first AI learning workspace — ask, note, review and create around your own materials. Wiki KB, Agents, Skills, creation tools.AI 学习工作台，围绕你的资料完成问答、笔记、复习和创作输出。本地优先，多模型，Wiki 知识库，AI Agent，创作工具。 Stars: 90; Forks: 5; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 90，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>rafaelmateo123/Arena-of-Autonomous-Threads</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/rafaelmateo123/Arena-of-Autonomous-Threads</li>
+<li>评分：4.08</li>
+<li>简介：Top AI Agent Simulator: Build a Local Reddit Forum for LLM Testing 2026 Stars: 153; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 153，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>shadowlzt/ironclaw-ai-vision</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/shadowlzt/ironclaw-ai-vision</li>
+<li>评分：4.0</li>
+<li>简介：Ultimate AI Fitness Coach PWA 2026: Iron Mike Workout &amp; Smart Recipe Agent Stars: 152; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 152，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI and Broadcom unveil LLM-optimized inference chip</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-broadcom-jalapeno-inference-chip</li>
+<li>评分：3.42</li>
+<li>简介：OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How Deutsche Telekom is rewiring telecommunications with AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/deutsche-telekom</li>
+<li>评分：3.36</li>
+<li>简介：How Deutsche Telekom is becoming an AI-native telco with OpenAI-transforming customer service, employee workflows, network operations, and the future of voice.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Mapping Europe’s AI Workforce Opportunity</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/mapping-ai-jobs-transition-eu</li>
+<li>评分：3.34</li>
+<li>简介：A new OpenAI report maps how AI could reshape jobs across the EU, highlighting which occupations may face automation, growth, or workflow changes.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>South Korea chip maker SK hynix rides AI boom raising $26.5bn in huge US listing</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/jul/10/south-korea-chip-maker-sk-hynix-rides-ai-boom-raising-265bn-in-huge-us-listing</li>
+<li>评分：3.88</li>
+<li>简介：SK hynix, a supplier of advanced memory chips, has seen profits skyrocket thanks to the global race to build AI datacentres South Korean chip maker SK hynix set pricing for its mega US listing on Friday, aiming to raise $26.5bn as it takes advantage of the AI boom in what will be one of the world’s biggest ever stock sales. The Asian semiconductor giant plans to issue the equivalent of about 18m shares on Wall Street’s tech-heavy Nasdaq index later in the day. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 chip、semiconductor，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Watch: What links a bomb in Monaco and a shooting in Ukraine?</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/videos/c992zv2xpdjo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.72</li>
+<li>简介：A Ukrainian intelligence agent who confessed to killing the woman suspected of trying to assassinate a multimillionaire in Monaco, has now claimed he did not pull the trigger.</li>
+<li>为什么值得关注：命中国际关键词 Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>US and Iran trade escalating strikes as supreme leader is buried after days-long funeral</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/jul/09/iran-trade-strikes-ceasefire-extended-donald-trump</li>
+<li>评分：3.72</li>
+<li>简介：Renewed attacks the largest since an interim memorandum was signed this June, with Trump saying fragile truce is ‘over’ The US and Iran traded retaliatory strikes on Thursday as US president Donald Trump threatened to escalate the conflict unless Iran stopped attacking ships in the strait of Hormuz. Iran responded to the latest round of attacks by targeting US-allied Kuwait and Qatar and accused the US of striking near its sole nuclear power plant. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>East Asia braces for destructive typhoon as landslides kill 15 in Philippines</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：Heading for Taiwan and south-eastern China, the 1,000 km-wide Bavi is forecast to be one of the strongest storms in decades.</li>
+<li>为什么值得关注：命中国际关键词 China、Taiwan，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å½å¡é¢é¨é¨ç½ç«</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748953.htm</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：mingchen666/Reviva。</li>
+<li>重点阅读：South Korea chip maker SK hynix rides AI boom raising $26.5bn in huge US listing。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/mingchen666/Reviva">mingchen666/Reviva</a> - GitHub</li>
+<li><a href="https://github.com/rafaelmateo123/Arena-of-Autonomous-Threads">rafaelmateo123/Arena-of-Autonomous-Threads</a> - GitHub</li>
+<li><a href="https://github.com/shadowlzt/ironclaw-ai-vision">shadowlzt/ironclaw-ai-vision</a> - GitHub</li>
+<li><a href="https://www.theguardian.com/world/2026/jul/10/south-korea-chip-maker-sk-hynix-rides-ai-boom-raising-265bn-in-huge-us-listing">South Korea chip maker SK hynix rides AI boom raising $26.5bn in huge US listing</a> - www.theguardian.com</li>
+<li><a href="https://www.bbc.co.uk/news/videos/c992zv2xpdjo?at_medium=RSS&amp;at_campaign=rss">Watch: What links a bomb in Monaco and a shooting in Ukraine?</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.theguardian.com/world/2026/jul/09/iran-trade-strikes-ceasefire-extended-donald-trump">US and Iran trade escalating strikes as supreme leader is buried after days-long funeral</a> - www.theguardian.com</li>
+<li><a href="https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&amp;at_campaign=rss">East Asia braces for destructive typhoon as landslides kill 15 in Philippines</a> - feeds.bbci.co.uk</li>
+<li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip">OpenAI and Broadcom unveil LLM-optimized inference chip</a> - openai.com</li>
+<li><a href="https://openai.com/index/deutsche-telekom">How Deutsche Telekom is rewiring telecommunications with AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/mapping-ai-jobs-transition-eu">Mapping Europe’s AI Workforce Opportunity</a> - openai.com</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748953.htm">å½å¡é¢é¨é¨ç½ç«</a> - 中国政府网</li>
+</ul></main></body></html>
