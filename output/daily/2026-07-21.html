@@ -1,0 +1,259 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-07-21</h1>
+<h2>AI 生成综述</h2>
+<p>好的，这是为你准备的 2026-07-21 每日个人简报。</p>
+<hr />
+<h2>📋 今日最值得关注的 5 件事</h2>
+<ol>
+<li>
+<p><strong>🔍 美国 CIA 参与在阿联酋打造中东最大 AI 前哨</strong>
+   - <strong>来源</strong>：<a href="https://www.hani.co.kr/arti/international/international_general/1269038.html">hani.co.kr</a>
+   - <strong>为什么重要</strong>：美国直接动用情报机构推动海外 AI 基础设施建设，说明 AI 已从商业竞争上升为国家级安全与情报战略。UAE 将成为中美 AI 角力的新支点，影响未来芯片流向、数据主权和云服务格局。
+   - <strong>对你有什么用</strong>：关注 AI Agent 和自动化工具时，要考虑数据存储和模型部署的合规性。如果未来做跨境 AI 项目，中东可能成为“中立区”，但政治风险也在增加。</p>
+</li>
+<li>
+<p><strong>🇨🇳 北京对世界喊话：我们不要你们的芯片</strong>
+   - <strong>来源</strong>：<a href="https://www.theatlantic.com/international/2026/07/china-tech-sector-ai/687938">theatlantic.com</a>
+   - <strong>为什么重要</strong>：这是中国公开拒绝外部芯片的明确信号，叠加韩国 ZDNet 关于“中国 AI 芯片 K3 冲击半导体霸权”的报道，说明中国在 AI 算力自主上已取得实质性进展（可能指华为昇腾或类似产品）。
+   - <strong>对你有什么用</strong>：如果你做 AI 应用开发，未来在中国市场可能更多使用国产芯片和国产 AI 框架（如昇思 MindSpore）。后端转 AI 的路径中，熟悉国产生态会成为加分项。</p>
+</li>
+<li>
+<p><strong>🤖 OpenAI 发布长周期模型安全报告</strong>
+   - <strong>来源</strong>：<a href="https://openai.com/index/safety-alignment-long-horizon-models">openai.com</a>
+   - <strong>为什么重要</strong>：长周期模型（运行小时甚至天级别的 AI）正在从实验室走向产品。OpenAI 总结了实际部署中出现的“失败”和“新风险”，这意味着未来的 AI 开发必须内建安全对齐机制，而不仅仅是训练一个模型。
+   - <strong>对你有什么用</strong>：你是初学者，但如果你要做 AI Agent（通常会长期运行，例如自动调研），必须从一开始就学习安全设计，否则你的 Agent 可能会“失控”。这份报告提供了第一手教训。</p>
+</li>
+<li>
+<p><strong>🌍 欧洲 AI 就业图谱：哪些岗位会被重塑</strong>
+   - <strong>来源</strong>：<a href="https://openai.com/index/mapping-ai-jobs-transition-eu">openai.com</a>
+   - <strong>为什么重要</strong>：OpenAI 对欧盟劳动力市场的分析具有普适性。报告指出哪些职业面临自动化，哪些岗位需求增长。对于“后端转 AI”的你，这是职业规划的参考地图。
+   - <strong>对你有什么用</strong>：可以对照自己当前的“后端”技能（API、数据库、系统设计），看看哪些是 AI 时代依然重要的，哪些需要补充（如 prompt engineering、工具链集成）。建议仔细看报告中的具体职业分类。</p>
+</li>
+<li>
+<p><strong>✈️ 日本防卫出口管制缓和，航空展带来商机</strong>
+   - <strong>来源</strong>：<a href="https://www.chunichi.co.jp/article/1284213">chunichi.co.jp</a>
+   - <strong>为什么重要</strong>：日本放宽防卫出口条件，不仅是军事层面，也暗示 AI 技术在军工、航天领域的民用转化可能加速。这对关注“国际形势与科技政策”的你有参考价值——技术出口管制和放松会直接影响你得以及时获取哪些硬件/软件。
+   - <strong>对你有什么用</strong>：如果你是做 RAG 或自动化工具，未来可以关注日本在航空、防灾等领域的 AI 合作项目，可能作为自由项目或工作机会。</p>
+</li>
+</ol>
+<hr />
+<h2>🔨 GitHub 热门项目</h2>
+<ol>
+<li>
+<p><strong>rollingSirius/equity-research-skill</strong> ⭐145 | Python
+   - <strong>是什么</strong>：AI 投研助手，自动生成个股深度分析报告，内置 DCF/EPV 估值模型，可复算。
+   - <strong>适合你学习吗</strong>：<strong>暂时不适合直接上手</strong>。代码涉及金融模型和 API 调用，对初学者较复杂。但可以作为“目标案例”留存——当你学了 Python 基础、requests、pandas 后，可以尝试读懂它的分析逻辑，并模仿做一个简化版。
+   - <strong>值得关注点</strong>：展示了如何把 AI（LLM）和传统分析脚本结合，是一个典型的 Agent 应用场景。</p>
+</li>
+<li>
+<p><strong>MemTensor/memmy-agent</strong> ⭐61 | TypeScript
+   - <strong>是什么</strong>：一个 AI Agent，拥有“共享记忆”——不同 AI 之间共享同一个记忆模块，类似多人协作时统一知识库。
+   - <strong>适合你学习吗</strong>：<strong>中等难度</strong>。用 TypeScript 编写，如果你刚开始学前端/JS 可能不友好。但它的“记忆共享”概念正是 RAG 的精髓——你可以先理解思路：用一个外部存储（向量库）统一不同 Agent 的上下文。建议之后可以尝试用 Python+LangChain 复现类似功能。
+   - <strong>值得关注点</strong>：如果你未来做 AI Agent，记忆管理是核心难点，该项目是最新的实现参考。</p>
+</li>
+<li>
+<p><strong>Fabiojvv/ai-cortex-hub</strong> ⭐153 | HTML
+   - <strong>是什么</strong>：AI 工具发现平台，自动筛选并展示当前最热 AI 工具排行榜。
+   - <strong>适合你学习吗</strong>：<strong>适合快速入门</strong>。纯 HTML 页面，前端极简，你可以研究它如何通过 API 拉取排名数据并展示。作为初学者，这是一个很好的“练手爬虫+展示”的参考项目，但不要期望学到复杂的后端逻辑。
+   - <strong>值得关注点</strong>：可以自己去更新这个排行榜的源，做成自己的“AI 工具导航站”，作为个人作品集。</p>
+</li>
+</ol>
+<hr />
+<h2>🤖 AI 发展动态（源自 ai_news）</h2>
+<ul>
+<li><strong>趋势核心：从“能用”到“安全可控”。</strong>
+  OpenAI 的三篇文章都在强调“安全部署”——长周期模型有新的失败模式（如任务漂移、幻觉累积），青少年使用需要限制，欧洲就业受冲击需要技能转型。这说明 2026 年下半年 AI 产业的重心正从模型能力竞赛转向工程化落地中的风险管控。</li>
+<li><strong>对你个人的影响</strong>：如果你想进入 AI 领域，<strong>安全与对齐</strong>是一个值得切入的细分方向。即使你暂时做不了底层研究，学习如何给 LLM 输出加防火墙、设置超时和熔断机制，都是实际工作中会直接需要的技能。</li>
+<li><strong>就业信号</strong>：欧洲报告提示“高技能白领工作（如法律、分析师）也会被 AI 辅助”，但“低技能重复任务”会被取代。作为后端转 AI 的人，你的价值在于理解系统架构，而非仅仅写 SQL 或 CRUD——AI 会帮你做那部分，你需要负责集成、测试、安全。</li>
+</ul>
+<hr />
+<h2>🌍 国际形势（源自 world_news）</h2>
+<p><strong>由于当前只有 4 条国际新闻，无法全面覆盖，以下基于已有材料分析：</strong></p>
+<ul>
+<li><strong>中美 AI 对决的“双重战场”</strong>：</li>
+<li><strong>中东战场</strong>：美国用 CIA 在阿联酋建 AI 基地，中国则用芯片自主（K3）在全球半导体供应链中撕开缺口。</li>
+<li><strong>意识形态战场</strong>：Atlantic 的报道标题“北京不要你们的芯片”实际上是对外宣示“技术自信”，对内则可能继续刺激国产替代政策。</li>
+<li><strong>日本转型</strong>：防卫出口放宽意味着日本在 AI/机器人/航空领域的民用技术更容易转化为军事用途（反之亦然）。这一方面会增加中国周边的技术竞争，另一方面也为跨国 AI 合作提供了新市场。</li>
+<li><strong>对科技/就业的影响</strong>：</li>
+<li>国产替代加速 → 国内 AI 开发者要适应国产芯片（如昇腾）和国产框架。</li>
+<li>美国对中东 AI 基础设施的投资 → 可能催生新的云服务商和数据中心运营商，对跨境工作或自由职业者来说是潜在机会。</li>
+<li>日本防卫松绑 → 可能带动自动驾驶、无人机、网络安全等领域的人才需求。</li>
+</ul>
+<p><strong>说明</strong>：本期缺少关于中国国家政策的直接新闻来源，因此无法分析具体政策动向。如有需要，可以手动搜索“国务院关于 AI 的新指导意见”或“工信部芯片扶持政策”等关键词。</p>
+<hr />
+<h2>🇨🇳 中国国家政策</h2>
+<p><strong>本期缺失直接来源</strong>。提供的两个链接（全国政协、国家监察委）仅为官网列表页，无具体新闻内容。无法据此分析政策走向。</p>
+<p><strong>建议</strong>：如你需要政策参考，可以关注“中国政府网政策原文”板块或“工信部、科技部”官网新闻。下期请提供具体政策文件或报道。</p>
+<hr />
+<h2>💡 对我的个人建议</h2>
+<ol>
+<li>
+<p><strong>本周聚焦“Agent 安全”</strong>：既然你在学 AI Agent，就去读 OpenAI 的长周期安全报告（英文，可借助翻译工具）。重点看我上面提到的“任务漂移”和“幻觉累积”——理解这两个概念后，写出一个简单的笔记，作为你的学习成果。</p>
+</li>
+<li>
+<p><strong>动手做一个“菜鸟版”记忆共享 Agent</strong>：参考 memmy-agent 的思路，用 Python + LangChain + ChromaDB（免费） 做一个“给 AI 一个共享记事本”的小项目。流程：一个 ai 写笔记 → 另一个 ai 读笔记回答问题。代码量不超过 100 行，非常适合初学者实践 RAG 核心。</p>
+</li>
+<li>
+<p><strong>职业信息收集</strong>：打开 OpenAI 欧洲就业报告页面，截图或记录下与“后端开发”、“系统架构”相关的岗位预测，放入你的学习计划文件夹。问自己：AI 时代我现在的哪些能力会被取代？哪些能力会被放大？例如，我是否会写 prompt 比写 SQL 更重要？</p>
+</li>
+<li>
+<p><strong>跟随国产芯片动态</strong>：如果你打算在国内就业，关注华为昇腾 (Ascend) 和百度昆仑的开发者文档，试着在本地跑一个支持国产硬件的 LLM 推理（如通过 ollama 社区版）。这是未来 2 年的实用技能。</p>
+</li>
+<li>
+<p><strong>拒绝信息堆砌，每天只用 30 分钟做以上 1-2 件事</strong>。你是不喜欢空话的，那就把每一条新闻变成“一个可执行的动作”。今天的简报到这里，明天继续。</p>
+</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>미 , UAE 중동 최대 미국산AI 전초 기지 만들려 CIA 동원</strong>（hani.co.kr，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Beijing to the World : We Dont Want Your Chips</strong>（theatlantic.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>중국 AI 키미 K3 쇼크가 흔든 반도체 패권</strong>（zdnet.co.kr，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>国際航空ショー 、 日本企業商機 防衛輸出の規制緩和追い風 ： 中日新聞Web</strong>（chunichi.co.jp，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>rollingSirius/equity-research-skill</strong>（GitHub，评分 4.08）：Python 项目，Stars 145，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>rollingSirius/equity-research-skill</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/rollingSirius/equity-research-skill</li>
+<li>评分：4.08</li>
+<li>简介：可能是最深度的 AI 投研报告 Skill：九章个股深研 + 九章财报深度分析，脚本化 DCF/EPV 与可复算估值 Stars: 145; Forks: 27; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 145，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>MemTensor/memmy-agent</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/MemTensor/memmy-agent</li>
+<li>评分：4.0</li>
+<li>简介：One Agent. One memory. Shared by every AI. 🍙 Stars: 61; Forks: 13; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 61，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Fabiojvv/ai-cortex-hub</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Fabiojvv/ai-cortex-hub</li>
+<li>评分：3.64</li>
+<li>简介：Top AI Tools Discovery Platform 2026: Automated Curation &amp; Live Leaderboards Stars: 153; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 153，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Safety and alignment in an era of long-horizon models</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/safety-alignment-long-horizon-models</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI shares lessons from deploying long-running AI models, highlighting new safety risks, observed failures, and improved safeguards through iterative deployment.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Why teens deserve access to safe AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/why-teens-deserve-access-safe-ai</li>
+<li>评分：3.16</li>
+<li>简介：Learn how OpenAI is making ChatGPT safer for teens with age-appropriate protections, learning tools, parental controls, and expert partnerships.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Mapping Europe’s AI Workforce Opportunity</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/mapping-ai-jobs-transition-eu</li>
+<li>评分：3.14</li>
+<li>简介：A new OpenAI report maps how AI could reshape jobs across the EU, highlighting which occupations may face automation, growth, or workflow changes.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>미 , UAE 중동 최대 미국산AI 전초 기지 만들려 CIA 동원</h3>
+<ul>
+<li>来源：hani.co.kr</li>
+<li>链接：https://www.hani.co.kr/arti/international/international_general/1269038.html</li>
+<li>评分：4.48</li>
+<li>简介：20260720T083000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Beijing to the World : We Dont Want Your Chips</h3>
+<ul>
+<li>来源：theatlantic.com</li>
+<li>链接：https://www.theatlantic.com/international/2026/07/china-tech-sector-ai/687938</li>
+<li>评分：4.48</li>
+<li>简介：20260719T163000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>중국 AI 키미 K3 쇼크가 흔든 반도체 패권</h3>
+<ul>
+<li>来源：zdnet.co.kr</li>
+<li>链接：https://zdnet.co.kr/view?no=20260720101823</li>
+<li>评分：4.48</li>
+<li>简介：20260720T063000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>国際航空ショー 、 日本企業商機 防衛輸出の規制緩和追い風 ： 中日新聞Web</h3>
+<ul>
+<li>来源：chunichi.co.jp</li>
+<li>链接：https://www.chunichi.co.jp:443/article/1284213</li>
+<li>评分：4.48</li>
+<li>简介：20260720T220000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½æ¿å</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.cppcc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å½å®¶çå¯å§åä¼</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.ccdi.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：rollingSirius/equity-research-skill。</li>
+<li>重点阅读：미 , UAE 중동 최대 미국산AI 전초 기지 만들려 CIA 동원。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.hani.co.kr/arti/international/international_general/1269038.html">미 , UAE 중동 최대 미국산AI 전초 기지 만들려 CIA 동원</a> - hani.co.kr</li>
+<li><a href="https://www.theatlantic.com/international/2026/07/china-tech-sector-ai/687938">Beijing to the World : We Dont Want Your Chips</a> - theatlantic.com</li>
+<li><a href="https://zdnet.co.kr/view?no=20260720101823">중국 AI 키미 K3 쇼크가 흔든 반도체 패권</a> - zdnet.co.kr</li>
+<li><a href="https://www.chunichi.co.jp:443/article/1284213">国際航空ショー 、 日本企業商機 防衛輸出の規制緩和追い風 ： 中日新聞Web</a> - chunichi.co.jp</li>
+<li><a href="https://github.com/rollingSirius/equity-research-skill">rollingSirius/equity-research-skill</a> - GitHub</li>
+<li><a href="https://github.com/MemTensor/memmy-agent">MemTensor/memmy-agent</a> - GitHub</li>
+<li><a href="https://github.com/Fabiojvv/ai-cortex-hub">Fabiojvv/ai-cortex-hub</a> - GitHub</li>
+<li><a href="https://openai.com/index/safety-alignment-long-horizon-models">Safety and alignment in an era of long-horizon models</a> - openai.com</li>
+<li><a href="https://openai.com/index/why-teens-deserve-access-safe-ai">Why teens deserve access to safe AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/mapping-ai-jobs-transition-eu">Mapping Europe’s AI Workforce Opportunity</a> - openai.com</li>
+<li><a href="http://www.cppcc.gov.cn/">å ¨å½æ¿å</a> - 中国政府网</li>
+<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
+</ul></main></body></html>
