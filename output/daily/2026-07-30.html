@@ -1,0 +1,292 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-07-30</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 | 2026-07-30</h1>
+<h2>今日最值得关注的 5 件事</h2>
+<ol>
+<li>
+<p><strong>OpenAI 向 10 万学术研究者免费提供最强 AI 模型</strong><br />
+   这说明顶级 AI 能力正在从“付费壁垒”转向“开放赋能”，对科研、自动化工具开发、学习资源获取都是积极信号。<br />
+<a href="https://openai.com/index/chatgpt-for-academic-researchers">来源</a></p>
+</li>
+<li>
+<p><strong>美国联合沙特对伊朗发动打击，中东局势升级</strong><br />
+   直接推高能源价格不确定性，间接影响科技企业成本（电力、芯片、国际物流），同时可能加速国内对自主可控技术的政策倾斜。<br />
+<a href="https://www.bbc.co.uk/news/articles/c74gwdzywmeo">来源</a> | <a href="https://www.bbc.co.uk/news/articles/c70g6y24d76o">补充：沙特加入</a></p>
+</li>
+<li>
+<p><strong>俄罗斯指控 Telegram 创始人“协助恐怖主义”</strong><br />
+   平台监管与地缘政治的冲突加剧，直接影响全球即时通讯、加密服务的合规走向，也提醒开发者注意不同司法管辖区的法律风险。<br />
+<a href="https://www.bbc.co.uk/news/articles/cj4kexqkpzno">来源</a></p>
+</li>
+<li>
+<p><strong>两款开源 AI 记忆管理项目冲榜 GitHub</strong> —— <strong>EXXETA/exxperts</strong> 和 <strong>MemTensor/memmy-agent</strong><br />
+   核心概念都是“让 AI 记住你”，这是当前 AI Agent 落地的关键痛点。直接对应你关注的 AI Agent 方向，且代码开放，适合动手学习。<br />
+<a href="https://github.com/EXXETA/exxperts">exxperts</a> | <a href="https://github.com/MemTensor/memmy-agent">memmy-agent</a></p>
+</li>
+<li>
+<p><strong>OpenAI 展示 Codex 在创意团队中的实际协作案例</strong><br />
+   证明 AI 编程助手已从“写代码工具”进化到“创意原型加速器”，后端转 AI 的同学可以关注这种“AI 作为协作伙伴”的工作流变化。<br />
+<a href="https://openai.com/index/codex-collaborator-creative-team">来源</a></p>
+</li>
+</ol>
+<hr />
+<h2>GitHub 热门项目</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>星数/语言</th>
+<th>适合你吗？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EXXETA/exxperts</strong> – 持久化 AI 房间，带审批的记忆管理，本地优先</td>
+<td>★240 / TypeScript</td>
+<td><strong>适合</strong>。概念清晰（AI 房间 + 记忆审批），TypeScript 有大量教程参考。可学习本地部署、记忆机制、权限控制。</td>
+</tr>
+<tr>
+<td><strong>MemTensor/memmy-agent</strong> – 所有 AI 代理（Claude Code、Codex 等）的共享本地记忆中心</td>
+<td>★85 / TypeScript</td>
+<td><strong>非常推荐</strong>。直接贴近“让多个 Agent 共享上下文”的前沿问题。代码量不大（85星），适合拆解学习。</td>
+</tr>
+<tr>
+<td><strong>riponcm/GemType</strong> – 免费的语法检查 &amp; 文本重写浏览器扩展，调用 Gemini API</td>
+<td>★126 / JavaScript</td>
+<td><strong>入门友好</strong>。纯 JS，调用免费 API，无后端。适合练手浏览器扩展开发、API 对接。</td>
+</tr>
+<tr>
+<td><strong>04mg/caw</strong> – AI 代理的 Web 终端复用器</td>
+<td>★76 / TypeScript</td>
+<td><strong>难度偏高</strong>。涉及终端仿射、WebSocket 等底层概念，建议有 Node.js 基础后再看。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>行动建议</strong>：本周末可以 Fork <code>memmy-agent</code>，先按 README 本地跑起来，然后尝试修改记忆存储逻辑（比如换成自己的文件路径）。</p>
+</blockquote>
+<hr />
+<h2>AI 发展动态</h2>
+<h3>趋势：AI 从“工具”转向“协作伙伴+科研加速器”</h3>
+<ul>
+<li>
+<p><strong>ChatGPT for Academic Researchers</strong><br />
+  OpenAI 免费开放顶级模型，直接降低学术研究门槛。对你有三层意义：<br />
+  1. 你可以用免费额度学习科研级 Prompt 设计；<br />
+  2. 关注“AI + 科学计算”报告（<a href="https://openai.com/index/scientific-computing-agentic-ai">原文链接</a>）—— 里面提到 AI Agent 正在自动写基因组学代码，这类自动化工具是你未来可能接触的方向；<br />
+  3. 公考科技政策部分，这类“技术普惠”案例常被用作正面论述素材。</p>
+</li>
+<li>
+<p><strong>Codex 成为创意团队 “协作伙伴”</strong><br />
+  说明 AI 编程助手的使用场景已从“替代重复劳动”扩展到“快速验证创意”。对于打算从后端转 AI 的人来说，这是很好的切入点：不必一开始就搞复杂模型，而是先用好 Codex 这类工具提升自己的原型能力。</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>一句话总结</strong>：AI 民主化+专业化双重加速，学会用 AI 工具比学会写 AI 模型更重要。</p>
+</blockquote>
+<hr />
+<h2>国际形势</h2>
+<h3>三组事件，两个影响方向</h3>
+<ol>
+<li>
+<p><strong>中东</strong>：美国联合沙特打击伊朗代理武装（<a href="https://www.bbc.co.uk/news/articles/c74gwdzywmeo">链接1</a> / <a href="https://www.bbc.co.uk/news/articles/c70g6y24d76o">链接2</a>）<br />
+   - <strong>对科技</strong>：油价可能走高，增加数据中心、GPU 集群的运营成本；同时推动美国收紧对中东的科技出口管制。<br />
+   - <strong>对就业</strong>：能源价格波动会间接影响国内新能源政策投资力度，公考面试可能涉及“能源安全与科技自主”。</p>
+</li>
+<li>
+<p><strong>俄乌</strong>：基辅遭导弹袭击（<a href="https://www.aljazeera.com/news/2026/7/30/russia-ballistic-missile-strikes-on-kyiv-come-after-zelenskyys-warning">来源</a>）；俄罗斯指控 Telegram 创始人（<a href="https://www.bbc.co.uk/news/articles/cj4kexqkpzno">来源</a>）<br />
+   - <strong>对科技</strong>：Telegram 事件直接考验“去中心化通信 vs 国家监管”的平衡，长期可能影响端到端加密技术的法律框架。<br />
+   - <strong>对政策</strong>：中国对平台经济的监管态度（如数据本地化、内容审核）与俄罗斯案例有部分相似逻辑，值得持续跟踪。</p>
+</li>
+</ol>
+<blockquote>
+<p>本期国际形势与你的关注点（科技政策、就业环境）交叉紧密，建议重点跟踪中东局势对芯片供应链的影响，以及 Telegram 事件对国内即时通讯合规的参考价值。</p>
+</blockquote>
+<hr />
+<h2>中国国家政策</h2>
+<p><strong>本期缺少有效的中国政策直接来源。</strong><br />
+材料中仅有中国政府网首页列表页（<a href="https://www.gov.cn/">链接</a>），无具体内容，无法分析。<br />
+- 不要用 GitHub 或 AI 新闻硬套政策结论。<br />
+- 建议每日关注“中国政府网”微信公众号或国务院客户端，补足这个信息缺口。</p>
+<hr />
+<h2>对我的个人建议</h2>
+<p>结合你的背景和本期信息，本周具体行动清单：</p>
+<ol>
+<li>
+<p><strong>动手学一个 AI Agent 记忆项目</strong><br />
+   - Fork <code>memmy-agent</code>，先看 README 和 <code>src</code> 结构，理解“所有 AI 共享同一个记忆”怎么实现。<br />
+   - 如果想更快上手，从 <code>GemType</code> 开始：注册一个 Gemini 免费 API Key，改一行代码体验 API 调用，15 分钟就能跑起来。</p>
+</li>
+<li>
+<p><strong>利用 OpenAI 免费计划提升自己</strong><br />
+   - 申请 ChatGPT for Academic Researchers（如果符合条件），用免费版 ChatGPT 辅助学习 TypeScript / Python，或者写一个小项目文档。<br />
+   - 阅读《Scientific computing in the age of agentic AI》报告，重点看“AI Agent 如何自动完成基因组分析”那段，思考类似的自动化能否迁移到你的兴趣领域（如 RAG 数据处理）。</p>
+</li>
+<li>
+<p><strong>国际形势的“技术视角”训练</strong><br />
+   - 每天花 5 分钟，把今天的中东/俄乌新闻问一下 AI（比如 ChatGPT）：“这对全球芯片物流链有什么具体影响？” 培养自己把新闻翻译成技术和就业影响的能力——这对后端转 AI 面试加分、公考申论论点都有帮助。</p>
+</li>
+<li>
+<p><strong>补上政策信息源</strong><br />
+   - 关注“中国政府网”公众号，每天早晨刷一遍当日政策标题。如果看到与科技、数据安全、新能源相关的通知，记下来并搜索解读文章。</p>
+</li>
+<li>
+<p><strong>本周目标</strong><br />
+   - 最实际的一个：跑通一个 AI Agent 本地记忆项目（哪怕只是日志打印），录个 30 秒 demo 或者写个学习笔记，作为你“AI Agent”方向的第一个作品。</p>
+</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>EXXETA/exxperts</strong>（GitHub，评分 4.17）：TypeScript 项目，Stars 240，适合评估是否能拆成练手项目。</li>
+<li><strong>MemTensor/memmy-agent</strong>（GitHub，评分 4.16）：TypeScript 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+<li><strong>riponcm/GemType</strong>（GitHub，评分 4.08）：JavaScript 项目，Stars 126，适合评估是否能拆成练手项目。</li>
+<li><strong>04mg/caw</strong>（GitHub，评分 4.0）：TypeScript 项目，Stars 76，适合评估是否能拆成练手项目。</li>
+<li><strong>US launches 'heavy' strikes on Iran after attempted attack on American troops</strong>（feeds.bbci.co.uk，评分 3.88）：命中国际关键词 Iran、Middle East，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>EXXETA/exxperts</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/EXXETA/exxperts</li>
+<li>评分：4.17</li>
+<li>简介：Persistent AI rooms with governed, approval-gated memory: local-first, on your machine. Stars: 240; Forks: 22; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 240，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>MemTensor/memmy-agent</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/MemTensor/memmy-agent</li>
+<li>评分：4.16</li>
+<li>简介：🍙 A personal AI agent &amp; local memory hub for all AI agents like Claude Code, Codex, OpenClaw and Hermes Agent. Gives every AI one shared, fully controlled memory and persistent context — all AI remember the same you. Stars: 85; Forks: 25; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>riponcm/GemType</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/riponcm/GemType</li>
+<li>评分：4.08</li>
+<li>简介：Free, open-source Grammarly alternative for Chrome &amp; Safari — AI grammar checker and text rewriter for any website, powered by your own free Google Gemini API key. No account, no tracking, no subscription. Stars: 126; Forks: 4; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 126，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>04mg/caw</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/04mg/caw</li>
+<li>评分：4.0</li>
+<li>简介：Web terminal multiplexer for AI agents. Stars: 76; Forks: 5; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 76，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Accelerating scientific discovery with ChatGPT for Academic Researchers</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/chatgpt-for-academic-researchers</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI is giving 100,000 academic researchers free access to ChatGPT's most advanced AI models to accelerate scientific research, collaboration, and discovery.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How Codex became a collaborator for OpenAI’s creative team</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/codex-collaborator-creative-team</li>
+<li>评分：3.06</li>
+<li>简介：How OpenAI’s creative team uses Codex to build custom creative tools, accelerate ideation, and prototype faster with context-aware AI.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Scientific computing in the age of agentic AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/scientific-computing-agentic-ai</li>
+<li>评分：2.92</li>
+<li>简介：A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.</li>
+<li>为什么值得关注：命中关键词 coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>US launches 'heavy' strikes on Iran after attempted attack on American troops</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/c74gwdzywmeo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.88</li>
+<li>简介：The US military said the strikes were in response to Iran firing missiles at US forces in the Middle East on Tuesday.</li>
+<li>为什么值得关注：命中国际关键词 Iran、Middle East，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Russia charges Telegram founder Durov with facilitating terrorism</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/cj4kexqkpzno?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The FSB claims the messenger app, created by Pavel Durov, has failed to remove accounts and channels used for recruitment by Ukraine's secret service.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>One killed in Russian missile strikes on Kyiv, day after Zelenskyy warning</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/news/2026/7/30/russia-ballistic-missile-strikes-on-kyiv-come-after-zelenskyys-warning?traffic_source=rss</li>
+<li>评分：3.64</li>
+<li>简介：Returning from the US, Zelenskyy says Ukraine's safety depends on allies’ willingness to provide anti-missile defences.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Saudi Arabia joins US in strikes on Iran-backed militias in Iraq</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.6</li>
+<li>简介：US Central Command says proxy groups launched attacks against US bases and Saudi energy infrastructure.</li>
+<li>为什么值得关注：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é¦é¡µ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/</li>
+<li>评分：1.32</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：EXXETA/exxperts。</li>
+<li>重点阅读：US launches 'heavy' strikes on Iran after attempted attack on American troops。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/EXXETA/exxperts">EXXETA/exxperts</a> - GitHub</li>
+<li><a href="https://github.com/MemTensor/memmy-agent">MemTensor/memmy-agent</a> - GitHub</li>
+<li><a href="https://github.com/riponcm/GemType">riponcm/GemType</a> - GitHub</li>
+<li><a href="https://github.com/04mg/caw">04mg/caw</a> - GitHub</li>
+<li><a href="https://www.bbc.co.uk/news/articles/c74gwdzywmeo?at_medium=RSS&amp;at_campaign=rss">US launches 'heavy' strikes on Iran after attempted attack on American troops</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/articles/cj4kexqkpzno?at_medium=RSS&amp;at_campaign=rss">Russia charges Telegram founder Durov with facilitating terrorism</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.aljazeera.com/news/2026/7/30/russia-ballistic-missile-strikes-on-kyiv-come-after-zelenskyys-warning?traffic_source=rss">One killed in Russian missile strikes on Kyiv, day after Zelenskyy warning</a> - www.aljazeera.com</li>
+<li><a href="https://openai.com/index/chatgpt-for-academic-researchers">Accelerating scientific discovery with ChatGPT for Academic Researchers</a> - openai.com</li>
+<li><a href="https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&amp;at_campaign=rss">Saudi Arabia joins US in strikes on Iran-backed militias in Iraq</a> - feeds.bbci.co.uk</li>
+<li><a href="https://openai.com/index/codex-collaborator-creative-team">How Codex became a collaborator for OpenAI’s creative team</a> - openai.com</li>
+<li><a href="https://openai.com/index/scientific-computing-agentic-ai">Scientific computing in the age of agentic AI</a> - openai.com</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
+</ul></main></body></html>
