@@ -1,0 +1,261 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-08-07</h1>
+<h2>AI 生成综述</h2>
+<h1>📋 2026-08-07 每日个人简报</h1>
+<h2>今日最值得关注的 5 件事</h2>
+<ol>
+<li>
+<p><strong>ChatGPT 正在从“问答”走向“执行”——AI Agent 趋势明确</strong><br />
+   OpenAI 发布 Signals 数据，显示全球用户正在把 ChatGPT 从“提问工具”变成“干活的工具”。这意味着 AI 不再只是回答问题，而是能直接帮人完成任务。这正是你关注的 <strong>AI Agent</strong> 方向的核心变化。<br />
+   🔗 https://openai.com/index/how-the-world-is-putting-chatgpt-to-work</p>
+</li>
+<li>
+<p><strong>OpenAI 与心理学协会合作：AI 心理健康与治理开始落地</strong><br />
+   OpenAI 与美国心理学会（APA）合作，推动青少年心理健康相关的 AI 使用规范。这说明 AI 的社会影响正在倒逼企业参与政策制定，未来类似“AI 伦理”“AI 安全”会成为科技政策的重点。<br />
+   🔗 https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai</p>
+</li>
+<li>
+<p><strong>AI 原生办公套件 genoffice 开源，办公自动化迎来新选择</strong><br />
+   genspark-ai/genoffice 是一个类似“AI 版 Office”的开源项目，支持文档、表格、PPT、PDF，已有 2066 stars。它可能改变日常办公方式，也意味着 AI 与办公软件的结合会成为就业市场新技能。<br />
+   🔗 https://github.com/genspark-ai/genoffice</p>
+</li>
+<li>
+<p><strong>本地 AI 视频工作室 Maestro：一条提示词生成完整视频</strong><br />
+   Maestro 号称“全本地、一体化 AI 视频/图像/音乐工作室”，支持导演模式从单一提示生成音乐视频。虽然目前只有 228 stars，但展示了本地 AI 创作工具的潜力，值得关注。<br />
+   🔗 https://github.com/Blizaine/Maestro</p>
+</li>
+<li>
+<p><strong>中东局势：美以分歧加剧，美国民调预期“不稳定”</strong><br />
+   多条外媒消息指向同一趋势：美国在中东的政策被以色列再次“否决”；同时有调查显示，一半美国人因对伊战争预期中东将陷入不稳定。地缘冲突升级会影响全球能源、供应链和科技投资。<br />
+   🔗 https://www.theamericanconservative.com/israel-vetoes-trump-in-the-middle-east-again<br />
+   🔗 https://www.okaz.com.sa/politics/na/2260173</p>
+</li>
+</ol>
+<hr />
+<h2>GitHub 热门项目</h2>
+<h3>1. genspark-ai/genoffice</h3>
+<ul>
+<li><strong>Stars / Forks / 语言</strong>：2066 / 343 / TypeScript  </li>
+<li><strong>说明</strong>：AI 原生办公套件，覆盖 Word、表格、PPT、PDF，支持 macOS 和 Windows。  </li>
+<li><strong>适合你吗？</strong>：你目前是编程初学者，这个项目偏前端和桌面应用，代码量较大，<strong>不建议直接入门</strong>。但可以关注它的产品形态，了解 AI 如何重塑办公软件，对你理解“AI+自动化”很有帮助。  </li>
+</ul>
+<h3>2. foodpm/timecut</h3>
+<ul>
+<li><strong>Stars / Forks / 语言</strong>：81 / 10 / Python  </li>
+<li><strong>说明</strong>：运行在 NAS 上的智能监控录像系统，用 FFmpeg 循环录像 + 大模型自动筛选一天精华并生成日记，有 Web 管理界面。  </li>
+<li><strong>适合你吗？</strong>：<strong>非常推荐</strong>。它是 Python 项目，涉及视频处理、大模型调用、自动化流程，代码量适中，你能通过它练习“把 AI 模型集成到实际工具”的完整思路。如果有 NAS，可以尝试部署。  </li>
+</ul>
+<h3>3. Blizaine/Maestro</h3>
+<ul>
+<li><strong>Stars / Forks / 语言</strong>：228 / 28 / Python  </li>
+<li><strong>说明</strong>：本地 AI 视频、图像、音乐生成工作室，基于 WanGP pipeline，通过 Pinokio 一键安装。  </li>
+<li><strong>适合你吗？</strong>：虽然 stars 不多，但项目整合了多种模型，适合作为 <strong>“了解本地 AI 视频管线”的参考</strong>。但它的依赖复杂，不建议初学者直接啃源码，可以先跑通体验一下，后续再深入。  </li>
+</ul>
+<hr />
+<h2>AI 发展动态</h2>
+<ul>
+<li>
+<p><strong>趋势：AI 从“助手”变成“执行者”</strong><br />
+  OpenAI 的官方数据显示，用户正在用 ChatGPT 完成实际任务，而不只是问答。这意味着 AI Agent（智能体）会成为下一阶段重点，你关注的 RAG、自动化工具都会围绕这个方向演进。<strong>建议尽快动手用 AI 完成一个小任务</strong>，比如自动整理笔记、生成代码框架。</p>
+</li>
+<li>
+<p><strong>趋势：AI 治理开始绑定社会机构</strong><br />
+  OpenAI 和 APA 的合作说明，AI 企业不再只关心技术，还要面对心理健康、未成年人保护等社会议题。未来政策会更多介入 AI 使用场景，这也可能带来新的职业方向，比如 AI 伦理顾问、合规测试。你可以持续观察这类新闻，对公考中的“科技政策”部分也有帮助。</p>
+</li>
+<li>
+<p><strong>趋势：AI 进入基础科学领域</strong><br />
+  OpenAI 公布了在数学和理论计算机科学上的 10 项进展，涉及几何、密码学、复杂性理论。短期看这些成果离应用较远，但长期会增强 AI 在科学发现中的地位。这类新闻适合作为“背景知识”积累，不必立即关注技术细节。<br />
+  🔗 https://openai.com/index/ten-advances-in-mathematics</p>
+</li>
+</ul>
+<hr />
+<h2>国际形势</h2>
+<p>本期共有 4 条国际新闻，集中在 <strong>中东局势</strong>：</p>
+<ul>
+<li>以色列再度否决特朗普的中东政策（美国保守派媒体分析）</li>
+<li>半数美国人因“对伊战争”预期中东不稳定（沙特媒体民调）</li>
+<li>泽连斯基为何介入中东（俄罗斯观点文章）</li>
+<li>土耳其国家安全委员会会议结束（标题无细节，无法判断具体内容）</li>
+</ul>
+<p><strong>与你关注点（科技、就业、政策环境）的关系：</strong></p>
+<ol>
+<li><strong>能源和供应链</strong>：中东冲突升级会推高油价和运输成本，直接影响全球科技企业的生产成本，进而影响招聘预算。  </li>
+<li><strong>科技自主政策</strong>：地缘紧张会让各国更强调关键领域“自主可控”，比如芯片、能源、AI基础设施。国内政策也会相应强化“科技自立自强”，这对你未来就业方向有参考价值。  </li>
+<li><strong>就业环境</strong>：制造业和跨境贸易可能收缩，但军工、网络安全、能源替代、AI 安全等领域岗位可能增加。如果你关注公考，这些方向也是热点考题。  </li>
+</ol>
+<p>注意：本期没有来自中国官方的直接分析，以上是基于国际新闻的合理推断，不是“对号入座”的硬结论。</p>
+<hr />
+<h2>中国国家政策</h2>
+<p>本期材料中仅包含中国政府网“邮箱”页面和“全国人大”官网入口链接，<strong>没有具体政策文件或新闻摘要</strong>。因此本期无法提供实质性的中国政策分析。<br />
+如果你需要跟踪政策，建议直接访问以下两个官网，并搜索最新政策名称或关键词：</p>
+<ul>
+<li>中国政府网：https://www.gov.cn  </li>
+<li>全国人大：http://www.npc.gov.cn</li>
+</ul>
+<hr />
+<h2>💡 对我的个人建议</h2>
+<p>结合你的背景（编程初学者、AI Agent / RAG / 自动化、公考关注者），本期给你 4 条可执行的建议：</p>
+<ol>
+<li>
+<p><strong>动手实践 AI Agent 小项目</strong><br />
+   既然 ChatGPT 已从“问答”走向“执行”，你可以尝试做一个最简单的自动化脚本：比如用 Python 调用 OpenAI API，让 AI 自动汇总你当天的 RAG 笔记，并输出 Markdown 文件。这是学习 Agent 逻辑的起点。</p>
+</li>
+<li>
+<p><strong>把 timecut 当作你的“第一个完整项目”</strong><br />
+   foodpm/timecut 是一个很合适的练手项目：Python + 大模型 + 自动化 + Web 界面。建议你先 fork 下来，通读 READ</p>
+</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>Blizaine/Maestro</strong>（GitHub，评分 4.17）：Python 项目，Stars 228，适合评估是否能拆成练手项目。</li>
+<li><strong>Son dakika : Milli Güvenlik Kurulu toplantısı sona erdi</strong>（haberturk.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>بسبب الحرب على إيران .. استطلاع : نصف الأمريكيين يتوقعون زعزعة استقرار الشرق الأوسط</strong>（okaz.com.sa，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Зачем Зеленский лезет на Ближний Восток :: Автор Сергей Миркин / ВЗГЛЯД</strong>（vz.ru，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Israel Vetoes Trump in the Middle East Again</strong>（theamericanconservative.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>Blizaine/Maestro</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Blizaine/Maestro</li>
+<li>评分：4.17</li>
+<li>简介：An all-in-one, 100% local AI video, image, and music studio. Director mode plans full music videos and short films from a single prompt. Built on the WanGP pipeline. Install via Pinokio. Stars: 228; Forks: 28; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 228，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>genspark-ai/genoffice</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/genspark-ai/genoffice</li>
+<li>评分：3.96</li>
+<li>简介：An AI-native office suite for macOS and Windows: word processor, spreadsheet, presentations, and PDF. Stars: 2066; Forks: 343; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 2066，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>foodpm/timecut</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/foodpm/timecut</li>
+<li>评分：3.96</li>
+<li>简介：跑在 NAS Docker 上的智能监控录像系统：FFmpeg 循环录像 + go2rtc 实时画面，大模型自动筛选一天回顾精华并生成日记，Web 面板一键管理。 Stars: 81; Forks: 10; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 81，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Working with the American Psychological Association on youth mental health and AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai</li>
+<li>评分：3.36</li>
+<li>简介：OpenAI and the American Psychological Association advance evidence-based guidance, resources, and safeguards for responsible AI use and youth mental health.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>From asking to doing: How the world is putting ChatGPT to work</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/how-the-world-is-putting-chatgpt-to-work</li>
+<li>评分：3.36</li>
+<li>简介：New OpenAI Signals data shows how people use ChatGPT worldwide, with country-level insights on adoption, usage trends, and evolving behavior.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Ten advances in mathematics and theoretical computer science</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/ten-advances-in-mathematics</li>
+<li>评分：3.16</li>
+<li>简介：OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography, and complexity.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Son dakika : Milli Güvenlik Kurulu toplantısı sona erdi</h3>
+<ul>
+<li>来源：haberturk.com</li>
+<li>链接：https://www.haberturk.com/gundem/son-dakika-milli-guvenlik-kurulu-toplantisi-sona-erdi-3903852</li>
+<li>评分：4.0</li>
+<li>简介：20260806T181500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>بسبب الحرب على إيران .. استطلاع : نصف الأمريكيين يتوقعون زعزعة استقرار الشرق الأوسط</h3>
+<ul>
+<li>来源：okaz.com.sa</li>
+<li>链接：https://www.okaz.com.sa/politics/na/2260173</li>
+<li>评分：4.0</li>
+<li>简介：20260806T131500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Зачем Зеленский лезет на Ближний Восток :: Автор Сергей Миркин / ВЗГЛЯД</h3>
+<ul>
+<li>来源：vz.ru</li>
+<li>链接：https://vz.ru/opinions/2026/8/5/1439976.html</li>
+<li>评分：4.0</li>
+<li>简介：20260805T080000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Israel Vetoes Trump in the Middle East Again</h3>
+<ul>
+<li>来源：theamericanconservative.com</li>
+<li>链接：https://www.theamericanconservative.com/israel-vetoes-trump-in-the-middle-east-again</li>
+<li>评分：4.0</li>
+<li>简介：20260806T073000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é®ç®±</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://mail.www.gov.cn/nsmail/index.html</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：Blizaine/Maestro。</li>
+<li>重点阅读：Son dakika : Milli Güvenlik Kurulu toplantısı sona erdi。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/Blizaine/Maestro">Blizaine/Maestro</a> - GitHub</li>
+<li><a href="https://www.haberturk.com/gundem/son-dakika-milli-guvenlik-kurulu-toplantisi-sona-erdi-3903852">Son dakika : Milli Güvenlik Kurulu toplantısı sona erdi</a> - haberturk.com</li>
+<li><a href="https://www.okaz.com.sa/politics/na/2260173">بسبب الحرب على إيران .. استطلاع : نصف الأمريكيين يتوقعون زعزعة استقرار الشرق الأوسط</a> - okaz.com.sa</li>
+<li><a href="https://vz.ru/opinions/2026/8/5/1439976.html">Зачем Зеленский лезет на Ближний Восток :: Автор Сергей Миркин / ВЗГЛЯД</a> - vz.ru</li>
+<li><a href="https://www.theamericanconservative.com/israel-vetoes-trump-in-the-middle-east-again">Israel Vetoes Trump in the Middle East Again</a> - theamericanconservative.com</li>
+<li><a href="https://github.com/genspark-ai/genoffice">genspark-ai/genoffice</a> - GitHub</li>
+<li><a href="https://github.com/foodpm/timecut">foodpm/timecut</a> - GitHub</li>
+<li><a href="https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai">Working with the American Psychological Association on youth mental health and AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/how-the-world-is-putting-chatgpt-to-work">From asking to doing: How the world is putting ChatGPT to work</a> - openai.com</li>
+<li><a href="https://openai.com/index/ten-advances-in-mathematics">Ten advances in mathematics and theoretical computer science</a> - openai.com</li>
+<li><a href="https://mail.www.gov.cn/nsmail/index.html">é®ç®±</a> - 中国政府网</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+</ul></main></body></html>
