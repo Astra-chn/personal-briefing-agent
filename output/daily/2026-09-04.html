@@ -1,0 +1,314 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-09-04</h1>
+<h2>AI 生成综述</h2>
+<h1>📋 每日个人简报</h1>
+<p><strong>日期：2026年9月4日</strong> ｜ <strong>给程序员的时政生存手册 第42期</strong></p>
+<blockquote>
+<p><strong>本期一句话：</strong> AI推理进入“白菜价”时代——OpenAI自研芯片+算力成本持续下降，AI Agent开发门槛正在快速降低。与此同时，全球地缘冲突升温，理解大环境对技术选型和职业规划的影响不再只是“看新闻”。</p>
+</blockquote>
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. OpenAI 自研推理芯片 Jalapeño：AI 推理进入“成本大跳水”前夜</h3>
+<p><strong>为什么重要：</strong> OpenAI发布自研推理芯片的首批结果，宣称在速度、能效、吞吐量和延迟方面达到行业领先。结合同日发布的“全栈智能”（chips+compute+models+products）战略，信号很明确：AI推理成本会持续快速下降。</p>
+<p><strong>对你的影响：</strong>
+- 如果API调用成本持续下降，基于GPT级别的Agent应用商业可行性将大幅提升
+- 小团队做AI产品窗口正在扩大——成本不再是核心竞争力，想法和场景才是</p>
+<p><strong>关注点：</strong> 留意后续针对Jalapeño的第三方基准测试（而不是OpenAI自己公布的数据）。</p>
+<p>🔗 <a href="https://openai.com/index/jalapeno-first-results">OpenAI - Jalapeño first results</a>
+🔗 <a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence">OpenAI - The full stack behind abundant intelligence</a></p>
+<h3>2. OpenAI 公布 Hugging Face 安全事件调查结果——开源生态的信任危机</h3>
+<p><strong>为什么重要：</strong> OpenAI发布了关于此前Hugging Face安全事件的调查发现，并说明在模型安全、监控和alignment方面将加强的措施。当前AI开发生态高度依赖Hugging Face分发模型和数据集，这次事件是供应链安全的典型缩影。</p>
+<p><strong>对你的影响：</strong> 你在学习RAG和Agent时几乎必然用到Hugging Face平台/模型。<strong>建议从现在开始养成习惯</strong>：使用开源模型前检查仓库热度、代码更新频率、issue区异常报告；从官方渠道下载权重；不盲目运行来路不明的代码。</p>
+<p>🔗 <a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead">OpenAI - Hugging Face incident and the road ahead</a></p>
+<h3>3. 伊朗誓言“击碎”美国——中东冲突升级风险加剧</h3>
+<p><strong>材料脉络：</strong> 本期三条相关新闻指向同一趋势：
+- 美军对伊朗实施轰炸（法语媒体报道）
+- 伊朗最高领袖誓言报复（“briser les États-Unis”即“粉碎/击碎美国”）
+- 特朗普同时面对伊朗和俄罗斯两个方向的冲突、可能陷入“永久战争”（independent.co.uk评论标题）</p>
+<p><strong>为什么重要：</strong> 中东局势影响全球油价、美股波动、AI算力基础设施的能源成本，也影响各国政府对科技自主可控的态度（新一轮算力出口管制可能在此基础上出台）。</p>
+<p><strong>注意：</strong> 该部分新闻的摘要信息量有限（部分仅有标题），冲突具体进展建议自行查看原文确认，避免被碎片化标题误导。伊朗新闻为法语来源，若需精确引用请阅读原文。</p>
+<p>🔗 <a href="https://www.independent.co.uk/news/world/middle-east/trump-iran-russia-putin-forever-war-nuclear-military-b3043847.html">The Independent - Trump and the forever war</a>
+🔗 <a href="https://www.tdg.ch/direct-moyen-orient-iran-jure-de-briser-les-etats-unis-apres-des-bombardements-802230108963">TDG（法语）- 伊朗誓言击碎美国</a></p>
+<h3>4. 欧盟防务报告：2022年后虽“显著进步”，碎片化仍是硬伤</h3>
+<p><strong>核心事实：</strong> 欧洲审计院（ECA）官方报告指出，欧盟到2030年实现“防御就绪”目标仍困难重重。原因有二：过度依赖美国军事能力、各国国防系统碎片化缺乏协同。报告同时承认，对比2022年俄乌冲突爆发前已有明显改善。</p>
+<p><strong>为什么重要：</strong> 这是“官方审计机构”的结论，而非媒体观点，可信度较高。防务一体化直接关系欧盟在AI安全、算力芯片、出口管制政策上的走向——一个更独立的欧盟，可能在科技监管上走自己的路（如数字欧元、AI法案推进节奏）。</p>
+<p>🔗 <a href="https://www.theguardian.com/world/2026/sep/03/eu-defence-readiness-eca-auditors-us-reliance">The Guardian - EU defence readiness in doubt</a></p>
+<h3>5. 中国与埃及寻求“安全伙伴关系”——中美在中东影响力博弈继续</h3>
+<p><strong>材料说明：</strong> 该新闻仅有标题级信息量（全文摘要缺失），无法核实具体举措。仅可指出趋势：中美在中东的安全与外交影响力竞争正在深化，这对中国海外算力基础设施“一带一路”节点布局和人民币跨境结算技术框架都可能产生间接影响。</p>
+<p><strong>建议：</strong> 将此条作为背景信息，不作为决策依据。不要跟风情绪化解读一家外媒的分析性报道。</p>
+<p>🔗 <a href="https://www.theepochtimes.com/china/as-chinas-xi-seeks-security-partnership-with-egypt-analysts-warn-of-ccps-attempt-to-undermine-us-influence-6083241">The Epoch Times - China seeks security partnership with Egypt</a></p>
+<h2>二、GitHub 热门项目</h2>
+<blockquote>
+<p><strong>总体判断：</strong> 本期没有出现 AI Agent、RAG 相关的优质新项目，四个项目含金量中等偏低。无需急于上手。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言</th>
+<th>Stars</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/juejin-cn/juejin-usage">juejin-usage</a></td>
+<td>TypeScript</td>
+<td>92</td>
+<td>掘金Token用量明细追踪工具（本地+云端记录）</td>
+</tr>
+<tr>
+<td><a href="https://github.com/rq0066622-lang/Neuro-Sprint">Neuro-Sprint</a></td>
+<td>HTML</td>
+<td>55</td>
+<td>号称“脑力训练&amp;认知增强套件”，实为HTML页面</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ventas319/microsoft-ai-livestream-slidevault">microsoft-ai-livestream-slidevault</a></td>
+<td>HTML</td>
+<td>55</td>
+<td>Microsoft AI Trainer 2026直播幻灯片存档</td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>④ 未列入第4个有效GitHub项目 ⚠️</td>
+</tr>
+</tbody>
+</table>
+<p><strong>学习建议：</strong></p>
+<ul>
+<li><strong>juejin-usage（如果你在用掘金）</strong> ⭐ 可以看看源码。TypeScript写的API调用和本地数据管理代码，比较适合你现阶段阅读，但需自行评估代码质量。Stars只有92，社区验证不充分。</li>
+<li><strong>后两个HTML项目</strong>：不推荐。没有架构深度，Star数量可能异常（55星但0 Fork），别把时间花在这里。</li>
+<li><strong>本期没有找到适合你学习的 Agent/RAG 方向项目</strong>——与其将就，不如做你手头的事：把已有的小项目拆了重构，或者继续学Python/TypeScript基础。为了开新项目而开新项目反而是浪费。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<p><strong>大趋势确认：AI 正在经历“从稀缺到富足”的转变。</strong></p>
+<p>本期三条AI新闻全部来自OpenAI，传递的核心信号有三个：</p>
+<p><strong>1. 算力成本下降是确定性趋势</strong>
+- OpenAI CFO亲述“全栈智能”逻辑：芯片→算力→模型→产品，每一层进步都在叠加，结果是“更多的智能、更大的规模、更低的成本”
+- Jalapeño推理芯片的发布意味着模型能力增长不再只靠堆GPU，<strong>算法+硬件共同优化带来的成本降幅将是惊人的</strong></p>
+<p><strong>2. 安全成为AI公司的核心叙事</strong>
+- Hugging Face事件后OpenAI主动公布调查结果，说明安全事件正在从“技术问题”上升为“公关与治理问题”
+- 这对行业的影响：安全合规将成为AI产品的准入门槛</p>
+<p><strong>3. 作为开发者你该捕捉到的信号</strong>
+- 推理成本下降 → 复杂Agent（多轮工具调用、多模型协作）商业上更可行
+- 安全风险升高 → 具备AI安全意识的开发者更值钱
+- 模型能力普惠 → 应用层竞争加剧，产品力和场景理解力比模型调参能力更重要</p>
+<h2>四、国际形势</h2>
+<blockquote>
+<p>⚠️ <strong>重要说明：</strong> 本期材料仅提供4条国际新闻事件的标题/摘要级信息，无深度分析材料，以下判断均基于有限信息、明确标注推测程度。<strong>请不要将其当作确定性结论。</strong></p>
+</blockquote>
+<p><strong>总体判断：全球地缘紧张度维持高位，且呈现多线并发态势：</strong></p>
+<ol>
+<li>
+<p><strong>美国两线作战困境初步显现</strong>——特朗普政府同时面对伊朗（中东）和俄罗斯（东欧）两个方向的冲突升级，independent评论标题称其为“他亲手创造的永久战争”（材料有限，推测为对某军事行动或撤出核协议决策的评论），如果这个判断方向属实，美国对AI算力出口管制的执行力和新增政策的推进节奏可能受限。</p>
+</li>
+<li>
+<p><strong>欧盟防务自主意愿增强，但能力追赶需要时间</strong>——官方审计机构承认2022年以来有进步，但也承认到2030年“防御就绪”目标难以实现。在科技层面，这可能加速欧盟推进“战略自主”（如自主云计算、主权AI、芯片补贴），中长期利好欧洲开源AI生态。</p>
+</li>
+<li>
+<p><strong>中东冲突风险可能飙升</strong>——伊朗在美军轰炸后誓言“击碎”美国，如果冲突进一步升级，影响的不只是油价，还有台积电和三星等亚洲半导体企业的能源成本和国际物流，间接影响全球算力价格。</p>
+</li>
+<li>
+<p><strong>中国在中东的安全布局深化</strong>——中国与埃及安全伙伴关系是中美在中东影响力博弈的一部分，中国通过安全合作进入传统上美国主导的地区秩序。中长期对中国与中东的科技合作（如智慧城市、数字化转型项目出海）可能产生积极影响。</p>
+</li>
+</ol>
+<p><strong>对你的就业与职业环境的影响：</strong>
+- 贸易/科技管制趋严 → <strong>具备国产AI技术栈能力（国产大模型API接入、华为昇腾生态）会更保值</strong>。
+- 地缘不确定性 → <strong>技术选型时优先考虑有“非美国替代方案”的路线</strong>（例如：不要在你的核心项目里100%绑定OpenAI或Anthropic）。
+- 风险意识 → 美国大选年、中东冲突升级都可能导致技术出口政策突变，当前节点不建议把全部职业筹码压在纯美国技术栈上。</p>
+<h2>五、中国国家政策</h2>
+<p><strong>⚠️ 本期缺少有效的中国政策直接来源材料。</strong></p>
+<p>提供的两条材料仅为“中国政府网邮箱入口”（gov.cn的mail子域名）和“全国人大官网首页”（npc.gov.cn），均为官网入口页，无具体政策文件。<strong>无法基于这些材料提炼任何实质性政策结论或趋势判断。</strong></p>
+<p><strong>给你的建议（不涉及具体政策内容）：</strong></p>
+<ol>
+<li>
+<p><strong>获取一手政策信息途径：</strong>
+   - 国务院官网：www.gov.cn（重点看“政策”频道）
+   - 全国人大：www.npc.gov.cn
+   - 国家发改委、工信部官网（科技产业政策主出口）
+   - 建议使用 RAG 思路搭建你自己的“政策追踪库”，从这些官网源定时抓取标题，重点关注信创、算力、数字经济、人工智能+等关键词</p>
+</li>
+<li>
+<p><strong>建议订阅的固定栏目：</strong>
+   - 工信部“政策解读”栏目
+   - 网信办生成式AI相关管理办法更新</p>
+</li>
+<li>
+<p><strong>政策与就业的结合点：</strong> 结合你关注公考这一方向，日常积累政策阅读习惯本身就是在为申论和面试打基础——可以尝试每周对一篇与数字经济和AI相关的政策文件做“摘要+关键词提取”练习。</p>
+</li>
+</ol>
+<h2>六、个人行动建议（按紧急度排序）</h2>
+<h3>🔴 这几天可做的事</h3>
+<p><strong>周三前：完成一个“AI推理成本小实验”</strong>
+选择一个你最常用的小任务（例如：让AI帮你把一篇英文新闻翻译成中文摘要），分别用GPT-4级别的最新模型和常规模型各跑10次，记录费用、速度和输出质量。目的：量化理解推理成本下降对个人开发的实际影响。</p>
+<h3>🟡 本周内可做的事</h3>
+<p><strong>1. 重构你的代码学习路径</strong>
+- 从“看教程”→“做项目”转型：既然你关注RAG和Agent，试着做一个最简版本地RAG问答脚本。不追求完美，跑通一个基础链路（文档读取→文本切割→向量化→检索→LLM回答）即可
+- 技术栈建议：Python + LangChain（或LlamaIndex）+ 一个免费向量库（如Chroma）</p>
+<p><strong>2. 建立你的“开源供应链安全”习惯</strong>
+- 使用任何GitHub项目/开源库前，检查3件事：Stars数是否与Fork数匹配（异常则可能有水军）、最近是否有更新、Issue区是否有安全隐患讨论
+- 参考Hugging Face事件给你的教训：不要盲目信任任何“知名平台”</p>
+<p><strong>3. 完整阅读那篇关于欧盟防务报告的分析</strong>
+继续关注EU“战略自主”的走向，这既是重要的国际关系参照系，也是你在后端转AI道路中评估欧洲开源生态变迁的基础背景。它会直接或间接影响数据保护立法（如GDPR修订）和AI合规工具箱的发展方向。</p>
+<h3>🟢 求职/长期竞争力提醒</h3>
+<p>结合你关注的“后端转AI”、这个阶段你应优先建立的能力组合：
+- <strong>后端基础仍然关键</strong>（API设计、数据库、部署），不要因为是“转AI”就放弃后端保底优势
+- <strong>技术应用能力优于算法推导能力</strong>：作为初学者+项目驱动学习者，你应该追求“会用AI工具链搭建完整应用”，而非死磕数学公式</p>
+<p><strong>下周给自己留一个需要展示的“结果”——比如一个部署上线的最小Demo</strong>。哪怕只是把别人的开源项目改改跑通了，也是你从“学习</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>As China Xi Seeks Security Partnership With Egypt , Analysts Warn of CCP Attempt to Undermine US Influence</strong>（theepochtimes.com，评分 4.24）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>EU’s ability to defend against invasion remains in doubt, finds official report</strong>（www.theguardian.com，评分 4.0）：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Trump doesnt understand the forever war he created with Iran – and Russia</strong>（independent.co.uk，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>DIRECT . Moyen - Orient : lIran jure de « briser » les États - Unis après des bombardements</strong>（tdg.ch，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>rq0066622-lang/Neuro-Sprint</strong>（GitHub，评分 3.72）：HTML 项目，Stars 55，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>rq0066622-lang/Neuro-Sprint</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/rq0066622-lang/Neuro-Sprint</li>
+<li>评分：3.72</li>
+<li>简介：2026 Mind Flex Pro: Brain Training &amp; Cognitive Enhancement Suite Stars: 55; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 55，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>ventas319/microsoft-ai-livestream-slidevault</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/ventas319/microsoft-ai-livestream-slidevault</li>
+<li>评分：3.44</li>
+<li>简介：Microsoft AI Trainer 2026 LiveStream Slides &amp; Presentation Deck Guide Stars: 55; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 55，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>juejin-cn/juejin-usage</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/juejin-cn/juejin-usage</li>
+<li>评分：3.44</li>
+<li>简介：Token 用量明细追踪工具，本地记录、云端同步， 还有线上排行榜看看谁用得最多。 Stars: 92; Forks: 19; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 92，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>The full stack behind abundant intelligence</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/the-full-stack-behind-abundant-intelligence</li>
+<li>评分：3.58</li>
+<li>简介：OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at greater scale and lower cost.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Jalapeño’s first results show industry-leading speed and efficiency in AI inference</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/jalapeno-first-results</li>
+<li>评分：3.58</li>
+<li>简介：Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower latency for modern models.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>The Hugging Face incident and the road ahead</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/hugging-face-incident-and-the-road-ahead</li>
+<li>评分：3.54</li>
+<li>简介：OpenAI shares findings from the Hugging Face security incident and the steps we’re taking to strengthen AI model security, monitoring, and alignment.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>As China Xi Seeks Security Partnership With Egypt , Analysts Warn of CCP Attempt to Undermine US Influence</h3>
+<ul>
+<li>来源：theepochtimes.com</li>
+<li>链接：https://www.theepochtimes.com/china/as-chinas-xi-seeks-security-partnership-with-egypt-analysts-warn-of-ccps-attempt-to-undermine-us-influence-6083241</li>
+<li>评分：4.24</li>
+<li>简介：20260904T020000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>EU’s ability to defend against invasion remains in doubt, finds official report</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/sep/03/eu-defence-readiness-eca-auditors-us-reliance</li>
+<li>评分：4.0</li>
+<li>简介：Fragmented infrastructure and reliance on US continue to hinder ‘defence readiness’, says European court of auditors Europe live – latest updates The EU’s ability to respond to a foreign invasion by 2030 remains in doubt due to a continuing reliance on the US and fragmented national defence systems, according to a report from its official auditor. The European court of auditors (ECA) said the EU was much better prepared than before Russia’s full-scale invasion of Ukraine of 2022, but achieving its goal of defence readiness by the end of the decade would be difficult. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Trump doesnt understand the forever war he created with Iran – and Russia</h3>
+<ul>
+<li>来源：independent.co.uk</li>
+<li>链接：https://www.independent.co.uk/news/world/middle-east/trump-iran-russia-putin-forever-war-nuclear-military-b3043847.html</li>
+<li>评分：4.0</li>
+<li>简介：20260903T090000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>DIRECT . Moyen - Orient : lIran jure de « briser » les États - Unis après des bombardements</h3>
+<ul>
+<li>来源：tdg.ch</li>
+<li>链接：https://www.tdg.ch/direct-moyen-orient-iran-jure-de-briser-les-etats-unis-apres-des-bombardements-802230108963</li>
+<li>评分：4.0</li>
+<li>简介：20260903T073000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é®ç®±</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://mail.www.gov.cn/nsmail/index.html</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：rq0066622-lang/Neuro-Sprint。</li>
+<li>重点阅读：As China Xi Seeks Security Partnership With Egypt , Analysts Warn of CCP Attempt to Undermine US Influence。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.theepochtimes.com/china/as-chinas-xi-seeks-security-partnership-with-egypt-analysts-warn-of-ccps-attempt-to-undermine-us-influence-6083241">As China Xi Seeks Security Partnership With Egypt , Analysts Warn of CCP Attempt to Undermine US Influence</a> - theepochtimes.com</li>
+<li><a href="https://www.theguardian.com/world/2026/sep/03/eu-defence-readiness-eca-auditors-us-reliance">EU’s ability to defend against invasion remains in doubt, finds official report</a> - www.theguardian.com</li>
+<li><a href="https://www.independent.co.uk/news/world/middle-east/trump-iran-russia-putin-forever-war-nuclear-military-b3043847.html">Trump doesnt understand the forever war he created with Iran – and Russia</a> - independent.co.uk</li>
+<li><a href="https://www.tdg.ch/direct-moyen-orient-iran-jure-de-briser-les-etats-unis-apres-des-bombardements-802230108963">DIRECT . Moyen - Orient : lIran jure de « briser » les États - Unis après des bombardements</a> - tdg.ch</li>
+<li>参考来源：https://www.24heures.ch/direct-moyen-orient-iran-jure-de-briser-les-etats-unis-apres-des-bombardements-802230108963</li>
+<li><a href="https://github.com/rq0066622-lang/Neuro-Sprint">rq0066622-lang/Neuro-Sprint</a> - GitHub</li>
+<li><a href="https://openai.com/index/the-full-stack-behind-abundant-intelligence">The full stack behind abundant intelligence</a> - openai.com</li>
+<li><a href="https://openai.com/index/jalapeno-first-results">Jalapeño’s first results show industry-leading speed and efficiency in AI inference</a> - openai.com</li>
+<li><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead">The Hugging Face incident and the road ahead</a> - openai.com</li>
+<li><a href="https://github.com/ventas319/microsoft-ai-livestream-slidevault">ventas319/microsoft-ai-livestream-slidevault</a> - GitHub</li>
+<li><a href="https://github.com/juejin-cn/juejin-usage">juejin-cn/juejin-usage</a> - GitHub</li>
+<li><a href="https://mail.www.gov.cn/nsmail/index.html">é®ç®±</a> - 中国政府网</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+</ul></main></body></html>
