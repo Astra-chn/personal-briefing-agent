@@ -26,174 +26,154 @@ blockquote {
 code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
 </style></head><body><main class="container"><h1>每日个人简报 - 2026-09-14</h1>
 <h2>AI 生成综述</h2>
-<h1>每日个人简报（2026-09-14）</h1>
+<h1>2026-09-14 中文每日个人简报</h1>
 <blockquote>
-<p>说明：本期材料包含 GitHub、AI 新闻、世界新闻和中国政策条目。中国政策条目只是官网列表页，没有具体政策正文；因此政策部分不做方向性判断。AI 新闻中部分发布时间为 8 月底至 9 月初，不是当天新闻。</p>
+<p>说明：本期有 <code>world_news</code> 和 <code>china_policy</code> 来源，但 <code>china_policy</code> 两条只是中国政府网首页/地方网站列表页，标题还出现乱码，<strong>没有可解读的具体政策正文</strong>。国际部分我会区分“事实报道”和“评论观点”。以下不编造材料外信息。</p>
 </blockquote>
+<hr />
 <h2>一、今日最值得关注的 5 件事</h2>
-<h3>1. BRICS 峰会呼吁中东等地区和平，战争议题可能影响讨论</h3>
+<h3>1. OpenAI 发布 GPT-6 Astra，定位“工作场景”</h3>
 <ul>
-<li>来源：联合国秘书长在 BRICS 峰会称“从加沙到中东、乌克兰、苏丹，世界需要和平”：<a href="https://www.prokerala.com/news/articles/a1811689.html">prokerala.com</a></li>
-<li>来源：BRICS 要求中东保持最大克制：<a href="https://www.ensonhaber.com/brics-orta-dogu-icin-azami-itidal-istedi-h1564983">ensonhaber.com</a></li>
-<li>来源：BRICS 峰会在印度举行，中东和乌克兰战争可能影响讨论：<a href="https://defimedia.info/sommet-des-brics-en-inde-pourquoi-les-guerres-au-moyen-orient-et-en-ukraine-pourraient-peser-sur">defimedia.info</a></li>
-<li><strong>为什么重要</strong>：BRICS 是多边协调平台，它公开谈中东、乌克兰、苏丹，说明地缘冲突仍在挤压国际议程。</li>
-<li><strong>对你有什么用</strong>：公考国际常识可积累“BRICS、中东、乌克兰、苏丹、联合国”这些关键词；做科技/出海相关规划时，要意识到地缘风险会影响供应链、能源、支付和数据跨境。</li>
-<li>注意：材料没有提供峰会成果文件细节，不能推断出具体经济或科技政策结论。</li>
+<li>来源：https://openai.com/index/gpt-6-astra-next-generation-work</li>
+<li>时间：2026-09-09</li>
+<li>材料摘要：OpenAI 称这是其面向企业的最强模型，具备高级推理、<strong>computer use</strong>、更强的写作和设计判断。</li>
+<li>为什么重要：模型竞争重点继续从“聊天”转向“替你操作软件、完成工作任务”。<code>computer use</code> 如果成熟，Agent 自动化会从写代码扩展到操作后台、填表、整理报告。</li>
+<li>对你有什么用：你关注后端转 AI，不能只学调 API。要开始理解工具调用、权限控制、操作审计、人工审批。这些是 Agent 落地时的工程重点。</li>
 </ul>
-<h3>2. OpenAI 终止向 Cursor 提供模型，原因是 Cursor 被 SpaceX 收购</h3>
+<h3>2. taskuary：本地优先的 AI 任务中枢</h3>
 <ul>
-<li>来源：<a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex">openai.com</a></li>
-<li><strong>是什么</strong>：OpenAI 决定终止向 Cursor 提供 OpenAI 模型的合同，背景是 Cursor 被 SpaceX 收购。</li>
-<li><strong>为什么重要</strong>：AI 编程工具和模型供应商之间的关系，会受资本并购影响。开发者常用的工具，底层模型供应可能突然变化。</li>
-<li><strong>对你有什么用</strong>：如果你以后做 AI Agent 或后端转 AI，尽量不要把系统绑死在单一模型/单一供应商上。多后端抽象、可替换模型，是更稳的设计。GitHub 项目 Baize 就强调支持 DeepSeek / OpenAI 兼容 / Ollama 本地，这个思路值得学。</li>
-</ul>
-<h3>3. OpenAI 扩大对新闻业的支持</h3>
-<ul>
-<li>来源：<a href="https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms">openai.com</a></li>
-<li><strong>是什么</strong>：OpenAI 面向学生、教育者、记者和新闻机构，扩大工具、培训和合作。</li>
-<li><strong>趋势影响</strong>：AI 公司与内容行业的关系，正在从“版权冲突”转向“合作、培训、工具支持”。这对做 RAG 的人有直接影响：新闻/媒体语料的授权、溯源、合规会越来越重要。</li>
-<li><strong>对你有什么用</strong>：如果你做 RAG 项目，别只抓网页文本。要开始习惯记录来源、授权状态、发布时间和可追溯链接。</li>
-</ul>
-<h3>4. 开源 AI Coding Agent CLI：Baize（白泽）</h3>
-<ul>
-<li>来源：<a href="https://github.com/Xu123-Bob/Baize">github.com/Xu123-Bob/Baize</a></li>
-<li><strong>是什么</strong>：JavaScript 写的 AI 编程 Agent CLI，支持多后端，具备工具调用、技能加载、子代理委派、上下文压缩、安全沙箱。</li>
-<li><strong>为什么值得关注</strong>：它把 AI Coding Agent 的关键模块都摆出来了，适合理解 Agent 架构，而不只是“用聊天写代码”。</li>
-<li><strong>是否适合你</strong>：适合你作为项目学习素材，但<strong>不建议一上来读全部源码</strong>。先跑通、看 README、看命令入口，再挑“工具调用”或“上下文压缩”一个点读。</li>
-</ul>
-<h3>5. 本地优先 Agent trace 工作台：tracecrate</h3>
-<ul>
-<li>来源：<a href="https://github.com/FankChen/tracecrate">github.com/FankChen/tracecrate</a></li>
-<li><strong>是什么</strong>：TypeScript 写的本地优先 AI agent trace 工作台，可检查 Claude Code、Codex 和 OTLP 日志，对比运行，导出隐私友好报告，无需后端或 API key。</li>
-<li>**为什么值得关注</li>
+<li>来源：https://github.com/ldbumble/taskuary</li>
+<li>时间：2026-09-14</li>
+<li>材料摘要：把 Email、Teams、Slack、报告汇总成一个时间线，AI 分类，再交给 Claude Code、Codex、Gemini 等 coding agents 执行，你负责批准。Python，50 stars。</li>
+<li>为什么重要：它把“消息聚合 → AI triage → Agent 执行 → 人工审批”串成完整工作流。这正是很多自动化工具正在走的方向。</li>
+<li>对你有什么用：</li>
 </ul>
 <h2>一、今日最值得关注的 5 件事</h2>
 <ul>
-<li><strong>Xu123-Bob/Baize</strong>（GitHub，评分 4.25）：JavaScript 项目，Stars 69，适合评估是否能拆成练手项目。</li>
-<li><strong>FankChen/tracecrate</strong>（GitHub，评分 4.08）：TypeScript 项目，Stars 115，适合评估是否能拆成练手项目。</li>
-<li><strong>antonkarasbiz/littleaibox</strong>（GitHub，评分 4.0）：JavaScript 项目，Stars 58，适合评估是否能拆成练手项目。</li>
-<li><strong>Amerikanın Kara Eylülleri ... - BERCAN TUTAR</strong>（sabah.com.tr，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
-<li><strong>From Gaza to Middle East , Ukraine , Sudan and beyond , our world needs peace , says UN chief at BRICS Summit</strong>（prokerala.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>jtydhr88/screenwriting-skills</strong>（GitHub，评分 4.68）：Python 项目，Stars 1033，适合评估是否能拆成练手项目。</li>
+<li><strong>ldbumble/taskuary</strong>（GitHub，评分 4.24）：Python 项目，Stars 50，适合评估是否能拆成练手项目。</li>
+<li><strong>tt-11-dd/tether-ai</strong>（GitHub，评分 4.0）：TypeScript 项目，Stars 87，适合评估是否能拆成练手项目。</li>
+<li><strong>Putin would rather keep killing than admit he lost . As a winter of misery looms in Ukraine , Nato must step in | Simon Tisdall</strong>（theguardian.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>نتائج التخطيط السري للشرق الأوسط</strong>（vetogate.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
 </ul>
 <h2>二、GitHub 热门项目</h2>
-<h3>Xu123-Bob/Baize</h3>
+<h3>jtydhr88/screenwriting-skills</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/Xu123-Bob/Baize</li>
-<li>评分：4.25</li>
-<li>简介：白泽 —— 中国古代神话中通晓万物的瑞兽，如今化身为 Vibe Coding 助手。 一个开源的 AI Coding Agent CLI，支持多后端（DeepSeek / OpenAI 兼容 / Ollama 本地），具备工具调用、技能加载、子代理委派、上下文压缩、安全沙箱等完整能力。在终端即可与 AI 结对编程。 Stars: 69; Forks: 0; Language: JavaScript</li>
-<li>为什么值得关注：JavaScript 项目，Stars 69，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/jtydhr88/screenwriting-skills</li>
+<li>评分：4.68</li>
+<li>简介：Professional agent skills for screenwriting, television writing and dramaturgy Stars: 1033; Forks: 120; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 1033，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>FankChen/tracecrate</h3>
+<h3>ldbumble/taskuary</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/FankChen/tracecrate</li>
-<li>评分：4.08</li>
-<li>简介：Local-first AI agent trace workbench. Inspect Claude Code, Codex and OTLP logs, compare runs, and export privacy-conscious reports. No backend or API keys. Stars: 115; Forks: 3; Language: TypeScript</li>
-<li>为什么值得关注：TypeScript 项目，Stars 115，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/ldbumble/taskuary</li>
+<li>评分：4.24</li>
+<li>简介：Automate your job: local-first AI task hub. Email, Teams, Slack &amp; reports -&gt; one timeline -&gt; AI triage -&gt; your coding agents (Claude Code, Codex, Gemini) do the work, you approve. Stars: 50; Forks: 12; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 50，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>antonkarasbiz/littleaibox</h3>
+<h3>tt-11-dd/tether-ai</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/antonkarasbiz/littleaibox</li>
+<li>链接：https://github.com/tt-11-dd/tether-ai</li>
 <li>评分：4.0</li>
-<li>简介：Privacy-focused AI conversation platform for chat, coding, research, and documents. Stars: 58; Forks: 0; Language: JavaScript</li>
-<li>为什么值得关注：JavaScript 项目，Stars 58，适合评估是否能拆成练手项目。</li>
+<li>简介：Tether Agent Stars: 87; Forks: 11; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 87，适合评估是否能拆成练手项目。</li>
 </ul>
 <h2>三、AI 发展动态</h2>
-<h3>OpenAI expands initiatives to support journalism from classrooms to newsrooms</h3>
+<h3>GPT-6 Astra: The next generation in intelligence for work</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms</li>
-<li>评分：3.16</li>
-<li>简介：OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.</li>
+<li>链接：https://openai.com/index/gpt-6-astra-next-generation-work</li>
+<li>评分：3.4</li>
+<li>简介：Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h3>Our decision on Cursor following its acquisition by SpaceX</h3>
+<h3>Paul Christiano joins OpenAI Foundation Board</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex</li>
-<li>评分：3.1</li>
-<li>简介：Our decision to wind down our contract providing OpenAI models to Cursor following its acquisition by SpaceX.</li>
+<li>链接：https://openai.com/index/paul-christiano-joins-openai-foundation-board</li>
+<li>评分：3.4</li>
+<li>简介：Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h3>How law firm Gilbert + Tobin governs and scales AI with OpenAI</h3>
+<h3>Polimill builds Japan's next-generation public AI infrastructure</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/gilbert-tobin</li>
-<li>评分：3.06</li>
-<li>简介：See how Gilbert + Tobin combines CEO-led commitment, rigorous governance, and human accountability to scale ChatGPT Enterprise and Codex across the firm.</li>
+<li>链接：https://openai.com/index/polimill</li>
+<li>评分：3.3</li>
+<li>简介：Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
 <h2>四、国际形势</h2>
-<h3>Amerikanın Kara Eylülleri ... - BERCAN TUTAR</h3>
+<h3>Putin would rather keep killing than admit he lost . As a winter of misery looms in Ukraine , Nato must step in | Simon Tisdall</h3>
 <ul>
-<li>来源：sabah.com.tr</li>
-<li>链接：https://www.sabah.com.tr/yazarlar/bercan-tutar/2026/09/12/amerikanin-kara-eylulleri</li>
+<li>来源：theguardian.com</li>
+<li>链接：https://www.theguardian.com/commentisfree/2026/sep/13/putin-ukraine-nato-russia-forever-war-crime-against-humanity-western-democracies</li>
 <li>评分：4.0</li>
-<li>简介：20260912T060000Z</li>
+<li>简介：20260913T060000Z</li>
 <li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>From Gaza to Middle East , Ukraine , Sudan and beyond , our world needs peace , says UN chief at BRICS Summit</h3>
+<h3>نتائج التخطيط السري للشرق الأوسط</h3>
 <ul>
-<li>来源：prokerala.com</li>
-<li>链接：https://www.prokerala.com/news/articles/a1811689.html</li>
+<li>来源：vetogate.com</li>
+<li>链接：https://www.vetogate.com/5730249</li>
 <li>评分：4.0</li>
-<li>简介：20260913T081500Z</li>
+<li>简介：20260912T111500Z</li>
 <li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>BRICS , Orta Doğu için azami itidal istedi</h3>
+<h3>En Inde , Poutine et Pezeshkian ouvrent les échanges des dirigeants des Brics</h3>
 <ul>
-<li>来源：ensonhaber.com</li>
-<li>链接：https://www.ensonhaber.com/brics-orta-dogu-icin-azami-itidal-istedi-h1564983</li>
+<li>来源：lequotidien.lu</li>
+<li>链接：https://lequotidien.lu/monde/en-inde-poutine-et-pezeshkian-ouvrent-les-echanges-des-dirigeants-des-brics</li>
 <li>评分：4.0</li>
-<li>简介：20260912T140000Z</li>
+<li>简介：20260912T084500Z</li>
 <li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>Sommet des BRICS en Inde : pourquoi les guerres au Moyen - Orient et en Ukraine pourraient peser sur les discussions</h3>
+<h3>BRICS issues New Delhi Declaration , as UAE and Iran back down from tough positions</h3>
 <ul>
-<li>来源：defimedia.info</li>
-<li>链接：https://defimedia.info/sommet-des-brics-en-inde-pourquoi-les-guerres-au-moyen-orient-et-en-ukraine-pourraient-peser-sur</li>
+<li>来源：thehindu.com</li>
+<li>链接：https://www.thehindu.com/news/national/brics-issues-new-delhi-declaration-as-uae-and-iran-back-down-from-tough-positions/article71460749.ece</li>
 <li>评分：4.0</li>
-<li>简介：20260912T034500Z</li>
+<li>简介：20260912T183000Z</li>
 <li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
 </ul>
 <h2>五、中国国家政策</h2>
-<h3>æé«äººæ°æ£å¯é¢</h3>
+<h3>é¦é¡µ</h3>
 <ul>
 <li>来源：中国政府网</li>
-<li>链接：http://www.spp.gov.cn/</li>
+<li>链接：https://www.gov.cn/</li>
 <li>评分：2.92</li>
 <li>简介：中国国家政策官网列表页条目。</li>
 <li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
 </ul>
-<h3>å½å¡é¢é¨é¨ç½ç«</h3>
+<h3>å°æ¹æ¿åºç½ç«</h3>
 <ul>
 <li>来源：中国政府网</li>
-<li>链接：https://www.gov.cn/home/2023-03/29/content_5748953.htm</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748954.htm</li>
 <li>评分：2.92</li>
 <li>简介：中国国家政策官网列表页条目。</li>
 <li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
 </ul>
 <h2>六、对我的个人建议</h2>
 <ol>
-<li>优先拆解：Xu123-Bob/Baize。</li>
-<li>重点阅读：Amerikanın Kara Eylülleri ... - BERCAN TUTAR。</li>
+<li>优先拆解：jtydhr88/screenwriting-skills。</li>
+<li>重点阅读：Putin would rather keep killing than admit he lost . As a winter of misery looms in Ukraine , Nato must step in | Simon Tisdall。</li>
 <li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
 </ol>
 <h2>七、来源链接</h2>
 <ul>
-<li><a href="https://github.com/Xu123-Bob/Baize">Xu123-Bob/Baize</a> - GitHub</li>
-<li><a href="https://github.com/FankChen/tracecrate">FankChen/tracecrate</a> - GitHub</li>
-<li><a href="https://github.com/antonkarasbiz/littleaibox">antonkarasbiz/littleaibox</a> - GitHub</li>
-<li><a href="https://www.sabah.com.tr/yazarlar/bercan-tutar/2026/09/12/amerikanin-kara-eylulleri">Amerikanın Kara Eylülleri ... - BERCAN TUTAR</a> - sabah.com.tr</li>
-<li><a href="https://www.prokerala.com/news/articles/a1811689.html">From Gaza to Middle East , Ukraine , Sudan and beyond , our world needs peace , says UN chief at BRICS Summit</a> - prokerala.com</li>
-<li>参考来源：https://www.prokerala.com/news/articles/a1811705.html</li>
-<li><a href="https://www.ensonhaber.com/brics-orta-dogu-icin-azami-itidal-istedi-h1564983">BRICS , Orta Doğu için azami itidal istedi</a> - ensonhaber.com</li>
-<li><a href="https://defimedia.info/sommet-des-brics-en-inde-pourquoi-les-guerres-au-moyen-orient-et-en-ukraine-pourraient-peser-sur">Sommet des BRICS en Inde : pourquoi les guerres au Moyen - Orient et en Ukraine pourraient peser sur les discussions</a> - defimedia.info</li>
-<li><a href="https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms">OpenAI expands initiatives to support journalism from classrooms to newsrooms</a> - openai.com</li>
-<li><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex">Our decision on Cursor following its acquisition by SpaceX</a> - openai.com</li>
-<li><a href="https://openai.com/index/gilbert-tobin">How law firm Gilbert + Tobin governs and scales AI with OpenAI</a> - openai.com</li>
-<li><a href="http://www.spp.gov.cn/">æé«äººæ°æ£å¯é¢</a> - 中国政府网</li>
-<li><a href="https://www.gov.cn/home/2023-03/29/content_5748953.htm">å½å¡é¢é¨é¨ç½ç«</a> - 中国政府网</li>
+<li><a href="https://github.com/jtydhr88/screenwriting-skills">jtydhr88/screenwriting-skills</a> - GitHub</li>
+<li><a href="https://github.com/ldbumble/taskuary">ldbumble/taskuary</a> - GitHub</li>
+<li><a href="https://github.com/tt-11-dd/tether-ai">tt-11-dd/tether-ai</a> - GitHub</li>
+<li><a href="https://www.theguardian.com/commentisfree/2026/sep/13/putin-ukraine-nato-russia-forever-war-crime-against-humanity-western-democracies">Putin would rather keep killing than admit he lost . As a winter of misery looms in Ukraine , Nato must step in | Simon Tisdall</a> - theguardian.com</li>
+<li><a href="https://www.vetogate.com/5730249">نتائج التخطيط السري للشرق الأوسط</a> - vetogate.com</li>
+<li><a href="https://lequotidien.lu/monde/en-inde-poutine-et-pezeshkian-ouvrent-les-echanges-des-dirigeants-des-brics">En Inde , Poutine et Pezeshkian ouvrent les échanges des dirigeants des Brics</a> - lequotidien.lu</li>
+<li><a href="https://www.thehindu.com/news/national/brics-issues-new-delhi-declaration-as-uae-and-iran-back-down-from-tough-positions/article71460749.ece">BRICS issues New Delhi Declaration , as UAE and Iran back down from tough positions</a> - thehindu.com</li>
+<li><a href="https://openai.com/index/gpt-6-astra-next-generation-work">GPT-6 Astra: The next generation in intelligence for work</a> - openai.com</li>
+<li><a href="https://openai.com/index/paul-christiano-joins-openai-foundation-board">Paul Christiano joins OpenAI Foundation Board</a> - openai.com</li>
+<li><a href="https://openai.com/index/polimill">Polimill builds Japan's next-generation public AI infrastructure</a> - openai.com</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748954.htm">å°æ¹æ¿åºç½ç«</a> - 中国政府网</li>
 </ul></main></body></html>
