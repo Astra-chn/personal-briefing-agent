@@ -1,0 +1,199 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-09-25</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-09-25</h1>
+<p><strong>本期材料构成</strong>：GitHub 4 条、国际新闻（world_news）4 条、AI 新闻 3 条、中国政策（china_policy）1 条。
+<strong>两个数据质量提示，先说清楚</strong>：
+- world_news 的 4 条摘要基本只有时间戳，抓取没拿到正文。下面涉及这些条目的判断，都只基于<strong>标题</strong>，不是正文内容。
+- china_policy 只有 1 条，是官网列表页条目，标题编码异常（<code>å ¨å½æ¿å</code>），无政策正文。<strong>本期缺少可用的中国政策直接来源</strong>，我不会拿 AI/GitHub 新闻去凑政策结论。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<p><strong>1. OpenAI 与 Grab 在东南亚推 AI 技能培训，覆盖 3 万合作方</strong>
+<a href="https://openai.com/index/grab-openai-ai-skills-southeast-asia">来源</a>
+是什么：名为 GO Forward with AI 的区域项目，面向东南亚 3 万名合作方，目标是建立实用 AI 技能。
+为什么重要：AI 培训正在从"面向开发者"下沉到"面向具体行业从业者"。这类项目会改变当地就业市场对"会用 AI"的基本预期。
+对你：如果你在准备后端转 AI，可以把这类项目的课程大纲当作自学路线的参照——它代表企业侧认为"够用"的能力边界。</p>
+<p><strong>2. OpenAI 推 AI 广告与 Sponsored Agents，接入 HubSpot、Shopify</strong>
+<a href="https://openai.com/index/reimagining-advertising-with-ai">来源</a>
+是什么：新的 AI 广告体验，包括 Sponsored Agents、面向营销人员的工具，以及与 HubSpot、Shopify 的集成。
+为什么重要：Agent 正在从"个人效率工具"进入"商业分发和营销"环节。这是 Agent 产品化落地的一个明确方向。
+对你：如果你以后想做自动化工具，营销、电商这类 B 端场景是最先出现付费需求的地方。可以留意"Agent 怎么被嵌入现有 SaaS 工作流"。</p>
+<p><strong>3. agent-router：一个帮你为任务挑 Agent 和模型的 CLI</strong>
+<a href="https://github.com/nidhi-singh02/agent-router">来源</a>
+是什么：命令行工具，根据任务选择 Cursor、Claude Code、Codex 或 OpenCode，并决定模型和 effort，然后启动。TypeScript，77 stars。
+为什么重要："任务 → 选工具/模型 → 启动"这一层路由，是 AI Agent 工作流里正在被单独抽出来的一环。
+对你：这是本期和你方向最贴的 GitHub 项目，下面单独展开。</p>
+<p><strong>4. 市场传闻：台积电明年 1 月晶圆代工再涨价（3%–6%）</strong>
+<a href="https://finance.ifeng.com/c/8wfmAaz3fh1">来源1</a> / <a href="http://www.cfi.net.cn/p20260924000162.html">来源2</a>
+是什么：两条来源其实是同一件事——市场传闻台积电 2027 年 1 月代工价格再涨 3%–6%。<strong>注意：是传闻，未经证实</strong>。
+为什么重要：先进制程成本若上升，会沿产业链传导到 AI 芯片、服务器、云服务，最终可能体现在你的推理 API 账单上。
+对你：不用现在做任何决策，但可以把它当作观察推理成本的一个信号。看到"涨价"先分清是官方公告还是市场传闻。</p>
+<p><strong>5. 印度半导体：从"老设计者"到"新生产者"</strong>
+<a href="https://thediplomat.com/2026/09/indias-semiconductor-journey-old-designer-new-producer">来源</a>
+是什么：The Diplomat 的分析文章。标题暗示印度正从芯片设计角色向制造/生产环节延伸。<strong>只有标题，无正文，无法判断具体政策或数据</strong>。
+为什么重要：全球半导体供应链多元化、各国补贴竞争、制造业岗位转移，都和科技政策、就业结构直接相关。
+对你：这类文章适合放在"国际形势—科技政策"的长期跟踪里，而不是当成短期信号。</p>
+<hr />
+<h2>二、GitHub 热门项目（按对你的适合度排序）</h2>
+<p><strong>1. agent-router —— 适合度：高（首选）</strong>
+<a href="https://github.com/nidhi-singh02/agent-router">链接</a> · TypeScript · 77 stars
+功能明确：为任务挑选 CLI Agent 和模型，再启动。项目小、目标单一，代码量大概率不大，适合初学者读源码。它直接对应你关注的 AI Agent + 自动化工具。
+注意：项目很年轻（77 stars），文档和稳定性未知，别指望生产可用，当学习样本。</p>
+<p><strong>2. paddock —— 适合度：中（概念学习高，代码学习低）</strong>
+<a href="https://github.com/truespar/paddock">链接</a> · Rust · 107 stars
+面向 NVIDIA 和 Apple Silicon 的本地推理服务器，提供 OpenAI 和 Anthropic 兼容 API，支持 GGUF / safetensors / MLX 和多种量化格式，自带 Studio。
+为什么对你有用：它展示了"本地模型服务如何暴露成 OpenAI 兼容 API"——这正是后端</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>unstablebuild/rune</strong>（GitHub，评分 4.6）：Go 项目，Stars 1151，适合评估是否能拆成练手项目。</li>
+<li><strong>nidhi-singh02/agent-router</strong>（GitHub，评分 4.48）：TypeScript 项目，Stars 77，适合评估是否能拆成练手项目。</li>
+<li><strong>India Semiconductor Journey : Old Designer , New Producer – The Diplomat</strong>（thediplomat.com，评分 4.48）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>蔡易餘提產業政策 ： 帶動嘉義經濟正向循環 | 政治 | Newtalk新聞</strong>（newtalk.tw，评分 4.48）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>市场传闻 ： 台积电明年1月晶圆代工再涨价</strong>（finance.ifeng.com，评分 4.24）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>unstablebuild/rune</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/unstablebuild/rune</li>
+<li>评分：4.6</li>
+<li>简介：the development environment for pros Stars: 1151; Forks: 88; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 1151，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>nidhi-singh02/agent-router</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/nidhi-singh02/agent-router</li>
+<li>评分：4.48</li>
+<li>简介：CLI that picks Cursor, Claude Code, Codex, or OpenCode + model/effort for a task, then launches it. Powered by Jev and Herdr Stars: 77; Forks: 7; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 77，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>truespar/paddock</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/truespar/paddock</li>
+<li>评分：4.16</li>
+<li>简介：Native Rust inference server for open models on NVIDIA and Apple Silicon. OpenAI- and Anthropic-compatible APIs, GGUF + safetensors + MLX, FP8/NVFP4/MXFP4/Q8/Q4, built-in Studio Stars: 107; Forks: 17; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 107，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>chelinho139/wow-ai</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/chelinho139/wow-ai</li>
+<li>评分：4.0</li>
+<li>简介：Addon to use AI (Claude, Codex and Grok) inside World of Warcraft (WoW) Stars: 85; Forks: 14; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Grab and OpenAI bring practical AI skills to Southeast Asia</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/grab-openai-ai-skills-southeast-asia</li>
+<li>评分：3.5</li>
+<li>简介：OpenAI and Grab launch GO Forward with AI, a regional programme helping 30,000 partners build practical AI skills across Southeast Asia.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Reimagining advertising with AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/reimagining-advertising-with-ai</li>
+<li>评分：3.42</li>
+<li>简介：Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Two years of OpenAI Academy</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/two-years-of-openai-academy</li>
+<li>评分：3.36</li>
+<li>简介：Marking two years of OpenAI Academy and bringing AI skills to even more communities.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>India Semiconductor Journey : Old Designer , New Producer – The Diplomat</h3>
+<ul>
+<li>来源：thediplomat.com</li>
+<li>链接：https://thediplomat.com/2026/09/indias-semiconductor-journey-old-designer-new-producer</li>
+<li>评分：4.48</li>
+<li>简介：20260924T191500Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>蔡易餘提產業政策 ： 帶動嘉義經濟正向循環 | 政治 | Newtalk新聞</h3>
+<ul>
+<li>来源：newtalk.tw</li>
+<li>链接：https://newtalk.tw/news/view/2026-09-24/1061751</li>
+<li>评分：4.48</li>
+<li>简介：20260924T053000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>市场传闻 ： 台积电明年1月晶圆代工再涨价</h3>
+<ul>
+<li>来源：finance.ifeng.com</li>
+<li>链接：https://finance.ifeng.com/c/8wfmAaz3fh1</li>
+<li>评分：4.24</li>
+<li>简介：20260924T023000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>市场传闻 ： 台积电2027年1月晶圆代工价格再涨3 %- 6 %- CFi . CN 中财网</h3>
+<ul>
+<li>来源：cfi.net.cn</li>
+<li>链接：http://www.cfi.net.cn/p20260924000162.html</li>
+<li>评分：4.24</li>
+<li>简介：20260924T010000Z</li>
+<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½æ¿å</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.cppcc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：unstablebuild/rune。</li>
+<li>重点阅读：India Semiconductor Journey : Old Designer , New Producer – The Diplomat。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/unstablebuild/rune">unstablebuild/rune</a> - GitHub</li>
+<li><a href="https://github.com/nidhi-singh02/agent-router">nidhi-singh02/agent-router</a> - GitHub</li>
+<li><a href="https://thediplomat.com/2026/09/indias-semiconductor-journey-old-designer-new-producer">India Semiconductor Journey : Old Designer , New Producer – The Diplomat</a> - thediplomat.com</li>
+<li><a href="https://newtalk.tw/news/view/2026-09-24/1061751">蔡易餘提產業政策 ： 帶動嘉義經濟正向循環 | 政治 | Newtalk新聞</a> - newtalk.tw</li>
+<li><a href="https://finance.ifeng.com/c/8wfmAaz3fh1">市场传闻 ： 台积电明年1月晶圆代工再涨价</a> - finance.ifeng.com</li>
+<li><a href="http://www.cfi.net.cn/p20260924000162.html">市场传闻 ： 台积电2027年1月晶圆代工价格再涨3 %- 6 %- CFi . CN 中财网</a> - cfi.net.cn</li>
+<li><a href="https://github.com/truespar/paddock">truespar/paddock</a> - GitHub</li>
+<li><a href="https://github.com/chelinho139/wow-ai">chelinho139/wow-ai</a> - GitHub</li>
+<li><a href="https://openai.com/index/grab-openai-ai-skills-southeast-asia">Grab and OpenAI bring practical AI skills to Southeast Asia</a> - openai.com</li>
+<li><a href="https://openai.com/index/reimagining-advertising-with-ai">Reimagining advertising with AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/two-years-of-openai-academy">Two years of OpenAI Academy</a> - openai.com</li>
+<li><a href="http://www.cppcc.gov.cn/">å ¨å½æ¿å</a> - 中国政府网</li>
+</ul></main></body></html>
