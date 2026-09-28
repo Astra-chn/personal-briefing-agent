@@ -25,243 +25,135 @@ blockquote {
 }
 code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
 </style></head><body><main class="container"><h1>每日个人简报 - 2026-09-28</h1>
-<h2>AI 生成综述</h2>
-<h1>每日个人简报 · 2026-09-28</h1>
 <blockquote>
-<p>说明：本期 world_news 材料较集中（中美、中东），AI 类材料是 OpenAI 官方发布且时间在 9/16–9/18，偏旧；china_policy 只有两个官网入口页、无实质政策内容。下面会逐块标注"材料说了什么"和"我的判断"，两者分开。</p>
+<p>DeepSeek 总结暂时不可用，以下为规则模板生成的基础版简报。</p>
 </blockquote>
-<hr />
-<h2>一、今日最值得关注的 5 件事</h2>
-<h3>1. 习特会：中方提出避免"修昔底德陷阱"的条件（最重要）</h3>
-<ul>
-<li>来源：The Guardian，2026-09-24 —— https://www.theguardian.com/us-news/2026/sep/24/xi-jinping-trump-china-cooperation-thucydides-trap</li>
-<li>材料内容：习近平在白宫与特朗普会晤开场时，提出通过广泛合作避免中美走向军事冲突，背景是两国在 <strong>AI、贸易、台湾</strong> 问题上的激烈竞争。</li>
-<li>为什么重要：这是本期唯一一条同时牵动"AI 竞争 + 贸易 + 地缘安全"的材料，也是评分最高的一条（3.9）。</li>
-<li>对科技/政策环境的意义（谨慎表述）：材料只说明 AI 是竞争焦点之一，<strong>没有给出任何具体政策、管制或产业措施</strong>，所以不宜推断具体行业影响。可以确定的是：中美关系仍是影响 AI 领域政策不确定性的主线。</li>
-</ul>
-<h3>2. 特朗普拒绝伊朗停火提议，伊朗称"只有谈判能结束冲突"</h3>
-<ul>
-<li>来源：Al Jazeera，2026-09-27 —— https://www.aljazeera.com/news/2026/9/27/better-deal-whats-behind-trumps-rejection-of-irans-truce-offer</li>
-<li>来源：BBC，2026-09-27 —— https://www.bbc.co.uk/news/articles/cmvgyyw2jeego</li>
-<li>材料内容：专家认为特朗普把经济制裁当作获取更多让步的手段，但存在失去筹码的风险；伊朗外长表示德黑兰仍在等待正式的拒绝答复，并称只有谈判能结束冲突。BBC 标题提到"霍尔木兹协议被拒"。</li>
-<li>为什么重要：涉及制裁与能源通道（霍尔木兹），属于会外溢到全球市场情绪的地缘议题。材料未涉及能源价格数据，不宜自行推断。</li>
-</ul>
-<h3>3. 加沙：UNRWA 被排除在"和平委员会"之外</h3>
-<ul>
-<li>来源：Al Jazeera，2026-09-27 —— https://www.aljazeera.com/news/2026/9/27/no-role-for-unrwa-in-gaza-does-the-board-of-peace-toe-israeli-lines</li>
-<li>材料内容：Board of Peace 将联合国近东救济工程处（UNRWA）排除在加沙事务之外，与以色列长期要求边缘化该机构的主张一致。</li>
-<li>为什么重要：人道援助机构的地位变化，会影响加沙重建与援助体系的走向。材料本身没有给出后续执行细节。</li>
-</ul>
-<h3>4. TypeLLM：LLM 的"类型安全生成"（796 stars，Python）</h3>
-<ul>
-<li>链接：https://github.com/TypeLLM/TypeLLM</li>
-<li>材料内容：语言 Python，796 stars / 53 forks，定位是"带类型安全生成的 LLM"。</li>
-<li>为什么值得看：这类项目解决的是"让模型输出可被程序可靠消费"的问题，跟 RAG、结构化输出、Agent 工具调用是同一类痛点。对后端转 AI 的人来说，比又一个大模型套壳更值得花时间。</li>
-</ul>
-<h3>5. agent-router：一个帮你选编码 Agent 的 CLI（87 stars，TypeScript）</h3>
-<ul>
-<li>链接：https://github.com/nidhi-singh02/agent-router</li>
-<li>材料内容：命令行工具，为任务选择 Cursor / Claude Code / Codex / OpenCode 以及模型和 effort 等级，然后启动；由 Jev 和 Herdr 驱动。</li>
-<li>为什么值得看：这是"多 Agent 编排/路由"在开发者工作流里的具体落地形态，思路可以直接借鉴到自己做的自动化工具里。</li>
-</ul>
-<hr />
-<h2>二、GitHub 热门项目（附是否适合你）</h2>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>语言 / 热度</th>
-<th>是什么</th>
-<th>是否适合你</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>TypeLLM</strong></td>
-<td>Python，796★ / 53 fork</td>
-<td>LLM 的类型安全生成</td>
-<td><strong>适合</strong>。Python 栈、概念清晰，是理解"结构化输出 + 类型约束"的好切口，跟你关注的 RAG/Agent 直接相关</td>
-</tr>
-<tr>
-<td><strong>research-workbench-assistant</strong></td>
-<td>Python，128★ / 0 fork</td>
-<td>面向 Codex 的本地优先"研究记忆"：检查点、进度账本、Markdown/JSON 论文笔记。早期 alpha</td>
-<td><strong>适合看设计，不适合依赖</strong>。0 fork、early alpha，说明还没人真用起来。它的"记忆/检查点"思路对做 Agent 记忆层很有参考价值</td>
-</tr>
-<tr>
-<td><strong>agent-router</strong></td>
-<td>TypeScript，87★ / 8 fork</td>
-<td>为任务挑选编码 Agent + 模型 + effort 再启动</td>
-<td><strong>中等</strong>。TypeScript + 多工具集成，对初学者偏重；但"任务 → 选工具 → 执行"这个结构本身很简单，值得抄思路而不是直接改代码</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>三个项目的共同点：都在解决 <strong>Agent 的"上下文/记忆"和"路由/选择"</strong>问题，不是模型本身。这是当前工程侧的真实热点。</p>
-</blockquote>
-<hr />
-<h2>三、AI 发展动态（本期全是 OpenAI 官方发布）</h2>
-<ol>
-<li><strong>Australian Youth Safety Blueprint</strong>（9/18）—— https://openai.com/index/australian-youth-safety-blueprint
-   六支柱路线图，目标是让年轻人使用 AI 更安全。<strong>方向：合规与青少年保护。</strong></li>
-<li><strong>Astra for Law / OpenAI for Law</strong>（9/17）—— https://openai.com/index/astra-for-law
-   面向法律行业：前沿智能、定制事务所工作流、连接法律数据源、面向涉密客户工作的"法律级"管控。<strong>方向：垂直行业 + 数据连接 + 权限管控。</strong></li>
-<li><strong>帮助老年人使用 AI</strong>（9/16）—— https://openai.com/index/helping-older-adults-use-ai-in-everyday-life
-   与 AARP 合作，在美国 10 个城市为 1000 名老年人提供免费 ChatGPT 实操工作坊。<strong>方向：数字包容与使用能力建设。</strong></li>
-</ol>
-<p><strong>趋势判断（基于以上三条，不超出材料）</strong>：
-- 头部厂商的发布重心明显从"模型能做什么"转向 <strong>"谁在用、在哪个行业用、合规边界在哪"</strong>。
-- 对"后端转 AI"的人来说，信号是：<strong>通用聊天能力在商品化，价值往垂直工作流、数据接入、权限与审计上走。</strong> 这是我对方向的判断，不是材料中的结论。</p>
-<hr />
-<h2>四、国际形势</h2>
-<ul>
-<li><strong>中美</strong>：本期唯一直接材料是习特会。核心信息是"避免军事冲突的相互理解"，竞争面明确列了 AI、贸易、台湾。<strong>材料没有给出任何具体协议条款或后续机制</strong>，不要把它读成关系已经缓和。</li>
-<li><strong>中东</strong>：两条线——加沙的援助机构安排（UNRWA 被排除），伊朗方向的制裁与谈判博弈（特朗普拒绝停火提议、霍尔木兹相关协议）。</li>
-<li><strong>与科技/就业/政策环境的关系</strong>：材料能支持的只有一点——AI 已被放在大国竞争的核心位置。至于出口管制、算力、人才流动等具体影响，本期材料没有涉及，不做延伸。</li>
-</ul>
-<hr />
-<h2>五、中国国家政策</h2>
-<p><strong>本期没有可用的实质政策材料。</strong></p>
-<p>材料中的两条 china_policy 分别是：
-- http://www.ccdi.gov.cn/ （中央纪委国家监委网站）
-- http://www.court.gov.cn/ （最高人民法院网站）</p>
-<p>两条均为<strong>官网入口/列表页</strong>，标题在采集时出现编码乱码，正文摘要只写了"中国国家政策官网列表页条目"，<strong>没有任何政策内容、文件或解读</strong>。</p>
-<p>所以本期不对中国政策做任何推断或结论。如果你要跟进政策，建议直接去这两个官网以及中国政府网看原文，不要依赖这类列表页摘要。</p>
-<hr />
-<h2>六、给你的具体建议（可今天执行）</h2>
-<ol>
-<li><strong>花 30 分钟读 TypeLLM 的 README 和示例</strong>（不必跑通）。目标只有一个：搞明白"类型安全的 LLM 生成"到底解决了什么报错场景。这比刷教程更接近真实工程问题。</li>
-<li><strong>用 Python 写一个 30 行的"极简 agent-router"</strong>：输入任务描述 → 用 if/规则或一次 LLM 调用分类 → 选择不同处理函数（比如"查资料"走检索、"写代码"走另一个 prompt）。骨架照抄 agent-router 的思路即可，这是你练 Agent 编排最低成本的方式。</li>
-<li><strong>把 research-workbench-assistant 当"设计参考"收藏，不要接入工作流</strong>。理由很直接：128 stars、0 fork、早期 alpha。看它怎么组织"检查点 + 进度账本 + 笔记文件"，对你的 RAG/记忆层设计有启发。</li>
-<li><strong>如果你想后端转 AI，把方向从"做通用聊天"调整为"某个垂直场景 + 数据接入 + 权限/审计"</strong>。依据是本期 OpenAI 的三条发布全在往这个方向走（法律、青少年、老年人）。这是我的推断，但方向性比较明确。</li>
-<li><strong>不要把本期简报当作政策或国际形势的决策依据</strong>：国际部分只有会晤和冲突的即时报道，没有协议细节；中国政策本期为零。真正的判断请回到原文链接核对。</li>
-</ol>
 <h2>一、今日最值得关注的 5 件事</h2>
 <ul>
-<li><strong>At Trump meeting, Xi Jinping lays out terms to avoid US-China military conflict</strong>（www.theguardian.com，评分 3.9）：命中国际关键词 China、Taiwan、US-China，有助于判断外部环境和科技政策变化。</li>
-<li><strong>z-liu-xiugou/research-workbench-assistant</strong>（GitHub，评分 3.72）：Python 项目，Stars 128，适合评估是否能拆成练手项目。</li>
-<li><strong>‘No role for UNRWA in Gaza’: Does the Board of Peace toe Israeli lines?</strong>（www.aljazeera.com，评分 3.64）：命中国际关键词 Gaza、Israel，有助于判断外部环境和科技政策变化。</li>
-<li><strong>‘Better deal’: What’s behind Trump’s rejection of Iran’s truce offer?</strong>（www.aljazeera.com，评分 3.44）：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
-<li><strong>Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal</strong>（feeds.bbci.co.uk，评分 3.36）：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
+<li><strong>0xethanq/astra-quant-agent</strong>（GitHub，评分 4.61）：Python 项目，Stars 263，适合评估是否能拆成练手项目。</li>
+<li><strong>myna-recorder/myna-macro-recorder</strong>（GitHub，评分 4.0）：Unknown 项目，Stars 88，适合评估是否能拆成练手项目。</li>
+<li><strong>Russian strikes kill eight, injure dozens across Ukraine</strong>（www.aljazeera.com，评分 3.88）：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Ed Miliband to acknowledge Labour’s former stance on Palestine fell short</strong>（www.theguardian.com，评分 3.88）：命中国际关键词 Israel、policy，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Ben-Gvir releases video threatening to kill senior Hamas figure in jail</strong>（www.aljazeera.com，评分 3.84）：命中国际关键词 Israel，有助于判断外部环境和科技政策变化。</li>
 </ul>
 <h2>二、GitHub 热门项目</h2>
-<h3>z-liu-xiugou/research-workbench-assistant</h3>
+<h3>0xethanq/astra-quant-agent</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/z-liu-xiugou/research-workbench-assistant</li>
+<li>链接：https://github.com/0xethanq/astra-quant-agent</li>
+<li>评分：4.61</li>
+<li>简介：Multi-agent LLM investment committee that actually trades: AI seats debate, a CIO adopts one, 17 fail-closed risk gates stop the rest. Multi-exchange crypto quant trading terminal for OKX / Binance / Gate, with self-evolving prompts and a full audit trail. Stars: 263; Forks: 88; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 263，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>myna-recorder/myna-macro-recorder</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/myna-recorder/myna-macro-recorder</li>
+<li>评分：4.0</li>
+<li>简介：Myna Recorder — a Windows macro recorder you can read and edit. Image anchors, an auto clicker, an AI assistant that writes macros, Agent mode (computer use, for short jobs) and a screen watchdog. Stars: 88; Forks: 0; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 88，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>AppitStudio/awesome-jev</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/AppitStudio/awesome-jev</li>
 <li>评分：3.72</li>
-<li>简介：Local-first research memory for Codex: checkpoints, progress ledgers, and Markdown/JSON paper notes. Early alpha. Stars: 128; Forks: 0; Language: Python</li>
-<li>为什么值得关注：Python 项目，Stars 128，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>nidhi-singh02/agent-router</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/nidhi-singh02/agent-router</li>
-<li>评分：3.08</li>
-<li>简介：CLI that picks Cursor, Claude Code, Codex, or OpenCode + model/effort for a task, then launches it. Powered by Jev and Herdr Stars: 87; Forks: 8; Language: TypeScript</li>
-<li>为什么值得关注：TypeScript 项目，Stars 87，适合评估是否能拆成练手项目。</li>
-</ul>
-<h3>TypeLLM/TypeLLM</h3>
-<ul>
-<li>来源：GitHub</li>
-<li>链接：https://github.com/TypeLLM/TypeLLM</li>
-<li>评分：3.05</li>
-<li>简介：TypeLLM: LLMs with type-safe generation Stars: 796; Forks: 53; Language: Python</li>
-<li>为什么值得关注：Python 项目，Stars 796，适合评估是否能拆成练手项目。</li>
+<li>简介：Curated Jev resources and runnable examples for typed AI decisions. Stars: 88; Forks: 16; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 88，适合评估是否能拆成练手项目。</li>
 </ul>
 <h2>三、AI 发展动态</h2>
-<h3>Introducing the Australian Youth Safety Blueprint</h3>
+<h3>OpenAI extends cyber access to Ukraine for civilian defense</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/australian-youth-safety-blueprint</li>
-<li>评分：3.06</li>
-<li>简介：OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.</li>
+<li>链接：https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense</li>
+<li>评分：3.44</li>
+<li>简介：OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h3>Introducing Astra for Law</h3>
+<h3>Sam Altman’s remarks at the United Nations Security Council</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/astra-for-law</li>
-<li>评分：3.06</li>
-<li>简介：OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.</li>
+<li>链接：https://openai.com/index/sam-altman-un-security-council-remarks</li>
+<li>评分：3.4</li>
+<li>简介：OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h3>Helping older adults use AI in everyday life</h3>
+<h3>Airbnb widens access to GPT-6 Astra and OpenAI frontier models</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/helping-older-adults-use-ai-in-everyday-life</li>
-<li>评分：3.06</li>
-<li>简介：OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.</li>
+<li>链接：https://openai.com/index/airbnb-gpt-6-astra</li>
+<li>评分：3.4</li>
+<li>简介：Learn how Airbnb is expanding access to GPT-6 Astra and OpenAI frontier models to help engineering teams solve bugs, design systems, and ship faster.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
 <h2>四、国际形势</h2>
-<h3>At Trump meeting, Xi Jinping lays out terms to avoid US-China military conflict</h3>
+<h3>Russian strikes kill eight, injure dozens across Ukraine</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/news/2026/9/28/russian-strikes-kill-eight-injure-dozens-across-ukraine?traffic_source=rss</li>
+<li>评分：3.88</li>
+<li>简介：Ukrainian leader Zelenskyy says Moscow launched nearly 4,000 drones, aerial bombs and missiles on Ukraine in past week.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Ed Miliband to acknowledge Labour’s former stance on Palestine fell short</h3>
 <ul>
 <li>来源：www.theguardian.com</li>
-<li>链接：https://www.theguardian.com/us-news/2026/sep/24/xi-jinping-trump-china-cooperation-thucydides-trap</li>
-<li>评分：3.9</li>
-<li>简介：Chinese president’s proposals for lessening tensions come amid period of intense competition between the two countries over AI and trade Xi Jinping has called for extensive cooperation with Washington to avoid the “Thucydides trap” that could put the US and China on a military collision course amid rising tensions over artificial intelligence, trade and Taiwan. At the start of his summit meeting with Donald Trump in the White House, the Chinese president laid out terms for a mutual understanding that he said could steer the two competing superpowers away from future military conflict and on to...</li>
-<li>为什么值得关注：命中国际关键词 China、Taiwan、US-China，有助于判断外部环境和科技政策变化。</li>
+<li>链接：https://www.theguardian.com/politics/2026/sep/28/ed-miliband-labour-former-stance-palestine-fell-short</li>
+<li>评分：3.88</li>
+<li>简介：Foreign secretary will tell party’s conference ‘we are not here to accept the status quo but to change it’ Ed Miliband will tell campaigners and party members who raised the plight of Palestinians they were right that Labour’s approach had not been enough, saying he was heeding the calls of millions of people by imposing sanctions on Israeli settlements. The foreign secretary will tell the Labour party conference that the government will take more explicitly progressive foreign policy positions under Andy Burnham, and that the UK will be a leader among like-minded countries in a new age of dip...</li>
+<li>为什么值得关注：命中国际关键词 Israel、policy，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>‘No role for UNRWA in Gaza’: Does the Board of Peace toe Israeli lines?</h3>
+<h3>Ben-Gvir releases video threatening to kill senior Hamas figure in jail</h3>
 <ul>
 <li>来源：www.aljazeera.com</li>
-<li>链接：https://www.aljazeera.com/news/2026/9/27/no-role-for-unrwa-in-gaza-does-the-board-of-peace-toe-israeli-lines?traffic_source=rss</li>
-<li>评分：3.64</li>
-<li>简介：Board of Peace excludes UNRWA from Gaza, aligning with repeated Israeli calls to sideline the refugee aid agency.</li>
-<li>为什么值得关注：命中国际关键词 Gaza、Israel，有助于判断外部环境和科技政策变化。</li>
+<li>链接：https://www.aljazeera.com/video/newsfeed/2026/9/28/ben-gvir-releases-video-threatening-to-kill-senior-hamas-figure-in-jail?traffic_source=rss</li>
+<li>评分：3.84</li>
+<li>简介：Israel’s security minister Itamar Ben-Gvir has released a video in which he is seen threatening to kill Hassan Salameh.</li>
+<li>为什么值得关注：命中国际关键词 Israel，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>‘Better deal’: What’s behind Trump’s rejection of Iran’s truce offer?</h3>
+<h3>Iran war live: Tehran open to ‘real diplomacy’, ready for ‘apocalyptic war’</h3>
 <ul>
 <li>来源：www.aljazeera.com</li>
-<li>链接：https://www.aljazeera.com/news/2026/9/27/better-deal-whats-behind-trumps-rejection-of-irans-truce-offer?traffic_source=rss</li>
-<li>评分：3.44</li>
-<li>简介：Experts say Trump sees economic sanctions as key to extracting more concessions but he risks losing leverage.</li>
-<li>为什么值得关注：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
-</ul>
-<h3>Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal</h3>
-<ul>
-<li>来源：feeds.bbci.co.uk</li>
-<li>链接：https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&amp;at_campaign=rss</li>
-<li>评分：3.36</li>
-<li>简介：The foreign minister says Tehran is waiting for an official rejection of a deal, despite the US President's comments.</li>
+<li>链接：https://www.aljazeera.com/news/liveblog/2026/9/28/iran-war-live-tehran-warns-its-fully-prepared-for-war-amid-hormuz-tensions?traffic_source=rss</li>
+<li>评分：3.72</li>
+<li>简介：Abbas Araghchi's warning comes after Washington rejected a seven-day roadmap to end the war and reopen Strait of Hormuz.</li>
 <li>为什么值得关注：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
 </ul>
 <h2>五、中国国家政策</h2>
-<h3>å½å®¶çå¯å§åä¼</h3>
+<h3>æé«äººæ°æ£å¯é¢</h3>
 <ul>
 <li>来源：中国政府网</li>
-<li>链接：http://www.ccdi.gov.cn/</li>
+<li>链接：http://www.spp.gov.cn/</li>
 <li>评分：2.92</li>
 <li>简介：中国国家政策官网列表页条目。</li>
 <li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
 </ul>
-<h3>æé«äººæ°æ³é¢</h3>
+<h3>å½å¡é¢é¨é¨ç½ç«</h3>
 <ul>
 <li>来源：中国政府网</li>
-<li>链接：http://www.court.gov.cn/</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748953.htm</li>
 <li>评分：2.92</li>
 <li>简介：中国国家政策官网列表页条目。</li>
 <li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
 </ul>
 <h2>六、对我的个人建议</h2>
 <ol>
-<li>优先拆解：z-liu-xiugou/research-workbench-assistant。</li>
-<li>重点阅读：At Trump meeting, Xi Jinping lays out terms to avoid US-China military conflict。</li>
+<li>优先拆解：0xethanq/astra-quant-agent。</li>
+<li>重点阅读：Russian strikes kill eight, injure dozens across Ukraine。</li>
 <li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
 </ol>
 <h2>七、来源链接</h2>
 <ul>
-<li><a href="https://www.theguardian.com/us-news/2026/sep/24/xi-jinping-trump-china-cooperation-thucydides-trap">At Trump meeting, Xi Jinping lays out terms to avoid US-China military conflict</a> - www.theguardian.com</li>
-<li><a href="https://github.com/z-liu-xiugou/research-workbench-assistant">z-liu-xiugou/research-workbench-assistant</a> - GitHub</li>
-<li><a href="https://www.aljazeera.com/news/2026/9/27/no-role-for-unrwa-in-gaza-does-the-board-of-peace-toe-israeli-lines?traffic_source=rss">‘No role for UNRWA in Gaza’: Does the Board of Peace toe Israeli lines?</a> - www.aljazeera.com</li>
-<li><a href="https://www.aljazeera.com/news/2026/9/27/better-deal-whats-behind-trumps-rejection-of-irans-truce-offer?traffic_source=rss">‘Better deal’: What’s behind Trump’s rejection of Iran’s truce offer?</a> - www.aljazeera.com</li>
-<li><a href="https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&amp;at_campaign=rss">Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal</a> - feeds.bbci.co.uk</li>
-<li><a href="https://github.com/nidhi-singh02/agent-router">nidhi-singh02/agent-router</a> - GitHub</li>
-<li><a href="https://openai.com/index/australian-youth-safety-blueprint">Introducing the Australian Youth Safety Blueprint</a> - openai.com</li>
-<li><a href="https://openai.com/index/astra-for-law">Introducing Astra for Law</a> - openai.com</li>
-<li><a href="https://openai.com/index/helping-older-adults-use-ai-in-everyday-life">Helping older adults use AI in everyday life</a> - openai.com</li>
-<li><a href="https://github.com/TypeLLM/TypeLLM">TypeLLM/TypeLLM</a> - GitHub</li>
-<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
-<li><a href="http://www.court.gov.cn/">æé«äººæ°æ³é¢</a> - 中国政府网</li>
+<li><a href="https://github.com/0xethanq/astra-quant-agent">0xethanq/astra-quant-agent</a> - GitHub</li>
+<li><a href="https://github.com/myna-recorder/myna-macro-recorder">myna-recorder/myna-macro-recorder</a> - GitHub</li>
+<li><a href="https://www.aljazeera.com/news/2026/9/28/russian-strikes-kill-eight-injure-dozens-across-ukraine?traffic_source=rss">Russian strikes kill eight, injure dozens across Ukraine</a> - www.aljazeera.com</li>
+<li><a href="https://www.theguardian.com/politics/2026/sep/28/ed-miliband-labour-former-stance-palestine-fell-short">Ed Miliband to acknowledge Labour’s former stance on Palestine fell short</a> - www.theguardian.com</li>
+<li><a href="https://www.aljazeera.com/video/newsfeed/2026/9/28/ben-gvir-releases-video-threatening-to-kill-senior-hamas-figure-in-jail?traffic_source=rss">Ben-Gvir releases video threatening to kill senior Hamas figure in jail</a> - www.aljazeera.com</li>
+<li><a href="https://github.com/AppitStudio/awesome-jev">AppitStudio/awesome-jev</a> - GitHub</li>
+<li><a href="https://www.aljazeera.com/news/liveblog/2026/9/28/iran-war-live-tehran-warns-its-fully-prepared-for-war-amid-hormuz-tensions?traffic_source=rss">Iran war live: Tehran open to ‘real diplomacy’, ready for ‘apocalyptic war’</a> - www.aljazeera.com</li>
+<li><a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense">OpenAI extends cyber access to Ukraine for civilian defense</a> - openai.com</li>
+<li><a href="https://openai.com/index/sam-altman-un-security-council-remarks">Sam Altman’s remarks at the United Nations Security Council</a> - openai.com</li>
+<li><a href="https://openai.com/index/airbnb-gpt-6-astra">Airbnb widens access to GPT-6 Astra and OpenAI frontier models</a> - openai.com</li>
+<li><a href="http://www.spp.gov.cn/">æé«äººæ°æ£å¯é¢</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748953.htm">å½å¡é¢é¨é¨ç½ç«</a> - 中国政府网</li>
 </ul></main></body></html>
