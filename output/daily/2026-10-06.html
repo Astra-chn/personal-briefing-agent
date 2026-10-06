@@ -1,0 +1,233 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-10-06</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-10-06</h1>
+<p><strong>一句话总结</strong>：本期实质内容集中在 4 条国际新闻、3 条 OpenAI 动态和 4 个 GitHub 项目。中国政策来源只有"中国政府网首页"列表条目（标题还是乱码），没有任何实质政策内容，所以本期我不做政策解读，也不拿 AI 新闻硬凑结论。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. OpenAI 公布 EU 文本溯源（水印）方案</h3>
+<p>来源：https://openai.com/index/eu-text-provenance</p>
+<p><strong>是什么</strong>：OpenAI 说明在欧盟规则下如何做文本水印——哪些场景加水印、检测怎么工作、为什么检测权限先开放给研究者。</p>
+<p><strong>为什么重要</strong>：这不是产品功能更新，是合规基础设施。欧盟的监管压力正在变成"AI 输出必须可追溯"的工程要求，而检测能力先给研究者、不公开给所有人，说明水印本身还有被绕过的风险。</p>
+<p><strong>对你有什么用</strong>：如果你以后做 RAG 或 Agent 输出内容，来源标注、内容溯源会成为基本要求而不是加分项。现在就开始在输出里保留引用来源，是成本最低的习惯。</p>
+<hr />
+<h3>2. ChatGPT 上线新的视觉广告格式</h3>
+<p>来源：https://openai.com/index/new-chatgpt-ads-format-and-measurement</p>
+<p><strong>是什么</strong>：ChatGPT 引入新的视觉广告格式，同时扩展了测量工具、归因合作和品牌适配能力。</p>
+<p><strong>为什么重要</strong>：AI 助手的主要商业模式正在从纯订阅转向广告。这意味着 C 端 AI 访问成本可能长期保持低位甚至免费，但界面和回答会被商业逻辑影响。</p>
+<p><strong>对你有什么用</strong>：你如果做自动化工具或小产品，要意识到两件事——一是"用户已经习惯免费用 AI"，定价空间被压缩；二是 API 成本和分发渠道会跟着平台商业模式走，不要把产品架构绑死在单一平台上。</p>
+<hr />
+<h3>3. 韩国燃料经受制裁油轮运往俄罗斯</h3>
+<p>来源：https://www.theguardian.com/world/2026/oct/06/oil-tankers-south-korea-russia-ukraine-war</p>
+<p><strong>是什么</strong>：卫报分析港口记录和船舶追踪数据发现，7、8 月有超过 17.6 万吨燃料（主要是柴油）从韩国多个港口装上 7 艘油轮，14 次航程运往俄罗斯远东。部分使用了被制裁的油轮。一名专家称这"削弱了"首尔对基辅的公开支持。</p>
+<p><strong>为什么重要</strong>：这是制裁执行出现漏洞的具体案例。战争持续期间，俄罗斯仍在通过第三国渠道获取补给。</p>
+<p><strong>对你有什么用</strong>：直接用处不大，但有一个间接信号——<strong>跨境贸易和供应链的合规审查在变严</strong>。如果你未来做跨境工具、支付或数据服务，合规成本要提前算进去。</p>
+<hr />
+<h3>4. 西班牙提前大选 + 法国校园抗议</h3>
+<p>来源：https://www.theguardian.com/world/live/2026/oct/05/europe-spain-pedro-sanchez-election-housing-france-school-protests-ukraine-russia-latest-news-updates</p>
+<p><strong>是什么</strong>：西班牙首相桑切斯宣布 11 月 29 日提前大选，起因是右翼政党在住房问题上阻挠了少数派政府的紧急措施并引发大规模抗议。同期法国数百所学校因抗议关闭，与警察冲突中近 200 名学生受伤。</p>
+<p><strong>为什么重要</strong>：两个欧洲主要国家的政治压力都来自<strong>住房和生活成本</strong>，不是意识形态议题。这类民生压力会直接影响欧洲各国的财政和政策优先级。</p>
+<p><strong>对你有什么用</strong>：欧洲是 AI 监管的主要输出地。政治注意力被国内民生议题占满时，监管推进节奏可能出现变化——但<strong>本期材料没有提供任何欧盟 AI 立法进程的证据，这只能作为观察点，不能当结论</strong>。</p>
+<hr />
+<h3>5. 也门收复摩卡港，麦加防务协议扩员</h3>
+<p>来源：https://www.aljazeera.com/news/liveblog/2026/10/6/iran-war-live-yemen-forces-reclaim-strategic-port-city-mocha-from-houthis</p>
+<p><strong>是什么</strong>：也门武装力量从胡塞武装手中夺回战略港口城市摩卡。同时土耳其和巴基斯坦同意快速部署军队，以加强沙特安全，属于"麦加防务协议"框架。</p>
+<p><strong>为什么重要</strong>：中东安全格局在重新组合，而且是带着实际军事部署的协议，不是口头声明。</p>
+<p><strong>对你有什么用</strong>：中东局势主要通过<strong>能源价格和航运通道</strong>影响全球宏观环境，再间接影响科技行业的融资和招聘。但材料里没有任何油价、运价或市场数据，所以不要根据这条新闻去推断具体经济影响。</p>
+<hr />
+<h2>二、GitHub 热门项目</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言</th>
+<th>数据</th>
+<th>是什么</th>
+<th>适合你吗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/AppitStudio/awesome-jev">AppitStudio/awesome-jev</a></td>
+<td>Python</td>
+<td>95★ / 20 fork</td>
+<td>"typed AI decisions" 的资源和可运行示例</td>
+<td><strong>四个里最适合</strong>。Python + 可运行示例，符合你"通过项目学习"的偏好；20 个 fork 说明有人真的在用</td>
+</tr>
+<tr>
+<td><a href="https://github.com/kayembemike/plugforge-embedded">kayembemike/plugforge-embedded</a></td>
+<td>HTML</td>
+<td>53★ / 0 fork</td>
+<td>面向嵌入式 Linux 自动化的可插拔 AI Skill 框架</td>
+<td><strong>不适合作为入门项目</strong>。嵌入式 Linux 是另一条陡峭路线，需要系统底层知识</td>
+</tr>
+<tr>
+<td><a href="https://github.com/tjayze/olympiad-problem-forge">tjayze/olympiad-problem-forge</a></td>
+<td>HTML</td>
+<td>56★ / 0 fork</td>
+<td>数学奥林匹克题目生成器</td>
+<td>优先级低。它是竞赛数学出题器，<strong>不能替代公考行测备考</strong>；但可以作为"LLM 生成 + 校验"的案例研究</td>
+</tr>
+<tr>
+<td>[Ayush-6/AI-Studio-Setup](https://github</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>kayembemike/plugforge-embedded</strong>（GitHub，评分 4.0）：HTML 项目，Stars 53，适合评估是否能拆成练手项目。</li>
+<li><strong>Green party of England and Wales facing international ostracism over ‘Zionism is racism’ vote</strong>（www.theguardian.com，评分 3.88）：命中国际关键词 Israel、policy，有助于判断外部环境和科技政策变化。</li>
+<li><strong>AppitStudio/awesome-jev</strong>（GitHub，评分 3.72）：Python 项目，Stars 95，适合评估是否能拆成练手项目。</li>
+<li><strong>tjayze/olympiad-problem-forge</strong>（GitHub，评分 3.72）：HTML 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+<li><strong>Ayush-6/AI-Studio-Setup</strong>（GitHub，评分 3.68）：HTML 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>kayembemike/plugforge-embedded</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/kayembemike/plugforge-embedded</li>
+<li>评分：4.0</li>
+<li>简介：Pluggable AI Skill Framework for Embedded Linux Automation 2026 Stars: 53; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 53，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>AppitStudio/awesome-jev</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/AppitStudio/awesome-jev</li>
+<li>评分：3.72</li>
+<li>简介：Curated Jev resources and runnable examples for typed AI decisions. Stars: 95; Forks: 20; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 95，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>tjayze/olympiad-problem-forge</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/tjayze/olympiad-problem-forge</li>
+<li>评分：3.72</li>
+<li>简介：Best Open-Source Math Olympiad Problem Generator 2026 Stars: 56; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Ayush-6/AI-Studio-Setup</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Ayush-6/AI-Studio-Setup</li>
+<li>评分：3.68</li>
+<li>简介：Open Source AI Trainer Studio Setup and Auto Update Tool 2026 Stars: 56; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Our approach to EU text provenance rules</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/eu-text-provenance</li>
+<li>评分：3.36</li>
+<li>简介：How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Building advertising for the way people use AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/new-chatgpt-ads-format-and-measurement</li>
+<li>评分：3.36</li>
+<li>简介：OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>OpenAI extends cyber access to Ukraine for civilian defense</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense</li>
+<li>评分：3.34</li>
+<li>简介：OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Green party of England and Wales facing international ostracism over ‘Zionism is racism’ vote</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/politics/2026/oct/05/green-party-england-wales-zionism-racism-vote-europe-germany</li>
+<li>评分：3.88</li>
+<li>简介：European Green party says motion goes against its policy, with German Green co-leader calling it ‘intolerable and unacceptable’ Zack Polanski may rue lack of leadership when Greens needed him to act The English and Welsh Greens are facing international ostracism after adopting a policy declaring Zionism as a form of racism, which has drawn dismay from the group representing European Greens. The co-leader of the German Greens separately said the policy was “intolerable and unacceptable”, running contrary to its belief in the right of Israel to exist. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 Israel、policy，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Fuel from South Korea being shipped to Russia as Ukraine war grinds on</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/oct/06/oil-tankers-south-korea-russia-ukraine-war</li>
+<li>评分：3.64</li>
+<li>简介：Exclusive: Guardian analysis finds more than 150,000 tonnes of fuel was shipped to Russian ports in July and August, some using sanctioned tankers Fuel is being shipped from South Korea to Russia via sanctioned tankers as Moscow scrambles for supplies amid the war in Ukraine, a move one expert said “undermines” Seoul’s public backing for Kyiv. Guardian analysis of port records and ship-tracking data found that in July and August over 176,000 tonnes of fuel, mostly diesel, was loaded at several South Korean ports on to seven tankers that made 14 voyages to Russia’s far east. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Nearly 200 students injured in French schools protests as clashes with police continue – as it happened</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/live/2026/oct/05/europe-spain-pedro-sanchez-election-housing-france-school-protests-ukraine-russia-latest-news-updates</li>
+<li>评分：3.64</li>
+<li>简介：Hundreds of schools in France remain closed amid planned demonstrations across the country The conservative People’s Party is very pleased with the announcement. “At last,” they say on their X, with a slick election video – set to the EU’s anthem “Ode to Joy” – to go along with it. Spanish prime minister Pedro Sánchez has called a snap election for 29 November, just days after rightwing parties blocked his minority government’s emergency measures on housing amid widespread protests ( 9:10 ). The election will take place on Sunday, 29 November, the earliest possible date procedurally. In a fier...</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Iran war live: Yemen forces reclaim strategic port city Mocha from Houthis</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/news/liveblog/2026/10/6/iran-war-live-yemen-forces-reclaim-strategic-port-city-mocha-from-houthis?traffic_source=rss</li>
+<li>评分：3.6</li>
+<li>简介：Turkiye and Pakistan agree to rapidly deploy militaries to bolster Saudi security as part of the Mecca defence pact.</li>
+<li>为什么值得关注：命中国际关键词 Iran，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é¦é¡µ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：kayembemike/plugforge-embedded。</li>
+<li>重点阅读：Green party of England and Wales facing international ostracism over ‘Zionism is racism’ vote。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/kayembemike/plugforge-embedded">kayembemike/plugforge-embedded</a> - GitHub</li>
+<li><a href="https://www.theguardian.com/politics/2026/oct/05/green-party-england-wales-zionism-racism-vote-europe-germany">Green party of England and Wales facing international ostracism over ‘Zionism is racism’ vote</a> - www.theguardian.com</li>
+<li><a href="https://github.com/AppitStudio/awesome-jev">AppitStudio/awesome-jev</a> - GitHub</li>
+<li><a href="https://github.com/tjayze/olympiad-problem-forge">tjayze/olympiad-problem-forge</a> - GitHub</li>
+<li><a href="https://github.com/Ayush-6/AI-Studio-Setup">Ayush-6/AI-Studio-Setup</a> - GitHub</li>
+<li><a href="https://www.theguardian.com/world/2026/oct/06/oil-tankers-south-korea-russia-ukraine-war">Fuel from South Korea being shipped to Russia as Ukraine war grinds on</a> - www.theguardian.com</li>
+<li><a href="https://www.theguardian.com/world/live/2026/oct/05/europe-spain-pedro-sanchez-election-housing-france-school-protests-ukraine-russia-latest-news-updates">Nearly 200 students injured in French schools protests as clashes with police continue – as it happened</a> - www.theguardian.com</li>
+<li><a href="https://www.aljazeera.com/news/liveblog/2026/10/6/iran-war-live-yemen-forces-reclaim-strategic-port-city-mocha-from-houthis?traffic_source=rss">Iran war live: Yemen forces reclaim strategic port city Mocha from Houthis</a> - www.aljazeera.com</li>
+<li><a href="https://openai.com/index/eu-text-provenance">Our approach to EU text provenance rules</a> - openai.com</li>
+<li><a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement">Building advertising for the way people use AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense">OpenAI extends cyber access to Ukraine for civilian defense</a> - openai.com</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
+</ul></main></body></html>
