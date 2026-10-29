@@ -1,0 +1,209 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-10-29</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-10-29</h1>
+<p><strong>先说材料情况</strong>：本期 <code>world_news</code> 4 条标题可用，但<strong>摘要基本是空的时间戳</strong>（只有标题和链接），因此下面关于国际新闻的判断只能停在“标题说了什么”，无法核实细节。<code>china_policy</code> 只有一条乱码的官网列表页标题（“全国人大”），<strong>没有任何实质性政策内容</strong>，所以本期不做中国政策解读，也不拿 GitHub/AI 新闻去凑政策结论。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 港交所推出 AI 与半导体指数</h3>
+<p>来源：<a href="https://www.manilatimes.net/2026/10/26/tmt-newswire/pr-newswire/hkex-launches-artificial-intelligence-and-semiconductor-indices/2453647">manilatimes.net</a>｜2026-10-26</p>
+<p>港交所上线 AI 和半导体两个指数。<strong>为什么值得关注</strong>：指数是资金配置的“标准接口”，说明 AI + 芯片已经被当作一个独立可投资的资产类别来运营，不再只是个股概念。<strong>对你有用之处</strong>：这代表行业岗位和资本会进一步向这两块集中，你“后端转 AI”的方向在产业侧仍是顺风；但指数化也意味着这个赛道被充分关注，靠“会调 API”入场已经不够，得有工程化能力。</p>
+<h3>2. 马来西亚出口创纪录，标题称对台湾出口增 175%</h3>
+<p>来源：<a href="https://navbharattimes.indiatimes.com/business/business-news/malaysia-export-surges-oover-54-percent-to-a-record-level-threat-to-china/articleshow/135205075.cms">navbharattimes.indiatimes.com</a>｜2026-10-26</p>
+<p>印地语标题大意是“这个挑战中国的小国出口创纪录，对台湾出口涨 175%”，链接 slug 显示“马来西亚出口激增超 54%”。<strong>注意</strong>：正文摘要缺失，54% 和 175% 这两个数字我无法核实，只能转述标题口径。<strong>为什么值得关注</strong>：如果数字成立，指向的是半导体/电子供应链在东南亚的再分配，这类变化会传导到订单、就业和产业政策。<strong>不要过度解读</strong>：单条标题不足以推出“取代中国”这种结论。</p>
+<h3>3. 韩国 KOSPI 被半导体拖累，标题称跌幅是纳斯达克的 5 倍</h3>
+<p>来源：<a href="https://www.newsway.co.kr/news/view?ud=2026102614054538416">newsway.co.kr</a>｜2026-10-26</p>
+<p>同样是标题层面信息。<strong>和第 2 条一起看才有意义</strong>：一边是东南亚出口冲高，一边是韩国股市被芯片股拖累——说明半导体周期和资金情绪正在分化，不是全行业单向利好。<strong>对你有什么用</strong>：别把“AI 热”直接等同于“半导体稳”，就业市场看的是具体公司现金流，不是指数。</p>
+<h3>4. OpenAI 与 ServiceNow 扩大合作，把 Agent 塞进企业工作流</h3>
+<p>来源：<a href="https://openai.com/index/openai-servicenow-partnership-expansion">openai.com</a>｜2026-10-28</p>
+<p>摘要明确：OpenAI 模型和 Agent 进入 ServiceNow，ServiceNow 的工作流进入 ChatGPT 和 Codex——是<strong>双向嵌入</strong>，不是简单 API 调用。<strong>趋势判断</strong>：AI Agent 的商业化重心正从“聊天框”转向“已有的企业流程系统”（IT 服务管理、工单、审批）。<strong>对你有什么用</strong>：后端背景在这里是优势，因为 Agent 落地的难点是权限、状态、审计、异常回滚，这些你比纯算法背景的人更熟。</p>
+<h3>5. OpenAI 披露前沿模型训练环境的安全加固</h3>
+<p>来源：<a href="https://openai.com/index/securing-our-frontier-model-training-environment">openai.com</a>｜2026-10-23（材料里最早的一条，非本周新发）</p>
+<p>内容：离线环境、高强度红队测试等“隔离”措施。<strong>为什么值得关注</strong>：前沿实验室开始把训练安全当工程问题公开讲，而不是只讲能力。<strong>趋势判断</strong>：模型能力报道之外，<strong>安全与合规工程岗位</strong>在增加。<strong>对你的用处</strong>：这是“后端 + AI”交叉最直接的岗位方向之一（隔离环境、权限、审计日志），门槛比训模型低，和你的现有技能栈更贴。</p>
+<hr />
+<h2>二、GitHub 热门项目（按对你的学习价值排序）</h2>
+<h3>① RabbittuX/purrge —— 最推荐你读</h3>
+<p><a href="https://github.com/RabbittuX/purrge">链接</a>｜Python｜101 stars / 16 forks
+macOS AI 磁盘清理：空间不足时提醒，AI 逐项判断哪些能清，<strong>你勾选确认后才执行</strong>。
+<strong>为什么适合你</strong>：Python 代码量小、逻辑清晰，而且是典型的“AI 给建议 + 人做决策 + 程序执行”的<strong>审批流</strong>模式——这正是企业级 Agent 最难也最值钱的部分。<strong>限制</strong>：仅 macOS；如果你不是 Mac，可把“扫描文件”换成任意 mock 数据，只跑 AI 判断 + 确认 + 执行这三段，仍能学到核心思路。</p>
+<h3>② jaisurya-dev-art/rigby2d —— 只挑 MCP 部分看</h3>
+<p><a href="https://github.com/jaisurya-dev-art/rigby2d">链接</a>｜JavaScript / Rust / Godot｜69 stars
+2D 骨骼动画编辑器：PSD 自动绑定、网格/IK/物理动画、音频口型同步、导出 JSON/.skel，<strong>内置给 AI 助手用的 MCP server</strong>。
+<strong>为什么适合你</strong>：整个项目不适合初学者通读（图形数学 + 三套运行时 + 引擎集成，劝退）。但它<strong>内置的 MCP server 部分</strong>是当下最值得学的接口形态：怎么把一堆工具函数暴露给 AI 助手。建议只定位到 MCP 目录，看工具定义和参数校验，别碰渲染核心。<strong>注意</strong>：69 stars，属于小项目，文档在 GitHub Pages，别指望有成熟生态。</p>
+<h3>③ guolola/SoftJL —— 学“结构化输出”，不学全栈</h3>
+<p><a href="https://github.com/guolola/SoftJL">链接</a>｜TypeScript｜121 stars / 5 forks
+需求 → UML 图 / 测试用例 / 可编辑 Word 规格，带可追溯性；自托管，自带 AI 模型；明确面向毕设和课程项目。
+<strong>为什么适合你</strong>：它把“一段自然语言需求”转成“几种固定结构的交付物”，这是 RAG 和 Agent 里最实用的能力（结构化输出 + 可追溯）。<strong>限制</strong>：全栈 TS + UML 生成 + Word 导出 + 模型接入，代码面较宽，读全量会累。建议只看它的 prompt / schema 定义部分。</p>
+<h3>④ Limatura/tessera —— 不建议当学习项目</h3>
+<p><a href="https://github.com/Limatura/tessera">链接</a>｜Rust｜71 stars
+自托管文件与笔记分享，会“自我清理”。
+<strong>为什么不推荐</strong>：Rust 对初学者门槛高，且它是工具型项目，架构上没有特别值得你借鉴的 Agent / RAG 结构。功能设计（自动过期清理）可以看两眼，代码不必读。</p>
+<hr />
+<h2>三、AI 发展动态</h2>
+<p><strong>三个方向，本期都在同一批材料里：</strong></p>
+<ol>
+<li>
+<p><strong>Agent 进入垂直工作流，而不是停留在通用助手。</strong> ServiceNow（IT 服务管理）和 Legora（<a href="https://openai.com/index/legora">法律工作</a>，合同分析、用 ChatGPT/Codex 加速律师工作流）都是“流程固定、结果可校验、出错可回滚”的领域。趋势判断：Agent 的商业价值正集中在<strong>有明确 SOP 的行业</strong>，通用闲聊型产品的空间在压缩。</p>
+</li>
+<li>
+<p><strong>入口之争：ChatGPT / Codex 正在变成“工作台”。</strong> ServiceNow 这条里，工作流被反向接进 ChatGPT 和 Codex，说明模型厂商在抢“你每天打开的第一个界面”。对你的启示：以后做 AI 产品，要考虑自己是“被嵌进去”还是“嵌别人”。</p>
+</li>
+<li>
+<p><strong>安全开始工程化、公开化。</strong> OpenAI 讲隔离环境和高算力红队，是从“表态”转向“披露机制”。这意味着<strong>AI 安全/合规类工程岗位</strong>会继续增加。</p>
+</li>
+</ol>
+<p><strong>一句话总结趋势</strong>：模型能力差距在缩小，竞争点转向<strong>流程集成能力 + 可控性</strong>。这恰好是</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>HKEX Launches Artificial Intelligence and Semiconductor Indices</strong>（manilatimes.net，评分 4.62）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>jaisurya-dev-art/rigby2d</strong>（GitHub，评分 4.48）：JavaScript 项目，Stars 69，适合评估是否能拆成练手项目。</li>
+<li><strong>चीन को चुनौती दे रहा यह छोटा सा देश , रिकॉर्ड पर पहुंचा एक्सपोर्ट , ताइवान को 175 % बढ़ गया निर्यात</strong>（navbharattimes.indiatimes.com，评分 4.38）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>반도체에 발목 잡힌 코스피나스닥보다 5배 더 빠졌다</strong>（newsway.co.kr，评分 4.38）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>NX Group to Participate in 9th China International Import Expo ( CIIE )</strong>（manilatimes.net，评分 4.38）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>jaisurya-dev-art/rigby2d</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/jaisurya-dev-art/rigby2d</li>
+<li>评分：4.48</li>
+<li>简介：Open-source 2D skeletal animation editor for games and film. AutoRig layered PSDs, animate with meshes, IK and physics, lip-sync from audio, render video, export JSON/.skel. JavaScript, Rust and Godot runtimes. Built-in MCP server for AI assistants. Docs: jaisurya-dev-art.github.io/rigby2d/docs Stars: 69; Forks: 11; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 69，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>RabbittuX/purrge</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/RabbittuX/purrge</li>
+<li>评分：4.08</li>
+<li>简介：🐾 Purrge — macOS AI 磁盘清理工具，支持 Claude Code 和 Codex：空间不足时提醒，AI 逐项判断能清什么，你勾选确认后才清理 Stars: 101; Forks: 16; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 101，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>guolola/SoftJL</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/guolola/SoftJL</li>
+<li>评分：4.04</li>
+<li>简介：Turn requirements into UML diagrams, test cases and editable Word specs—with traceability. Self-hosted, bring your own AI model. Built for capstone and course projects. Stars: 121; Forks: 5; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 121，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Limatura/tessera</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Limatura/tessera</li>
+<li>评分：3.72</li>
+<li>简介：Self-hosted file and note sharing that cleans up after itself. Stars: 71; Forks: 1; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 71，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI and ServiceNow expand partnership across enterprise workflows</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-servicenow-partnership-expansion</li>
+<li>评分：3.96</li>
+<li>简介：OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Legora is building the agentic operating system for legal work</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/legora</li>
+<li>评分：3.96</li>
+<li>简介：See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Securing our frontier model training environment</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/securing-our-frontier-model-training-environment</li>
+<li>评分：3.4</li>
+<li>简介：OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>HKEX Launches Artificial Intelligence and Semiconductor Indices</h3>
+<ul>
+<li>来源：manilatimes.net</li>
+<li>链接：https://www.manilatimes.net/2026/10/26/tmt-newswire/pr-newswire/hkex-launches-artificial-intelligence-and-semiconductor-indices/2453647</li>
+<li>评分：4.62</li>
+<li>简介：20261026T071500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>चीन को चुनौती दे रहा यह छोटा सा देश , रिकॉर्ड पर पहुंचा एक्सपोर्ट , ताइवान को 175 % बढ़ गया निर्यात</h3>
+<ul>
+<li>来源：navbharattimes.indiatimes.com</li>
+<li>链接：https://navbharattimes.indiatimes.com/business/business-news/malaysia-export-surges-oover-54-percent-to-a-record-level-threat-to-china/articleshow/135205075.cms</li>
+<li>评分：4.38</li>
+<li>简介：20261026T071500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>반도체에 발목 잡힌 코스피나스닥보다 5배 더 빠졌다</h3>
+<ul>
+<li>来源：newsway.co.kr</li>
+<li>链接：https://www.newsway.co.kr/news/view?ud=2026102614054538416</li>
+<li>评分：4.38</li>
+<li>简介：20261026T071500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>NX Group to Participate in 9th China International Import Expo ( CIIE )</h3>
+<ul>
+<li>来源：manilatimes.net</li>
+<li>链接：https://www.manilatimes.net/2026/10/26/tmt-newswire/pr-newswire/nx-group-to-participate-in-9th-china-international-import-expo-ciie/2453645</li>
+<li>评分：4.38</li>
+<li>简介：20261026T071500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：jaisurya-dev-art/rigby2d。</li>
+<li>重点阅读：HKEX Launches Artificial Intelligence and Semiconductor Indices。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.manilatimes.net/2026/10/26/tmt-newswire/pr-newswire/hkex-launches-artificial-intelligence-and-semiconductor-indices/2453647">HKEX Launches Artificial Intelligence and Semiconductor Indices</a> - manilatimes.net</li>
+<li><a href="https://github.com/jaisurya-dev-art/rigby2d">jaisurya-dev-art/rigby2d</a> - GitHub</li>
+<li><a href="https://navbharattimes.indiatimes.com/business/business-news/malaysia-export-surges-oover-54-percent-to-a-record-level-threat-to-china/articleshow/135205075.cms">चीन को चुनौती दे रहा यह छोटा सा देश , रिकॉर्ड पर पहुंचा एक्सपोर्ट , ताइवान को 175 % बढ़ गया निर्यात</a> - navbharattimes.indiatimes.com</li>
+<li><a href="https://www.newsway.co.kr/news/view?ud=2026102614054538416">반도체에 발목 잡힌 코스피나스닥보다 5배 더 빠졌다</a> - newsway.co.kr</li>
+<li><a href="https://www.manilatimes.net/2026/10/26/tmt-newswire/pr-newswire/nx-group-to-participate-in-9th-china-international-import-expo-ciie/2453645">NX Group to Participate in 9th China International Import Expo ( CIIE )</a> - manilatimes.net</li>
+<li><a href="https://github.com/RabbittuX/purrge">RabbittuX/purrge</a> - GitHub</li>
+<li><a href="https://github.com/guolola/SoftJL">guolola/SoftJL</a> - GitHub</li>
+<li><a href="https://openai.com/index/openai-servicenow-partnership-expansion">OpenAI and ServiceNow expand partnership across enterprise workflows</a> - openai.com</li>
+<li><a href="https://openai.com/index/legora">Legora is building the agentic operating system for legal work</a> - openai.com</li>
+<li><a href="https://github.com/Limatura/tessera">Limatura/tessera</a> - GitHub</li>
+<li><a href="https://openai.com/index/securing-our-frontier-model-training-environment">Securing our frontier model training environment</a> - openai.com</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+</ul></main></body></html>
