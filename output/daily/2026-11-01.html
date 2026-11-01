@@ -1,0 +1,329 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-01</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报（2026-11-01）</h1>
+<blockquote>
+<p>本期材料边界：有 GitHub、AI 新闻、少量国际新闻；中国政策只有两个官网列表页且标题乱码，没有可用的具体政策文本。因此下面不会用 AI/GitHub 新闻硬推政策结论。</p>
+</blockquote>
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. AI API 中转站的“可用率、延迟、价格”开始被工具化评测</h3>
+<ul>
+<li>来源：<a href="https://github.com/Folkbench/folkbench">Folkbench/folkbench</a></li>
+<li>是什么：一个开源 AI API 中转站评测排行与切换工具，面向 Claude Code / Codex，统计可用率、延迟和价格。Rust 项目，约 4.1k stars。</li>
+<li>为什么值得关注：你用 AI 编程工具时，真正影响体验的不只是模型能力，还有接口稳定性、延迟和成本。这个项目把这些问题量化了。</li>
+<li>对你有什么用：<strong>不适合作为第一个项目读源码</strong>（Rust + 网络/评测工程）。但非常适合作为“使用者”参考：你可以照它的指标，做一个 Python/Node 小脚本，记录自己常用 API 的成功率、延迟和粗略成本。</li>
+</ul>
+<h3>2. “证据链接 + 可验证计划”的本地优先 AI 顾问</h3>
+<ul>
+<li>来源：<a href="https://github.com/Balanov/baiagent-director">Balanov/baiagent-director</a></li>
+<li>是什么：本地优先的 AI 商业顾问，强调 evidence-linked research 和 verifiable pilot plans。JavaScript，约 305 stars。</li>
+<li>为什么值得关注：它抓住了一个关键趋势——AI 不能只给结论，还要给来源和可验证的下一步。这和你关注的 RAG、Agent 很接近。</li>
+<li>对你有什么用：<strong>产品思路值得学，代码成熟度未知，不建议生产依赖</strong>。你可以把“每个结论附来源链接 + 生成验证清单”搬到自己的 RAG demo 里。</li>
+</ul>
+<h3>3. AI 应用开始需要专门的设计系统</h3>
+<ul>
+<li>来源：<a href="https://github.com/deeplethe/solid-glass">deeplethe/solid-glass</a></li>
+<li>是什么：面向 AI 应用的设计系统，强调材质、物理感、技术感。TypeScript，约 2k stars。</li>
+<li>为什么值得关注：Agent 产品越来越多，界面不只是聊天框，还需要状态、工具调用、证据展示、审批确认等交互规范。</li>
+<li>对你有什么用：<strong>适合做前端/全栈练手参考，但不建议初学者一上来通读整个设计系统</strong>。可以先看组件示例和设计 token，给自己的 Agent demo 套一个像样的界面。</li>
+</ul>
+<h3>4. OpenAI 与 Oracle 合作，把企业应用和 AI Agent 接入 ChatGPT</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/oracle-apps-in-chatgpt">OpenAI expands partnership with Oracle</a></li>
+<li>是什么：双方扩大合作，把业务应用和 AI Agent 带入 ChatGPT，并支持新的 Oracle 产品。</li>
+<li>为什么值得关注：AI 助手正在变成企业软件的入口和 Agent 编排层。竞争点会从“模型会不会回答”转向“能不能安全接入业务系统、权限、数据和流程”。</li>
+<li>对你有什么用：后端转 AI 时，<strong>API 集成、鉴权、权限、审计日志、数据边界</strong>这些后端能力会更重要，而不是只学 prompt。</li>
+</ul>
+<h3>5. 语音 Agent 已出现大规模调用案例，但数据来自厂商案例</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/retell-ai">Retell uses OpenAI models to help power 100M monthly calls</a></li>
+<li>是什么：Retell 使用 OpenAI 模型支撑每月 1 亿次通话；材料称 GPT-6 Astra 在其语音 Agent benchmark 中排名靠前，Codex 帮助其达到每员工 160 万美元年化收入。</li>
+<li>为什么值得关注：语音 Agent 的工程问题很具体——延迟、并发、打断、评测、成本。这类岗位需要后端和实时系统能力。</li>
+<li>对你有什么用：<strong>不要把这组营收数据当成行业普遍水平</strong>，它是厂商案例。但可以据此判断：实时语音链路、评测集、可观测性是值得补的技能。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目：是否适合你学习</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言/热度</th>
+<th>适合你吗</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Folkbench/folkbench">Folkbench</a></td>
+<td>Rust，约 4.1k stars</td>
+<td>不适合读源码，适合用思路</td>
+<td>学它的评测维度：可用率、延迟、价格；自己写小监控脚本</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Balanov/baiagent-director">baiagent-director</a></td>
+<td>JavaScript，约 305 stars</td>
+<td>适合学产品思路</td>
+<td>借鉴“证据链接 + 可验证试点计划”；先小样本验证代码质量</td>
+</tr>
+<tr>
+<td><a href="https://github.com/deeplethe/solid-glass">solid-glass</a></td>
+<td>TypeScript，约 2k stars</td>
+<td>适合前端/全栈参考</td>
+<td>只看组件和设计 token，别一开始啃全库</td>
+</tr>
+<tr>
+<td><a href="https://github.com/junjamrk/OpenCinema">OpenCinema</a></td>
+<td>TypeScript，约 120 stars</td>
+<td>暂不适合作为第一个项目</td>
+<td>AI 视频工作室，依赖模型和视频管线，适合看架构和产品设计</td>
+</tr>
+</tbody>
+</table>
+<p><strong>给你的取舍</strong>：优先 Folkbench 的“监控思路”和 baiagent-director 的“证据链思路”。这两个能直接迁移到你的 RAG/Agent 学习项目里。solid-glass 可以用来美化 demo。OpenCinema 先收藏，不建议现在投入。</p>
+<hr />
+<h2>三、AI 发展动态：趋势与影响</h2>
+<ol>
+<li>
+<p><strong>企业应用入口化</strong>
+   - <a href="https://openai.com/index/oracle-apps-in-chatgpt">Oracle 合作</a>：ChatGPT 进一步接入企业业务应用和 Agent。
+   - 趋势：AI 产品竞争会更多落在企业集成、权限、审计、数据连接上。
+   - 对你的影响：后端经验是优势，但要补“AI 网关、工具调用、权限边界、评测与日志”。</p>
+</li>
+<li>
+<p><strong>语音 Agent 规模化</strong>
+   - <a href="https://openai.com/index/retell-ai">Retell 案例</a>：每月 1 亿次通话。
+   - 趋势：实时语音 Agent 从 demo 走向运营系统，工程门槛在延迟、并发、打断和评测。
+   - 注意：材料是 OpenAI 官网客户案例，不能据此推断整个行业收入水平。</p>
+</li>
+<li>
+<p><strong>AI 进入安全漏洞研究</strong>
+   - <a href="https://openai.com/index/check-point-daybreak">Check Point 使用 Daybreak</a>：加速漏洞研究，把漏洞情报更快转成客户防护。
+   - 趋势：安全运营、漏洞情报、代码审计是 AI 落地较实的场景。
+   - 对你的影响：后端转 AI 可以关注“安全 + AI”方向，但需要补安全基础。</p>
+</li>
+<li>
+<p><strong>平台安全与青少年保护加强</strong>
+   - <a href="https://openai.com/index/community-safety-report-and-new-protections-for-teens">Community safety report</a>：扩大暴力预防保护、更早干预、公共安全报告承诺。
+   - 趋势：面向公众的 AI 产品需要年龄分级、滥用防护、日志和应急流程。
+   - 对你的影响：做 Agent 应用不能只做功能，至少要有输入输出防护和审计记录。</p>
+</li>
+</ol>
+<hr />
+<h2>四、国际形势：本期材料只支持局部判断</h2>
+<p>材料只有两条关于乌克兰 Oleshky 撤离的报道：
+- <a href="https://www.aljazeera.com/news/2026/11/1/ukrainian-evacuees-from-russian-occupied-oleshky-reunite-with-family?traffic_source=rss">Al Jazeera</a>
+- <a href="https://www.theguardian.com/world/2026/oct/31/oleshky-evacuees-reunite-with-families-after-truce-allows-crossing-into-ukraine">The Guardian</a></p>
+<p>可确认的信息是：在停火安排下，俄占 Oleshky 的居民撤离并与家人团聚；这是局部人道救援，不是全面和平协议。</p>
+<p><strong>与科技、就业、政策环境的关系</strong>：本期材料不足以推出供应链、能源、科技管制或就业政策结论。不要因为一条人道新闻就外推宏观趋势。若你关注国际形势对科技环境的影响，需要等更直接的材料，例如出口管制、产业政策、企业投资或就业数据。</p>
+<hr />
+<h2>五、中国国家政策：本期缺少可用材料</h2>
+<p>两条 <code>china_policy</code> 条目：
+- <a href="http://www.court.gov.cn/">court.gov.cn</a>
+- <a href="http://www.spp.gov.cn/">spp.gov.cn</a></p>
+<p>问题：
+- 标题乱码；
+- 摘要只是“中国国家政策官网列表页条目”；
+- 没有具体政策文件、发布时间或正文。</p>
+<p><strong>结论</strong>：本期不能据此分析中国政策走向，也不应该用 AI 新闻替代政策材料。若你备考公考或跟踪科技政策，建议直接去官网检索栏目，而不是依赖这类列表页摘要。</p>
+<hr />
+<h2>六、对你的个人建议</h2>
+<h3>今天就能做</h3>
+<ol>
+<li>
+<p><strong>做一个“API 可用性小监控”</strong>
+   - 用 Python 或 Node，定时请求你已有的 2–3 个模型接口；
+   - 记录：成功/失败、延迟、粗略成本；
+   - 输出 CSV 或简单网页。
+   - 参考 <a href="https://github.com/Folkbench/folkbench">Folkbench</a> 的指标，但不用读它的 Rust 源码。</p>
+</li>
+<li>
+<p><strong>给现有 RAG demo 加“证据链”</strong>
+   - 每个回答列出：来源链接、关键片段、置信说明；
+   - 最后生成 3 条“如何验证”的步骤。
+   - 参考 <a href="https://github.com/Balanov/baiagent-director">baiagent-director</a> 的思路，不直接依赖其代码。</p>
+</li>
+</ol>
+<h3>本周</h3>
+<ol start="3">
+<li>
+<p><strong>用 solid-glass 只做界面参考</strong>
+   - 选 1–2 个组件或设计 token；
+   - 给你的 Agent demo 加“工具调用状态、来源列表、确认按钮”三个界面元素。
+   - 不要一开始通读整个设计系统。</p>
+</li>
+<li>
+<p><strong>补后端转 AI 的四个关键词</strong>
+   - API 网关、鉴权与权限、限流与重试、审计日志。
+   - 结合 Oracle/ChatGPT 企业集成和语音 Agent 案例理解：AI 落地难点常在工程边界，不只在模型。</p>
+</li>
+</ol>
+<h3>本月</h3>
+<ol start="5">
+<li>
+<p><strong>做一个“证据链 RAG”小项目作为作品</strong>
+   - 输入一批文档；
+   - 输出回答 + 来源链接 + 验证清单；
+   - 加一个简单评测集，记录哪些回答有来源、哪些没有。
+   - 这比堆多个 demo 更能体现你理解 RAG 的问题。</p>
+</li>
+<li>
+<p><strong>政策与国际信息不要硬解读</strong>
+   - 本期中国政策无实质材料，国际只有局部人道新闻；
+   - 公考/政策跟踪建议直接看官网原文；
+   - 国际形势等出现产业、科技、就业直接材料再分析。</p>
+</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>Folkbench/folkbench</strong>（GitHub，评分 4.68）：Rust 项目，Stars 4101，适合评估是否能拆成练手项目。</li>
+<li><strong>Balanov/baiagent-director</strong>（GitHub，评分 4.61）：JavaScript 项目，Stars 305，适合评估是否能拆成练手项目。</li>
+<li><strong>deeplethe/solid-glass</strong>（GitHub，评分 4.6）：TypeScript 项目，Stars 2023，适合评估是否能拆成练手项目。</li>
+<li><strong>junjamrk/OpenCinema</strong>（GitHub，评分 4.24）：TypeScript 项目，Stars 120，适合评估是否能拆成练手项目。</li>
+<li><strong>OpenAI expands partnership with Oracle to bring its apps to ChatGPT</strong>（openai.com，评分 3.8）：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>Folkbench/folkbench</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Folkbench/folkbench</li>
+<li>评分：4.68</li>
+<li>简介：AI API 中转站评测排行与切换工具：实测可用率、延迟与价格 · Open-source AI API relay benchmark, rankings &amp; switcher for Claude Code / Codex Stars: 4101; Forks: 21; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 4101，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Balanov/baiagent-director</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Balanov/baiagent-director</li>
+<li>评分：4.61</li>
+<li>简介：Free local-first AI business advisor with evidence-linked research and verifiable pilot plans. Stars: 305; Forks: 1; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 305，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>deeplethe/solid-glass</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/deeplethe/solid-glass</li>
+<li>评分：4.6</li>
+<li>简介：A design system for AI applications. Material, physical, tactile, technical. Stars: 2023; Forks: 42; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 2023，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>junjamrk/OpenCinema</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/junjamrk/OpenCinema</li>
+<li>评分：4.24</li>
+<li>简介：The open-source video studio for AI agents. Plan, generate, and edit films on a local-first canvas with your own models and short drama video. Stars: 120; Forks: 3; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 120，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI expands partnership with Oracle to bring its apps to ChatGPT</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/oracle-apps-in-chatgpt</li>
+<li>评分：3.8</li>
+<li>简介：OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.</li>
+<li>为什么值得关注：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Retell uses OpenAI models to help power 100M monthly calls</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/retell-ai</li>
+<li>评分：3.76</li>
+<li>简介：GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How Check Point accelerates vulnerability research with Daybreak</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/check-point-daybreak</li>
+<li>评分：3.4</li>
+<li>简介：With OpenAI Daybreak, Check Point speeds up the research behind new security protections, enabling its analysts to turn vulnerability intelligence into customer defenses faster.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Community safety report and new protections for teens</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/community-safety-report-and-new-protections-for-teens</li>
+<li>评分：3.36</li>
+<li>简介：OpenAI is strengthening violence prevention in ChatGPT with expanded safeguards, earlier interventions, and a new commitment to public safety reporting.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Ukrainian evacuees from Russian-occupied Oleshky reunite with family</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/news/2026/11/1/ukrainian-evacuees-from-russian-occupied-oleshky-reunite-with-family?traffic_source=rss</li>
+<li>评分：3.64</li>
+<li>简介：Starved and exhausted residents of Oleshky arrive in Ukraine after months of isolation, but some stay behind.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Oleshky evacuees reunite with families after truce allows crossing back into Ukraine</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/oct/31/oleshky-evacuees-reunite-with-families-after-truce-allows-crossing-into-ukraine</li>
+<li>评分：3.64</li>
+<li>简介：Residents of nearby villages line highway waving flags to greet the evacuees’ convoy from the Russian-occupied city Evacuees from Russian-occupied Oleshky have been reunited with their families after crossing into Ukrainian-held territory on Saturday. The major rescue operation began on Friday and was carried out under the most significant truce since Russia’s full-scale invasion of Ukraine four and a half years ago. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>æé«äººæ°æ³é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.court.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>æé«äººæ°æ£å¯é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.spp.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：Folkbench/folkbench。</li>
+<li>重点阅读：Ukrainian evacuees from Russian-occupied Oleshky reunite with family。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/Folkbench/folkbench">Folkbench/folkbench</a> - GitHub</li>
+<li><a href="https://github.com/Balanov/baiagent-director">Balanov/baiagent-director</a> - GitHub</li>
+<li><a href="https://github.com/deeplethe/solid-glass">deeplethe/solid-glass</a> - GitHub</li>
+<li><a href="https://github.com/junjamrk/OpenCinema">junjamrk/OpenCinema</a> - GitHub</li>
+<li><a href="https://openai.com/index/oracle-apps-in-chatgpt">OpenAI expands partnership with Oracle to bring its apps to ChatGPT</a> - openai.com</li>
+<li><a href="https://openai.com/index/retell-ai">Retell uses OpenAI models to help power 100M monthly calls</a> - openai.com</li>
+<li><a href="https://www.aljazeera.com/news/2026/11/1/ukrainian-evacuees-from-russian-occupied-oleshky-reunite-with-family?traffic_source=rss">Ukrainian evacuees from Russian-occupied Oleshky reunite with family</a> - www.aljazeera.com</li>
+<li><a href="https://www.theguardian.com/world/2026/oct/31/oleshky-evacuees-reunite-with-families-after-truce-allows-crossing-into-ukraine">Oleshky evacuees reunite with families after truce allows crossing back into Ukraine</a> - www.theguardian.com</li>
+<li><a href="https://openai.com/index/check-point-daybreak">How Check Point accelerates vulnerability research with Daybreak</a> - openai.com</li>
+<li><a href="https://openai.com/index/community-safety-report-and-new-protections-for-teens">Community safety report and new protections for teens</a> - openai.com</li>
+<li><a href="http://www.court.gov.cn/">æé«äººæ°æ³é¢</a> - 中国政府网</li>
+<li><a href="http://www.spp.gov.cn/">æé«äººæ°æ£å¯é¢</a> - 中国政府网</li>
+</ul></main></body></html>
