@@ -1,0 +1,247 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-03</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-03</h1>
+<blockquote>
+<p>说明：本期 <code>world_news</code> 和 <code>china_policy</code> 来源质量较差（仅有标题、无正文，或页面编码乱码），因此国际形势和政策部分我不做延伸推断，只标注“材料说了什么、没说什么”。</p>
+</blockquote>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<p><strong>1. AI 新词雷达项目 new-term-radar（对你最有用）</strong>
+在 X、Hugging Face、GitHub 和站点地图上抓取新模型、新产品、新仓库的名字，赶在关键词工具之前收录。2054 星、626 fork，Python。
+→ 价值：你做 RAG / Agent 时，真正的痛点是“不知道生态里又冒出了什么”，这类“多源采集 + 去重 + 定时跑”的项目结构，正是自动化工具方向的基本功。
+链接：https://github.com/zhuyansen/new-term-radar</p>
+<p><strong>2. OpenAI 为 Codex 规模重建 Git 后端（Pando）</strong>
+OpenAI 构建了一个“Git 兼容的后端”，理由明确写成：为了支撑 Codex 带来的开发规模。
+→ 价值：这说明 AI 编程的瓶颈正在从“模型能力”转到“工程基础设施”。对你后端转 AI 是很直接的信号：AI 团队也需要平台/基础设施工程，不只是算法岗。
+链接：https://openai.com/index/scaling-git-at-openai</p>
+<p><strong>3. AI 创业 7 步 Agent Skill 合集</strong>
+把“验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册”写成 7 个 Agent Skill，925 星，Python。
+→ 价值：它展示的是“把一段流程固化成可复用 skill”的写法，而不是算法。这类东西你现在就能读懂并模仿，门槛低、见效快。
+链接：https://github.com/huaxialucaicaizi/ai-startup-skills</p>
+<p><strong>4. OpenAI 一天内三条安全动作</strong>
+提高安全漏洞赏金、宣布下一轮内部安全冲刺（与 Cathedral Systems 合作测试防御）、任命 Dan Driscoll 为国家安全现代化高级顾问。
+→ 价值：AI 安全正从“模型对齐”扩到“基础设施安全 + 政企/国家安全协作”。对你意味着：安全工程是后端背景转 AI 时门槛相对友好的方向之一。
+链接：https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties ｜ https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai ｜ https://openai.com/index/dan-driscoll-joins-openai</p>
+<p><strong>5. 中国相关两条方向性报道（信息有限，仅作线索）</strong>
+一条是“习近平为增强中国金融实力指明方向 / 中国特色金融发展之路”，一条是约旦安曼工业商会谈进博会对约旦出口的意义。
+→ 注意：两条都只有标题，没有可核实的正文要点。我不据此下任何结论，只建议你把它当作“随访题目”，需要原文时去官方渠道看。
+链接：https://www.prnewswire.com/news-releases/how-president-xi-jinping-has-charted-the-course-for-boosting-chinas-strength-in-finance-pursuing-a-path-of-financial-development-with-chinese-characteristics-302927169.html ｜ http://arabic.people.com.cn/n3/2026/1103/c31664-20514953.html</p>
+<hr />
+<h2>二、GitHub 热门项目（含学习适配度）</h2>
+<h3>1. zhuyansen/new-term-radar ｜ 2054★ / 626 fork ｜ Python</h3>
+<p><strong>是什么</strong>：每日扫描 X、Hugging Face、GitHub、sitemap，捕捉尚未被关键词工具收录的新 AI 模型/产品/仓库名。
+<strong>适不适合你</strong>：适合，但<strong>不要整份读</strong>。完整项目涉及多平台 API、限流、去重排序、调度，对初学者偏重。
+<strong>建议路径</strong>：
+- 第一步只做“GitHub 一个源”：调 GitHub API 拉最近创建的高星仓库 → 过滤 → 存成 CSV；
+- 第二步加“去重 + 上次结果对比”，只输出新增项；
+- 第三步再加定时任务。
+这样你能在自己能完成且可验证的范围内得到 80% 的收获。</p>
+<h3>2. huaxialucaicaizi/ai-startup-skills ｜ 925★ / 70 fork ｜ Python</h3>
+<p><strong>是什么</strong>：7 个 Agent Skill，覆盖从验证想法到公司注册的商业流程。
+<strong>适不适合你</strong>：<strong>非常适合现在上手</strong>。从摘要看，主体是流程/skill 定义而非复杂代码，重点是结构：一个 skill 怎么拆步骤、怎么定义输入输出。
+<strong>建议路径</strong>：读 1 个 skill 的完整写法，然后把你自己一个重复动作（比如“每周整理 AI 新闻”）照同样结构写成 skill。这是最省力的 Agent 入门练习。</p>
+<hr />
+<h2>三、AI 发展动态（趋势影响）</h2>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>事件</th>
+<th>趋势判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工程基础设施</td>
+<td>OpenAI 的 Pando（Git 兼容后端），服务 Codex 规模</td>
+<td>AI 编码让代码提交量、并发度和仓库规模上一个量级，版本控制/CI 需要重做。<strong>平台工程岗在 AI 时代不是被替代，而是被放大。</strong></td>
+</tr>
+<tr>
+<td>安全</td>
+<td>提高赏金 + 内部安全冲刺 + 国安顾问任命</td>
+<td>AI 公司正在把安全从“研究议题”变成“组织能力和政企协作”。<strong>安全 + 合规会成为长期招聘方向。</strong></td>
+</tr>
+<tr>
+<td>生态情报</td>
+<td>new-term-radar 这类项目获关注</td>
+<td>说明“追踪 AI 新词”本身成了刚需，<strong>信息采集/聚合类小工具的需求在变多</strong>。</td>
+</tr>
+</tbody>
+</table>
+<p>一句话：本期 AI 新闻没有模型能力突破，全是<strong>“AI 变大之后的配套工程”</strong>——基础设施、安全、组织。这对你这种有后端背景的人是好消息。</p>
+<hr />
+<h2>四、国际形势</h2>
+<p><strong>材料实际给了什么</strong>（都只有标题）：
+- 中国特色金融发展之路（prnewswire 转载）
+- 进博会与约旦出口（人民网阿语版）
+- “战争、关税与中国：美国中期选举对亚太意味着什么”（dominicanrepublicpost.com）</p>
+<p><strong>必须说清楚的限制</strong>：三条都没有正文内容。第 3 条标题涉及中期选举、关税与亚太，通常是和科技供应链、出口管制、就业结构强相关的题目，但<strong>本期材料没有给出任何结论，我不做推演</strong>。</p>
+<p><strong>给你的处理方式</strong>：把“美国中期选举 → 关税/出口管制 → 科技产业链与岗位”当成一条要持续跟踪的线索，等有正文来源再判断。不要用标题当结论，也不要拿 GitHub/AI 新闻去替代这条线索。</p>
+<hr />
+<h2>五、中国国家政策</h2>
+<p><strong>本期没有可用的政策直接来源。</strong></p>
+<ul>
+<li>两条 <code>china_policy</code> 条目分别指向 <code>cppcc.gov.cn</code>（全国政协）和 <code>ccdi.gov.cn</code>（国家监察委员会），标题是乱码（编码错误），时间显示“未知”，摘要只写了“官网列表页条目”——<strong>没有任何政策正文</strong>。</li>
+<li>唯一涉及中国政策方向的，是世界新闻里的“金融强国”转载稿，属二手转载，不宜当政策原文用。</li>
+</ul>
+<p><strong>结论</strong>：这一节今天只能标注为“缺数据”。建议你后续直接看官方原文，不要依赖聚合摘要做判断（尤其是公考复习，二手转述容易失真）。</p>
+<hr />
+<h2>六、给你的具体行动建议</h2>
+<p><strong>今天就能做的（约 2 小时）</strong>
+1. 打开 new-term-radar，<strong>只找 3 个文件</strong>：抓取入口、数据清洗/去重、结果输出。看懂这条链路就行，其余跳过。
+2. 用 <code>requests</code> + GitHub API 写一个 60 行左右的脚本：拉取近 24 小时新建的高星 AI 仓库，输出标题+链接+星数到 CSV。这是你第一个“可运行、可验证”的自动化</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>zhuyansen/new-term-radar</strong>（GitHub，评分 4.85）：Python 项目，Stars 2054，适合评估是否能拆成练手项目。</li>
+<li><strong>三亚市科普地图研学路线发布 一图解锁三十八个 科学彩蛋 - 南海网</strong>（hinews.cn，评分 4.72）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>huaxialucaicaizi/ai-startup-skills</strong>（GitHub，评分 4.61）：Python 项目，Stars 925，适合评估是否能拆成练手项目。</li>
+<li><strong>How President Xi Jinping Has Charted the Course for Boosting China Strength in Finance : Pursuing a Path of Financial Development with Chinese Characteristics</strong>（prnewswire.com，评分 4.56）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>مقابلة : مدير غرفة صناعة عمان : معرض الصين الدولي للاستيراد يفتح آفاقا جديدة أمام الصادرات الأردنية</strong>（arabic.people.com.cn，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>zhuyansen/new-term-radar</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/zhuyansen/new-term-radar</li>
+<li>评分：4.85</li>
+<li>简介：Daily radar for new AI terms: names of new models, products and repos, caught on X, Hugging Face, GitHub and sitemaps before keyword tools list them. Stars: 2054; Forks: 626; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 2054，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>huaxialucaicaizi/ai-startup-skills</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/huaxialucaicaizi/ai-startup-skills</li>
+<li>评分：4.61</li>
+<li>简介：创业公司做 AI 产品的 7 步 Agent Skill 合集：验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册。 Stars: 925; Forks: 70; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 925，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Scaling Git at OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/scaling-git-at-openai</li>
+<li>评分：3.64</li>
+<li>简介：How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Rewarding defenders with bigger bug bounties</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Preparing our next security sprint to harden OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/dan-driscoll-joins-openai</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>三亚市科普地图研学路线发布 一图解锁三十八个 科学彩蛋 - 南海网</h3>
+<ul>
+<li>来源：hinews.cn</li>
+<li>链接：https://www.hinews.cn/page?n=2847210&amp;m=1&amp;s=1044</li>
+<li>评分：4.72</li>
+<li>简介：20261103T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>How President Xi Jinping Has Charted the Course for Boosting China Strength in Finance : Pursuing a Path of Financial Development with Chinese Characteristics</h3>
+<ul>
+<li>来源：prnewswire.com</li>
+<li>链接：https://www.prnewswire.com/news-releases/how-president-xi-jinping-has-charted-the-course-for-boosting-chinas-strength-in-finance-pursuing-a-path-of-financial-development-with-chinese-characteristics-302927169.html</li>
+<li>评分：4.56</li>
+<li>简介：20261103T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>مقابلة : مدير غرفة صناعة عمان : معرض الصين الدولي للاستيراد يفتح آفاقا جديدة أمام الصادرات الأردنية</h3>
+<ul>
+<li>来源：arabic.people.com.cn</li>
+<li>链接：http://arabic.people.com.cn/n3/2026/1103/c31664-20514953.html</li>
+<li>评分：4.48</li>
+<li>简介：20261103T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>War , tariffs and China : What the US midterms mean for the Asia - Pacific - Dominican Republic Post – Caribbean News , Business , Travel &amp; Culture</h3>
+<ul>
+<li>来源：dominicanrepublicpost.com</li>
+<li>链接：https://dominicanrepublicpost.com/war-tariffs-and-china-what-the-us-midterms-mean-for-the-asia-pacific</li>
+<li>评分：4.48</li>
+<li>简介：20261103T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½æ¿å</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.cppcc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å½å®¶çå¯å§åä¼</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.ccdi.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：zhuyansen/new-term-radar。</li>
+<li>重点阅读：三亚市科普地图研学路线发布 一图解锁三十八个 科学彩蛋 - 南海网。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/zhuyansen/new-term-radar">zhuyansen/new-term-radar</a> - GitHub</li>
+<li><a href="https://www.hinews.cn/page?n=2847210&amp;m=1&amp;s=1044">三亚市科普地图研学路线发布 一图解锁三十八个 科学彩蛋 - 南海网</a> - hinews.cn</li>
+<li><a href="https://github.com/huaxialucaicaizi/ai-startup-skills">huaxialucaicaizi/ai-startup-skills</a> - GitHub</li>
+<li><a href="https://www.prnewswire.com/news-releases/how-president-xi-jinping-has-charted-the-course-for-boosting-chinas-strength-in-finance-pursuing-a-path-of-financial-development-with-chinese-characteristics-302927169.html">How President Xi Jinping Has Charted the Course for Boosting China Strength in Finance : Pursuing a Path of Financial Development with Chinese Characteristics</a> - prnewswire.com</li>
+<li><a href="http://arabic.people.com.cn/n3/2026/1103/c31664-20514953.html">مقابلة : مدير غرفة صناعة عمان : معرض الصين الدولي للاستيراد يفتح آفاقا جديدة أمام الصادرات الأردنية</a> - arabic.people.com.cn</li>
+<li><a href="https://dominicanrepublicpost.com/war-tariffs-and-china-what-the-us-midterms-mean-for-the-asia-pacific">War , tariffs and China : What the US midterms mean for the Asia - Pacific - Dominican Republic Post – Caribbean News , Business , Travel &amp; Culture</a> - dominicanrepublicpost.com</li>
+<li><a href="https://openai.com/index/scaling-git-at-openai">Scaling Git at OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties">Rewarding defenders with bigger bug bounties</a> - openai.com</li>
+<li><a href="https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai">Preparing our next security sprint to harden OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/index/dan-driscoll-joins-openai">OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization</a> - openai.com</li>
+<li><a href="http://www.cppcc.gov.cn/">å ¨å½æ¿å</a> - 中国政府网</li>
+<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
+</ul></main></body></html>
