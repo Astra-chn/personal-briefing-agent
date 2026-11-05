@@ -1,0 +1,267 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-05</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-05</h1>
+<blockquote>
+<p>说明：本期材料中，<code>world_news</code> 有 1 条实质性报道 + 1 个事件的多语种重复报道；<code>china_policy</code> 的 2 条均为乱码的官网列表页/邮箱入口，<strong>没有可用的政策内容</strong>。因此本期不做中国政策解读，也不会用 GitHub/AI 新闻强行拼凑政策结论。</p>
+</blockquote>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 英国议会认定在关键矿产上“危险依赖”中国（军工、AI、新能源都受影响）</h3>
+<ul>
+<li>来源：The Guardian｜https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy</li>
+<li>发生了什么：英国商业特别委员会调查认为，英国在军工、可再生能源基础设施、AI 所需关键原材料上“危险地”依赖中国；议员呼吁设立集中政策和“关键矿产融资设施”，用拨款、股权、债务推动稀土等矿山和供应多元化。</li>
+<li>为什么重要：AI 的瓶颈不只是模型和 GPU，还包括上游材料与供应链。这说明“AI 竞争”正在往矿产、材料、加工环节延伸。</li>
+<li>对你：短期不影响你写代码或找工作；中期看，供应链合规、材料回收、替代材料、出口管制研究这类交叉岗位会变多。可作为长期观察指标，不必现在转行。</li>
+</ul>
+<h3>2. OpenAI 收购 Pierre Computer Company，扩展 Codex 的代码构建/理解/审查能力</h3>
+<ul>
+<li>来源：https://openai.com/index/openai-to-acquire-pierre</li>
+<li>趋势判断：AI 编程工具的竞争点正从“帮你写代码”转向“帮你读懂和审查代码”。这对后端转 AI 的人是明确信号——代码理解、静态分析、测试生成、Code Review 自动化是能积累真实经验的方向。</li>
+<li>注意：这是公司收购公告，实际产品整合效果未知，不要当成既成事实。</li>
+</ul>
+<h3>3. OpenAI 称用自动化流程发现并修复 Linux 内核 948 个本地提权漏洞</h3>
+<ul>
+<li>来源：https://openai.com/index/a-thousand-fewer-paths-to-root</li>
+<li>趋势判断：AI 做安全审计/漏洞挖掘正在从演示走向工程化流水线（发现→验证→生成补丁）。</li>
+<li>注意：这是 OpenAI 自述成果，材料中没有第三方验证信息，别夸大成“AI 取代安全工程师”。实际影响是：安全岗位的入门工作（重复审计、模式化漏洞）会被压缩，能设计审核流程的人更值钱。</li>
+</ul>
+<h3>4. 轻量 OCR 项目 indra：1M 参数、CPU 可跑、比 tesseract 快 15 倍</h3>
+<ul>
+<li>来源：https://github.com/datalab-to/indra</li>
+<li>为什么值得看：OCR 是 RAG 文档解析的第一道关卡。你关注 RAG，这个项目直接对应“PDF/扫描件→可检索文本”的环节，而且不需要 GPU，学习成本低。</li>
+</ul>
+<h3>5. 俄乌美将在阿布扎比举行三方会谈（多来源重复报道同一事件）</h3>
+<ul>
+<li>来源：https://www.channelnewsasia.com/world/russia-ukraine-us-trilateral-talks-6516046</li>
+<li>另见（同一事件的多语种报道，内容重复，不必逐条读）：teraz.sk、newpost.gr</li>
+<li>与科技/就业/政策的关系：地缘谈判影响能源价格和欧洲防务预算，进而影响欧洲科技投资情绪。但材料只确认“将举行会谈”，<strong>结果未知</strong>，不要据此推断市场或政策走向。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目（含是否适合你）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言/热度</th>
+<th>是什么</th>
+<th>适合你吗</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/datalab-to/indra">datalab-to/indra</a></td>
+<td>Python｜1638 星 / 167 fork</td>
+<td>1M 参数 OCR 模型，CPU 运行，比 tesseract 快约 15 倍，准确率接近 10 亿+参数模型</td>
+<td><strong>适合，但定位是“会用”而非“读懂源码”</strong>。先跑 CLI/推理接口，接进你的 RAG 文档解析流程；模型训练部分暂时跳过</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Eljot19/runic">Eljot19/runic</a></td>
+<td>HTML｜58 星 / 0 fork</td>
+<td>macOS 菜单栏应用，追踪 AI 使用成本和 token 消耗</td>
+<td><strong>部分适合</strong>。项目小、macOS 限定，适合当“小工具怎么写”的参考，不适合当主要学习项目</td>
+</tr>
+<tr>
+<td><a href="https://github.com/do-whilefor/ClawGod_Y">do-whilefor/ClawGod_Y</a></td>
+<td>JavaScript｜85 星 / 2 fork</td>
+<td>所谓 Claude Code“God Mode”，用于绕过模型限制</td>
+<td><strong>不建议碰</strong>。目的是规避服务条款，有账号封禁和合规风险；85 星 2 fork，代码可信度低，来路不明的脚本还可能带恶意代码。对初学者没有正迁移价值</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、AI 发展动态（趋势 + 对你的影响）</h2>
+<ol>
+<li>
+<p><strong>编程工具向“代码审查与理解”延伸</strong>（收购 Pierre）
+   → 趋势：生成式补全已经同质化，下一阶段竞争在“读懂大型代码库、给出可执行修改”。
+   → 对你：把学习重点从“提示词让 AI 写代码”转到“给 AI 设计审查规则、测试用例、验收标准”。这是后端经验能直接复用的地方。</p>
+</li>
+<li>
+<p><strong>AI 安全审计工程化</strong>（948 个内核漏洞）
+   → 趋势：漏洞发现→验证→打补丁被串成自动化管线。
+   → 对你：可以了解“LLM + 静态分析/模糊测试”的组合思路，但注意这是厂商自述，没有独立验证。</p>
+</li>
+<li>
+<p><strong>OpenAI 任命首席企业事务官</strong>（Jill Hazelbaker，负责全球传播与公司定位）
+   → 趋势：头部 AI 公司在加强政策与公共沟通，说明监管沟通成本在上升。
+   → 对你：如果以后做 AI 产品，合规和对外沟通不是“以后再说”的事。</p>
+</li>
+</ol>
+<hr />
+<h2>四、国际形势（只讲与科技/就业/政策环境的关系）</h2>
+<ul>
+<li><strong>关键矿产与 AI 供应链</strong>：英国这份调查把“军工+新能源+AI”放在同一条材料供应链上，并主张用财政工具（融资设施、拨款、股权、债务）扶持本土和多元化供应。可观察方向：欧洲关键矿产政策、稀土出口管制、材料回收与替代技术。这类政策通常会带来补贴型岗位和合规岗位，而不是立刻改变软件岗需求。</li>
+<li><strong>俄乌美三方会谈</strong>：材料只确认会谈安排，没有结果。对科技就业的传导路径是能源价格→欧洲经济与防务预算→投资情绪，属于中期变量，不值得今天做任何职业决策。</li>
+<li><strong>本期没有中国相关的国际政策直接材料</strong>，不做延伸推断。</li>
+</ul>
+<hr />
+<h2>五、中国国家政策</h2>
+<p><strong>本期无有效材料。</strong> 两条 <code>china_policy</code> 条目标题为乱码（“é®ç®±”“æé«äººæ°æ³é¢”），链接分别是政府网邮箱入口和法院网站首页，摘要仅为“官网列表页条目”，<strong>不构成任何政策信息</strong>。</p>
+<p>因此本期不对公考、科技政策、产业政策做任何解读。建议你直接查看权威原文渠道，不要基于本期材料下判断。</p>
+<hr />
+<h2>六、给你的具体行动建议</h2>
+<p><strong>今天（30–60 分钟）</strong>
+1. 打开 indra 仓库，只看 README 的安装和推理示例，用一张扫描版 PDF 跑通“图片→文字”。记录：CPU 耗时、准确率主观感受、和 tesseract 的差异。
+2. 把结果写进你的 RAG 项目笔记：文档解析环节现在用什么、换 indra 后差在哪。</p>
+<p><strong>本周（3–5 小时，一个完整小项目）</strong>
+3. 做一个“AI 代码审查清单”实验：拿你自己一个 Python 小项目，让 AI 按你写的 5 条规则（命名、异常处理、边界条件、日志、测试覆盖）逐条审查，再手工验证哪些建议是对的。目的是练“设计审查标准”，不是练提示词。
+4. 在笔记里列一张“RAG 文档解析”对比表：tesseract / indra / 其他方案，列 CPU 耗时、准确率、部署难度。这张表以后写简历或做选型都能用。</p>
+<p><strong>长期（每月一次，各 30 分钟）</strong>
+5. 跟踪两个指标：①关键矿产/稀土相关出口管制与补贴政策；②AI 编程工具在“代码审查”方向的进展。只记录事实和链接，不预测。
+6. 明确回避：任何声称“绕过模型限制/破解订阅”的项目（如 ClawGod_Y 这类）。风险大于收益，而且学不到可迁移能力。
+7. 中国政策与公考：自建信息源清单（政府网、部委官网原文），本期材料不可用，下次看到乱码或列表页条目直接跳过，不要拿来当政策依据。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>datalab-to/indra</strong>（GitHub，评分 4.32）：Python 项目，Stars 1638，适合评估是否能拆成练手项目。</li>
+<li><strong>do-whilefor/ClawGod_Y</strong>（GitHub，评分 4.24）：JavaScript 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+<li><strong>UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI</strong>（www.theguardian.com，评分 4.12）：命中国际关键词 China、policy，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Eljot19/runic</strong>（GitHub，评分 4.0）：HTML 项目，Stars 58，适合评估是否能拆成练手项目。</li>
+<li><strong>US to mediate trilateral talks with Ukraine , Russia in Abu Dhabi next week , US envoy says</strong>（channelnewsasia.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>datalab-to/indra</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/datalab-to/indra</li>
+<li>评分：4.32</li>
+<li>简介：1M param OCR model - runs on CPU, 15x faster than tesseract, close to 1B+ param models in accuracy Stars: 1638; Forks: 167; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 1638，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>do-whilefor/ClawGod_Y</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/do-whilefor/ClawGod_Y</li>
+<li>评分：4.24</li>
+<li>简介：Claude Code “God Mode,” designed to let the model “breach the armor” (i.e., bypass restrictions). Stars: 85; Forks: 2; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 85，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Eljot19/runic</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Eljot19/runic</li>
+<li>评分：4.0</li>
+<li>简介：Runic macOS Menu Bar App for AI Usage Cost and Token Tracking Stars: 58; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 58，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>OpenAI to acquire Pierre Computer Company, Inc.</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/openai-to-acquire-pierre</li>
+<li>评分：3.36</li>
+<li>简介：OpenAI will acquire Pierre Computer Company, expanding Codex’s tools for building, understanding, and reviewing code.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>A thousand fewer paths to root</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/a-thousand-fewer-paths-to-root</li>
+<li>评分：3.36</li>
+<li>简介：OpenAI built an autonomous pipeline that found, validated, and generated patches for 948 local privilege-escalation vulnerabilities in the Linux kernel.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer</li>
+<li>评分：3.26</li>
+<li>简介：Jill Hazelbaker will join OpenAI as Chief Corporate Affairs Officer, leading the company’s global communications and corporate positioning.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy</li>
+<li>评分：4.12</li>
+<li>简介：Delivering net zero also at risk, say MPs as they call for centralised policy and funding for mines and diversification The UK is “dangerously” dependent on China for critical raw materials needed for the military, renewable energy infrastructure and AI, a parliamentary investigation has found. MPs on the business select committee called for an urgent centralised policy and the creation of a “critical minerals finance facility” to help fund rare earth and other critical mineral mines, and deploy grants, equity and debt to accelerate a diversification programme. Continue reading...</li>
+<li>为什么值得关注：命中国际关键词 China、policy，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>US to mediate trilateral talks with Ukraine , Russia in Abu Dhabi next week , US envoy says</h3>
+<ul>
+<li>来源：channelnewsasia.com</li>
+<li>链接：https://www.channelnewsasia.com/world/russia-ukraine-us-trilateral-talks-6516046</li>
+<li>评分：4.0</li>
+<li>简介：20261103T111500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Rusko potvrdilo rokovania s united states a Ukrajinou</h3>
+<ul>
+<li>来源：teraz.sk</li>
+<li>链接：https://www.teraz.sk/zahranicie/rusko-potvrdilo-rokovania-s-usa-a-ukraji/1004795-clanok.html</li>
+<li>评分：4.0</li>
+<li>简介：20261103T111500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Επιβεβαιώνει το Κρεμλίνο τις συνομιλίες με την Ουκρανία και τις ΗΠΑ</h3>
+<ul>
+<li>来源：newpost.gr</li>
+<li>链接：https://newpost.gr/eidiseis/epivevaionei-to-kremlino-tis-synomilies-me-tin-oykrania-kai-tis-ipa</li>
+<li>评分：4.0</li>
+<li>简介：20261103T111500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é®ç®±</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://mail.www.gov.cn/nsmail/index.html</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>æé«äººæ°æ³é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.court.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：datalab-to/indra。</li>
+<li>重点阅读：UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/datalab-to/indra">datalab-to/indra</a> - GitHub</li>
+<li><a href="https://github.com/do-whilefor/ClawGod_Y">do-whilefor/ClawGod_Y</a> - GitHub</li>
+<li><a href="https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy">UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI</a> - www.theguardian.com</li>
+<li><a href="https://github.com/Eljot19/runic">Eljot19/runic</a> - GitHub</li>
+<li><a href="https://www.channelnewsasia.com/world/russia-ukraine-us-trilateral-talks-6516046">US to mediate trilateral talks with Ukraine , Russia in Abu Dhabi next week , US envoy says</a> - channelnewsasia.com</li>
+<li><a href="https://www.teraz.sk/zahranicie/rusko-potvrdilo-rokovania-s-usa-a-ukraji/1004795-clanok.html">Rusko potvrdilo rokovania s united states a Ukrajinou</a> - teraz.sk</li>
+<li><a href="https://newpost.gr/eidiseis/epivevaionei-to-kremlino-tis-synomilies-me-tin-oykrania-kai-tis-ipa">Επιβεβαιώνει το Κρεμλίνο τις συνομιλίες με την Ουκρανία και τις ΗΠΑ</a> - newpost.gr</li>
+<li><a href="https://openai.com/index/openai-to-acquire-pierre">OpenAI to acquire Pierre Computer Company, Inc.</a> - openai.com</li>
+<li><a href="https://openai.com/index/a-thousand-fewer-paths-to-root">A thousand fewer paths to root</a> - openai.com</li>
+<li><a href="https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer">OpenAI appoints Jill Hazelbaker as Chief Corporate Affairs Officer</a> - openai.com</li>
+<li><a href="https://mail.www.gov.cn/nsmail/index.html">é®ç®±</a> - 中国政府网</li>
+<li><a href="http://www.court.gov.cn/">æé«äººæ°æ³é¢</a> - 中国政府网</li>
+</ul></main></body></html>
