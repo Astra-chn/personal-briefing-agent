@@ -1,0 +1,257 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-06</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报｜2026-11-06</h1>
+<p><strong>本期材料结构</strong>：美国中期选举与中东政策相关国际新闻 5 条；OpenAI 动态 4 条；GitHub 项目 2 个；中国政策来源 2 条，但均为乱码官网列表页，<strong>没有可用的实质政策内容</strong>。下面会明确区分“材料说了什么”和“不能据此推出什么”。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 美国中期选举改变国会格局，但特朗普仍主导外交政策</h3>
+<ul>
+<li>来源：Economic Times  </li>
+<li>链接：https://economictimes.indiatimes.com/news/international/world-news/us-midterms-upended-congress-but-trump-still-commands-foreign-policy/articleshow/135589895.cms</li>
+<li>材料标题称中期选举“upended Congress”，同时认为特朗普仍掌控外交政策。材料没有给出席位变化、具体政策清单等细节，<strong>不能据此推断具体立法结果</strong>。</li>
+<li><strong>为什么值得关注</strong>：美国外交与安全政策的不确定性，会影响全球市场风险偏好、企业投资节奏和科技行业的合规预期。但这是背景变量，不是直接就业结论。</li>
+</ul>
+<h3>2. 中期选举后，美以关系与特朗普中东政策面临不确定性</h3>
+<ul>
+<li>来源：Monocle  </li>
+<li>链接：https://monocle.com/affairs/politics/us-israel-relations-and-donald-trumps-middle-east-policy-face-uncertainty-after-democrat-midterm-gains</li>
+<li>另有 Express.pk 标题称特朗普与内塔尼亚胡的战争政策“受挫”：https://www.express.pk/story/2842580/trump-and-netanyahu-war-policy-dealt-a-blow-2842580</li>
+<li><strong>注意</strong>：土耳其媒体标题“Trump kaybetti, İsrail panikledi”（特朗普输了、以色列恐慌）属于单一媒体表述，材料未提供可核实细节，<strong>不应当作事实结论</strong>。</li>
+<li><strong>对你的用处</strong>：如果你关注国际形势，重点看“政策连续性是否下降”，而不是追逐情绪化标题。</li>
+</ul>
+<h3>3. OpenAI 发布 GPT‑6 Cyber：面向授权范围内的网络安全模型</h3>
+<ul>
+<li>来源：OpenAI  </li>
+<li>链接：https://openai.com/index/introducing-gpt-6-cyber</li>
+<li>摘要明确说：用于发现可利用漏洞并开发修复方案，训练目标是“保持在授权范围内”。</li>
+<li><strong>趋势影响</strong>：模型正在从通用聊天走向<strong>垂直领域 + 明确权限边界</strong>。这说明 Agent 落地时，权限、审计、授权范围会和模型能力一样重要。</li>
+<li><strong>对你的用处</strong>：后端转 AI 时，“会调模型”不够，<strong>懂权限、日志、评测、边界控制</strong>更有价值。</li>
+</ul>
+<h3>4. OpenAI 发布 AI 基础设施责任框架与算力校园政策蓝图</h3>
+<ul>
+<li>来源：OpenAI  </li>
+<li>链接：https://openai.com/index/setting-new-standard-responsible-ai-infrastructure</li>
+<li>摘要提到 National Community Compact 和 Compute Campus Policy Blueprint，目标是保护当地资源、创造就业、指导负责任的 AI 基础设施建设。</li>
+<li><strong>趋势影响</strong>：AI 竞争进入<strong>算力、能源、地方社区和公共政策</strong>层面，不只是模型发布。</li>
+<li><strong>注意</strong>：这是一家企业发布的政策主张，不是政府政策，<strong>不能直接当作中国或美国监管结论</strong>。</li>
+</ul>
+<h3>5. 企业 AI 落地案例：投研与企业内部工作流</h3>
+<ul>
+<li>Franklin Templeton 用 OpenAI 支持投资研究：从股票研究开始，帮助组合经理比较研究观点、检查投资风险。<br />
+  https://openai.com/index/franklin-templeton</li>
+<li>Merge 用 GPT‑6 Astra、ChatGPT、Codex 审查产品代码、支持营销，甚至用于规划高管晚宴和准备销售更新。<br />
+  https://openai.com/index/merge-builds-with-openai</li>
+<li><strong>为什么重要</strong>：这些案例的重点不是“模型多强”，而是<strong>把 AI 嵌进已有业务流程</strong>。对你做项目最有参考价值的是“研究工作流 + 代码审查 + 文档准备”这类可复制场景。</li>
+<li><strong>注意</strong>：这是厂商客户案例，效果数据未在材料中给出，不能夸大。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目</h2>
+<h3>1. Limatura/tessera</h3>
+<ul>
+<li>链接：https://github.com/Limatura/tessera</li>
+<li>简介：自托管文件和笔记分享，会自动清理；Rust；约 80 stars、3 forks。</li>
+<li><strong>是否适合你学习</strong>：<strong>不太适合作为入门主力项目</strong>。Rust 学习曲线陡，且项目规模信息不足。  </li>
+<li><strong>适合怎么用</strong>：把它当“产品思路”案例看：自托管、文件分享、自动清理策略。你可以用自己熟悉的 Python/FastAPI 做一个简化版，练后端文件存储、过期清理、权限控制。不要一上来改 Rust 代码。</li>
+</ul>
+<h3>2. enmerasoftware/ai-design-check</h3>
+<ul>
+<li>链接：https://github.com/enmerasoftware/ai-design-check</li>
+<li>简介：面向 AI 编码代理生成界面的设计规则和零依赖检查器，支持 Web、SwiftUI、Jetpack Compose，HTML，约 229 stars、12 forks。</li>
+<li><strong>是否适合你学习</strong>：<strong>相对适合</strong>。零依赖、规则式检查，比大型框架更容易读懂；还能结合你关注的 AI Agent 主题，理解“如何约束 AI 生成结果”。</li>
+<li><strong>适合怎么用</strong>：先读规则文件和 README，本地跑一遍；然后给自己做的小页面加一个简单检查脚本。<strong>注意</strong>：材料只给了摘要，代码质量和维护情况需要你自己看 issue、提交记录再判断。</li>
+</ul>
+<hr />
+<h2>三、AI 发展动态：趋势与影响</h2>
+<ol>
+<li><strong>垂直安全模型出现</strong>：GPT‑6 Cyber 强调“授权范围内”工作。趋势是模型能力与安全边界绑定。对个人来说，Agent 项目要提前设计权限和审计，而不是事后补。</li>
+<li><strong>AI 基础设施政策化</strong>：算力建设开始和“当地资源、就业、社区”绑定。说明 AI 不只是技术问题，也会进入地方政策讨论。但单篇企业公告不能代表监管方向。</li>
+<li><strong>企业落地转向工作流</strong>：投研、代码审查、营销支持、销售准备，都是“嵌入流程”的案例。对初学者做项目，优先做<strong>有明确输入输出、能评测、能记录来源</strong>的小工作流，比如“多份研报对比 + 引用溯源”。</li>
+<li><strong>RAG/Agent 的工程重点</strong>：从这些材料只能谨慎推出——权限、来源引用、流程整合会被反复提到；材料没有给出具体技术架构，不能编造。</li>
+</ol>
+<hr />
+<h2>四、国际形势：和科技、就业、政策环境的关系</h2>
+<ul>
+<li>本期国际新闻集中在<strong>美国中期选举后的外交主导权</strong>和<strong>美以/中东政策不确定性</strong>。</li>
+<li>可以说的：政策连续性可能下降，企业和市场会面对更高的不确定性。</li>
+<li><strong>不能说的</strong>：材料没有提供具体科技政策、签证政策、关税政策或就业数据，<strong>不能据此推断“科技就业将如何变化”</strong>。土耳其媒体标题中的情绪化表述也不应当作事实。</li>
+<li>对你的实际含义：国际新闻本期只适合作为背景跟踪，<strong>不建议据此做职业或投资重大决策</strong>。</li>
+</ul>
+<hr />
+<h2>五、中国国家政策</h2>
+<p>本期两条 <code>china_policy</code> 材料均为乱码官网列表页：</p>
+<ul>
+<li>http://www.npc.gov.cn/</li>
+<li>http://www.spp.gov.cn/</li>
+</ul>
+<p><strong>结论：本期没有可用的中国政策实质内容。</strong><br />
+乱码看起来像编码问题，且只是官网列表页，不是具体政策文件。因此：
+- 不能分析政策方向；
+- 不能用 AI 新闻或 GitHub 项目替代政策信息；
+- 如果你关注公考或科技政策，建议直接访问官网原文，并检查抓取源的编码设置。</p>
+<hr />
+<h2>六、给你的具体行动建议</h2>
+<ol>
+<li><strong>本周做一个最小 Agent/RAG 项目</strong>：用 Python + FastAPI 做“文档问答”，必须包含：来源引用、简单权限控制、调用日志。不要先学 Rust。</li>
+<li><strong>读 <code>ai-design-check</code> 的规则文件</strong>：学习如何把“设计规范”变成可执行检查器。你可以给自己的项目加一个零依赖检查脚本，这比空看框架更有收获。</li>
+<li><strong>参考 Franklin Templeton 案例做小工具</strong>：输入 3–5 篇公开研报或文章，输出“观点对比表 + 引用链接”。重点练检索、引用和结构化输出，不要追求复杂模型。</li>
+<li><strong>理解 GPT‑6 Cyber 的“授权范围”思路</strong>：不需要立刻学攻防，但要在自己的 Agent 项目里加“允许做什么、不允许做什么”的配置和日志。</li>
+<li><strong>修复政策信息源</strong>：本期中国政策材料不可用。建议单独建立官网抓取清单，处理编码问题；在修好之前，公考和政策判断直接看原文。</li>
+<li><strong>国际新闻只做背景</strong>：关注美国中期选举后的政策连续性，但不要用单一媒体标题推导科技就业结论。</li>
+</ol>
+<p><strong>一句话总结</strong>：本期真正对你有用的，是“AI 进入工作流和权限边界”这两个方向；GitHub 里 <code>ai-design-check</code> 比 <code>tessera</code> 更适合你上手；中国政策材料本期无效，不要硬做判断。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>US midterms upended Congress but Trump still commands foreign policy</strong>（economictimes.indiatimes.com，评分 4.24）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>US - Israel relations and Donald Trump Middle East policy face uncertainty after Democrat midterm gains</strong>（monocle.com，评分 4.24）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Trump and Netanyahu war policy dealt a blow</strong>（express.pk，评分 4.24）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</strong>（openai.com，评分 4.2）：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+<li><strong>Tel Avivde alarm zilleri çalıyor : Trump kaybetti , İsrail panikledi</strong>（turkiyegazetesi.com.tr，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>Limatura/tessera</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Limatura/tessera</li>
+<li>评分：3.72</li>
+<li>简介：Self-hosted file and note sharing that cleans up after itself. Stars: 80; Forks: 3; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 80，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>enmerasoftware/ai-design-check</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/enmerasoftware/ai-design-check</li>
+<li>评分：3.13</li>
+<li>简介：Design rules and a zero-dependency checker for interfaces built with AI coding agents, on the web and in SwiftUI and Jetpack Compose apps. English and Turkish. Stars: 229; Forks: 12; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 229，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/introducing-gpt-6-cyber</li>
+<li>评分：4.2</li>
+<li>简介：Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Setting a new standard for responsible AI infrastructure</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/setting-new-standard-responsible-ai-infrastructure</li>
+<li>评分：3.96</li>
+<li>简介：OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Merge builds product and business tools with OpenAI technology</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/merge-builds-with-openai</li>
+<li>评分：3.36</li>
+<li>简介：Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Franklin Templeton uses OpenAI to support investment research</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/franklin-templeton</li>
+<li>评分：3.36</li>
+<li>简介：Starting with equity research, Franklin Templeton is developing AI workflows to help portfolio managers compare research views and examine investment risks.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>US midterms upended Congress but Trump still commands foreign policy</h3>
+<ul>
+<li>来源：economictimes.indiatimes.com</li>
+<li>链接：https://economictimes.indiatimes.com/news/international/world-news/us-midterms-upended-congress-but-trump-still-commands-foreign-policy/articleshow/135589895.cms</li>
+<li>评分：4.24</li>
+<li>简介：20261106T030000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>US - Israel relations and Donald Trump Middle East policy face uncertainty after Democrat midterm gains</h3>
+<ul>
+<li>来源：monocle.com</li>
+<li>链接：https://monocle.com/affairs/politics/us-israel-relations-and-donald-trumps-middle-east-policy-face-uncertainty-after-democrat-midterm-gains</li>
+<li>评分：4.24</li>
+<li>简介：20261106T033000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Trump and Netanyahu war policy dealt a blow</h3>
+<ul>
+<li>来源：express.pk</li>
+<li>链接：https://www.express.pk/story/2842580/trump-and-netanyahu-war-policy-dealt-a-blow-2842580</li>
+<li>评分：4.24</li>
+<li>简介：20261106T050000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Tel Avivde alarm zilleri çalıyor : Trump kaybetti , İsrail panikledi</h3>
+<ul>
+<li>来源：turkiyegazetesi.com.tr</li>
+<li>链接：https://www.turkiyegazetesi.com.tr/dunya/tel-avivde-alarm-zilleri-caliyor-trump-kaybetti-israil-panikledi-1827514</li>
+<li>评分：4.0</li>
+<li>简介：20261106T050000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>æé«äººæ°æ£å¯é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.spp.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：Limatura/tessera。</li>
+<li>重点阅读：US midterms upended Congress but Trump still commands foreign policy。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://economictimes.indiatimes.com/news/international/world-news/us-midterms-upended-congress-but-trump-still-commands-foreign-policy/articleshow/135589895.cms">US midterms upended Congress but Trump still commands foreign policy</a> - economictimes.indiatimes.com</li>
+<li>参考来源：https://bworldonline.com/world/2026/11/06/791973/midterms-upended-congress-but-trump-still-commands-foreign-policy</li>
+<li><a href="https://monocle.com/affairs/politics/us-israel-relations-and-donald-trumps-middle-east-policy-face-uncertainty-after-democrat-midterm-gains">US - Israel relations and Donald Trump Middle East policy face uncertainty after Democrat midterm gains</a> - monocle.com</li>
+<li><a href="https://www.express.pk/story/2842580/trump-and-netanyahu-war-policy-dealt-a-blow-2842580">Trump and Netanyahu war policy dealt a blow</a> - express.pk</li>
+<li><a href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</a> - openai.com</li>
+<li><a href="https://www.turkiyegazetesi.com.tr/dunya/tel-avivde-alarm-zilleri-caliyor-trump-kaybetti-israil-panikledi-1827514">Tel Avivde alarm zilleri çalıyor : Trump kaybetti , İsrail panikledi</a> - turkiyegazetesi.com.tr</li>
+<li><a href="https://openai.com/index/setting-new-standard-responsible-ai-infrastructure">Setting a new standard for responsible AI infrastructure</a> - openai.com</li>
+<li><a href="https://github.com/Limatura/tessera">Limatura/tessera</a> - GitHub</li>
+<li><a href="https://openai.com/index/merge-builds-with-openai">Merge builds product and business tools with OpenAI technology</a> - openai.com</li>
+<li><a href="https://openai.com/index/franklin-templeton">Franklin Templeton uses OpenAI to support investment research</a> - openai.com</li>
+<li><a href="https://github.com/enmerasoftware/ai-design-check">enmerasoftware/ai-design-check</a> - GitHub</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+<li><a href="http://www.spp.gov.cn/">æé«äººæ°æ£å¯é¢</a> - 中国政府网</li>
+</ul></main></body></html>
