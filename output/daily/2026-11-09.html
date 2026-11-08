@@ -1,0 +1,216 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-09</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报｜2026-11-09</h1>
+<h2>先说明本期材料局限</h2>
+<ul>
+<li><strong>中国政策</strong>：两条 <code>china_policy</code> 都是乱码标题的 gov.cn 列表页/机构网站条目，时间未知，摘要没有实质政策内容。<strong>不能据此判断任何政策方向。</strong></li>
+<li><strong>GitHub</strong>：3 个 <code>manus-ai</code> 仓库摘要、Stars/Forks 高度重复，看起来像同一项目的 fork/镜像，代码质量和维护状态未知。</li>
+<li><strong>AI 新闻</strong>：来自 OpenAI 官网的企业案例/项目介绍，时间是 11-02、11-03，不是 11-09 当日突发。</li>
+<li><strong>国际新闻</strong>：有直接来源，主要是乌克兰能源设施遭袭。</li>
+</ul>
+<hr />
+<h2>今日最值得关注的 5 件事</h2>
+<h3>1. 乌克兰能源设施遭袭，约 85 万人断电，且发生在谈判前</h3>
+<ul>
+<li>来源：BBC、Al Jazeera</li>
+<li>链接：<br />
+  https://www.bbc.co.uk/news/articles/cm4g1nq8158po<br />
+  https://www.aljazeera.com/news/2026/11/8/russian-strikes-on-ukraine-leave-hundreds-of-thousands-without-electricity</li>
+<li><strong>为什么重要</strong>：袭击针对能源基础设施，Dnipropetrovsk 和 Kharkiv 约 85 万人失去电力；报道提到袭击发生在乌克兰和俄罗斯代表团赴阿布扎比三方谈判之前。能源设施既是民生问题，也是谈判筹码。</li>
+<li><strong>对你有什么用</strong>：这类事件会影响欧洲能源价格预期和地缘风险情绪。它是理解“能源安全—算力成本—制造业成本”链条的现实案例，但材料没有给出价格或就业数据，<strong>不要据此推断具体就业影响</strong>。</li>
+</ul>
+<h3>2. OpenAI 连发三则企业/基础设施动态：AI 正在进入安全、房地产后台和电网</h3>
+<ul>
+<li>来源：OpenAI 官网</li>
+<li>链接：<br />
+  https://openai.com/index/cisco-cyber<br />
+  https://openai.com/index/heimstaden<br />
+  https://openai.com/index/grid-protectors-program</li>
+<li><strong>内容</strong>：</li>
+<li>Cisco 把网络情报与 OpenAI 模型结合，做企业安全的自适应防御。</li>
+<li>Heimstaden 用 ChatGPT Enterprise 和 Codex 改造物业管理、降本、赋能员工。</li>
+<li>Grid Protectors Program 计划与公用事业合作，帮助未来算力园区支持电网可靠性、保护消费者电费。</li>
+<li><strong>趋势影响</strong>：AI 落地重点不只是“聊天”，而是进入<strong>安全运营、传统行业后台流程、算力基础设施</strong>。对后端转 AI 来说，机会更多在集成层：权限、审计、日志、数据管道、成本和可靠性。</li>
+<li><strong>注意</strong>：这是企业案例和项目介绍，不是效果验证报告，不要夸大成“岗位大量增加”。</li>
+</ul>
+<h3>3. <code>manus-ai</code> 系列仓库集中出现：通用 AI Agent + 沙箱方向值得看，但要辨别重复项目</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：<br />
+  https://github.com/abhinay-h/manus-ai<br />
+  https://github.com/tireddwarf99/manus-ai<br />
+  https://github.com/Youw/ai--manus</li>
+<li><strong>为什么重要</strong>：摘要都指向“通用 AI Agent 系统，支持在沙箱环境运行各种工具和操作”。这正是 Agent 工程的核心问题：工具调用、沙箱隔离、任务编排。</li>
+<li><strong>风险</strong>：三个仓库 Stars/Forks 高度重复，语言有 Python 和 Unknown，可能是 fork/镜像。<strong>不要默认代码质量高或可维护。</strong></li>
+<li><strong>对你有什么用</strong>：适合作为“读结构”的样本，不适合直接上生产。</li>
+</ul>
+<h3>4. <code>ClawGod_Y</code>：Claude Code “God Mode”，项目自述用于绕过限制</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/7sen1ot/ClawGod_Y</li>
+<li><strong>为什么重要</strong>：它反映了一类需求——用户想让 AI 编程工具突破限制。但项目自述是“breach the armor / bypass restrictions”，存在合规和服务条款风险。</li>
+<li><strong>对你有什么用</strong>：<strong>不建议初学者学习或使用</strong>。你更应该关注它背后的工程问题：AI 应用为什么需要权限边界、审计和最小授权，而不是研究怎么绕过。</li>
+</ul>
+<h3>5. 本期中国政策材料不可用，这是信息质量问题</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：<br />
+  https://www.gov.cn/<br />
+  https://www.gov.cn/home/2023-03/29/content_5748955.htm</li>
+<li><strong>情况</strong>：标题为乱码，摘要只是“官网列表页条目”，时间未知，没有可读政策正文。</li>
+</ul>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>7sen1ot/ClawGod_Y</strong>（GitHub，评分 4.24）：JavaScript 项目，Stars 151，适合评估是否能拆成练手项目。</li>
+<li><strong>abhinay-h/manus-ai</strong>（GitHub，评分 4.16）：Python 项目，Stars 54，适合评估是否能拆成练手项目。</li>
+<li><strong>tireddwarf99/manus-ai</strong>（GitHub，评分 4.16）：Python 项目，Stars 54，适合评估是否能拆成练手项目。</li>
+<li><strong>Youw/ai--manus</strong>（GitHub，评分 4.08）：Unknown 项目，Stars 53，适合评估是否能拆成练手项目。</li>
+<li><strong>How Cisco defends at machine speed with OpenAI</strong>（openai.com，评分 3.64）：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>7sen1ot/ClawGod_Y</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/7sen1ot/ClawGod_Y</li>
+<li>评分：4.24</li>
+<li>简介：Claude Code “God Mode,” designed to let the model “breach the armor” (i.e., bypass restrictions). Stars: 151; Forks: 4; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 151，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>abhinay-h/manus-ai</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/abhinay-h/manus-ai</li>
+<li>评分：4.16</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 54; Forks: 46; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 54，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>tireddwarf99/manus-ai</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/tireddwarf99/manus-ai</li>
+<li>评分：4.16</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 54; Forks: 46; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 54，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Youw/ai--manus</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Youw/ai--manus</li>
+<li>评分：4.08</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 53; Forks: 8; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 53，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>How Cisco defends at machine speed with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/cisco-cyber</li>
+<li>评分：3.64</li>
+<li>简介：Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Heimstaden is changing residential real estate management with AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/heimstaden</li>
+<li>评分：3.16</li>
+<li>简介：Discover how Heimstaden uses OpenAI’s ChatGPT Enterprise and Codex to transform property management, cut costs, and empower employees across Europe.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Introducing the Grid Protectors Program</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/grid-protectors-program</li>
+<li>评分：3.16</li>
+<li>简介：OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Russian strikes wound nine and damage Ukraine's power network ahead of talks</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The attacks come before Ukrainian and Russian delegations are due to take part in trilateral talks in Abu Dhabi next week.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Russian strikes on Ukraine leave hundreds of thousands without electricity</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/news/2026/11/8/russian-strikes-on-ukraine-leave-hundreds-of-thousands-without-electricity?traffic_source=rss</li>
+<li>评分：3.64</li>
+<li>简介：About 850,000 people lose power after Russian attacks on energy infrastructure in Ukraine's Dnipropetrovsk and Kharkiv.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Psychiatrists and paediatricians among specialists most likely to charge ‘extreme’ fees, thinktank finds</h3>
+<ul>
+<li>来源：www.theguardian.com</li>
+<li>链接：https://www.theguardian.com/australia-news/2026/nov/08/psychiatrists-paediatricians-extreme-specialist-fees-health-australia</li>
+<li>评分：3.6</li>
+<li>简介：Grattan Institute finds some doctors charge up to triple the fees of their peers – well beyond what can be justified by business running costs Get our breaking news email , free app or daily news podcast More than 2.2 million Australians paid an “extreme” fee to see a specialist last year, with psychiatrists and paediatricians among the most likely to routinely unreasonably charge their patients, according to new research. Specialists cannot justify exorbitant fees by blaming inadequate government rebates, or the costs of running a business, a report from policy thinktank the Grattan Institute...</li>
+<li>为什么值得关注：命中国际关键词 policy，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é¦é¡µ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>é©»æ¸¯æ¾³æºæç½ç«</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748955.htm</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：7sen1ot/ClawGod_Y。</li>
+<li>重点阅读：Russian strikes wound nine and damage Ukraine's power network ahead of talks。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/7sen1ot/ClawGod_Y">7sen1ot/ClawGod_Y</a> - GitHub</li>
+<li><a href="https://github.com/abhinay-h/manus-ai">abhinay-h/manus-ai</a> - GitHub</li>
+<li><a href="https://github.com/tireddwarf99/manus-ai">tireddwarf99/manus-ai</a> - GitHub</li>
+<li><a href="https://github.com/Youw/ai--manus">Youw/ai--manus</a> - GitHub</li>
+<li><a href="https://openai.com/index/cisco-cyber">How Cisco defends at machine speed with OpenAI</a> - openai.com</li>
+<li><a href="https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&amp;at_campaign=rss">Russian strikes wound nine and damage Ukraine's power network ahead of talks</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.aljazeera.com/news/2026/11/8/russian-strikes-on-ukraine-leave-hundreds-of-thousands-without-electricity?traffic_source=rss">Russian strikes on Ukraine leave hundreds of thousands without electricity</a> - www.aljazeera.com</li>
+<li><a href="https://www.theguardian.com/australia-news/2026/nov/08/psychiatrists-paediatricians-extreme-specialist-fees-health-australia">Psychiatrists and paediatricians among specialists most likely to charge ‘extreme’ fees, thinktank finds</a> - www.theguardian.com</li>
+<li><a href="https://openai.com/index/heimstaden">Heimstaden is changing residential real estate management with AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/grid-protectors-program">Introducing the Grid Protectors Program</a> - openai.com</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748955.htm">é©»æ¸¯æ¾³æºæç½ç«</a> - 中国政府网</li>
+</ul></main></body></html>
