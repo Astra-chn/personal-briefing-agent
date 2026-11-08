@@ -1,0 +1,261 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-08</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-08</h1>
+<blockquote>
+<p>说明：本期 world_news 材料只有标题，摘要仅为时间戳，缺少正文细节；china_policy 只有两个官网列表页条目，且标题存在编码乱码。以下涉及这些来源的内容，仅按标题字面信息解读，不做延伸推断。</p>
+</blockquote>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 美国批准英伟达向与中国有关联的企业销售芯片，民主党拟审查</h3>
+<ul>
+<li>来源：<a href="https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-914132">jpost.com</a>、<a href="https://www.arkansasonline.com/news/2026/nov/07/democrats-expected-to-scrutinize-nvidia">arkansasonline.com</a></li>
+<li><strong>是什么</strong>：两条新闻指向同一件事：美方批准了英伟达对华相关芯片销售，同时美国民主党方面预计将对英伟达展开审查。</li>
+<li><strong>为什么重要</strong>：这涉及中美科技出口管制这一长期主线。批准销售与政治审查同时出现，说明政策内部存在拉扯，不是简单的“放松”或“收紧”。</li>
+<li><strong>对你的用处</strong>：如果你关注后端转 AI、AI 基础设施就业，芯片供应政策会间接影响国内 AI 算力成本和岗位需求。但材料没有具体条款，<strong>不要据此判断政策已转向</strong>。</li>
+</ul>
+<h3>2. 英伟达 CEO 黄仁勋相关“情报备忘录”传闻（多家外媒报道）</h3>
+<ul>
+<li>来源：<a href="https://www.freepressjournal.in/world/us-intelligence-memo-claims-nvidia-ceo-jensen-huang-had-romantic-relationship-with-alleged-chinese-spy-report">freepressjournal.in</a>、<a href="https://www.insight.co.kr/news/581059">insight.co.kr</a></li>
+<li><strong>是什么</strong>：有报道称一份美国情报备忘录涉及黄仁勋与一名被指为中国间谍的女性的关系。</li>
+<li><strong>重要提醒</strong>：这是<strong>“据报道”的泄露备忘录内容，未经证实，且涉及个人私生活</strong>。多家媒体转载不等于事实成立。</li>
+<li><strong>对你的用处</strong>：把它当作“信息素养”案例，而不是新闻事实。不要转发、不要基于此做投资或职业判断。这类传闻容易在中美科技舆论中被放大，保持距离。</li>
+</ul>
+<h3>3. GitHub：Local Code —— 设备端运行的私有 AI Agent</h3>
+<ul>
+<li>来源：<a href="https://github.com/drawthingsai/local-code-community">drawthingsai/local-code-community</a></li>
+<li><strong>是什么</strong>：Mac / iPad / iPhone 上的私有 AI Agent，设备上运行 DeepSeek 4.1，内置 Python、Node.js 和 shell。C 语言，127 stars。</li>
+<li><strong>为什么值得看</strong>：这是“本地化、私有化 Agent”方向的真实产品代码，和你关注的 AI Agent 高度相关。</li>
+<li><strong>对你的适合度</strong>：C 语言对初学者偏难，<strong>不建议直接读源码</strong>。但可以先看 README 和文档，理解“设备端 Agent + 内置运行时”的产品设计思路，这对你做 Agent 项目有启发。</li>
+</ul>
+<h3>4. OpenAI 启动新一轮安全冲刺，并提高漏洞赏金</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai">安全冲刺</a>、<a href="https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties">漏洞赏金</a></li>
+<li><strong>是什么</strong>：OpenAI 与 Cathedral Systems 合作，用 AI 测试和强化自身防御；同时提高安全漏洞赏金，新增报告质量、忠诚度、优先活动奖金。</li>
+<li><strong>趋势判断</strong>：头部 AI 公司正把“AI 安全”从口号变成<strong>工程化和外部协作机制</strong>。安全能力正在成为 AI 公司的核心竞争力之一。</li>
+<li><strong>对你的用处</strong>：后端转 AI 时，“AI + 安全”是一个值得留意的细分方向，但门槛较高，先作为趋势了解。</li>
+</ul>
+<h3>5. OpenAI 开源式介绍 Pando：为 Codex 规模设计的 Git 兼容后端</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/scaling-git-at-openai">Scaling Git at OpenAI</a></li>
+<li><strong>是什么</strong>：OpenAI 构建了 Pando，一个 Git 兼容后端，用于支撑 Codex 带来的大规模开发。</li>
+<li><strong>为什么重要</strong>：这说明 AI 编程工具不只是模型问题，还会倒逼<strong>代码托管、版本控制等基础设施</strong>升级。</li>
+<li><strong>对你的用处</strong>：概念偏工程底层，初学者了解即可。但它提示你：AI 编程的落地需要后端基础设施配合，这与你“后端转 AI”的背景相关。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目（适合度评估）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言 / 热度</th>
+<th>是什么</th>
+<th>是否适合你</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/songshikang0111/awesome-REA-cases">awesome-REA-cases</a></td>
+<td>Python，410★/63fork</td>
+<td>REA 与 AI 辅助逆向工程的案例、项目、想法合集，每 4 小时更新</td>
+<td><strong>适合当资料库浏览</strong>。不用写代码，先收藏、挑案例读，培养“AI 用于逆向/自动化”的视野</td>
+</tr>
+<tr>
+<td><a href="https://github.com/drawthingsai/local-code-community">local-code-community</a></td>
+<td>C，127★/10fork</td>
+<td>Mac/iPad/iPhone 私有 AI Agent，设备端跑 DeepSeek 4.1，内置 Python/Node.js/shell</td>
+<td><strong>部分适合</strong>。产品思路值得学，C 源码对初学者偏难，先读文档</td>
+</tr>
+<tr>
+<td><a href="https://github.com/7sen1ot/zcode2api">zcode2api</a></td>
+<td>Go，123★/9fork</td>
+<td>智谱/Zai 的“反代”，优化免费账号并发重试、领取免费 token</td>
+<td><strong>不建议跟</strong>。涉及免费额度滥用和反代，存在服务条款与合规风险，初学者别碰这类灰色工具</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、AI 发展动态</h2>
+<p>本期 AI 新闻全部来自 OpenAI，集中在两条线：</p>
+<ol>
+<li><strong>工程基础设施</strong>：Pando（Git 兼容后端）说明 AI 编程工具的规模化会推动底层工程改造。趋势：AI 不只是“模型 + 应用”，还在重塑研发基础设施。</li>
+<li><strong>安全工程化</strong>：安全冲刺 + 提高漏洞赏金，说明头部公司把 AI 安全当作持续投入的工程体系，并借助外部研究者。趋势：AI 安全从“研究话题”走向“常态化运营”。</li>
+</ol>
+<p><strong>注意</strong>：这些新闻时间为 2026-11-02，不是当天新闻，属于本周内动态。</p>
+<hr />
+<h2>四、国际形势</h2>
+<p>本期仅有 world_news 直接来源，集中在<strong>英伟达与中美科技关系</strong>：</p>
+<ul>
+<li><strong>芯片销售与政治审查并行</strong>：批准对华销售 + 民主党拟审查，反映美国内部在出口管制上存在分歧和博弈。对科技行业的影响是供应链和政策不确定性上升。</li>
+<li><strong>情报传闻</strong>：黄仁勋相关备忘录报道属于未经证实内容，不宜作为形势判断依据。</li>
+</ul>
+<p><strong>与科技、就业、政策环境的关系（保守表述）</strong>：
+- 若对华芯片销售实际放宽，可能降低部分 AI 算力成本；若审查加强，则可能再度收紧。材料不足以判断方向。
+- 对个人就业：芯片与 AI 基础设施岗位受政策波动影响较大，关注但不押注单一判断。</p>
+<p><strong>必须说明</strong>：本期没有更多国际政治、经济类来源，以上仅为英伟达相关议题，不能代表整体国际形势。</p>
+<hr />
+<h2>五、中国国家政策</h2>
+<p>本期 china_policy 材料只有两条：
+- <a href="http://www.cppcc.gov.cn/">全国政协</a>（标题显示为乱码，应为编码问题）
+- <a href="http://www.ccdi.gov.cn/">国家监察委员会</a></p>
+<p>两者均为<strong>官网列表页条目，无具体政策内容</strong>，时间未知。因此：</p>
+<p><strong>本期缺少可分析的中国政策实质材料，无法给出政策解读或结论。</strong> 如果你关注公考和科技政策，建议直接访问上述官网或国务院、科技部等权威渠道获取原文，不要用本期 AI/GitHub 新闻去反推政策方向。</p>
+<hr />
+<h2>六、对你的个人建议（具体行动）</h2>
+<ol>
+<li><strong>今天就能做</strong>：打开 <a href="https://github.com/drawthingsai/local-code-community">local-code-community</a> 的 README，用 20 分钟理解“设备端 Agent + 内置 Python/Node/shell”的架构。不用读 C 代码，画一张简单的架构</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>US approved Nvidia chip sales to China - linked firms</strong>（jpost.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Democrats expected to scrutinize Nvidia | The Arkansas Democrat - Gazette</strong>（arkansasonline.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>US Intelligence Memo Claims Nvidia CEO Jensen Huang Had Romantic Relationship With Alleged Chinese Spy : Report</strong>（freepressjournal.in，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>젠슨 황의 여자친구 ... 美정보당국이 中스파이로 의심한 여성 정체</strong>（insight.co.kr，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>songshikang0111/awesome-REA-cases</strong>（GitHub，评分 4.17）：Python 项目，Stars 410，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>songshikang0111/awesome-REA-cases</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/songshikang0111/awesome-REA-cases</li>
+<li>评分：4.17</li>
+<li>简介：A curated collection of REA and AI-assisted reverse engineering cases, projects, and ideas. Updated every four hours. Stars: 410; Forks: 63; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 410，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>drawthingsai/local-code-community</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/drawthingsai/local-code-community</li>
+<li>评分：4.16</li>
+<li>简介：Source code of Local Code, a private AI agent for Mac, iPad and iPhone. Runs DeepSeek 4.1 on device, with Python, Node.js and a shell built into the app. Stars: 127; Forks: 10; Language: C</li>
+<li>为什么值得关注：C 项目，Stars 127，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>7sen1ot/zcode2api</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/7sen1ot/zcode2api</li>
+<li>评分：3.36</li>
+<li>简介：ZCode(智谱、Zai）毒鸡蛋反代，优化免费账号并发重试问题，支持免费额度以及领取免费token。 Stars: 123; Forks: 9; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 123，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Scaling Git at OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/scaling-git-at-openai</li>
+<li>评分：3.44</li>
+<li>简介：How OpenAI built Pando, a Git-compatible backend designed for the scale of development that Codex makes possible.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Preparing our next security sprint to harden OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai</li>
+<li>评分：3.4</li>
+<li>简介：OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Rewarding defenders with bigger bug bounties</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties</li>
+<li>评分：3.4</li>
+<li>简介：OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>US approved Nvidia chip sales to China - linked firms</h3>
+<ul>
+<li>来源：jpost.com</li>
+<li>链接：https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-914132</li>
+<li>评分：4.48</li>
+<li>简介：20261107T173000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Democrats expected to scrutinize Nvidia | The Arkansas Democrat - Gazette</h3>
+<ul>
+<li>来源：arkansasonline.com</li>
+<li>链接：https://www.arkansasonline.com/news/2026/nov/07/democrats-expected-to-scrutinize-nvidia</li>
+<li>评分：4.48</li>
+<li>简介：20261107T100000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>US Intelligence Memo Claims Nvidia CEO Jensen Huang Had Romantic Relationship With Alleged Chinese Spy : Report</h3>
+<ul>
+<li>来源：freepressjournal.in</li>
+<li>链接：https://www.freepressjournal.in/world/us-intelligence-memo-claims-nvidia-ceo-jensen-huang-had-romantic-relationship-with-alleged-chinese-spy-report</li>
+<li>评分：4.48</li>
+<li>简介：20261107T070000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>젠슨 황의 여자친구 ... 美정보당국이 中스파이로 의심한 여성 정체</h3>
+<ul>
+<li>来源：insight.co.kr</li>
+<li>链接：https://www.insight.co.kr/news/581059</li>
+<li>评分：4.48</li>
+<li>简介：20261107T100000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½æ¿å</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.cppcc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å½å®¶çå¯å§åä¼</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.ccdi.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：songshikang0111/awesome-REA-cases。</li>
+<li>重点阅读：US approved Nvidia chip sales to China - linked firms。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.jpost.com/business-and-innovation/tech-and-start-ups/article-914132">US approved Nvidia chip sales to China - linked firms</a> - jpost.com</li>
+<li><a href="https://www.arkansasonline.com/news/2026/nov/07/democrats-expected-to-scrutinize-nvidia">Democrats expected to scrutinize Nvidia | The Arkansas Democrat - Gazette</a> - arkansasonline.com</li>
+<li><a href="https://www.freepressjournal.in/world/us-intelligence-memo-claims-nvidia-ceo-jensen-huang-had-romantic-relationship-with-alleged-chinese-spy-report">US Intelligence Memo Claims Nvidia CEO Jensen Huang Had Romantic Relationship With Alleged Chinese Spy : Report</a> - freepressjournal.in</li>
+<li><a href="https://www.insight.co.kr/news/581059">젠슨 황의 여자친구 ... 美정보당국이 中스파이로 의심한 여성 정체</a> - insight.co.kr</li>
+<li><a href="https://github.com/songshikang0111/awesome-REA-cases">songshikang0111/awesome-REA-cases</a> - GitHub</li>
+<li><a href="https://github.com/drawthingsai/local-code-community">drawthingsai/local-code-community</a> - GitHub</li>
+<li><a href="https://openai.com/index/scaling-git-at-openai">Scaling Git at OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai">Preparing our next security sprint to harden OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties">Rewarding defenders with bigger bug bounties</a> - openai.com</li>
+<li><a href="https://github.com/7sen1ot/zcode2api">7sen1ot/zcode2api</a> - GitHub</li>
+<li><a href="http://www.cppcc.gov.cn/">å ¨å½æ¿å</a> - 中国政府网</li>
+<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
+</ul></main></body></html>
