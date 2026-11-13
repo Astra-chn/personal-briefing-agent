@@ -1,0 +1,282 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-13</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-13</h1>
+<blockquote>
+<p>本期材料来源：GitHub（4 条）、OpenAI 官网（4 条）、国际新闻（4 条）。
+<strong>注意：本期没有 <code>china_policy</code> 来源材料，因此“中国国家政策”部分只做缺口说明，不提供任何政策解读。</strong></p>
+</blockquote>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. Amplitude 用 OpenAI 模型把产品改进压到 1–2 天</h3>
+<p>链接：https://openai.com/business/customer-stories/amplitude</p>
+<p>Amplitude 的 Wave 产品 Agent 做三件事：判断“该做什么功能”→ 用 coding agent 帮助把改动写出来 → 量化上线后的影响。
+<strong>为什么重要</strong>：这是少见的“完整闭环”案例——Agent 不是聊天框，而是嵌入了“发现需求→写代码→验证效果”的生产流程。
+<strong>对你有什么用</strong>：你想转 AI 后端，值得注意的不是模型本身，而是这套<strong>编排结构</strong>（判断→执行→度量）。RAG、Agent 项目的价值也在这类闭环上，而不是单点调用 API。</p>
+<h3>2. GPT-6 Cyber：垂直领域专用模型 + “授权范围”约束</h3>
+<p>链接：https://openai.com/index/introducing-gpt-6-cyber （发布于 2026-11-05，非今日）</p>
+<p>定位是发现可利用漏洞并给出修复方案，训练时刻意约束“在授权范围内行动”。
+<strong>趋势判断</strong>：通用模型之后，厂商在推<strong>领域专精 + 行为边界</strong>两个方向同时走。对做 Agent 的人意味着：以后做垂直 Agent，合规边界要设计进系统里，不是事后补。
+<strong>提醒</strong>：这是厂商自述的能力说明，材料里没有第三方评测数据，不宜当成“AI 已能自动挖洞”来理解。</p>
+<h3>3. <code>ai-startup-skills</code>：把创业流程拆成 7 个 Agent Skill</h3>
+<p>链接：https://github.com/huaxialucaicaizi/ai-startup-skills ｜ 924 stars ｜ Python</p>
+<p>7 步：验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册。
+<strong>为什么值得关注</strong>：它体现了一个可复用的模式——<strong>把长流程拆成多个可组合的 Skill</strong>，而不是写一个巨大的 prompt。这正是当前 Agent 工程的主流做法。
+<strong>适不适合你</strong>：适合“读结构”，不适合“读代码”。你是初学者，直接跑这套东西收益低；但可以拿它的目录结构当模板，模仿着写你自己 1–2 个 Skill（比如“需求验证”“竞品调研”）。里面“政策”一环与你的公考/政策兴趣能搭上。</p>
+<h3>4. <code>price-comparison</code>：AI 订阅比价工具</h3>
+<p>链接：https://github.com/hhtower/price-comparison ｜ 307 stars ｜ TypeScript</p>
+<p>说需求→AI 帮你选，聚合 ChatGPT/Codex/Claude/Gemini 等的代充与账号报价，带价格走势、渠道和质保对比。
+<strong>为什么值得关注</strong>：这类项目火，说明需求真实（AI 订阅已成固定支出）。
+<strong>风险提示</strong>：项目涉及“代充/账号”渠道，材料未说明其合规性与资金安全机制，“质保”也是项目自述。<strong>不建议你作为个人去实际交易</strong>，仅当技术案例看。
+<strong>适不适合你</strong>：技术栈是 TypeScript，你基础弱的话上手成本不低；但“比价”这个题目本身很适合做练手项目（爬取+结构化+前端展示）。</p>
+<h3>5. 俄乌和谈出现“欧洲入场”信号</h3>
+<ul>
+<li>泽连斯基欢迎美国把欧洲拉进谈判：https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo</li>
+<li>美方特使 Witkoff 与 Kushner 在都柏林与莫斯科之间穿梭：https://www.aljazeera.com/video/newsfeed/2026/11/13/aje-onl-nf_us-envoys-shuttle-between-putin-and-zelenskyy</li>
+<li>乌克兰一座大型电站遭导弹打击后的现场：https://www.bbc.co.uk/news/videos/cm93rp3gxn6qo</li>
+</ul>
+<p><strong>怎么读</strong>：目前只是“谈判进程推进”的信号，材料中没有协议内容、时间表或各方让步细节，<strong>不能推断为接近停火</strong>。
+<strong>与科技/就业/政策的关系（谨慎表述）</strong>：材料只提供了能源基础设施被打击这一事实。这类事件通常会影响欧洲能源成本与财政预期，但本期没有数据支撑，<strong>不能据此推演对你就业环境的直接影响</strong>。</p>
+<hr />
+<h2>二、GitHub 热门项目</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言 / Stars</th>
+<th>是什么</th>
+<th>对你的适配度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/huaxialucaicaizi/ai-startup-skills">ai-startup-skills</a></td>
+<td>Python / 924</td>
+<td>创业 7 步 Agent Skill 合集</td>
+<td>⭐⭐⭐ 读结构好，代码不必硬啃。可当“Skill 拆分”范本</td>
+</tr>
+<tr>
+<td><a href="https://github.com/hhtower/price-comparison">price-comparison</a></td>
+<td>TypeScript / 307</td>
+<td>AI 订阅比价平台</td>
+<td>⭐⭐ 题目可借鉴，涉及代充渠道需谨慎</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ekoouu/kojoomail">kojoomail</a></td>
+<td>Rust / 51</td>
+<td>多邮箱 + AI 的桌面邮件客户端（Tauri 2 + Rust + React）</td>
+<td>⭐ 技术栈重（Rust），初学者不建议直接跟。但“本地桌面 + AI”是个好方向</td>
+</tr>
+<tr>
+<td><a href="https://github.com/xl03-bit/sm120-nvfp4-training">sm120-nvfp4-training</a></td>
+<td>Python / 93</td>
+<td>RTX 50 系显卡上的 NVFP4 全参数训练</td>
+<td>⭐ 偏底层训练优化，需要 GPU 与训练经验，<strong>现阶段跳过</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>给你的取舍</strong>：4 个里只有第 1 个与你“Agent 拆分”的学习目标直接相关。<code>kojoomail</code> 可以在几个月后作为第二个项目看（Tauri + React 对做工具类应用很有用）。</p>
+<hr />
+<h2>三、AI 发展动态</h2>
+<p><strong>A. 厂商在补“评测”与“基建规范”两块地基</strong>
+- BioBasicsBench：100 个任务，测 AI Agent 能否读懂原始实验数据、处理湿实验室日常：https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science
+- National Community Compact 与 Compute Campus Policy Blueprint：面向 AI 基建的“社区契约 + 算力园区政策蓝图”，提到保护本地资源、创造就业：https://openai.com/index/setting-new-standard-responsible-ai-infrastructure</p>
+<p><strong>趋势判断</strong>：
+1. Agent 的竞争点正从“能聊”转向“能不能被测量”。你以后做 RAG/Agent 项目，<strong>先想清楚怎么评估</strong>，会比堆功能更有说服力——面试也吃这套。
+2. 大厂开始主动输出“基建政策建议”。对关注政策方向的你，这是一个观察点：AI 基建的选址、能耗、就业补偿正在成为政策议题。但注意这是<strong>企业倡议</strong>，不是政府政策。</p>
+<p><strong>B. 企业落地案例增多</strong>
+除 Amplitude 外，本期无其他企业案例。样本量小，<strong>不能据此说“Agent 已在企业普及”</strong>。</p>
+<p><strong>C. 时间提示</strong>
+编号 2、A 组中的三条均发布于 11-05 至 11-06，不是今天的新消息，热度来自聚合排序，阅读时注意时效。</p>
+<hr />
+<h2>四、国际形势</h2>
+<p>本期 4 条国际新闻只有两条主线：</p>
+<p><strong>1. 俄乌：谈判推进 + 基础设施战</strong>
+- 欧洲被拉入谈判进程（泽连斯基表态）
+- 美方特使穿梭外交
+- 乌克兰电站被导弹打击，持续受无人机威胁</p>
+<p><strong>2. 加沙：纳赛尔医院遭袭</strong>
+- 以军袭击加沙南部最大医院，卫生部门称 6 名巴勒斯坦人死亡；目击者称导弹击中含外科病房和 ICU 的建筑：https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo</p>
+<p><strong>与科技/就业/政策环境的关系——实事求是版：</strong>
+- 材料中<strong>没有</strong>任何关于科技产业、就业数据、技术出口管制、签证或产业政策的内容。
+- 能谨慎说的只有一点：欧洲能源基础设施持续受损，是一个会影响欧洲能源成本与财政支出的变量；但本期无量化信息，<strong>不构成对你个人就业或行业环境的可操作判断</strong>。
+- 若你的公考/申论视角需要素材：这两条属于“地缘冲突 + 民生设施受损”类事实素材，可用，但<strong>引用时要限定在事实层面</strong>，不要延伸成因果结论。</p>
+<hr />
+<h2>五、中国国家政策</h2>
+<p><strong>本期无 <code>china_policy</code> 来源材料。</strong></p>
+<p>按你的要求，我不会用 GitHub 或 OpenAI 的新闻来凑中国的政策结论。需要说明：
+- <code>ai-startup-skills</code> 里有一环叫“政策”，但那只是<strong>该项目的流程设计</strong>，不是中国政策内容；
+- OpenAI 的 Compute Campus Policy Blueprint 是<strong>美国企业的政策倡议</strong>，与中国政策无关。</p>
+<p>如果你需要跟踪中国的科技政策/公考相关政策，本期简报无法覆盖，建议下一期补充该来源。</p>
+<hr />
+<h2>六、给你的个人建议（具体可执行）</h2>
+<p><strong>本周（低门槛，2–3 小时）</strong>
+1. 打开 <code>ai-startup-skills</code>，<strong>只看 README 和目录结构</strong>，不看实现。用一句话写下“它为什么把一件事拆成 7 个 Skill”，答案控制在 3 行内。这是理解 Agent 设计最快的路径。
+2. 从 7 步里挑 1 步（推荐“验证”或“竞品调研”），自己写一个最小 Skill：输入一个产品想法，输出 5 条验证问题。不用框架，一个 Python 脚本 + 一个 prompt 文件就够。</p>
+<p><strong>本月（项目方向）</strong>
+3. 做一个<strong>带评测的小 RAG 项目</strong>，比做“更大的 RAG”更值钱：10–20 篇文档 + 10 个问题 + 一张“答对/答错”表。仿照 BioBasicsBench 的思路（固定任务集 + 打分），你有评测表，转 AI 后端时的说服力会明显不同。
+4. 暂不碰 <code>sm120-nvfp4-training</code>，需要训练经验和 GPU 环境，投入产出比对你不划算。
+5. <code>price-comparison</code> 只当“题目灵感”：你可以做一个更窄的版本（比如只比某个品类），把它当 TypeScript/前后端练手，<strong>但不要涉及代充渠道</strong>。</p>
+<p><strong>信息习惯</strong>
+6. 遇到“AI 能自动做 X”的厂商公告（如 GPT-6 Cyber），先找“有没有第三方评测”。本期材料里没有，就标为“待验证”。
+7. 国际新闻只做事实记录，不写因果推断。你的申论/公考素材库可以按“事件—各方表态—待确认信息”三栏记，避免把推测当结论。</p>
+<p><strong>明确不需要做的事</strong>
+- 不需要今天就去学 Rust（<code>kojoomail</code> 那条不用焦虑）；
+- 不需要因为没看到中国政策新闻就去找替代材料硬凑——本期就是缺，等补来源。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>huaxialucaicaizi/ai-startup-skills</strong>（GitHub，评分 4.51）：Python 项目，Stars 924，适合评估是否能拆成练手项目。</li>
+<li><strong>hhtower/price-comparison</strong>（GitHub，评分 4.37）：TypeScript 项目，Stars 307，适合评估是否能拆成练手项目。</li>
+<li><strong>How Amplitude ships product improvements in 1–2 days with OpenAI</strong>（openai.com，评分 4.24）：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
+<li><strong>ekoouu/kojoomail</strong>（GitHub，评分 4.08）：Rust 项目，Stars 51，适合评估是否能拆成练手项目。</li>
+<li><strong>GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</strong>（openai.com，评分 4.0）：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>huaxialucaicaizi/ai-startup-skills</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/huaxialucaicaizi/ai-startup-skills</li>
+<li>评分：4.51</li>
+<li>简介：创业公司做 AI 产品的 7 步 Agent Skill 合集：验证 → BP → 政策 → 路演 → 获客 → 定价 → 注册。 Stars: 924; Forks: 65; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 924，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>hhtower/price-comparison</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/hhtower/price-comparison</li>
+<li>评分：4.37</li>
+<li>简介：AI 订阅与卡网比价平台，说出需求，让 AI 帮你选。聚合 ChatGPT / Codex、Claude、Gemini 等代充或账号报价，对比价格走势、充值渠道与质保。AI-powered shopping and price comparison for subscriptions and accounts, with cross-shop offers, price history and purchase details. Stars: 307; Forks: 9; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 307，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>ekoouu/kojoomail</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/ekoouu/kojoomail</li>
+<li>评分：4.08</li>
+<li>简介：所有邮箱，一个收件箱。多邮箱 + AI 的桌面邮件客户端（Windows / macOS）· All your mailboxes in one inbox, with AI. Tauri 2 + Rust + React. Stars: 51; Forks: 7; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 51，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>xl03-bit/sm120-nvfp4-training</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/xl03-bit/sm120-nvfp4-training</li>
+<li>评分：3.96</li>
+<li>简介：Full NVFP4 training for GeForce RTX 50-series and RTX PRO 6000 Blackwell GPUs (SM120). Built on Infatoshi/nvfp4-sm120, with software stochastic rounding, random Hadamard transforms and six profiles for speed and memory. On one RTX 5060 Ti 16GB, validation loss fell over 2,048 full-parameter FineWeb updates of a 4.06B model. Stars: 93; Forks: 12; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 93，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>How Amplitude ships product improvements in 1–2 days with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/amplitude</li>
+<li>评分：4.24</li>
+<li>简介：Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.</li>
+<li>为什么值得关注：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/introducing-gpt-6-cyber</li>
+<li>评分：4.0</li>
+<li>简介：Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, trained to stay within authorized scope.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Measuring how AI agents handle everyday wet-lab science</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science</li>
+<li>评分：3.8</li>
+<li>简介：OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.</li>
+<li>为什么值得关注：命中关键词 AI Agent、OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Setting a new standard for responsible AI infrastructure</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/setting-new-standard-responsible-ai-infrastructure</li>
+<li>评分：3.66</li>
+<li>简介：OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The Ukrainian president says it makes sense for European leaders to be involved as Ukraine hopes to eventually join the EU.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Israeli strike on Gaza hospital kills six Palestinians, health ministry says</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：Witnesses say a missile hit a building containing the surgical wards and intensive care units at Nasser hospital, the largest in southern Gaza.</li>
+<li>为什么值得关注：命中国际关键词 Gaza、Israel，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>'We've got to run': Inside ruined Ukraine power plant under constant drone threat</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/videos/cm93rp3gxn6qo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：Dan Johnson visits one of the country's largest power stations, barely left standing after a ballistic missile strike by Russia.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>US envoys shuttle between Putin and Zelenskyy</h3>
+<ul>
+<li>来源：www.aljazeera.com</li>
+<li>链接：https://www.aljazeera.com/video/newsfeed/2026/11/13/aje-onl-nf_us-envoys-shuttle-between-putin-and-zelenskyy-121126?traffic_source=rss</li>
+<li>评分：3.64</li>
+<li>简介：US envoys Witkoff and Kushner have shuttled between Dublin and Moscow in efforts to broker a Russia-Ukraine peace deal.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<ul>
+<li>暂无高分内容。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：huaxialucaicaizi/ai-startup-skills。</li>
+<li>重点阅读：Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/huaxialucaicaizi/ai-startup-skills">huaxialucaicaizi/ai-startup-skills</a> - GitHub</li>
+<li><a href="https://github.com/hhtower/price-comparison">hhtower/price-comparison</a> - GitHub</li>
+<li><a href="https://openai.com/business/customer-stories/amplitude">How Amplitude ships product improvements in 1–2 days with OpenAI</a> - openai.com</li>
+<li><a href="https://github.com/ekoouu/kojoomail">ekoouu/kojoomail</a> - GitHub</li>
+<li><a href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents</a> - openai.com</li>
+<li><a href="https://github.com/xl03-bit/sm120-nvfp4-training">xl03-bit/sm120-nvfp4-training</a> - GitHub</li>
+<li><a href="https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science">Measuring how AI agents handle everyday wet-lab science</a> - openai.com</li>
+<li><a href="https://openai.com/index/setting-new-standard-responsible-ai-infrastructure">Setting a new standard for responsible AI infrastructure</a> - openai.com</li>
+<li><a href="https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo?at_medium=RSS&amp;at_campaign=rss">Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&amp;at_campaign=rss">Israeli strike on Gaza hospital kills six Palestinians, health ministry says</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/videos/cm93rp3gxn6qo?at_medium=RSS&amp;at_campaign=rss">'We've got to run': Inside ruined Ukraine power plant under constant drone threat</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.aljazeera.com/video/newsfeed/2026/11/13/aje-onl-nf_us-envoys-shuttle-between-putin-and-zelenskyy-121126?traffic_source=rss">US envoys shuttle between Putin and Zelenskyy</a> - www.aljazeera.com</li>
+</ul></main></body></html>
