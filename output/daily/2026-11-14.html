@@ -1,0 +1,271 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-14</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-14</h1>
+<blockquote>
+<p>说明：本期材料里，<code>china_policy</code> 只有两个官网列表页条目（且编码乱码、无具体政策内容），<code>world_news</code> 多为只有标题或时间戳、无正文的条目。因此本期<strong>国际形势和中国政策部分信息不足，不做推断</strong>，也不拿 GitHub/AI 新闻去凑结论。</p>
+</blockquote>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. OpenAI 客户案例：用 Agent 接管"遗留系统"的重复操作</h3>
+<ul>
+<li>来源：<a href="https://openai.com/business/customer-stories/shield">openai.com · Shield</a></li>
+<li>内容：Shield 用 OpenAI 的 Forge agents 在老旧门户系统里代为操作，让 IT 技术人员把精力放在需要判断的问题上。</li>
+<li>为什么重要：这是 Agent 落地里最"土"但最容易产生价值的方向——<strong>不是做聊天，而是替人点系统</strong>。遗留系统、无 API 的网页、内部后台，这类场景在企业里极多。</li>
+<li>对我有什么用：如果你走"后端转 AI"，这类"Agent + 浏览器/表单自动化"是最容易在现有公司内部找到真实需求的切入方向，门槛比训练模型低得多。</li>
+</ul>
+<h3>2. Amplitude 用 Agent 把产品迭代压到 1–2 天</h3>
+<ul>
+<li>来源：<a href="https://openai.com/business/customer-stories/amplitude">openai.com · Amplitude</a></li>
+<li>内容：基于 OpenAI 模型的产品 agent "Wave" 负责判断该做什么，再用编码 agent 帮团队落地改动，并度量效果。</li>
+<li>为什么重要：这条把"发现问题 → 写代码 → 验证效果"串成一个 agent 闭环，说明企业采购的重点正在从"模型能力"转向"流程闭环"。</li>
+<li>对我有什么用：这正好对应你想做的 RAG/Agent 项目——<strong>做一个"能闭环的小系统"比做一个"能聊天的 demo"更有说服力</strong>。</li>
+</ul>
+<h3>3. 1Helm：部署在自己 Cloudflare 账号里的个人 AI 工作台</h3>
+<ul>
+<li>来源：<a href="https://github.com/gitcommit90/1Helm">github.com/gitcommit90/1Helm</a>（62 stars，JavaScript）</li>
+<li>内容：持久记忆、channel computers、可自选 AI 提供商，跑在自己的 Cloudflare 账号下。</li>
+<li>为什么重要：它代表一个明确趋势——<strong>个人 AI 助手的"数据主权"和"记忆持久化"</strong>，而不是全托管在别人服务器上。</li>
+<li>对我有什么用：架构值得读（记忆怎么存、provider 怎么抽象、Cloudflare 上怎么部署），但要动手改需要 JS + Cloudflare Workers 基础，初学者先读 README 和目录结构，别一上来就 clone 改代码。</li>
+</ul>
+<h3>4. larchanka/skills：把开发和自动化拆成一个个独立 skill</h3>
+<ul>
+<li>来源：<a href="https://github.com/larchanka/skills">github.com/larchanka/skills</a>（57 stars，Python）</li>
+<li>内容：每个 skill 是自包含的小项目，有自己的目的、实现和文档。</li>
+<li>为什么重要：这是"skills 化封装"思路的典型形态，和当前 Agent 生态里"给 agent 装能力包"的做法同源。</li>
+<li>对我有什么用：<strong>这个仓库对你学习价值最高</strong>——因为每个 skill 都小而完整，适合当"最小可运行项目"来读。但仓库很新、star 少，文档质量没法从材料判断，先挑一个最小的 skill 通读，别整仓啃。</li>
+</ul>
+<h3>5. OpenAI 投入 200 万美元研究 AI 与儿童安全</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/children-first-declaration">openai.com · children-first-declaration</a></li>
+<li>内容：资助 AI 对青少年风险与机会的测量工具研究。</li>
+<li>为什么重要：这是"AI 治理从口号走向可测量指标"的一步，风险度量工具往往后续会变成合规要求。</li>
+<li>对我有什么用：短期对你没有直接技术收益，但如果以后做面向公众的产品，这类"风险测量 + 合规"是绕不开的。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目（3 个）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言 / 热度</th>
+<th>是什么</th>
+<th>是否适合你</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/larchanka/skills">larchanka/skills</a></td>
+<td>Python，57★ / 8 fork</td>
+<td>独立的开发与自动化 skill 合集，每个自包含</td>
+<td>✅ <strong>最推荐</strong>。小而完整，适合初学者按单个 skill 精读，练习"读懂一个小项目"</td>
+</tr>
+<tr>
+<td><a href="https://github.com/gitcommit90/1Helm">gitcommit90/1Helm</a></td>
+<td>JavaScript，62★ / 0 fork</td>
+<td>自托管在 Cloudflare 的个人 AI 工作台，带持久记忆、多 AI provider</td>
+<td>⚠️ 中等。架构值得学，但需要 JS + Cloudflare 基础，先读不先改</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Eljot19/runic">Eljot19/runic</a></td>
+<td>HTML，58★ / 0 fork</td>
+<td>macOS 菜单栏的 AI 用量与 Token 成本追踪小工具</td>
+<td>⚠️ 只在你用 macOS 且关心 API 成本时才有用；否则跳过</td>
+</tr>
+</tbody>
+</table>
+<p>一句判断：这三个都是<strong>小星数、新仓库</strong>，都不是"必学项目"，价值在于<strong>思路参考</strong>，不要当成学习主线。</p>
+<hr />
+<h2>三、AI 发展动态（趋势判断）</h2>
+<p>本期三条 AI 新闻全部来自 OpenAI，信息面窄，只能做有限判断：</p>
+<ol>
+<li><strong>Agent 正在从"演示"转向"接管具体岗位的脏活"</strong>：Shield 的 IT 门户操作、Amplitude 的产品迭代闭环，都是把 agent 塞进已有业务流程，而不是新建一个聊天入口。</li>
+<li><strong>企业关心的指标变了</strong>：从"模型多强"变成"交付周期缩短多少""技术人员省下多少时间"。</li>
+<li><strong>治理侧开始投钱做度量</strong>：儿童安全这条说明，风险测量工具化是下一步。</li>
+</ol>
+<p>对你的含义：<strong>后端转 AI 的最短路径是"把 Agent 接到你熟悉的业务系统上"</strong>，而不是从模型原理学起。你已有的后端经验（接口、数据库、部署）在这条路径上是加分项。</p>
+<hr />
+<h2>四、国际形势</h2>
+<p>⚠️ 本期 <code>world_news</code> 材料质量很差：4 条里 3 条摘要只有时间戳，没有正文；无法核实细节。<strong>以下只陈述标题层面信息，不做影响推断。</strong></p>
+<ul>
+<li><a href="https://pakobserver.net/us-midterm-elections-their-geopolitical-significance">美国中期选举及其地缘政治意义</a>（pakobserver.net）：仅有标题，材料中<strong>没有选举结果、没有政策分析</strong>。无法判断对科技政策或就业的影响。</li>
+<li><a href="https://www.chinatimes.com/realtimenews/20261112003282-260410">以色列空袭加沙，6 人死亡</a>（chinatimes.com）：标题层面的事件报道，无后续分析。</li>
+<li><a href="https://www.interfax.ru/business/1128495">莫斯科交易所指数开盘上涨 0.1%</a>（interfax.ru）：单日开盘行情，属于噪音级信息，参考价值低。</li>
+<li><a href="https://www.sigmalive.com/news/international/1337252/se-sinedria-toy-sa-i-katastasi-ston-kolpo-kai-i-asfaleia-tis-nausiploias">联合国安理会就海湾局势与航行安全开会</a>（sigmalive.com）：涉及能源运输通道安全，理论上与油价、通胀、全球供应链相关，但材料无具体内容。</li>
+</ul>
+<p><strong>结论</strong>：本期<strong>没有可用于判断"科技、就业、政策环境"的国际信息</strong>。想跟踪美国中期选举对科技政策的影响，需要另找有正文的来源，别用这份材料的标题下结论。</p>
+<hr />
+<h2>五、中国国家政策</h2>
+<p>⚠️ 本期 <code>china_policy</code> 只有两条来源质量很低的条目：</p>
+<ul>
+<li><a href="https://www.gov.cn/">中国政府网首页</a>——列表页，非具体政策</li>
+<li><a href="http://www.spp.gov.cn/">最高人民检察院</a>——站点首页，非具体政策</li>
+</ul>
+<p>两条标题均为乱码，时间为"未知"，<strong>没有任何可读的政策内容</strong>。所以本期<strong>无法给出政策解读</strong>。如果你在做公考准备，建议直接去 gov.cn 的"国务院政策文件库"按发布时间检索，而不是依赖这类抓取条目。</p>
+<hr />
+<h2>六、给你的个人建议（具体可执行）</h2>
+<p><strong>本周做（2–3 小时）</strong>
+1. 打开 <a href="https://github.com/larchanka/skills">larchanka/skills</a>，只挑<strong>一个最小的 skill</strong>，把它跑起来，然后用自己的话写 200 字说明"它输入什么、输出什么、边界在哪"。这是练"读项目"的最低成本方式。
+2. 读 <a href="https://github.com/gitcommit90/1Helm">1Helm</a> 的 README，<strong>只回答一个问题</strong>：它的"持久记忆"存在哪、怎么取。不写代码，只画一张草图。</p>
+<p><strong>本月做（一个能拿出手的小项目）</strong>
+3. 选一个你公司/自己常用的、<strong>没有 API 的老系统或网页表单</strong>，用 Python + 浏览器自动化做一个"半自动 Agent"：能识别页面状态、填表、失败时转人工。目标不是全自动，而是<strong>能演示"省了多少分钟"</strong>。这正是 Shield 那条新闻的模式，也是后端转 AI 最容易讲清楚的项目。
+4. 给这个项目写一页 README，包含：问题、方案、失败案例、省时数据。<strong>失败案例比成功案例更能证明你懂边界。</strong></p>
+<p><strong>信息源调整</strong>
+5. 国际形势和中国政策这两块，当前材料源不可用。建议替换为：gov.cn 政策文件库（政策）、有正文的通讯社稿件（国际）。<strong>不要为了"简报完整"而用 AI/GitHub 新闻去推政策结论</strong>——那是最容易误导自己的做法。</p>
+<p><strong>不建议做</strong>
+- 不要现在去啃 1Helm 或 runic 的源码：一个是 JS + Cloudflare 生态，一个是 macOS 特定场景，投入产出比对你的当前阶段不划算。
+- 不要因为看到"Agent 很强"就去学模型训练，你的优势在后端工程和业务理解。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>larchanka/skills</strong>（GitHub，评分 4.16）：Python 项目，Stars 57，适合评估是否能拆成练手项目。</li>
+<li><strong>gitcommit90/1Helm</strong>（GitHub，评分 4.16）：JavaScript 项目，Stars 62，适合评估是否能拆成练手项目。</li>
+<li><strong>Eljot19/runic</strong>（GitHub，评分 4.0）：HTML 项目，Stars 58，适合评估是否能拆成练手项目。</li>
+<li><strong>US midterm elections &amp; their geopolitical significance</strong>（pakobserver.net，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>《 國際政治 》 來添亂 ！ 以色列開轟加薩 6人亡 - 財經</strong>（chinatimes.com，评分 4.0）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>larchanka/skills</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/larchanka/skills</li>
+<li>评分：4.16</li>
+<li>简介：This repository is a collection of independent skills and tools for software development and automation. Each skill is a self-contained project with its own purpose, implementation, and documentation. Stars: 57; Forks: 8; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 57，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>gitcommit90/1Helm</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/gitcommit90/1Helm</li>
+<li>评分：4.16</li>
+<li>简介：A personal AI workspace on your own Cloudflare account, with persistent memory, channel computers, and your choice of AI provider. Stars: 62; Forks: 0; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 62，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Eljot19/runic</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Eljot19/runic</li>
+<li>评分：4.0</li>
+<li>简介：Runic macOS Menu Bar App for AI Usage Cost and Token Tracking Stars: 58; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 58，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Shield helps technicians hand off legacy portal work with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/shield</li>
+<li>评分：3.72</li>
+<li>简介：Shield uses OpenAI to help IT technicians hand off work in legacy portals. Its Forge agents navigate systems so technicians can focus on issues needing their judgment.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How Amplitude ships product improvements in 1–2 days with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/amplitude</li>
+<li>评分：3.44</li>
+<li>简介：Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.</li>
+<li>为什么值得关注：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Supporting research on AI and children’s safety</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/children-first-declaration</li>
+<li>评分：3.26</li>
+<li>简介：OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>US midterm elections &amp; their geopolitical significance</h3>
+<ul>
+<li>来源：pakobserver.net</li>
+<li>链接：https://pakobserver.net/us-midterm-elections-their-geopolitical-significance</li>
+<li>评分：4.0</li>
+<li>简介：20261113T004500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>《 國際政治 》 來添亂 ！ 以色列開轟加薩 6人亡 - 財經</h3>
+<ul>
+<li>来源：chinatimes.com</li>
+<li>链接：https://www.chinatimes.com/realtimenews/20261112003282-260410</li>
+<li>评分：4.0</li>
+<li>简介：20261112T070000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Индексы МосБиржи и РТС начали основную сессию ростом на 0 , 1 %</h3>
+<ul>
+<li>来源：interfax.ru</li>
+<li>链接：https://www.interfax.ru/business/1128495</li>
+<li>评分：4.0</li>
+<li>简介：20261112T070000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Σε συνεδρία του ΣΑ η κατάσταση στον Κόλπο και η ασφάλεια της ναυσιπλοΐας</h3>
+<ul>
+<li>来源：sigmalive.com</li>
+<li>链接：https://www.sigmalive.com/news/international/1337252/se-sinedria-toy-sa-i-katastasi-ston-kolpo-kai-i-asfaleia-tis-nausiploias</li>
+<li>评分：4.0</li>
+<li>简介：20261112T070000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>é¦é¡µ</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>æé«äººæ°æ£å¯é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.spp.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：larchanka/skills。</li>
+<li>重点阅读：US midterm elections &amp; their geopolitical significance。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/larchanka/skills">larchanka/skills</a> - GitHub</li>
+<li><a href="https://github.com/gitcommit90/1Helm">gitcommit90/1Helm</a> - GitHub</li>
+<li><a href="https://github.com/Eljot19/runic">Eljot19/runic</a> - GitHub</li>
+<li><a href="https://pakobserver.net/us-midterm-elections-their-geopolitical-significance">US midterm elections &amp; their geopolitical significance</a> - pakobserver.net</li>
+<li><a href="https://www.chinatimes.com/realtimenews/20261112003282-260410">《 國際政治 》 來添亂 ！ 以色列開轟加薩 6人亡 - 財經</a> - chinatimes.com</li>
+<li><a href="https://www.interfax.ru/business/1128495">Индексы МосБиржи и РТС начали основную сессию ростом на 0 , 1 %</a> - interfax.ru</li>
+<li><a href="https://www.sigmalive.com/news/international/1337252/se-sinedria-toy-sa-i-katastasi-ston-kolpo-kai-i-asfaleia-tis-nausiploias">Σε συνεδρία του ΣΑ η κατάσταση στον Κόλπο και η ασφάλεια της ναυσιπλοΐας</a> - sigmalive.com</li>
+<li><a href="https://openai.com/business/customer-stories/shield">Shield helps technicians hand off legacy portal work with OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/business/customer-stories/amplitude">How Amplitude ships product improvements in 1–2 days with OpenAI</a> - openai.com</li>
+<li><a href="https://openai.com/index/children-first-declaration">Supporting research on AI and children’s safety</a> - openai.com</li>
+<li><a href="https://www.gov.cn/">é¦é¡µ</a> - 中国政府网</li>
+<li><a href="http://www.spp.gov.cn/">æé«äººæ°æ£å¯é¢</a> - 中国政府网</li>
+</ul></main></body></html>
