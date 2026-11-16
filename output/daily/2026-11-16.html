@@ -26,254 +26,235 @@ blockquote {
 code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
 </style></head><body><main class="container"><h1>每日个人简报 - 2026-11-16</h1>
 <h2>AI 生成综述</h2>
-<h1>每日个人简报 · 2026-11-16</h1>
+<h1>每日个人简报｜2026-11-16</h1>
 <blockquote>
-<p><strong>本期来源结构说明（先看这个）</strong>
-- <code>github</code>：4 条，但<strong>实际是同一个项目的 4 个同名副本</strong>（见下）
-- <code>ai_news</code>：3 条，全部来自 openai.com 官方案例
-- <code>world_news</code>：4 条，以财经市场/财报为主，<strong>没有地缘政治类来源</strong>
-- <code>china_policy</code>：1 条，仅中国政府网“全国人大”列表页条目，标题乱码，<strong>无实质政策内容</strong></p>
-<p>因此本期<strong>不对中国政策做任何解读</strong>，也不拿 AI/GitHub 新闻去推演政策结论。</p>
+<p>说明：本期 <code>world_news</code> 几乎全部围绕 Nvidia 丑闻；<code>china_policy</code> 仅有官网列表页且标题乱码，没有可引用的实质政策内容。以下对材料未提供细节的地方会明确标注，不补写事实。</p>
 </blockquote>
 <hr />
 <h2>一、今日最值得关注的 5 件事</h2>
-<h3>1. 4 个同名 GitHub 仓库在 30 秒内集中出现——这本身比项目内容更值得看</h3>
-<p>材料 1–4 全部叫 <code>Gemini-Config-Checker-</code>，摘要一字不差，Stars 都是 475、Forks 都是 0，发布时间集中在 18:39:38–18:40:26（不到 1 分钟），语言却在 Makefile / Go 之间跳。</p>
-<p><strong>为什么重要</strong>：正常项目不会这样。同一摘要、同一 star 数、零 fork、几十秒内由不同账号（YellowLaborerMarket、WyrmClimberManacle、wisemeadowlarkspike、WireProvostPucker，都是随机词拼接式用户名）发布，典型特征是<strong>批量注册账号刷榜或做分发农场</strong>。</p>
-<p><strong>对你有什么用</strong>：这是练“信息鉴别”的免费样本。以后看到 GitHub 趋势榜上的高星项目，先看三件事——star/fork 比例是否异常、贡献者是否真人、发布时间是否密集。<strong>这不属于“热门项目”，是噪音。</strong></p>
-<p>来源：https://github.com/YellowLaborerMarket/Gemini-Config-Checker-</p>
-<hr />
-<h3>2. 一个工厂用 API 把“找图纸”从 1 小时压到 4.5 分钟——这是最贴近你方向的一条</h3>
-<p>Kuken Industries 用 OpenAI API 检索 70 年历史冷却塔图纸，工程师维修时找图时间从近 1 小时降到 4.5 分钟。</p>
-<p><strong>趋势判断</strong>：这不是“AI 很厉害”的通稿，而是<strong>企业 RAG 的标准形态</strong>——私有文档库 + 检索 + 定位到具体页。它证明 RAG 的真实价值不在“聊天”，而在<strong>把非结构化历史资料变成可检索资产</strong>。工业、制造、法务、档案这类“资料堆了几十年没人整理”的场景，是目前落地最扎实的。</p>
-<p><strong>对你有什么用</strong>：这是你目前最该抄的作业模板。你不需要工厂数据，家里或网上找一批 PDF（说明书、标准、论文）就能复刻同样链路。后面“个人建议”第 1 条会展开。</p>
-<p>来源：https://openai.com/index/kuken</p>
-<hr />
-<h3>3. 新加坡航空：客服 + 员工效率双线，CSAT 翻倍</h3>
-<p>新航用 OpenAI 模型和 API 做客服支持、行程发现和员工效率，Kris 聊天机器人 CSAT（客户满意度）翻倍。</p>
-<p><strong>趋势判断</strong>：企业 AI 落地的重心已经从“对外做个聊天机器人”转向<strong>对外客服 + 对内员工工具两条腿</strong>。注意摘要里“employee productivity”和“customer support”并列——内部效率工具往往是真正省钱的那一半。</p>
-<p><strong>注意边界</strong>：材料只说了 CSAT 翻倍，没给基线、样本量、统计口径。这种官方客户案例天然是选择性披露，<strong>可以当方向参考，不要当效果证据引用</strong>。</p>
-<p>来源：https://openai.com/index/singapore-airlines-travel-work</p>
-<hr />
-<h3>4. OpenAI Academy 给照护者办免费线下工作坊（美国 5 城）</h3>
-<p>面向照护者（caregivers）的免费实操 ChatGPT 课程，覆盖美国 5 个城市。</p>
-<p><strong>趋势判断</strong>：AI 素养培训正在<strong>下沉到非技术人群</strong>。“会用 AI”从程序员技能变成通用职业技能，这对“后端转 AI”的人是双刃剑——纯“会调 API”的溢价会下降，<strong>懂业务场景 + 能搭完整链路</strong>的溢价会上升。</p>
-<p>来源：https://openai.com/index/helping-caregivers-use-ai-in-everyday-life</p>
-<hr />
-<h3>5. 下周宏观日历：10 月经济数据、APEC 工商领导人峰会、英伟达财报</h3>
-<p>新浪财经前瞻给出三个节点：10 月经济数据公布、APEC 工商领导人峰会、英伟达最新财报。</p>
-<p><strong>为什么值得记一笔</strong>：英伟达财报是<strong>AI 算力需求最直接的温度计</strong>，会传导到算力价格、云厂商资本开支、以及 AI 岗位的招聘节奏。对关注“后端转 AI”的你来说，它比任何 AI 通稿都更能反映行业是在扩张还是在收缩。</p>
-<p><strong>必须说明的限制</strong>：材料只有一句前瞻标题，<strong>没有具体日期、没有预期数字、没有 APEC 议题</strong>。所以这里只能当“日历提醒”，任何具体判断都缺依据。</p>
-<p>来源：https://finance.sina.com.cn/jjxw/2026-11-15/doc-iniyuyiy9692924.shtml</p>
+<h3>1. Nvidia 丑闻揭开“让中国获得美国芯片”的漏洞</h3>
+<ul>
+<li>来源：kten.com  </li>
+<li>链接：https://www.kten.com/news/business/how-the-nvidia-scandal-lifted-the-curtain-on-a-loophole-that-s-giving-china-access/article_e4b6e215-c378-52ac-a9c3c83dcc324a38.html  </li>
+<li>时间：2026-11-14</li>
+</ul>
+<p><strong>为什么重要：</strong> 标题指向美国芯片出口管制可能存在执行漏洞。材料只给了标题和日期，没有说明漏洞具体是什么、涉及哪些芯片或渠道，因此不能下结论。<br />
+<strong>对你有什么用：</strong> 如果你关注 AI 基础设施和算力成本，这类管制执行问题会影响高端芯片供应预期，也会影响云算力价格和 AI 公司成本。先把它当作“需要继续跟踪的变量”，不要当成已证实结论。</p>
+<h3>2. 美国国内出现政治问责压力：Blumenthal 呼吁 Lutnick 辞职</h3>
+<ul>
+<li>来源：mk.ru  </li>
+<li>链接：https://www.mk.ru/politics/2026/11/15/skandal-s-nvidia-blyumental-prizval-lyutnika-uyti-v-otstavku.html  </li>
+<li>时间：2026-11-15</li>
+</ul>
+<p><strong>为什么重要：</strong> 标题显示，Nvidia 丑闻已从企业层面扩展到政治问责。材料没有提供呼吁的理由、Lutnick 的回应或后续程序。<br />
+<strong>对你有什么用：</strong> 出口管制不只是技术问题，也是政治和执行问题。若问责升级，相关审批、合规和供应链审查可能更严，影响芯片相关公司的招聘和业务节奏。不要据此预测“某人一定下台”。</p>
+<h3>3. 丑闻余波可能压低 AI 热度</h3>
+<ul>
+<li>来源：bostonglobe.com  </li>
+<li>链接：https://www.bostonglobe.com/2026/11/13/business/nvidia-fallout-jensen-huang  </li>
+<li>时间：2026-11-13</li>
+</ul>
+<p><strong>为什么重要：</strong> 标题说的是“可能 dampen（抑制）围绕 AI 的 exuberance（狂热）”，是可能性判断，不是已经发生的市场结论。<br />
+<strong>对你有什么用：</strong> 如果 AI 投资情绪降温，初级岗位和扩张型招聘可能更谨慎。对转行者来说，作品集和可验证的项目交付会比“追热点”更重要。</p>
+<h3>4. OpenAI 上线科学博客</h3>
+<ul>
+<li>来源：openai.com  </li>
+<li>链接：https://openai.com/index/our-new-blog-for-science  </li>
+<li>时间：2026-11-15</li>
+</ul>
+<p><strong>为什么重要：</strong> 摘要说该博客分享研究发现、实用方法，以及研究者使用 AI 推进科学发现的第一手经验。<br />
+<strong>对你有什么用：</strong> 这是观察“AI 如何进入真实研究工作流”的窗口，比单纯看模型发布更有参考价值。你可以关注其中有没有可复用的方法，比如文献处理、实验分析、数据标注。</p>
+<h3>5. Amplitude 用 OpenAI 在 1–2 天内交付产品改进</h3>
+<ul>
+<li>来源：openai.com  </li>
+<li>链接：https://openai.com/business/customer-stories/amplitude  </li>
+<li>时间：2026-11-12</li>
+</ul>
+<p><strong>为什么重要：</strong> 摘要显示，Amplitude 的产品 agent “Wave” 主要基于 OpenAI 模型，用来识别“该做什么”、帮助团队用 coding agents 交付变更，并衡量影响。这是一个“分析—开发—度量”闭环案例。<br />
+<strong>对你有什么用：</strong> 后端转 AI 不一定要做通用聊天机器人。把 LLM 接入已有业务数据、让 agent 辅助产出变更、再用指标验证效果，更接近企业真实需求。</p>
 <hr />
 <h2>二、GitHub 热门项目</h2>
-<table>
-<thead>
-<tr>
-<th>项目</th>
-<th>语言</th>
-<th>Star/Fork</th>
-<th>是否适合你</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Gemini-Config-Checker-（4 个同名副本）</td>
-<td>Makefile / Go</td>
-<td>475 / 0</td>
-<td><strong>不建议</strong></td>
-</tr>
-</tbody>
-</table>
-<p><strong>它是什么</strong>：一个“链式区域扫描器”，用来寻找能让你进入 Google AI Studio 和 Gemini 的代理配置，带登录态浏览器检测、anti-DPI、跨 Windows/macOS/Linux/Android。</p>
-<p><strong>为什么不适合你学习</strong>：</p>
-<ol>
-<li><strong>不是学习项目，是工具</strong>。核心逻辑是代理探测和连通性检测，对初学者几乎没有可迁移的编程知识。</li>
-<li><strong>来源可疑</strong>。4 个账号批量发布同一内容、零 fork，无法判断代码是否被植入额外脚本。这类“代理/配置”工具是恶意代码的高发载体。</li>
-<li><strong>合规与账号风险</strong>。规避区域限制、anti-DPI 这类用途，可能违反服务条款，也可能踩到本地网络管理规定。</li>
-<li><strong>对你目标（Agent / RAG / 后端转 AI）零加分</strong>。简历上放这个不如放一个能跑通的小 RAG。</li>
-</ol>
-<p><strong>唯一可取的用法</strong>：把它当<strong>反面样本</strong>，花 10 分钟看它的 README 怎么写、怎么组织跨平台说明——但<strong>不要 clone 后在自己主力机上运行</strong>，尤其不要在你登录了 Google 账号的浏览器环境里跑。</p>
+<h3>1. Orchis-ai-LLC/Konnect-EDA</h3>
+<ul>
+<li>链接：https://github.com/Orchis-ai-LLC/Konnect-EDA</li>
+<li>数据：170 stars / 11 forks；语言未知；商业闭源，beta 免费</li>
+<li>内容：面向 KiCAD 10 的 AI 辅助 PCB 设计，仓库主要是下载和 issue tracker。</li>
+</ul>
+<p><strong>是否适合你学习：不适合作为读代码的项目。</strong> 它是闭源商业产品，仓库不是开源代码库。除非你对 PCB/EDA 感兴趣，否则直接跳过。它的价值在于观察“AI 辅助垂直工程软件”这一方向，而不是学编程。</p>
+<h3>2. thesysdev/opendashboards</h3>
+<ul>
+<li>链接：https://github.com/thesysdev/opendashboards</li>
+<li>数据：210 stars / 21 forks；TypeScript</li>
+<li>内容：开源 Claude Dashboards。材料只有这一句描述，具体功能不明确。</li>
+</ul>
+<p><strong>是否适合你学习：有 TypeScript/前端基础后再看。</strong> 初学者不要一上来通读代码。可以先看 README、截图和 issue，判断它解决什么问题。如果你只是想做“能看的界面”，用更小的项目练手更合适。</p>
+<h3>3. trustabl/agent-dashboard</h3>
+<ul>
+<li>链接：https://github.com/trustabl/agent-dashboard</li>
+<li>数据：62 stars / 51 forks；TypeScript</li>
+<li>内容：运行可靠性扫描、skills 和网络访问探测的 agent dashboard。</li>
+</ul>
+<p><strong>是否适合你学习：方向相关，但门槛偏高。</strong> 它和 AI Agent 的运维、评测、可观测性有关，属于“agent 工程化”而不是“agent 入门”。fork 数接近 star 数，说明可能有人拿来改造，但材料不足以判断代码质量。建议先看 README，确认能否本地跑起来。</p>
+<h3>4. precis1onz/tokenation</h3>
+<ul>
+<li>链接：https://github.com/precis1onz/tokenation</li>
+<li>数据：53 stars / 0 forks；语言未知</li>
+<li>内容：日更免费 LLM API 清单，按 AA 指数筛选，分“常态免费”和“限时羊毛”，条目声称逐条对官方页核实。</li>
+</ul>
+<p><strong>是否适合你学习：本期最适合你当前阶段的工具型项目。</strong> 你可以用它低成本试 API、做小 demo。但要注意：免费 API 的稳定性、隐私条款、速率限制都可能变化；不要发送敏感数据，也不要把“免费”当成长期方案。</p>
 <hr />
-<h2>三、AI 发展动态（趋势归纳）</h2>
-<p>本期 3 条 AI 新闻全部是企业/教育落地案例，可以归纳出两条主线：</p>
-<p><strong>主线 1：从“能对话”到“能查私有资料”</strong>
-Kuken 案例的 4.5 分钟不是模型能力的胜利，是<strong>检索链路</strong>的胜利。企业愿意付钱的不是 chatbot，是“把 70 年纸质/图纸档案变成可搜索的东西”。→ 这直接对应你的 RAG 方向，需求是真实存在的，而且集中在传统行业。</p>
-<p><strong>主线 2：AI 使用能力在向非技术岗扩散</strong>
-照护者工作坊 + 航司员工效率工具，都在把 AI 变成“办公软件”级别的默认技能。→ 意味着<strong>单纯会写 prompt 或会调 API 不再是差异化优势</strong>，差异化在“能把它接进真实业务流程”。</p>
-<p><strong>这份材料的盲区</strong>：3 条全部来自 OpenAI 官方渠道，属于客户成功案例（marketing 内容），<strong>没有第三方测评、没有失败案例、没有竞品对比</strong>。看的时候要意识到这是单向信源。</p>
+<h2>三、AI 发展动态</h2>
+<p>本期 AI 新闻只有两条，但指向两个趋势：</p>
+<ol>
+<li><strong>AI 正在进入科研工作流。</strong> OpenAI 科学博客强调“研究发现、实用方法、研究者第一手经验”，说明厂商在争取科研用户，而不只是普通消费者。  </li>
+<li><strong>Agent 的产品化强调闭环，而不是单点问答。</strong> Amplitude 的案例把“识别要做什么—用 coding agents 交付—衡量影响”串起来。对企业来说，价值在于缩短交付周期；对个人来说，意味着只会调 API 不够，还要懂业务数据、评测和落地。</li>
+</ol>
+<p><strong>趋势影响：</strong> 如果你后端转 AI，优先补“把模型接入现有系统”的能力：数据清洗、检索、评测、日志、权限、成本控制。这些比追新模型名称更耐用。</p>
 <hr />
 <h2>四、国际形势</h2>
-<p><strong>先说清楚：本期没有可用的国际政治/地缘类来源。</strong> <code>world_news</code> 的 4 条分别是：</p>
-<ul>
-<li>新浪财经：下周市场资讯前瞻（10 月经济数据、APEC 工商峰会、英伟达财报）</li>
-<li>mining.com：一条 Press Release 条目，摘要为空（<code>20261113T180000Z</code>），<strong>无可读内容，不做解读</strong></li>
-<li>中财网：昨夜华尔街——指数小幅回调，半导体逆势上涨</li>
-<li>新浪财经：从 AMD 财报切入，用豆包工作拆解 AI 巨头生意局</li>
-</ul>
-<p><strong>能说的（仅限市场层面）</strong>：</p>
+<p>本期国际新闻集中在 Nvidia 丑闻，能确认的主线有三条：</p>
 <ol>
-<li><strong>半导体逆势上涨、指数小幅回调</strong>，说明资金在大盘与算力板块之间分化，市场对 AI 算力的预期仍偏强。但这条只有一句摘要，<strong>没有幅度、没有成交量</strong>，不能由此判断趋势。</li>
-<li><strong>下周三个节点叠加</strong>（经济数据 + APEC 工商峰会 + 英伟达财报），是本周市场波动的主要来源。</li>
-<li><strong>“用豆包拆 AI 巨头生意局”</strong>这条值得留意：国产工具被用来分析美股 AI 巨头，本身反映国产 AI 产品在财经分析场景的使用在变常见。</li>
+<li><strong>出口管制执行问题被曝光。</strong> 标题指向“让中国获得美国芯片”的漏洞，但材料没有细节。  </li>
+<li><strong>政治问责出现。</strong> Blumenthal 呼吁 Lutnick 辞职，说明事件已进入政治层面。  </li>
+<li><strong>市场情绪可能受影响。</strong> Boston Globe 用的是“可能抑制 AI 狂热”，属于风险提示，不是既成事实。</li>
 </ol>
-<p><strong>不能说的</strong>：材料里没有任何关于贸易政策、出口管制、关税、地缘冲突的内容，<strong>因此本节不推导任何“对科技/就业/政策环境的影响”结论</strong>。凡是我在这里加一句“这意味着中美科技竞争加剧”，都是编的。</p>
+<p><strong>与科技、就业、政策环境的关系：</strong><br />
+- 若管制执行收紧，芯片供应链和合规成本会变化，影响 AI 算力供给预期。<br />
+- 若政治问责升级，相关审批和监管可能更谨慎。<br />
+- 若 AI 投资情绪降温，扩张型岗位可能减少，企业更看重能直接交付价值的人。  </p>
+<p>另有一条土耳其媒体文章，标题涉及“古代中国策略”与硅谷，但摘要缺失、语义不清，<strong>不建议据此判断国际形势</strong>。</p>
 <hr />
 <h2>五、中国国家政策</h2>
-<p><strong>本期缺少有效来源，本节不做解读。</strong></p>
-<p>材料第 12 条来自中国政府网，标题显示为乱码 <code>å ¨å ½äººå¤§</code>（编码错误，实际应为“全国人大”），链接是 <code>npc.gov.cn</code> 首页，时间是“未知”，摘要仅注明“中国国家政策官网列表页条目”。</p>
-<p><strong>这是一条抓取失败的记录，不是一条政策新闻。</strong> 没有法律名称、没有发布时间、没有条文内容。</p>
-<p>按你的要求，我不会用 GitHub 项目或 AI 新闻去填补这个空缺，也不会猜测“可能和 AI 监管有关”。</p>
-<p><strong>替代做法</strong>（如果你想自己补）：直接去 <code>www.npc.gov.cn</code> 和 <code>www.gov.cn</code> 看“最新政策”栏目，重点盯<strong>人社部</strong>（就业、职业培训）和<strong>工信部</strong>（AI/算力产业政策）——这两个对你“后端转 AI + 关注公考”的目标最相关。</p>
-<hr />
-<h2>六、对你的个人建议</h2>
-<h3>1. 本周就动手：做一个“最小可用 RAG”，抄 Kuken 的链路而不是抄它的规模</h3>
-<p>这是本期唯一一条“今天就能开工”的建议。目标不是做大，是<strong>跑通完整链路</strong>。</p>
+<p>本期 <code>china_policy</code> 只有两条官网列表页条目：</p>
 <ul>
-<li><strong>数据</strong>：找一个你自己的 50–200 页 PDF 库（产品说明书、技术标准、公开论文都行）</li>
-<li><strong>链路</strong>：切分 → 向量化 → 检索 → 带出处回答（<strong>必须输出页码/原文片段</strong>，这是 Kuken 案例的核心价值）</li>
-<li><strong>技术选型</strong>：先用最笨的（本地 embedding + 简单向量库），别一上来上框架</li>
-<li><strong>验收标准</strong>：问一个只有第 137 页才有的细节，它能在 10 秒内给出答案并标出页码</li>
+<li>最高人民法院：http://www.court.gov.cn/</li>
 </ul>
-<p><strong>为什么这条排第一</strong>：你代码基础不强，但 RAG 是<strong>最容易通过项目学会的后端 AI 方向</strong>——它同时练到文件处理、API 调用、数据结构、简单服务封装。做完这一个，你就有可讲的作品，而不是只有“看过很多 AI 新闻”。</p>
-<h3>2. 不要碰第 1 条那 4 个仓库</h3>
-<p>具体三条：不 clone、不在有登录态的浏览器环境跑、不把 star 数当质量背书。<strong>保护账号和环境比多学一个工具重要得多。</strong> 想学“怎么识别刷榜”，看一眼 star/fork 比例和发布时间就够了，看到即完成学习。</p>
-<h3>3. 把“英伟达财报”当行业温度计，不是当投资信号</h3>
-<p>下周财报出来后，只看一件事：<strong>数据中心的营收和指引方向</strong>。它决定云厂商明年还愿不愿意花钱买算力，进而影响 AI 相关岗位的招聘量。<strong>不据此做任何交易决策</strong>——材料里连预期数字都没有。</p>
-<h3>4. 关于“后端转 AI”：别只学调 API</h3>
-<p>结合本期两条趋势（企业要的是私有资料检索、AI 使用能力在全民化），你的差异点应该落在后端能力上：<strong>怎么把模型接进一个稳定的服务里</strong>——超时、重试、限流、成本控制、结果缓存、日志追踪。这些恰恰是纯 AI 背景的人不熟、而你有后端基础能补的。<strong>这是你的护城河，别丢掉去卷 prompt。</strong></p>
-<h3>5. 公考方向：本期材料零支撑，本周自己补一次</h3>
-<p>本期没有任何政策来源，所以这条只能给方法：花 20 分钟看人社部“就业促进”相关栏目 + 工信部 AI 产业相关表述，把<strong>原文标题和发布日期记下来</strong>。这样下次简报有材料时，你能立刻判断是延续还是新变化。<strong>不要靠 AI 通稿推测政策方向，这是最容易出错的地方。</strong></p>
-<h3>6. 给自己加一条信息卫生规则</h3>
-<p>本期 12 条材料里，<strong>有效信息大约 5 条</strong>（3 条 AI 案例 + 2 条市场），4 条是同一项目的重复，1 条抓取乱码，1 条无摘要。你的时间应该花在那 5 条上。<strong>建议</strong>：以后看到同一摘要重复出现，直接折叠成 1 条，剩下的当噪音处理。</p>
-<hr />
-<p><strong>本期一句话总结</strong>：AI 落地正在往“私有资料检索”和“全员普及”两个方向走，这恰好给了你一个可动手的 RAG 项目；而政策与国际政治这两块，本期材料不足，<strong>不猜，等下次</strong>。</p>
 <h2>一、今日最值得关注的 5 件事</h2>
 <ul>
-<li><strong>YellowLaborerMarket/Gemini-Config-Checker-</strong>（GitHub，评分 4.53）：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
-<li><strong>WyrmClimberManacle/Gemini-Config-Checker-</strong>（GitHub，评分 4.53）：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
-<li><strong>wisemeadowlarkspike/Gemini-Config-Checker-</strong>（GitHub，评分 4.53）：Go 项目，Stars 475，适合评估是否能拆成练手项目。</li>
-<li><strong>WireProvostPucker/Gemini-Config-Checker-</strong>（GitHub，评分 4.53）：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
-<li><strong>下周影响市场重要资讯前瞻 ： 10月经济数据将公布 ， APEC工商领导人峰会将举行 ， 英伟达将发布最新财报</strong>（finance.sina.com.cn，评分 4.48）：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>How the Nvidia scandal lifted the curtain on a loophole that giving China access to US chips | Business</strong>（kten.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Скандал с Nvidia : Блюменталь призвал Лютника уйти в отставку</strong>（mk.ru，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Teknoloji liderini kerten bal tuzağı ! Antik Çinin güzellik stratejisi Silikon Vadisini nasıl vurdu ?</strong>（hurriyet.com.tr，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Fallout from the Nvidia scandal may dampen the exuberance around AI</strong>（bostonglobe.com，评分 4.38）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Orchis-ai-LLC/Konnect-EDA</strong>（GitHub，评分 4.24）：Unknown 项目，Stars 170，适合评估是否能拆成练手项目。</li>
 </ul>
 <h2>二、GitHub 热门项目</h2>
-<h3>YellowLaborerMarket/Gemini-Config-Checker-</h3>
+<h3>Orchis-ai-LLC/Konnect-EDA</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/YellowLaborerMarket/Gemini-Config-Checker-</li>
-<li>评分：4.53</li>
-<li>简介：Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) Stars: 475; Forks: 0; Language: Makefile</li>
-<li>为什么值得关注：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/Orchis-ai-LLC/Konnect-EDA</li>
+<li>评分：4.24</li>
+<li>简介：AI-assisted PCB design for KiCAD 10: downloads and issue tracker. Commercial, closed source, free during the beta. Stars: 170; Forks: 11; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 170，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>WyrmClimberManacle/Gemini-Config-Checker-</h3>
+<h3>thesysdev/opendashboards</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/WyrmClimberManacle/Gemini-Config-Checker-</li>
-<li>评分：4.53</li>
-<li>简介：Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) Stars: 475; Forks: 0; Language: Makefile</li>
-<li>为什么值得关注：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/thesysdev/opendashboards</li>
+<li>评分：4.17</li>
+<li>简介：Open Source Claude Dashboards Stars: 210; Forks: 21; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 210，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>wisemeadowlarkspike/Gemini-Config-Checker-</h3>
+<h3>trustabl/agent-dashboard</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/wisemeadowlarkspike/Gemini-Config-Checker-</li>
-<li>评分：4.53</li>
-<li>简介：Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) Stars: 475; Forks: 0; Language: Go</li>
-<li>为什么值得关注：Go 项目，Stars 475，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/trustabl/agent-dashboard</li>
+<li>评分：4.06</li>
+<li>简介：Agent dashboard runs reliability scans, skills, and network access probes. Stars: 62; Forks: 51; Language: TypeScript</li>
+<li>为什么值得关注：TypeScript 项目，Stars 62，适合评估是否能拆成练手项目。</li>
 </ul>
-<h3>WireProvostPucker/Gemini-Config-Checker-</h3>
+<h3>precis1onz/tokenation</h3>
 <ul>
 <li>来源：GitHub</li>
-<li>链接：https://github.com/WireProvostPucker/Gemini-Config-Checker-</li>
-<li>评分：4.53</li>
-<li>简介：Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) Stars: 475; Forks: 0; Language: Makefile</li>
-<li>为什么值得关注：Makefile 项目，Stars 475，适合评估是否能拆成练手项目。</li>
+<li>链接：https://github.com/precis1onz/tokenation</li>
+<li>评分：3.54</li>
+<li>简介：Daily-updated free LLM API list — top AA-scored picks, free tokens to burn. Evergreen + limited-time lists, every entry verified against official pages. 日更免费 LLM API 羊毛清单｜AA 指数高分精选，token 自由无脑蹬！常态免费+限时羊毛双清单，条目逐条对官方页核实。 Stars: 53; Forks: 0; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 53，适合评估是否能拆成练手项目。</li>
 </ul>
 <h2>三、AI 发展动态</h2>
-<h3>Singapore Airlines elevates travel &amp; work with OpenAI technology</h3>
+<h3>Our new blog for science</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/singapore-airlines-travel-work</li>
-<li>评分：3.4</li>
-<li>简介：Discover how Singapore Airlines uses OpenAI models and API to enhance customer support, travel discovery, and employee productivity, doubling CSAT for its Kris chatbot.</li>
+<li>链接：https://openai.com/index/our-new-blog-for-science</li>
+<li>评分：3.36</li>
+<li>简介：The OpenAI science blog shares new findings, practical methods, and firsthand accounts from researchers using AI to advance scientific discovery.</li>
 <li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
 </ul>
-<h3>Helping caregivers use AI in everyday life</h3>
+<h3>How Amplitude ships product improvements in 1–2 days with OpenAI</h3>
 <ul>
 <li>来源：openai.com</li>
-<li>链接：https://openai.com/index/helping-caregivers-use-ai-in-everyday-life</li>
-<li>评分：3.16</li>
-<li>简介：OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.</li>
-<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
-</ul>
-<h3>Kuken Industries searches 70 years of drawings in minutes</h3>
-<ul>
-<li>来源：openai.com</li>
-<li>链接：https://openai.com/index/kuken</li>
-<li>评分：3.16</li>
-<li>简介：Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.</li>
-<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+<li>链接：https://openai.com/business/customer-stories/amplitude</li>
+<li>评分：3.14</li>
+<li>简介：Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.</li>
+<li>为什么值得关注：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
 </ul>
 <h2>四、国际形势</h2>
-<h3>下周影响市场重要资讯前瞻 ： 10月经济数据将公布 ， APEC工商领导人峰会将举行 ， 英伟达将发布最新财报</h3>
+<h3>How the Nvidia scandal lifted the curtain on a loophole that giving China access to US chips | Business</h3>
 <ul>
-<li>来源：finance.sina.com.cn</li>
-<li>链接：https://finance.sina.com.cn/jjxw/2026-11-15/doc-iniyuyiy9692924.shtml</li>
+<li>来源：kten.com</li>
+<li>链接：https://www.kten.com/news/business/how-the-nvidia-scandal-lifted-the-curtain-on-a-loophole-that-s-giving-china-access/article_e4b6e215-c378-52ac-a9c3-c83dcc324a38.html</li>
+<li>评分：4.48</li>
+<li>简介：20261114T200000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Скандал с Nvidia : Блюменталь призвал Лютника уйти в отставку</h3>
+<ul>
+<li>来源：mk.ru</li>
+<li>链接：https://www.mk.ru/politics/2026/11/15/skandal-s-nvidia-blyumental-prizval-lyutnika-uyti-v-otstavku.html</li>
 <li>评分：4.48</li>
 <li>简介：20261115T074500Z</li>
-<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
 </ul>
-<h3>Press Release</h3>
+<h3>Teknoloji liderini kerten bal tuzağı ! Antik Çinin güzellik stratejisi Silikon Vadisini nasıl vurdu ?</h3>
 <ul>
-<li>来源：mining.com</li>
-<li>链接：https://www.mining.com/press-release?id=6af74782f6300c82dfd412f3</li>
+<li>来源：hurriyet.com.tr</li>
+<li>链接：https://www.hurriyet.com.tr/dunya/teknoloji-liderini-cokerten-bal-tuzagi-antik-cinin-guzellik-stratejisi-silikon-vadisini-nasil-vurdu-43377883</li>
+<li>评分：4.48</li>
+<li>简介：20261115T074500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Fallout from the Nvidia scandal may dampen the exuberance around AI</h3>
+<ul>
+<li>来源：bostonglobe.com</li>
+<li>链接：https://www.bostonglobe.com/2026/11/13/business/nvidia-fallout-jensen-huang</li>
 <li>评分：4.38</li>
 <li>简介：20261113T180000Z</li>
-<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
-</ul>
-<h3>昨夜华尔街 : 指数小幅回调 半导体逆势狂飙 - CFi . CN 中财网</h3>
-<ul>
-<li>来源：cfi.net.cn</li>
-<li>链接：http://www.cfi.net.cn/p20261113000075.html</li>
-<li>评分：4.38</li>
-<li>简介：20261113T004500Z</li>
-<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
-</ul>
-<h3>从AMD财报开始 ， 用豆包工作拆开AI巨头的生意局</h3>
-<ul>
-<li>来源：finance.sina.com.cn</li>
-<li>链接：https://finance.sina.com.cn/roll/2026-11-15/doc-iniyuyka6469983.shtml</li>
-<li>评分：4.24</li>
-<li>简介：20261115T074500Z</li>
-<li>为什么值得关注：命中国际关键词 (global economy OR technology policy OR chip supply chain OR Taiwan)，有助于判断外部环境和科技政策变化。</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
 </ul>
 <h2>五、中国国家政策</h2>
-<h3>å ¨å½äººå¤§</h3>
+<h3>æé«äººæ°æ³é¢</h3>
 <ul>
 <li>来源：中国政府网</li>
-<li>链接：http://www.npc.gov.cn/</li>
+<li>链接：http://www.court.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h3>å½å¡é¢é¨é¨ç½ç«</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：https://www.gov.cn/home/2023-03/29/content_5748953.htm</li>
 <li>评分：2.92</li>
 <li>简介：中国国家政策官网列表页条目。</li>
 <li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
 </ul>
 <h2>六、对我的个人建议</h2>
 <ol>
-<li>优先拆解：YellowLaborerMarket/Gemini-Config-Checker-。</li>
-<li>重点阅读：下周影响市场重要资讯前瞻 ： 10月经济数据将公布 ， APEC工商领导人峰会将举行 ， 英伟达将发布最新财报。</li>
+<li>优先拆解：Orchis-ai-LLC/Konnect-EDA。</li>
+<li>重点阅读：How the Nvidia scandal lifted the curtain on a loophole that giving China access to US chips | Business。</li>
 <li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
 </ol>
 <h2>七、来源链接</h2>
 <ul>
-<li><a href="https://github.com/YellowLaborerMarket/Gemini-Config-Checker-">YellowLaborerMarket/Gemini-Config-Checker-</a> - GitHub</li>
-<li><a href="https://github.com/WyrmClimberManacle/Gemini-Config-Checker-">WyrmClimberManacle/Gemini-Config-Checker-</a> - GitHub</li>
-<li><a href="https://github.com/wisemeadowlarkspike/Gemini-Config-Checker-">wisemeadowlarkspike/Gemini-Config-Checker-</a> - GitHub</li>
-<li><a href="https://github.com/WireProvostPucker/Gemini-Config-Checker-">WireProvostPucker/Gemini-Config-Checker-</a> - GitHub</li>
-<li><a href="https://finance.sina.com.cn/jjxw/2026-11-15/doc-iniyuyiy9692924.shtml">下周影响市场重要资讯前瞻 ： 10月经济数据将公布 ， APEC工商领导人峰会将举行 ， 英伟达将发布最新财报</a> - finance.sina.com.cn</li>
-<li><a href="https://www.mining.com/press-release?id=6af74782f6300c82dfd412f3">Press Release</a> - mining.com</li>
-<li><a href="http://www.cfi.net.cn/p20261113000075.html">昨夜华尔街 : 指数小幅回调 半导体逆势狂飙 - CFi . CN 中财网</a> - cfi.net.cn</li>
-<li><a href="https://finance.sina.com.cn/roll/2026-11-15/doc-iniyuyka6469983.shtml">从AMD财报开始 ， 用豆包工作拆开AI巨头的生意局</a> - finance.sina.com.cn</li>
-<li><a href="https://openai.com/index/singapore-airlines-travel-work">Singapore Airlines elevates travel &amp; work with OpenAI technology</a> - openai.com</li>
-<li><a href="https://openai.com/index/helping-caregivers-use-ai-in-everyday-life">Helping caregivers use AI in everyday life</a> - openai.com</li>
-<li><a href="https://openai.com/index/kuken">Kuken Industries searches 70 years of drawings in minutes</a> - openai.com</li>
-<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+<li><a href="https://www.kten.com/news/business/how-the-nvidia-scandal-lifted-the-curtain-on-a-loophole-that-s-giving-china-access/article_e4b6e215-c378-52ac-a9c3-c83dcc324a38.html">How the Nvidia scandal lifted the curtain on a loophole that giving China access to US chips | Business</a> - kten.com</li>
+<li><a href="https://www.mk.ru/politics/2026/11/15/skandal-s-nvidia-blyumental-prizval-lyutnika-uyti-v-otstavku.html">Скандал с Nvidia : Блюменталь призвал Лютника уйти в отставку</a> - mk.ru</li>
+<li><a href="https://www.hurriyet.com.tr/dunya/teknoloji-liderini-cokerten-bal-tuzagi-antik-cinin-guzellik-stratejisi-silikon-vadisini-nasil-vurdu-43377883">Teknoloji liderini kerten bal tuzağı ! Antik Çinin güzellik stratejisi Silikon Vadisini nasıl vurdu ?</a> - hurriyet.com.tr</li>
+<li><a href="https://www.bostonglobe.com/2026/11/13/business/nvidia-fallout-jensen-huang">Fallout from the Nvidia scandal may dampen the exuberance around AI</a> - bostonglobe.com</li>
+<li><a href="https://github.com/Orchis-ai-LLC/Konnect-EDA">Orchis-ai-LLC/Konnect-EDA</a> - GitHub</li>
+<li><a href="https://github.com/thesysdev/opendashboards">thesysdev/opendashboards</a> - GitHub</li>
+<li><a href="https://github.com/trustabl/agent-dashboard">trustabl/agent-dashboard</a> - GitHub</li>
+<li><a href="https://github.com/precis1onz/tokenation">precis1onz/tokenation</a> - GitHub</li>
+<li><a href="https://openai.com/index/our-new-blog-for-science">Our new blog for science</a> - openai.com</li>
+<li><a href="https://openai.com/business/customer-stories/amplitude">How Amplitude ships product improvements in 1–2 days with OpenAI</a> - openai.com</li>
+<li><a href="http://www.court.gov.cn/">æé«äººæ°æ³é¢</a> - 中国政府网</li>
+<li><a href="https://www.gov.cn/home/2023-03/29/content_5748953.htm">å½å¡é¢é¨é¨ç½ç«</a> - 中国政府网</li>
 </ul></main></body></html>
