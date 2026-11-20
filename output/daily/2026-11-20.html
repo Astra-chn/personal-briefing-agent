@@ -1,0 +1,221 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-20</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-20</h1>
+<p><strong>一句话总览</strong>：本期 GitHub 和 AI 侧材料偏向“Agent 实际应用与工程化”，国际新闻偏地缘冲突；<strong>中国政策侧材料基本不可用</strong>，下面会明确说明。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<p><strong>1. 欧洲就乌克兰问题形成“统一”谈判立场</strong>
+- 来源：BBC｜<a href="https://www.bbc.co.uk/news/articles/ckzd9nln5e6go">链接</a>
+- 内容：乌克兰的欧洲盟友在柏林峰会后表示，已准备好与俄罗斯谈判结束战争，并称拥有“统一”的谈判立场。
+- 为什么重要：这是“是否进入谈判阶段”的信号，不是结果。谈判预期会直接影响欧洲能源价格、供应链和全球资金风险偏好。
+- 对你：不要据此判断“局势缓和”或“局势升级”。可观察的间接影响是外企/出海岗位的招聘节奏和汇率。别过度解读。</p>
+<p><strong>2. 加州对英伟达中国 AI 芯片业务展开调查</strong>
+- 来源：BBC｜<a href="https://www.bbc.co.uk/news/articles/cqn70vxp5p4no">链接</a>
+- 内容：调查由英伟达总部所在的加州发起。
+- ⚠️ <strong>需核实</strong>：该条摘要写“follows former CEO Jensen Huang's departure”，但黄仁勋是英伟达现任 CEO，此表述与公开信息不符。<strong>只把“加州发起调查”当作待核实信号，不要采信人事变动部分。</strong>
+- 对你：如果成立，属于“AI 芯片合规/出口管制”链条的延续。对个人技能的含义是：国产算力适配、推理优化、合规相关工程能力的需求会更稳。但材料只有一句话，<strong>不足以推出政策结论</strong>。</p>
+<p><strong>3. OpenAI 客户案例：Amplitude 用 Agent 把产品改进压到 1–2 天</strong>
+- 来源：openai.com｜<a href="https://openai.com/business/customer-stories/amplitude">链接</a>
+- 内容：产品 Agent“Wave”负责判断该做什么，coding agent 负责实施，再衡量影响。
+- 为什么重要：“发现问题 → 用 Agent 执行 → 量化效果”三段闭环，是 Agent 从演示走向生产的分界线。
+- 对你：这就是“后端转 AI”最现实的能力组合。会调用模型的人很多，能把评估环节做出来的人少。</p>
+<p><strong>4. OpenAI 用 Codex 工作流做性能优化（Performance Factory）</strong>
+- 来源：openai.com｜<a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast">链接</a>
+- 为什么重要：AI 被用来维护 AI 自身的基础设施。这说明“AI + 性能工程/内部效能工具”是一个已经在运行的岗位方向，不是概念。
+- 对你：你的后端背景在这里是加分项而不是包袱。</p>
+<p><strong>5. CVEngine：带 MCP 集成的攻击面评估 Agent</strong>
+- 来源：GitHub｜<a href="https://github.com/hevnsnt/CVEngine">链接</a>（744 stars，Python）
+- 为什么重要：它把“持续发现、基于证据的漏洞验证、面向开发者 Agent 的 MCP 接口”组合在一起，是 Agent 与真实工具链结合的样本。
+- 对你：<strong>不适合复现，适合读架构</strong>，尤其是 MCP 那部分（详见第二节）。</p>
+<blockquote>
+<p>未进前五但值得记一笔：加沙地面行动与停火争议（<a href="https://www.bbc.co.uk/news/articles/cw8r7510degno">链接</a>）、俄方对克里米亚大桥遇袭的表态（<a href="https://www.bbc.co.uk/news/articles/cm879dqn3e1jo">链接</a>）。这两条与你的科技/就业关注点关联弱，不硬扯。</p>
+</blockquote>
+<hr />
+<h2>二、GitHub 热门项目（含适配度判断）</h2>
+<p><strong>1. hevnsnt/CVEngine</strong> — Python，744★/122 fork
+AI 驱动的外部攻击面评估：持续发现、基于证据的漏洞验证、MCP 集成。
+- <strong>适配度：不适合动手，适合读。</strong>
+- 原因：需要渗透测试和攻击面管理领域知识；漏洞验证逻辑不是初学者能靠读代码补上的。
+- 建议只读两块：① MCP 接口定义（Agent 怎么把外部工具暴露给模型）；② Agent 调度主流程。这两个概念你以后做任何 Agent 项目都用得上。</p>
+<p><strong>2. KenKaiii/Roamies</strong> — JavaScript，377★/102 fork
+桌面宠物 + AI 助手，会记住你说要做的事并提醒你、指给你看；支持 Mac/Windows，AI 可自选。
+- <strong>适配度：中等，适合“改造型学习”。</strong>
+- 需要 JS 基础。项目还年轻（377★），代码量大概率不大，比成熟项目好读。
+- 学的是“AI 记忆 + 主动提醒”这个交互模式——这和你关注的 Agent 记忆方向直接相关。</p>
+<p><strong>3. vercel-labs/screen-relay</strong> — C++，254★/13 fork
+最高 120fps 的低延迟桌面串流，面向“人和 AI Agent”。
+- <strong>适配度：现在不要碰。</strong>
+- C++ + 音视频/编解码，学习曲线和你的目标不匹配。
+- 但趋势要记：Agent 要操作图形界面，就需要“看见屏幕”的基础设施。这是 computer-use 类能力的地基。</p>
+<p><strong>4. YanNyeinHtet/EggLab</strong> — JavaScript，57★/5 fork
+Windows 本地 AI 图像生成与编辑，基于 Qwen-Image-2.1，<strong>不需要 ComfyUI、不需要 Python、不需要云</strong>。
+- <strong>适配度：对初学者友好度最高。</strong>
+- “不用 Python、不用云”意味着环境配置坑少，适合第一次跑通本地模型。
+- 代价：吃本地显卡，且 57★ 说明文档和 issue 支持都薄，遇坑要自己扛。</p>
+<hr />
+<h2>三、AI 发展动态（趋势判断）</h2>
+<p><strong>趋势 1：Agent 的竞争点从“能不能对话”转向“有没有闭环和度量”。</strong>
+Amplitude 案例的关键不是 Agent 写了代码，而是“识别该做什么 + 实施 + 衡量影响”三段齐全。<strong>没有度量环节的 Agent 项目，在面试和实际使用中都会被认为不完整。</strong></p>
+<p><strong>趋势 2：AI 开始进入“维护 AI 自己”的工程领域。</strong>
+Performance Factory 用 Codex 工作流定位并修复性能问题。这类工作最需要的不是算法，而是懂系统、懂瓶颈、会写工具的人——这正是后端背景的迁移路径。</p>
+<p><strong>趋势 3：Agent 的工具接口在标准化。</strong>
+CVEngine 明确做“developer-agent MCP 集成”，screen-relay 明确面向 AI Agent。工具层在主动为 Agent 让路。<strong>MCP 这类接口协议，是当前性价比最高的学习点之一。</strong></p>
+<p><strong>趋势 4（观点，非政策）</strong>：OpenAI 的《The Silent Consensus》讨论更强 AI 如何重塑社会、人如何保持对制度的控制（<a href="https://openai.com/index/the-silent-consensus">链接</a>）。注意这是企业战略视角的评论文章，<strong>不是政策文件</strong>，写公考论述题时可当论点素材，不能当政策依据。</p>
+<p><strong>本期材料中没有 RAG 方向的项目或新闻</strong>，不要从上面几条里硬推 RAG 结论。</p>
+<hr />
+<h2>四、国际形势（仅限材料范围）</h2>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>hevnsnt/CVEngine</strong>（GitHub，评分 4.69）：Python 项目，Stars 744，适合评估是否能拆成练手项目。</li>
+<li><strong>KenKaiii/Roamies</strong>（GitHub，评分 4.61）：JavaScript 项目，Stars 377，适合评估是否能拆成练手项目。</li>
+<li><strong>vercel-labs/screen-relay</strong>（GitHub，评分 4.45）：C++ 项目，Stars 254，适合评估是否能拆成练手项目。</li>
+<li><strong>YanNyeinHtet/EggLab</strong>（GitHub，评分 4.24）：JavaScript 项目，Stars 57，适合评估是否能拆成练手项目。</li>
+<li><strong>How Amplitude ships product improvements in 1–2 days with OpenAI</strong>（openai.com，评分 4.04）：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>hevnsnt/CVEngine</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/hevnsnt/CVEngine</li>
+<li>评分：4.69</li>
+<li>简介：AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability validation, and developer-agent MCP integration. Stars: 744; Forks: 122; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 744，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>KenKaiii/Roamies</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/KenKaiii/Roamies</li>
+<li>评分：4.61</li>
+<li>简介：Desktop creatures with an AI sidekick that lives on your screen. Talk to it, it remembers what you said you'd do, reminds you and points at things. Your choice of AI. Mac and Windows. Stars: 377; Forks: 102; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 377，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>vercel-labs/screen-relay</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/vercel-labs/screen-relay</li>
+<li>评分：4.45</li>
+<li>简介：Upto 120 fps, low latency desktop streaming for humans and AI agents Stars: 254; Forks: 13; Language: C++</li>
+<li>为什么值得关注：C++ 项目，Stars 254，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>YanNyeinHtet/EggLab</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/YanNyeinHtet/EggLab</li>
+<li>评分：4.24</li>
+<li>简介：Local AI image generation and editing for Windows - a design agent for PhotoCraft powered by Qwen-Image-2.1 (no ComfyUI, no Python, no cloud). Stars: 57; Forks: 5; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 57，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>How Amplitude ships product improvements in 1–2 days with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/amplitude</li>
+<li>评分：4.04</li>
+<li>简介：Built primarily on OpenAI models, Amplitude’s proactive product agent, Wave, identifies what to build, helps teams ship changes with coding agents, and measures the impact.</li>
+<li>为什么值得关注：命中关键词 OpenAI、coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How OpenAI’s Performance Factory keeps ChatGPT fast</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast</li>
+<li>评分：3.36</li>
+<li>简介：Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>The Silent Consensus</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/the-silent-consensus</li>
+<li>评分：3.36</li>
+<li>简介：Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Europe ready for talks with Russia on ending war in Ukraine, leaders say</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：European allies of Ukraine say they have a "united" negotiating position at a summit in Berlin.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>California targets Nvidia in China AI chip probe</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The probe by California, where the AI chipmaker has its global headquarters, follows former CEO Jensen Huang's departure.</li>
+<li>为什么值得关注：命中国际关键词 China、chip，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：The bridge - a symbol of Russia's occupation of the Crimean Peninsula - suffered major damaged following a combined attack by Ukraine earlier this week.</li>
+<li>为什么值得关注：命中国际关键词 Russia、Ukraine，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Israeli military completes ground operation in Gaza beyond Yellow Line</h3>
+<ul>
+<li>来源：feeds.bbci.co.uk</li>
+<li>链接：https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&amp;at_campaign=rss</li>
+<li>评分：3.64</li>
+<li>简介：Hamas condemned the incursion, which the Israeli military said was to dismantle a "terror tunnel", as a "flagrant" ceasefire violation.</li>
+<li>为什么值得关注：命中国际关键词 Gaza、Israel，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å ¨å½äººå¤§</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.npc.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：hevnsnt/CVEngine。</li>
+<li>重点阅读：Europe ready for talks with Russia on ending war in Ukraine, leaders say。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/hevnsnt/CVEngine">hevnsnt/CVEngine</a> - GitHub</li>
+<li><a href="https://github.com/KenKaiii/Roamies">KenKaiii/Roamies</a> - GitHub</li>
+<li><a href="https://github.com/vercel-labs/screen-relay">vercel-labs/screen-relay</a> - GitHub</li>
+<li><a href="https://github.com/YanNyeinHtet/EggLab">YanNyeinHtet/EggLab</a> - GitHub</li>
+<li><a href="https://openai.com/business/customer-stories/amplitude">How Amplitude ships product improvements in 1–2 days with OpenAI</a> - openai.com</li>
+<li><a href="https://www.bbc.co.uk/news/articles/ckzd9nln5e6go?at_medium=RSS&amp;at_campaign=rss">Europe ready for talks with Russia on ending war in Ukraine, leaders say</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/articles/cqn70vxp5p4no?at_medium=RSS&amp;at_campaign=rss">California targets Nvidia in China AI chip probe</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/articles/cm879dqn3e1jo?at_medium=RSS&amp;at_campaign=rss">Putin vows 'far more painful' response to Ukraine's strikes on Crimean Bridge</a> - feeds.bbci.co.uk</li>
+<li><a href="https://www.bbc.co.uk/news/articles/cw8r7510degno?at_medium=RSS&amp;at_campaign=rss">Israeli military completes ground operation in Gaza beyond Yellow Line</a> - feeds.bbci.co.uk</li>
+<li><a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast">How OpenAI’s Performance Factory keeps ChatGPT fast</a> - openai.com</li>
+<li><a href="https://openai.com/index/the-silent-consensus">The Silent Consensus</a> - openai.com</li>
+<li><a href="http://www.npc.gov.cn/">å ¨å½äººå¤§</a> - 中国政府网</li>
+</ul></main></body></html>
