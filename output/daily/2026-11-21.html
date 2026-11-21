@@ -1,0 +1,233 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-21</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报（2026-11-21）</h1>
+<p><strong>材料范围</strong>：2026-11-18 至 11-20 的 GitHub、AI 新闻、国际新闻、中国政策来源。<br />
+<strong>筛选原则</strong>：优先保留与 AI Agent、RAG、项目学习直接相关的内容；国际和政策材料如果不足，我会明确说明，不用 GitHub 或 AI 新闻勉强拼凑结论。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 三个高度相似的 <code>manus--ai</code> 仓库集中出现，先判断来源，再决定是否投入时间</h3>
+<ul>
+<li>链接：</li>
+<li>https://github.com/python001-dev/manus--ai</li>
+<li>https://github.com/python001-dev/ai--manus</li>
+<li>https://github.com/lloweryfn-rgb/manus--ai</li>
+<li>材料显示三者摘要几乎相同：通用 AI Agent 系统，支持在沙箱环境中运行各种工具和操作；Stars 均为 201，Forks 均为 0，语言 Unknown。</li>
+<li><strong>为什么值得关注</strong>：同一项目名、相同摘要、相同 Star 数，说明它们可能是重复发布或镜像，不能仅凭“热门”就认为质量高。</li>
+<li><strong>对你有什么用</strong>：你是初学者，时间有限。先把它们当作“Agent 功能说明”阅读，不要同时 clone 三个仓库，也不要把它们作为主力代码学习项目。</li>
+</ul>
+<h3>2. GitHub Copilot app：Agent 正在从“聊天”走向“桌面工作流”</h3>
+<ul>
+<li>链接：https://github.com/mohamedhamdytaha/GitHub-Copilot-app</li>
+<li>材料描述：一个 agent-native 桌面体验，用于在 GitHub 仓库中查找、运行、控制和完成软件工作；Stars 56，Forks 8，语言 Unknown。</li>
+<li><strong>为什么值得关注</strong>：它代表一种产品方向——Agent 不只是回答问题，还要能接管任务、操作工具、查看仓库。</li>
+<li><strong>对你有什么用</strong>：适合学习“Agent 产品应该有哪些交互”，但不一定适合直接读代码。材料未说明它是否为官方项目，使用前需先确认仓库性质和许可证。</li>
+</ul>
+<h3>3. OpenAI 谈“对抗性蒸馏”：模型能力保护会成为行业常规议题</h3>
+<ul>
+<li>链接：https://openai.com/index/combatting-adversarial-distillation</li>
+<li>材料摘要：OpenAI 采用分层方法，结合模型训练、防护措施、检测和执法，防止模型能力被提取。</li>
+<li><strong>为什么值得关注</strong>：模型厂商会更关注 API 滥用、能力蒸馏和输出监控。对做 AI 应用的人来说，合规和依赖风险会变得更实际。</li>
+<li><strong>对你有什么用</strong>：如果你以后做 Agent 或 RAG 产品，不要默认“调用模型 API 就是全部壁垒”。数据、流程、评测和用户场景才是你能积累的部分。</li>
+</ul>
+<h3>4. Hebbia 用 GPT-6 Astra 做金融研究：RAG 的评估重点在“来源和引用”</h3>
+<ul>
+<li>链接：https://openai.com/business/customer-stories/hebbia</li>
+<li>材料摘要：Hebbia 测试了 GPT-6 Astra 用于金融研究，预发布评估发现来源覆盖、引用相关性和展示质量有提升。</li>
+<li><strong>为什么值得关注</strong>：研究型 AI 的竞争点不只是“答得快”，而是“来源覆盖够不够、引用准不准、结果能不能用”。</li>
+<li><strong>对你有什么用</strong>：你做 RAG 项目时，不要只记录“回答看起来不错”。建议至少记录：来源是否覆盖关键材料、引用是否对得上原文、答案是否方便人复核。</li>
+</ul>
+<h3>5. Le Figaro 与 OpenAI 合作：内容授权 + 摘要 + 原文链接</h3>
+<ul>
+<li>链接：https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership</li>
+<li>材料摘要：Le Figaro 的新闻内容将通过摘要和摘录进入 ChatGPT，并链接回原文。</li>
+<li><strong>为什么值得关注</strong>：媒体内容进入 AI 产品时，版权、引用和导流正在形成一种合作模式。</li>
+<li><strong>对你有什么用</strong>：如果你做新闻、文档或知识库问答，不能只抓内容。要设计来源标注、原文链接和引用边界。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>材料信号</th>
+<th>是否适合你学习</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/python001-dev/manus--ai">python001-dev/manus--ai</a></td>
+<td>Stars 201，Forks 0，语言 Unknown，通用 Agent + 沙箱工具</td>
+<td><strong>不适合作为主线代码项目</strong>。信息太少，语言未知，且与另外两个仓库高度重复。可读 README 了解 Agent 功能清单。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/python001-dev/ai--manus">python001-dev/ai--manus</a></td>
+<td>同上，摘要几乎一致</td>
+<td><strong>不建议重复投入</strong>。先确认是否与上一条是同一内容。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/lloweryfn-rgb/manus--ai">lloweryfn-rgb/manus--ai</a></td>
+<td>Stars 201，Forks 0，语言 Unknown，评分略低</td>
+<td><strong>先观望</strong>。同样存在重复信号，不建议作为初学项目。</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mohamedhamdytaha/GitHub-Copilot-app">mohamedhamdytaha/GitHub-Copilot-app</a></td>
+<td>Stars 56，Forks 8，语言 Unknown，agent-native 桌面体验</td>
+<td><strong>适合做产品观察，不一定适合读代码</strong>。先看 README、技术</td>
+</tr>
+</tbody>
+</table>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>python001-dev/manus--ai</strong>（GitHub，评分 4.61）：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+<li><strong>python001-dev/ai--manus</strong>（GitHub，评分 4.61）：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+<li><strong>lloweryfn-rgb/manus--ai</strong>（GitHub，评分 4.53）：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+<li><strong>I support strong ties with Israel but condemn actions in Gaza : Rahul Gandhi , says India foreign policy must serve national interest</strong>（arabherald.com，评分 4.24）：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>mohamedhamdytaha/GitHub-Copilot-app</strong>（GitHub，评分 4.16）：Unknown 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>python001-dev/manus--ai</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/python001-dev/manus--ai</li>
+<li>评分：4.61</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 201; Forks: 0; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>python001-dev/ai--manus</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/python001-dev/ai--manus</li>
+<li>评分：4.61</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 201; Forks: 0; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>lloweryfn-rgb/manus--ai</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/lloweryfn-rgb/manus--ai</li>
+<li>评分：4.53</li>
+<li>简介：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment. Stars: 201; Forks: 0; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 201，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>mohamedhamdytaha/GitHub-Copilot-app</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/mohamedhamdytaha/GitHub-Copilot-app</li>
+<li>评分：4.16</li>
+<li>简介：The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. Stars: 56; Forks: 8; Language: Unknown</li>
+<li>为什么值得关注：Unknown 项目，Stars 56，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Hebbia sees improvements in financial research with GPT-6 Astra</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/hebbia</li>
+<li>评分：3.68</li>
+<li>简介：Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.</li>
+<li>为什么值得关注：命中关键词 RAG，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Combatting adversarial distillation</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/combatting-adversarial-distillation</li>
+<li>评分：3.6</li>
+<li>简介：OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership</li>
+<li>评分：3.26</li>
+<li>简介：Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>I support strong ties with Israel but condemn actions in Gaza : Rahul Gandhi , says India foreign policy must serve national interest</h3>
+<ul>
+<li>来源：arabherald.com</li>
+<li>链接：http://www.arabherald.com/news/279443834/i-support-strong-ties-with-israel-but-condemn-actions-in-gaza-rahul-gandhi-says-india-foreign-policy-must-serve-national-interest</li>
+<li>评分：4.24</li>
+<li>简介：20261119T233000Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Palestinians victims of a third of violations against children worldwide , Save the Children says</h3>
+<ul>
+<li>来源：click2houston.com</li>
+<li>链接：https://www.click2houston.com/news/world/2026/11/19/palestinians-victims-of-a-third-of-violations-against-children-worldwide-save-the-children-says</li>
+<li>评分：4.0</li>
+<li>简介：20261119T171500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>अमेरिका में बैठ पुतिन के कसीदे पढ़ आए राहुल गांधी , पश्चिमी देशों को सुनाया ; इजरायल - पाकिस्तान पर क्या बोले ?</h3>
+<ul>
+<li>来源：livehindustan.com</li>
+<li>链接：https://www.livehindustan.com/national/rahul-gandhi-praises-putin-in-us-visit-western-countries-india-foreign-policy-201795139624637.html</li>
+<li>评分：4.0</li>
+<li>简介：20261120T034500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>READERS FORUM : Let do our part to reduce trend of violence and poverty | Opinion</h3>
+<ul>
+<li>来源：dailygazette.com</li>
+<li>链接：https://www.dailygazette.com/hv360/opinion/readers-forum-let-s-do-our-part-to-reduce-trend-of-violence-and-poverty/article_08063887-5718-45d0-84a6-9f93e1f56d73.html</li>
+<li>评分：4.0</li>
+<li>简介：20261120T024500Z</li>
+<li>为什么值得关注：命中国际关键词 (Ukraine OR Russia OR Middle East OR Gaza OR Israel OR Iran)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å½å®¶çå¯å§åä¼</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.ccdi.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：python001-dev/manus--ai。</li>
+<li>重点阅读：I support strong ties with Israel but condemn actions in Gaza : Rahul Gandhi , says India foreign policy must serve national interest。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://github.com/python001-dev/manus--ai">python001-dev/manus--ai</a> - GitHub</li>
+<li><a href="https://github.com/python001-dev/ai--manus">python001-dev/ai--manus</a> - GitHub</li>
+<li><a href="https://github.com/lloweryfn-rgb/manus--ai">lloweryfn-rgb/manus--ai</a> - GitHub</li>
+<li><a href="http://www.arabherald.com/news/279443834/i-support-strong-ties-with-israel-but-condemn-actions-in-gaza-rahul-gandhi-says-india-foreign-policy-must-serve-national-interest">I support strong ties with Israel but condemn actions in Gaza : Rahul Gandhi , says India foreign policy must serve national interest</a> - arabherald.com</li>
+<li><a href="https://github.com/mohamedhamdytaha/GitHub-Copilot-app">mohamedhamdytaha/GitHub-Copilot-app</a> - GitHub</li>
+<li><a href="https://www.click2houston.com/news/world/2026/11/19/palestinians-victims-of-a-third-of-violations-against-children-worldwide-save-the-children-says">Palestinians victims of a third of violations against children worldwide , Save the Children says</a> - click2houston.com</li>
+<li><a href="https://www.livehindustan.com/national/rahul-gandhi-praises-putin-in-us-visit-western-countries-india-foreign-policy-201795139624637.html">अमेरिका में बैठ पुतिन के कसीदे पढ़ आए राहुल गांधी , पश्चिमी देशों को सुनाया ; इजरायल - पाकिस्तान पर क्या बोले ?</a> - livehindustan.com</li>
+<li><a href="https://www.dailygazette.com/hv360/opinion/readers-forum-let-s-do-our-part-to-reduce-trend-of-violence-and-poverty/article_08063887-5718-45d0-84a6-9f93e1f56d73.html">READERS FORUM : Let do our part to reduce trend of violence and poverty | Opinion</a> - dailygazette.com</li>
+<li><a href="https://openai.com/business/customer-stories/hebbia">Hebbia sees improvements in financial research with GPT-6 Astra</a> - openai.com</li>
+<li><a href="https://openai.com/index/combatting-adversarial-distillation">Combatting adversarial distillation</a> - openai.com</li>
+<li><a href="https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership">Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT</a> - openai.com</li>
+<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
+</ul></main></body></html>
