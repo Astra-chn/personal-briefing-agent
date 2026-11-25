@@ -1,0 +1,273 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-25</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-25</h1>
+<p><strong>一句话概览</strong>：今天最实在的信息集中在两处：一是美国对华 AI 芯片管制的<strong>执行层面</strong>出现人事变动，二是中国半导体自主化的<strong>节奏</strong>被韩媒持续讨论；AI 侧的关键词是“Agent 工程化”（大规模仓库、Agent 产物治理）。国内政策方面，本期<strong>没有可用材料</strong>，我不做推测。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 美国 BIS（工业与安全局）的 AI 芯片安全相关探员被调去做个人安保</h3>
+<p>来源：ibtimes.com｜https://www.ibtimes.com/lutnick-reassigned-bis-agents-personal-security-3810155
+<strong>是什么</strong>：标题称 Lutnick（美国商务部长）把 BIS 的探员抽调为个人安保人员，报道本身是“Report”（转述报道）。摘要只有时间戳，没有正文细节。
+<strong>为什么重要</strong>：BIS 是执行出口管制（含 AI 芯片）的机构。如果人手被挪走，讨论焦点就不在“规则怎么写”，而在“<strong>规则能不能被执行</strong>”。
+<strong>对我的用处</strong>：看芯片管制新闻时，别只看新规条文，也要看执行机构的人、钱、案件量。这是我判断“政策是真收紧还是只是表态”的一条实用线索。
+<strong>注意</strong>：单篇转述报道，未见官方确认，不要当成定论。</p>
+<h3>2. 韩媒：黄仁勋“回归”背景下，对华芯片管制是否放缓 vs 中国技术自立加速</h3>
+<p>来源：hani.co.kr｜https://www.hani.co.kr/arti/international/china/1288837.html
+来源：newspim.com｜https://www.newspim.com/news/view/20261124001055
+<strong>是什么</strong>：两篇韩文报道标题分别指向“对华芯片管制会不会暂缓”和“即便黄仁勋回归，中国半导体自立仍在加速”。第二条标题提到部分中国半导体公司受关注，但摘要未给公司名，我无法确认具体标的，<strong>不要照抄</strong>。
+<strong>为什么重要</strong>：市场对“管制放松”的预期和中国“自主替代”的实际进度，是两条<strong>同时进行但方向相反</strong>的线。任何一条被单独放大，都会误判。
+<strong>对我的用处</strong>：这是一个典型的“预期差”场景，AI 芯片供给、算力成本、国产替代岗位需求都会跟着摆动。关注结论时，要区分“政策表态”和“采购/产能动作”。</p>
+<h3>3. 韩国视角：半导体景气 + 对华牵制带来的出口机会，但需要产业升级</h3>
+<p>来源：segye.com｜https://www.segye.com:443/newsView/20261124516303
+<strong>是什么</strong>：评论文章，主题是“出口 1 万亿美元时代”，主张借半导体景气和外部环境机会，做产业高附加值化和结构改善。
+<strong>为什么重要</strong>：它是“别人的产业政策反思”，但对理解东亚半导体分工、以及“机会窗口会逼着产业升级”这套逻辑很有参考价值。
+<strong>对我的用处</strong>：如果你以后看中国半导体/科技产业政策文件，会发现相似的措辞结构（“抓住窗口期”“向价值链上游走”）。这类文章能帮你读懂政策语言。</p>
+<h3>4. iFood 在 1.5 万个代码仓库中规模化运行编码 Agent</h3>
+<p>来源：openai.com｜https://openai.com/business/customer-stories/ifood
+<strong>是什么</strong>：厂商客户案例，无摘要，仅标题可确认：在 15,000 个仓库规模上跑 coding agents。
+<strong>为什么重要</strong>：这标志编码 Agent 的难点从“写出一段代码”转向“<strong>在大量仓库、权限、规范下稳定运行</strong>”。后者是平台工程，不是模型能力。
+<strong>对我的用处</strong>：这是“后端转 AI”最现实的一条路径——不是去训模型，而是去做 Agent 的工程化底座（工具封装、权限、审计、回滚）。</p>
+<h3>5. <code>obituary</code>：给 AI Agent 遗留文件做“自动过期 + 7 天可恢复的回收站”</h3>
+<p>来源：GitHub｜https://github.com/woodfishhhh/obituary
+<strong>是什么</strong>：Go 写的工具。Agent 留下的文件自动过期，删除的 7 天内可恢复。110 stars。
+<strong>为什么重要</strong>：Agent 越多、跑得越久，“它留下的垃圾”就越成问题。这是个很小但很真实的需求点，属于 Agent 工具链里的“运维层”。
+<strong>对我的用处</strong>：概念直接可以抄进你自己的自动化脚本（输出目录 + TTL + 可恢复），比读大部头项目划算得多。</p>
+<hr />
+<h2>二、GitHub 热门项目（按“适不适合你”排序）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言/热度</th>
+<th>是什么</th>
+<th>适不适合初学者</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/woodfishhhh/obituary">obituary</a></td>
+<td>Go，110★/11 fork</td>
+<td>Agent 文件回收站，自动过期 + 7 天可恢复</td>
+<td>⭐⭐⭐⭐ <strong>最推荐</strong>。规模小，概念清晰，Go 语法简单。目标不是读懂全部，而是看懂“过期策略 + 可恢复”怎么设计</td>
+</tr>
+<tr>
+<td><a href="https://github.com/omnimux-ai/omnimux-client">omnimux-client</a></td>
+<td>JavaScript，67★</td>
+<td>本地 AI 内容电商工作台：产品/素材库、多模态无限画布、时间线编辑器（macOS/Windows）</td>
+<td>⭐⭐⭐ JS 技术栈对你友好，但这是<strong>桌面端 + 画布 + 时间线</strong>的复合大项目，直接读源码会卡住。建议只读 README 和目录结构，学产品拆解思路</td>
+</tr>
+<tr>
+<td><a href="https://github.com/opensetlabs/openset-llm">openset-llm</a></td>
+<td>C++，68★</td>
+<td>纯 CPU 本地跑 LLM，无需 GPU、8GB 内存，OpenAI 兼容 server</td>
+<td>⭐⭐⭐ <strong>用，不读</strong>。C++ 推理引擎不适合当第一个源码项目。但“OpenAI 兼容接口 + 本地跑”对做 RAG/Agent 后端极有价值，直接当服务调用</td>
+</tr>
+<tr>
+<td><a href="https://github.com/7wdn/7paws">7paws</a></td>
+<td>Rust，68★</td>
+<td>3D 桌面猫桌宠，响应全局键鼠，支持内置 MCP 做 AI 定制</td>
+<td>⭐⭐ <strong>暂不碰代码</strong>。Rust 学习曲线陡，且依赖图形/系统钩子。可只看它“怎么把 MCP 接进一个非 AI 应用”的用法</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句话选择</strong>：这周只看 <code>obituary</code>，其余三个都别开 IDE。</p>
+<hr />
+<h2>三、AI 发展动态（趋势 + 对你的影响）</h2>
+<ol>
+<li>
+<p><strong>Hebbia 用 GPT-6 Astra 做金融研究，来源覆盖、引用相关性、呈现质量三项有提升</strong>
+   https://openai.com/business/customer-stories/hebbia （2026-11-20，厂商客户案例，属<strong>宣传材料</strong>，需打折看）
+   <strong>趋势</strong>：RAG 的评价标准正在从“答得对不对”细化到“<strong>引用对不对、来源全不全</strong>”。这个三指标你可以直接拿来自评项目。
+   <strong>对你</strong>：做 RAG 项目时，别只报“准确率”，把“每条结论是否带可点击来源、来源是否真的支撑该结论”做成检查项，这比调 embedding 更能体现工程能力。</p>
+</li>
+<li>
+<p><strong>编码 Agent 走向大规模多仓库治理（iFood，1.5 万仓库）</strong>
+   <strong>趋势</strong>：Agent 的竞争点从模型转向<strong>工程约束</strong>——权限、审计、一致性、回滚。
+   <strong>对你</strong>：这就是“后端转 AI”的现实入口，岗位名可能是 AI 平台工程师 / Agent 基础设施，而不是“算法工程师”。</p>
+</li>
+<li>
+<p><strong>OpenAI 谈“对抗性蒸馏”的多层防御：训练、防护、检测、执法</strong>
+   https://openai.com/index/combatting-adversarial-distillation （2026-11-20）
+   <strong>趋势</strong>：模型能力被“提取”已成为正式的安全与合规议题，会外溢到 API 条款、企业采购合规。
+   <strong>对你</strong>：如果你做的东西涉及调用闭源模型 API 批量生成数据，注意服务条款风险，别默认“能调就能蒸馏”。</p>
+</li>
+</ol>
+<p><strong>今日 AI 侧结论</strong>：三条新闻没有一条是“模型又变强了”，全是<strong>落地与治理</strong>。这正好说明现在缺的是工程人，不是调参的人。</p>
+<hr />
+<h2>四、国际形势（只谈材料能支撑的部分）</h2>
+<p>材料只给了 4 条世界新闻，且多为标题级信息，所以我把结论压到最小：</p>
+<ul>
+<li><strong>能说的</strong>：美国出口管制执行机构出现人事层面的报道（单篇、待核实）；韩媒在讨论“对华管制节奏”与“中国半导体自立加速”两件事同时发生；韩国在讨论借半导体景气推进产业升级。</li>
+<li><strong>不能说的</strong>：不能由此推出“美国要放松对华芯片管制”，也不能推出“中国某家具体公司受益”。标题里的“会不会放缓”本身是<strong>疑问句</strong>，不是结论。</li>
+</ul>
+<p><strong>和科技、就业、政策环境的关系（谨慎版）</strong>：
+- 科技：AI 芯片的<strong>供给规则</strong>和<strong>执行力度</strong>，直接决定国内算力成本和可获得性，进而影响你做 RAG/Agent 时的模型选择（本地小模型 vs 云端大模型）。
+- 就业：如果国产替代节奏加快，需求增量更可能在<strong>芯片/算力基础设施 + 行业应用落地</strong>两侧，而不是纯算法岗。
+- 政策环境：这类外部变量常是国内产业政策表述的“背景板”。但<strong>本期没有国内政策材料</strong>，我不做连接。</p>
+<hr />
+<h2>五、中国国家政策</h2>
+<p><strong>本期无有效材料。</strong></p>
+<p>唯一一条 <code>china_policy</code> 来源是中国政府网列表页（标题为乱码，内容为“国家政策官网列表页条目”，无具体文件，评分 2.92）：
+http://www.ccdi.gov.cn/</p>
+<p>这条<strong>不含任何可分析的政策内容</strong>，我不据此写任何政策解读，也不用 GitHub/AI 新闻硬凑政策结论。</p>
+<p><strong>如果你需要</strong>：这块请直接去原文站点看当期发布，或下期补充带具体文件名的政策材料（文件名 + 发文机关 + 日期），我才能做实质分析。</p>
+<hr />
+<h2>六、给你的具体行动建议（本周可执行）</h2>
+<ol>
+<li><strong>做一个“带引用”的最小 RAG（2-3 天）</strong>
+   用 <code>openset-llm</code> 的 OpenAI 兼容接口（无 GPU 也能跑）做后端，知识库就用你正在看的 AI/政策新闻。</li>
+</ol>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>Lutnick Pulled Agents From US AI Chip Security . They Became His Personal Bodyguards : Report .</strong>（ibtimes.com，评分 4.8）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>제슨 황 복귀에도 中 반도체 자립 가속 , 캠브리콘 · 무시 등 기회 주목</strong>（newspim.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>돌아온 젠슨 황 , 대중 칩 규제 주춤할까 … 중국선 기술 자립론</strong>（hani.co.kr，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>반도체 호황 · 中 견제로 번 기회 … 산업 고도화 · 체질 개선해야 [ 심층기획 - 수출 1조달러 시대 ]</strong>（segye.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>omnimux-ai/omnimux-client</strong>（GitHub，评分 4.16）：JavaScript 项目，Stars 67，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>omnimux-ai/omnimux-client</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/omnimux-ai/omnimux-client</li>
+<li>评分：4.16</li>
+<li>简介：OmniMux — Local AI content commerce workbench for product videos, ads, and creator workflows. Built-in product &amp; asset library, inspiration teardown, infinite multimodal canvas, and timeline editor for macOS &amp; Windows. Stars: 67; Forks: 3; Language: JavaScript</li>
+<li>为什么值得关注：JavaScript 项目，Stars 67，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>woodfishhhh/obituary</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/woodfishhhh/obituary</li>
+<li>评分：4.0</li>
+<li>简介：Obituary — the trash bin for AI agents. Files AI agents leave behind expire on their own; anything they delete stays restorable for 7 days. Stars: 110; Forks: 11; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 110，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>opensetlabs/openset-llm</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/opensetlabs/openset-llm</li>
+<li>评分：3.92</li>
+<li>简介：Fast local LLM inference on plain CPUs. No GPU, 8 GB of RAM. OpenAI-compatible server. Stars: 68; Forks: 8; Language: C++</li>
+<li>为什么值得关注：C++ 项目，Stars 68，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>7wdn/7paws</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/7wdn/7paws</li>
+<li>评分：3.72</li>
+<li>简介：Windows 与 macOS 的 3D 桌面小猫桌宠：响应全局键鼠、敲键追光标、摸猫呼噜；支持照片取色或 AI（内置 MCP）定制专属猫咪，闲置后睡觉。 Stars: 68; Forks: 11; Language: Rust</li>
+<li>为什么值得关注：Rust 项目，Stars 68，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Hebbia sees improvements in financial research with GPT-6 Astra</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/hebbia</li>
+<li>评分：3.48</li>
+<li>简介：Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.</li>
+<li>为什么值得关注：命中关键词 RAG，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>How iFood scales coding agents across 15,000 repositories</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/business/customer-stories/ifood</li>
+<li>评分：3.44</li>
+<li>简介：无摘要</li>
+<li>为什么值得关注：命中关键词 coding agent，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Combatting adversarial distillation</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/combatting-adversarial-distillation</li>
+<li>评分：3.4</li>
+<li>简介：OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Lutnick Pulled Agents From US AI Chip Security . They Became His Personal Bodyguards : Report .</h3>
+<ul>
+<li>来源：ibtimes.com</li>
+<li>链接：https://www.ibtimes.com/lutnick-reassigned-bis-agents-personal-security-3810155</li>
+<li>评分：4.8</li>
+<li>简介：20261125T001500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>제슨 황 복귀에도 中 반도체 자립 가속 , 캠브리콘 · 무시 등 기회 주목</h3>
+<ul>
+<li>来源：newspim.com</li>
+<li>链接：https://www.newspim.com/news/view/20261124001055</li>
+<li>评分：4.48</li>
+<li>简介：20261124T063000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>돌아온 젠슨 황 , 대중 칩 규제 주춤할까 … 중국선 기술 자립론</h3>
+<ul>
+<li>来源：hani.co.kr</li>
+<li>链接：https://www.hani.co.kr/arti/international/china/1288837.html</li>
+<li>评分：4.48</li>
+<li>简介：20261124T071500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>반도체 호황 · 中 견제로 번 기회 … 산업 고도화 · 체질 개선해야 [ 심층기획 - 수출 1조달러 시대 ]</h3>
+<ul>
+<li>来源：segye.com</li>
+<li>链接：https://www.segye.com:443/newsView/20261124516303</li>
+<li>评分：4.48</li>
+<li>简介：20261125T004500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>å½å®¶çå¯å§åä¼</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.ccdi.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：omnimux-ai/omnimux-client。</li>
+<li>重点阅读：Lutnick Pulled Agents From US AI Chip Security . They Became His Personal Bodyguards : Report .。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.ibtimes.com/lutnick-reassigned-bis-agents-personal-security-3810155">Lutnick Pulled Agents From US AI Chip Security . They Became His Personal Bodyguards : Report .</a> - ibtimes.com</li>
+<li><a href="https://www.newspim.com/news/view/20261124001055">제슨 황 복귀에도 中 반도체 자립 가속 , 캠브리콘 · 무시 등 기회 주목</a> - newspim.com</li>
+<li><a href="https://www.hani.co.kr/arti/international/china/1288837.html">돌아온 젠슨 황 , 대중 칩 규제 주춤할까 … 중국선 기술 자립론</a> - hani.co.kr</li>
+<li><a href="https://www.segye.com:443/newsView/20261124516303">반도체 호황 · 中 견제로 번 기회 … 산업 고도화 · 체질 개선해야 [ 심층기획 - 수출 1조달러 시대 ]</a> - segye.com</li>
+<li><a href="https://github.com/omnimux-ai/omnimux-client">omnimux-ai/omnimux-client</a> - GitHub</li>
+<li><a href="https://github.com/woodfishhhh/obituary">woodfishhhh/obituary</a> - GitHub</li>
+<li><a href="https://github.com/opensetlabs/openset-llm">opensetlabs/openset-llm</a> - GitHub</li>
+<li><a href="https://github.com/7wdn/7paws">7wdn/7paws</a> - GitHub</li>
+<li><a href="https://openai.com/business/customer-stories/hebbia">Hebbia sees improvements in financial research with GPT-6 Astra</a> - openai.com</li>
+<li><a href="https://openai.com/business/customer-stories/ifood">How iFood scales coding agents across 15,000 repositories</a> - openai.com</li>
+<li><a href="https://openai.com/index/combatting-adversarial-distillation">Combatting adversarial distillation</a> - openai.com</li>
+<li><a href="http://www.ccdi.gov.cn/">å½å®¶çå¯å§åä¼</a> - 中国政府网</li>
+</ul></main></body></html>
