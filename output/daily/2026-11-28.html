@@ -1,0 +1,274 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body {
+  margin: 0;
+  padding: 24px;
+  background: #f6f7f9;
+  color: #1f2933;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.65;
+}
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px;
+}
+h1, h2, h3 { color: #111827; line-height: 1.3; }
+a { color: #2563eb; }
+blockquote {
+  margin: 16px 0;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-left: 4px solid #94a3b8;
+}
+code { background: #f1f5f9; padding: 2px 4px; border-radius: 4px; }
+</style></head><body><main class="container"><h1>每日个人简报 - 2026-11-28</h1>
+<h2>AI 生成综述</h2>
+<h1>每日个人简报 · 2026-11-28</h1>
+<p><strong>本期材料结构说明</strong>：世界新闻 4 条（集中在芯片出口管制）、GitHub 4 个项目、AI 新闻 3 条（均为 OpenAI，发布时间为 11-16/11-17，不是当日新闻）、中国政策 1 条（官网列表页条目，标题乱码，没有有效内容）。因此本期<strong>不生成中国政策结论</strong>，也不拿芯片或 GitHub 新闻去推断中国政策走向。</p>
+<hr />
+<h2>一、今日最值得关注的 5 件事</h2>
+<h3>1. 荷兰政府游说反对美国芯片出口法案，核心是保 ASML 的中国业务</h3>
+<ul>
+<li>来源：<a href="https://www.theepochtimes.com/world/dutch-government-lobbies-against-us-chip-export-bill-6129583">theepochtimes.com</a>、<a href="https://www.digitimes.com/news/a20261126PD231/netherlands-asml-business-dutch-equipment.html">digitimes.com</a></li>
+<li>材料只提供标题，可确认的内容是：荷兰政府在游说反对美国一项芯片出口法案（MATCH Act），理由是保护 ASML 的对华业务。</li>
+<li><strong>为什么重要</strong>：出口管制不再是美国单方面施加、企业被动执行，盟国政府开始为本土龙头企业的商业利益公开争取。这意味着管制政策的落地会变得更慢、更复杂，也更容易被谈判和豁免分化。</li>
+<li><strong>对你有什么用</strong>：它决定 AI 算力的长期供给和价格环境。你作为后端转 AI 的人，不必追具体条款，但要意识到：算力成本受政策影响，不小程度并非只由技术决定；做个人项目时，优先选择成本可控的小模型或本地推理方案，不要依赖可能随时变化的单一 API 渠道。</li>
+</ul>
+<h3>2. 英伟达暂停向 4 个东南亚国家出货 AI 服务器</h3>
+<ul>
+<li>来源：<a href="https://timesofindia.indiatimes.com/business/international-business/china-link-us-curbs-new-executive-controversy-why-nvidia-halted-ai-server-shipments-to-4-southeast-asian-countries/articleshow/136206977.cms">timesofindia</a>、<a href="https://www.fnnews.com/news/202611270224421362">fnnews</a></li>
+<li>材料给出的标题信息：与“中国关联”“美国管制”以及一项高管争议有关；韩媒标题称此举意在封堵中国 AI 的“绕道路径”。<strong>具体是哪四国、具体原因，材料没有给出，我不做推断。</strong></li>
+<li><strong>为什么重要</strong>：管制重点正从“卖芯片”转向“卖整机、卖算力节点”，东南亚作为中转地的空间被压缩。这是供应链区域化的又一步。</li>
+<li><strong>对你有什么用</strong>：这类新闻的传导链是：算力渠道收紧，云服务报价和可用区域随之变化，进而影响到你调用模型的成本和稳定性。做 RAG 或 Agent 项目时，把模型调用层做成可替换的（抽象一层接口），这既是工程习惯，也是对冲政策风险。</li>
+</ul>
+<h3>3. <code>uncut</code>：7MB 单二进制的 headless coding agent harness</h3>
+<ul>
+<li>来源：<a href="https://github.com/Balanov/uncut">github.com/Balanov/uncut</a>（Go，105 stars，20 forks）</li>
+<li>“四工具、纯 stdin/stdout、无损截断”——本质是把 coding agent 的核心循环抽出来做成极小可执行文件。</li>
+<li><strong>为什么重要</strong>：Agent 领域正在从“套壳产品”回到“最小内核”。理解一个 agent harness 由哪几个工具构成、上下文怎么传入传出，比学某个框架 API 更有长期价值。</li>
+</ul>
+<h3>4. <code>ai-dialog-manage</code>：统一管理 9 种 AI 编程工具的会话</h3>
+<ul>
+<li>来源：<a href="https://github.com/haczen/ai-dialog-manage">github.com/haczen/ai-dialog-manage</a>（Python，57 stars，20 forks）</li>
+<li>功能：统一浏览、搜索、编辑会话记录，并能把会话迁移到其他 AI 工具继续聊。</li>
+<li><strong>为什么重要</strong>：它解决的是一个真实痛点——AI 工具越来越多，聊天记录散落在各处、无法复用。这类“元工具”需求会持续存在，而且实现门槛不高。</li>
+</ul>
+<h3>5. OpenAI 与 NATO 及盟国网络机构合作</h3>
+<ul>
+<li>来源：<a href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai">openai.com</a></li>
+<li>内容：帮助“可信防御方”找漏洞、验证修复、保护关键系统。</li>
+<li><strong>为什么重要</strong>：AI 厂商正在把“政府/国防”做成正式业务线，同期还有智利政府合作、LVMH 媒体合作（见下文）。这说明 AI 商业化路径是三条并行：<strong>公共部门、受监管行业、传统内容行业</strong>，而不只是消费级产品。</li>
+<li><strong>对你有什么用</strong>：这三条路都需要“懂业务 + 会集成”的人，而不是只会调 API 的人。后端转 AI 的优势恰好在集成、数据管道、权限与审计，这个方向与趋势对得上。</li>
+</ul>
+<hr />
+<h2>二、GitHub 热门项目（含适配度判断）</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>语言/规模</th>
+<th>是什么</th>
+<th>适不适合你</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Balanov/uncut">Balanov/uncut</a></td>
+<td>Go，105★</td>
+<td>无损、headless 的 coding agent harness，7MB 静态二进制，四工具，纯 stdin/stdout</td>
+<td><strong>读架构可以，跟写不推荐</strong>。Go 对你现在偏难。建议只读 README + 主流程文件，画出“输入→工具调用→输出”的图，理解 harness 边界</td>
+</tr>
+<tr>
+<td><a href="https://github.com/haczen/ai-dialog-manage">haczen/ai-dialog-manage</a></td>
+<td>Python，57★</td>
+<td>统一浏览/搜索/编辑 9 种 AI CLI 会话，支持会话迁移</td>
+<td><strong>最适合你</strong>。Python + 文件处理 + 搜索，正是练“小工具完整闭环”的好素材</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Balanov/shim">Balanov/shim</a></td>
+<td>Go，88★</td>
+<td>本地优先的极小 AI harness，支持任意模型、MCP、Agent Skills、自然语言 CLI，零依赖 MIT</td>
+<td><strong>概念最值得学</strong>（local-first、MCP、Skills 三件套），代码同样因 Go 门槛高，建议先看设计思路</td>
+</tr>
+<tr>
+<td><a href="https://github.com/thebodytheory01-commits/final-round-ai-desktop">final-round-ai-desktop</a></td>
+<td>HTML，150★，0 fork</td>
+<td>实时面试辅导、语音转写、回答建议</td>
+<td><strong>不建议学习</strong>。HTML 为主的仓库工程参考价值低，0 fork 也说明缺少社区检验；且“实时面试辅助”在求职场景有诚信与合规风险，不要往简历里放</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、AI 发展动态</h2>
+<p>本期三条都来自 OpenAI 官方博客（11-16 至 11-17），是同一种扩张逻辑的三个切面：</p>
+<ol>
+<li><strong>安全/国防</strong>：<a href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai">与 NATO 及盟国网络机构合作</a>。AI 进入漏洞发现与修复验证流程。</li>
+<li><strong>国家数字化</strong>：<a href="https://openai.com/index/introducing-openai-for-chile">OpenAI for Chile</a>。与智利政府合作，做负责任采用、公共部门技能建设、扶持本地创业公司。</li>
+<li><strong>内容行业</strong>：<a href="https://openai.com/index/lvmh-media-division-partnership">与 LVMH 媒体部门合作</a>。用 AI 支持新闻业，并让出版物通过 ChatGPT 更易获取。</li>
+</ol>
+<p><strong>趋势判断（仅基于这三条）</strong>：
+- 大厂的增量市场在“机构客户”，不在个人订阅。对应的岗位是解决方案、集成、合规、培训，不是纯算法。
+- “让内容通过 ChatGPT 被获取”这类合作，技术内核就是<strong>内容结构化 + 检索（RAG）</strong>。你关注的 RAG 方向在这里有直接落点。
+- 公共部门项目普遍带“技能建设”条款，说明政府侧缺的是会用 AI 的人，这对公考/体制内技术岗是个可关注的信号（但本期无中国政策材料，不作国内推断）。</p>
+<hr />
+<h2>四、国际形势（只谈与科技、就业、政策环境的关系）</h2>
+<p>本期国际新闻高度集中，可以概括为一条主线：<strong>芯片管制的博弈从“企业合规”升级为“政府间博弈”</strong>。</p>
+<ul>
+<li>美国在推更严的出口法案（MATCH Act），荷兰在为自己的龙头企业争取豁免空间；同时英伟达在东南亚主动收缩服务器出货。三方动作指向同一件事：算力流动的行政边界在收紧。</li>
+<li><strong>对科技环境</strong>：供应链继续区域化，企业要在多个法域做合规设计，“在哪个区域用哪种算力”会成为架构问题，而不是采购问题。</li>
+<li><strong>对就业</strong>：半导体设备、AI 基础设施、出口合规这三类岗位的政策敏感度上升；反过来，纯应用层开发者受影响是间接的（通过云成本与模型可用性传导）。</li>
+<li><strong>对政策环境</strong>：盟国内部出现利益分歧，意味着管制不会一刀切。<strong>注意：这属于对国际新闻的解读，不能推演成对中国政策的判断；本期没有可用中国政策材料。</strong></li>
+</ul>
+<hr />
+<h2>五、中国国家政策</h2>
+<p><strong>本期无有效材料。</strong> 唯一一条 <code>china_policy</code> 是<a href="http://www.court.gov.cn/">最高人民法院官网</a>的列表页条目，标题为乱码，无正文、无具体政策内容。</p>
+<p>因此今天不输出任何政策解读，也不拿芯片新闻去“补”政策结论。这是材料缺失，不是没有政策发生。需要跟踪的话，建议直接去政府网/部委官网看原文，不看二手摘要。</p>
+<hr />
+<h2>六、给你的个人建议（具体到能今天动手）</h2>
+<p><strong>1. 本周主项目：用 Python 复刻 <code>ai-dialog-manage</code> 的最小版（约 6–8 小时）</strong>
+只做三件事：扫描本地会话文件、建立索引、支持关键词搜索。
+技术点：<code>pathlib</code> 遍历、SQLite 或 SQLite FTS5 全文检索、<code>argparse</code> 做 CLI。
+这一步同时练到：文件 IO、数据建模、检索——正是 RAG 的地基。做完再去看原项目源码，对比差异，收获最大。</p>
+<p><strong>2. 用 1 小时读 <code>uncut</code> 和 <code>shim</code> 的 README，只画图不写码</strong>
+目标：搞清楚一个 agent harness 的最小构成（工具集、上下文传递、stdin/stdout 协议、MCP 接口）。
+产出物：一张手绘架构图。这是你理解“Agent 到底是什么”的最快路径，比看教程有效。</p>
+<p><strong>3. 给自己的项目加一层模型抽象</strong>
+把你现有的任何 AI 小项目，改成“模型调用层可替换”（一个接口 + 两个实现）。理由来自本期第 1、2 条新闻：算力渠道会变，代码不该跟着重写。</p>
+<p><strong>4. 不要做的事</strong>
+- 不学 <code>final-round-ai-desktop</code>，也不做面试实时辅助类工具。
+- 不因为一条出口管制新闻就去判断某只股票或某个行业短期走势，材料信息量不足以支撑。
+- 不从国际芯片新闻推中国政策方向。</p>
+<p><strong>5. 信息源调整</strong>
+本期 AI 新闻全部来自单一厂商博客，视角偏窄。建议在你的日报源里补 1–2 个非厂商来源（如学术/开源社区动态），否则容易把“某公司的商业动作”误当成“行业趋势”。</p>
+<h2>一、今日最值得关注的 5 件事</h2>
+<ul>
+<li><strong>Dutch Government Lobbies Against US Chip Export Bill</strong>（theepochtimes.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Nvidia : China link , US curbs &amp; new executive controversy : Why Nvidia halted AI server shipments to 4 Southeast Asian countries</strong>（timesofindia.indiatimes.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Netherlands pushes back on US MATCH Act to protect ASML China business</strong>（digitimes.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>엔비디아 , 동남아 서버 출하 중단 … 中 AI 우회로 봉쇄</strong>（fnnews.com，评分 4.48）：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+<li><strong>Balanov/uncut</strong>（GitHub，评分 4.2）：Go 项目，Stars 105，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>二、GitHub 热门项目</h2>
+<h3>Balanov/uncut</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Balanov/uncut</li>
+<li>评分：4.2</li>
+<li>简介：The lossless, headless coding agent harness. One 7 MB static binary, four tools, plain stdin/stdout, no silent cuts. Stars: 105; Forks: 20; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 105，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>haczen/ai-dialog-manage</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/haczen/ai-dialog-manage</li>
+<li>评分：4.16</li>
+<li>简介：一个窗口管住 9 种 AI 编程工具的聊天记录：统一浏览/搜索/编辑，会话转生到其它 AI 工具换目录继续聊，零依赖意识上传包 | Unified AI CLI session manager: browse / search / edit / transplant Stars: 57; Forks: 20; Language: Python</li>
+<li>为什么值得关注：Python 项目，Stars 57，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>Balanov/shim</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/Balanov/shim</li>
+<li>评分：4.1</li>
+<li>简介：Tiny local-first AI harness: any model, MCP and Agent Skills, natural-language CLI. Zero dependencies. MIT. Stars: 88; Forks: 15; Language: Go</li>
+<li>为什么值得关注：Go 项目，Stars 88，适合评估是否能拆成练手项目。</li>
+</ul>
+<h3>thebodytheory01-commits/final-round-ai-desktop</h3>
+<ul>
+<li>来源：GitHub</li>
+<li>链接：https://github.com/thebodytheory01-commits/final-round-ai-desktop</li>
+<li>评分：4.08</li>
+<li>简介：Final Round AI Desktop: Real-Time Interview Coaching, Speech Transcription, and Response Suggestions Stars: 150; Forks: 0; Language: HTML</li>
+<li>为什么值得关注：HTML 项目，Stars 150，适合评估是否能拆成练手项目。</li>
+</ul>
+<h2>三、AI 发展动态</h2>
+<h3>Strengthening NATO and allied cyber defenses with AI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/strengthening-nato-allied-cyber-defences-ai</li>
+<li>评分：3.06</li>
+<li>简介：How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>Introducing OpenAI for Chile</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/introducing-openai-for-chile</li>
+<li>评分：3.06</li>
+<li>简介：OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h3>LVMH’s Media Division announces strategic partnership with OpenAI</h3>
+<ul>
+<li>来源：openai.com</li>
+<li>链接：https://openai.com/index/lvmh-media-division-partnership</li>
+<li>评分：3.06</li>
+<li>简介：LVMH’s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.</li>
+<li>为什么值得关注：命中关键词 OpenAI，可能影响学习方向或技术判断。</li>
+</ul>
+<h2>四、国际形势</h2>
+<h3>Dutch Government Lobbies Against US Chip Export Bill</h3>
+<ul>
+<li>来源：theepochtimes.com</li>
+<li>链接：https://www.theepochtimes.com/world/dutch-government-lobbies-against-us-chip-export-bill-6129583</li>
+<li>评分：4.48</li>
+<li>简介：20261127T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Nvidia : China link , US curbs &amp; new executive controversy : Why Nvidia halted AI server shipments to 4 Southeast Asian countries</h3>
+<ul>
+<li>来源：timesofindia.indiatimes.com</li>
+<li>链接：https://timesofindia.indiatimes.com/business/international-business/china-link-us-curbs-new-executive-controversy-why-nvidia-halted-ai-server-shipments-to-4-southeast-asian-countries/articleshow/136206977.cms</li>
+<li>评分：4.48</li>
+<li>简介：20261127T043000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>Netherlands pushes back on US MATCH Act to protect ASML China business</h3>
+<ul>
+<li>来源：digitimes.com</li>
+<li>链接：https://www.digitimes.com/news/a20261126PD231/netherlands-asml-business-dutch-equipment.html</li>
+<li>评分：4.48</li>
+<li>简介：20261127T021500Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h3>엔비디아 , 동남아 서버 출하 중단 … 中 AI 우회로 봉쇄</h3>
+<ul>
+<li>来源：fnnews.com</li>
+<li>链接：https://www.fnnews.com/news/202611270224421362</li>
+<li>评分：4.48</li>
+<li>简介：20261126T223000Z</li>
+<li>为什么值得关注：命中国际关键词 (US China OR China technology OR semiconductor OR export controls OR AI regulation)，有助于判断外部环境和科技政策变化。</li>
+</ul>
+<h2>五、中国国家政策</h2>
+<h3>æé«äººæ°æ³é¢</h3>
+<ul>
+<li>来源：中国政府网</li>
+<li>链接：http://www.court.gov.cn/</li>
+<li>评分：2.92</li>
+<li>简介：中国国家政策官网列表页条目。</li>
+<li>为什么值得关注：来自国家政策官网，可用于观察国内科技、就业和产业政策方向。</li>
+</ul>
+<h2>六、对我的个人建议</h2>
+<ol>
+<li>优先拆解：Balanov/uncut。</li>
+<li>重点阅读：Dutch Government Lobbies Against US Chip Export Bill。</li>
+<li>把国际新闻或政策术语整理成申论/面试素材，同时把技术方向转成一个小项目或读书笔记。</li>
+</ol>
+<h2>七、来源链接</h2>
+<ul>
+<li><a href="https://www.theepochtimes.com/world/dutch-government-lobbies-against-us-chip-export-bill-6129583">Dutch Government Lobbies Against US Chip Export Bill</a> - theepochtimes.com</li>
+<li><a href="https://timesofindia.indiatimes.com/business/international-business/china-link-us-curbs-new-executive-controversy-why-nvidia-halted-ai-server-shipments-to-4-southeast-asian-countries/articleshow/136206977.cms">Nvidia : China link , US curbs &amp; new executive controversy : Why Nvidia halted AI server shipments to 4 Southeast Asian countries</a> - timesofindia.indiatimes.com</li>
+<li><a href="https://www.digitimes.com/news/a20261126PD231/netherlands-asml-business-dutch-equipment.html">Netherlands pushes back on US MATCH Act to protect ASML China business</a> - digitimes.com</li>
+<li><a href="https://www.fnnews.com/news/202611270224421362">엔비디아 , 동남아 서버 출하 중단 … 中 AI 우회로 봉쇄</a> - fnnews.com</li>
+<li><a href="https://github.com/Balanov/uncut">Balanov/uncut</a> - GitHub</li>
+<li><a href="https://github.com/haczen/ai-dialog-manage">haczen/ai-dialog-manage</a> - GitHub</li>
+<li><a href="https://github.com/Balanov/shim">Balanov/shim</a> - GitHub</li>
+<li><a href="https://github.com/thebodytheory01-commits/final-round-ai-desktop">thebodytheory01-commits/final-round-ai-desktop</a> - GitHub</li>
+<li><a href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai">Strengthening NATO and allied cyber defenses with AI</a> - openai.com</li>
+<li><a href="https://openai.com/index/introducing-openai-for-chile">Introducing OpenAI for Chile</a> - openai.com</li>
+<li><a href="https://openai.com/index/lvmh-media-division-partnership">LVMH’s Media Division announces strategic partnership with OpenAI</a> - openai.com</li>
+<li><a href="http://www.court.gov.cn/">æé«äººæ°æ³é¢</a> - 中国政府网</li>
+</ul></main></body></html>
